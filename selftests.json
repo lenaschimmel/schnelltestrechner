@@ -1,0 +1,9 @@
+[
+    { "id": "AT001/20", "available": [] },
+    { "id": "AT116/20", "available": ["dm", "LIDL", "Rossmann"] },
+    { "id": "AT011/20", "available": [] },
+    { "id": "AT307/21", "available": [] },
+    { "id": "AT033/20", "available": [] },
+    { "id": "AT282/21", "available": [] },
+    { "id": "AT363/20", "available": ["Aldi"] }    
+]

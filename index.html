@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Covid-Selbsttests selbst verstehen</title>
+    <meta
+      name="description"
+      content="Ein Werkzeug, um Bayes-Wahrscheinlichkeiten von Covid-Schnelltests zu verstehen"
+    />
+    <meta name="author" content="Lena Schimmel" />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div id="hello-vue" class="demo">
+      <h1>Covid-Selbsttests selbst verstehen</h1>
+      <h2>Ein Werkzeug, um Bayes-Wahrscheinlichkeiten von Covid-Schnelltests zu verstehen</h2>
+      <p><b>Dies ist eine sehr frühe Vorschau-Version dieser Seite. Sie ist weder technisch vollständig, noch von unabhängigen Menschen auf Plausibilität geprüft. Bitte verwende die Ergebnisse mit Vorsicht und Skepsis!</b></p>
+      <p>Seit Kurzem sind einige Covid-Schnelltests in Deutschland als Selbst-Tests zugelassen. Wie praktisch alle mediznisichen Tests können sie gelegentlich falsche Ergebnisse liefen, z.B. einem mit SARS-CoV-2 (Corona) infizierten Menschen anzeigen, dass er nicht infiziert wäre, oder umgekehrt.</p>
+      <p>Politik und Wissenschaft haben oft darauf hingewiesen, dass der Nutzen von Covid-Schnelltests eingeschänkt ist, aber dennoch ein wichtiges Werkzeug zur Kontrolle und Beendigung der Pandemie. Dazu ist es aber wichtig, dass Menschen die Tests korrekt anwenden, und aus den Ergebnissen die richtigen Schlüsse ziehen.</p>
+      <p>Ein positives oder negatives Testergebnis sinnvoll zu interpretieren, ist gar nicht so einfach. Dazu muss man nicht Medizin studiert haben, aber es braucht etwas mathematisches Verständnis und Wissen über die Zusammenhänge. Es gibt ein wunderbares (allerdings englisch-sprachiges) Video, das diese Zusammenhänge erklärt:</p>
+     <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/lG4VkPoG3ko" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+      <p>Diese Website stellt eine einfache Weise dar, um die Berechnungen auf die konkreten Werte für Deutschland anzuwenden.</p>
+
+      <div id="tests">
+        <h2>Test-Auswahl</h2>
+        <input type="radio" id="testsSelf" name="testsKind" v-model="testsKind" value="self">
+        <label for="self">Nur Selbst-Tests</label> 
+        
+        <input type="radio" id="testsAll" name="testsKind" v-model="testsKind" value="pei">
+        <label for="all">Vom PEI evaluiert (Selbst- und Profi-Tests)</label> 
+        
+        <input type="radio" id="testsAll" name="testsKind" v-model="testsKind" value="all">
+        <label for="all">Alle (Selbst- und Profi-Tests)</label> 
+        
+        <input type="radio" id="testsAll" name="testsKind" v-model="testsKind" value="input">
+        <label for="input">Eigene Werte eingeben</label> 
+        
+        <template v-if="testsKind != 'input'">
+          <p>Test: <select v-model="testId">
+            <option v-for="test in visibleTests" :value="test.id">{{ getTestDisplayName(test) }}</option>
+          </select>
+          <p>Sensitivität: <input disabled v-bind:value="formatPercent(sensitivity)" /></p>
+          <p>Spezifität:   <input disabled v-bind:value="formatPercent(specificity)" /></p>
+        </template>
+        <template v-else>
+          <p>Sensitivität: <input v-model="sensitivityString" /></p>
+          <p>Spezifität:   <input v-model="specificityString" /></p>
+        </template>
+      </div>
+      <div id="factors">
+        <h2>Abgeleitete Werte:</h2>
+        <p>Falsch-Negativ-Rate: <input disabled v-bind:value="formatPercent(fnr)" /></p>
+        <p>Falsch-Positiv-Rate: <input disabled v-bind:value="formatPercent(fpr)" /></p>
+
+        <p>Bayes-Faktor bei positivem Test: <input disabled :value="formatNumber(bayesFactorPos)" /></p>
+        <p>Bayes-Faktor bei negativem Test: <input disabled :value="formatNumber(1/bayesFactorNeg)" /></p>
+      </div>
+
+      <div id="incidence">
+        <h2>Aktuelle Inzidenz</h2>
+        <input type="radio" id="incidenceGermany" name="incidenceSource" v-model="incidenceSource" value="germany">
+        <label for="self">Ganz Deutschland</label> 
+        
+        <input type="radio" id="incidenceState" name="incidenceSource" v-model="incidenceSource" value="state">
+        <label for="all">Nach Bundesland</label> 
+
+        <input type="radio" id="incidenceDistrict" name="incidenceSource" v-model="incidenceSource" value="district">
+        <label for="all">Nach Landkreis</label> 
+        
+        <input type="radio" id="incidenceSelf" name="incidenceSource" v-model="incidenceSource" value="input">
+        <label for="input">Eigenen Wert eingeben</label> 
+       
+        <template v-if="incidenceSource == 'state'">
+          <p>Bundesland:
+          <select v-model="stateId">
+            <option v-for="state in states" :value="state.id">{{ state.name }}</option>
+          </select>
+          </p>
+        </template>
+
+        <template v-if="incidenceSource == 'district'">
+          <p>Landkreis:
+          <select v-model="districtId">
+            <option v-for="district in districts" :value="district.ags">{{ district.name }}</option>
+          </select>
+          </p>
+        </template>
+        
+        <template v-if="incidenceSource == 'input'">
+          <p>7-Tage Inzidenz je 100.000: <input v-model="incidenceString" /></p>
+        </template>
+        <template v-else>
+          <p>7-Tage Inzidenz je 100.000 diese Woche: <input disabled :value="formatNumber(incidence)" /></p>
+          <p>7-Tage Inzidenz je 100.000 vorherige Woche: <input disabled :value="formatNumber(incidencePrev)" /></p>
+        </template>
+        <p>Angepasste Prävalenz: <input disabled :value="formatNumber(incidenceAdjusted)" /></p>
+      </div>
+
+      <div id="case">
+        <h2>Persönliches Risiko</h2>
+        <p>Privates Risiko-Profil: 
+          <select v-model="riskProfilePrivate">
+            <option value="1.0">Durchschnittliche Person</option>
+            <option value="0.015">Lebt allein, Kontakte nur beim Einkaufen</option>
+            <option value="0.3">Ein enger Kontakt mit unbekanntem Risiko</option>
+            <option value="1.0">Vier enge Kontakte mit unbekanntem Risiko</option>
+            <option value="2.5">Zehn enge Kontakte mit unbekanntem Risiko</option>
+            <option value="15.0">Hat kürzlich eine Bar besucht</option>
+          </select>
+        </p>
+        <p>Berufliches Risiko-Profil: 
+          <select v-model="riskProfileProfessional">
+            <option value="0.0">Home-Office, Arbeitlsos, etc.</option>
+            <option value="0.1">Risikoarmer Beruf</option>
+            <option value="0.4">Produktion</option>
+            <option value="0.5">Verkauf</option>
+            <option value="0.8">Büro</option>
+            <option value="1.3">Kita / Kindergarten</option>
+            <option value="1.8">Reinigungskraft</option>
+            <option value="2.2">Grundschul-Lehrkraft</option>
+            <option value="3.2">Pflege- und Gesundsheitsberuf</option>
+          </select>
+        </p>
+        <p>A-Priori: <input disabled v-bind:value="formatPercent(priorProb)" /></p>
+        <p>A-Posteriori bei positivem Test: <input disabled v-bind:value="formatPercent(updatedProbPos)" /></p>
+        <p>A-Posteriori bei negativem Test: <input disabled v-bind:value="formatPercent(updatedProbNeg)" /></p>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

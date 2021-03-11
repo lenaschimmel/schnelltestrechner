@@ -1,0 +1,19 @@
+{
+  "name": "antigen-calc",
+  "version": "1.0.0",
+  "description": "Tools to better understand the meaning of covid rapid test results",
+  "main": "updateList.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "covid",
+    "corona",
+    "germany"
+  ],
+  "author": "Lena Schimmel",
+  "license": "MIT",
+  "dependencies": {
+    "csv-parse": "4.15.3"
+  }
+}
