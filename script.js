@@ -1,7 +1,10 @@
 const apiEndpoint = "https://api.corona-zahlen.org";
-const apiGermany = "/germany/history/incidence/8";
-const apiStates = "/states";
-const apiDistricts = "/districts";
+// 7 days should be enough, but sometimes the API returns fewer entries then requested
+// also, there seems to be about 15% underreporting for the latest day, which we bypass by using 
+// data that is one day older
+const apiGermany = "/germany/history/incidence/8"; 
+const apiStates = "/states/history/incidence/8";
+const apiDistricts = "/districts/history/incidence/8";
 
 const HelloVueApp = {
     data() {
@@ -159,9 +162,9 @@ const HelloVueApp = {
                 console.log("Germany: " + JSON.stringify( this.germany));
                 return this.germany[6].weekIncidence;
             } else if (this.incidenceSource == "state" && this.selectedState) {
-                return this.selectedState.weekIncidence;
+                return this.selectedState.history[6].weekIncidence;
             } else if (this.incidenceSource == "district" && this.selectedDistrict) {
-                return this.selectedDistrict.weekIncidence;
+                return this.selectedDistrict.history[6].weekIncidence;
             } else {
                 return 0.0;
             }
@@ -172,9 +175,9 @@ const HelloVueApp = {
             } else if (this.incidenceSource == "germany" && this.germany) {
                 return this.germany[0].weekIncidence;
             } else if (this.incidenceSource == "state" && this.selectedState) {
-                return this.selectedState.weekIncidence;
+                return this.selectedState.history[0].weekIncidence;
             } else if (this.incidenceSource == "district" && this.selectedDistrict) {
-                return this.selectedDistrict.weekIncidence;
+                return this.selectedDistrict.history[0].weekIncidence;
             } else {
                 return 0.0;
             }
