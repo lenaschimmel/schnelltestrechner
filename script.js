@@ -17,6 +17,7 @@ const HelloVueApp = {
             incidenceSource: "germany",
             riskProfilePrivate: "1.0",
             riskProfileProfessional: "0.8",
+            additionalRiskString: "0",
 
             // user inputs
             incidenceString: "100",
@@ -207,7 +208,12 @@ const HelloVueApp = {
             return this.fnr / this.specificity;
         },
         priorProb() {
-            return this.incidenceAdjusted / 100000.0 * (parseFloat(this.riskProfilePrivate) + parseFloat(this.riskProfileProfessional)) / 1.8;
+            let riskFactors = (parseFloat(this.riskProfilePrivate) + parseFloat(this.riskProfileProfessional)) / 1.8;
+            let additionalRisk = parseFloat(this.additionalRiskString) / 1000000.0;
+            if (Number.isNaN(additionalRisk)) additionalRisk = 0.0;
+            let prior = this.incidenceAdjusted / 100000.0 * riskFactors + additionalRisk;
+            if (prior > 0.999) prior = 0.999; // 1.00 would give computational erros for updates probabilities
+            return prior;
         },
         updatedProbPos() {
             let priorOdds = this.priorProb / (1.0 - this.priorProb);

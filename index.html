@@ -125,6 +125,8 @@
             <option value="3.2">Pflege- und Gesundsheitsberuf</option>
           </select>
         </p>
+        <p>Zusätzliche Risiken in den letzten 10 Tagen laut <a href="https://www.microcovid.org">microCOVID.org</a>: <input v-model="additionalRiskString" /> µCoV</p>
+
         <p>A-Priori: <input disabled v-bind:value="formatPercent(priorProb)" /></p>
         <p>A-Posteriori bei positivem Test: <input disabled v-bind:value="formatPercent(updatedProbPos)" /></p>
         <p>A-Posteriori bei negativem Test: <input disabled v-bind:value="formatPercent(updatedProbNeg)" /></p>
