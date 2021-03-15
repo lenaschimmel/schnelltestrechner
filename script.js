@@ -70,11 +70,24 @@ const HelloVueApp = {
                 if (nameA > nameB) {
                     return 1;
                 }
+                return 0;
+            };
+            byId = function (a, b) {
+                if (a.id < b.id) {
+                    return -1;
+                }
+                if (a.id > b.id) {
+                    return 1;
+                }
+                return 0;
             };
 
             fetch('./antigentests.json')
                 .then(response => response.json())
-                .then(data => this.tests = data)
+                .then(data => {
+                    this.tests = data;
+                    this.tests.sort(byId);
+                })
                 .catch(error => console.log(error));
             fetch(apiEndpoint + apiGermany)
                 .then(response => response.json())
@@ -104,9 +117,9 @@ const HelloVueApp = {
         },
         getTestDisplayName(test) {
             if (test.shops && test.shops.length > 0) {
-                return test.name + " 🛒 (erhältlich bei " + test.shops.join(", ") + ")";
+                return test.id + " - " + test.name + " 🛒 (erhältlich bei " + test.shops.join(", ") + ")";
             }
-            return test.name;
+            return test.id + " - " + test.name;
         },
     },
     /* watch: {

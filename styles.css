@@ -7,4 +7,15 @@
     margin-bottom: 40px;
     user-select: none;
     overflow-x: auto;
+    background-color: azure;
   }
+
+input {
+    color:#000;
+    background-color: #FFF;
+ }
+
+input[disabled] {
+    color:#666;
+    background-color: #EEE;
+ }
