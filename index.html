@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
 
-    <title>Covid-Selbsttests selbst verstehen</title>
+    <title>Covid-Schnelltests selbst verstehen</title>
     <meta
       name="description"
       content="Ein Werkzeug, um Bayes-Wahrscheinlichkeiten von Covid-Schnelltests zu verstehen"
@@ -16,10 +16,10 @@
 
   <body>
     <div id="hello-vue" class="demo">
-      <h1>Covid-Selbsttests selbst verstehen</h1>
+      <h1>Covid-Schnelltests selbst verstehen</h1>
       <h2>Ein Werkzeug, um Bayes-Wahrscheinlichkeiten von Covid-Schnelltests zu verstehen</h2>
       <p><b>Dies ist eine sehr frühe Vorschau-Version dieser Seite. Sie ist weder technisch vollständig, noch von unabhängigen Menschen auf Plausibilität geprüft. Bitte verwende die Ergebnisse mit Vorsicht und Skepsis!</b></p>
-      <p>Seit Kurzem sind einige Covid-Schnelltests in Deutschland als Selbst-Tests zugelassen. Wie praktisch alle mediznisichen Tests können sie gelegentlich falsche Ergebnisse liefen, z.B. einem mit SARS-CoV-2 (Corona) infizierten Menschen anzeigen, dass er nicht infiziert wäre, oder umgekehrt.</p>
+      <p>Seit Kurzem sind einige Covid-Schnelltests in Deutschland als Selbst-Tests zugelassen. Wie praktisch alle medizinischen Tests können sie gelegentlich falsche Ergebnisse liefen, z.B. einem mit SARS-CoV-2 (Corona) infizierten Menschen anzeigen, dass er nicht infiziert wäre, oder umgekehrt.</p>
       <p>Politik und Wissenschaft haben oft darauf hingewiesen, dass der Nutzen von Covid-Schnelltests eingeschänkt ist, aber dennoch ein wichtiges Werkzeug zur Kontrolle und Beendigung der Pandemie. Dazu ist es aber wichtig, dass Menschen die Tests korrekt anwenden, und aus den Ergebnissen die richtigen Schlüsse ziehen.</p>
       <p>Ein positives oder negatives Testergebnis sinnvoll zu interpretieren, ist gar nicht so einfach. Dazu muss man nicht Medizin studiert haben, aber es braucht etwas mathematisches Verständnis und Wissen über die Zusammenhänge. Es gibt ein wunderbares (allerdings englisch-sprachiges) Video, das diese Zusammenhänge erklärt:</p>
      <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/lG4VkPoG3ko" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
@@ -27,17 +27,17 @@
 
       <div id="tests">
         <h2>Test-Auswahl</h2>
-        <input type="radio" id="testsSelf" name="testsKind" v-model="testsKind" value="self">
-        <label for="self">Nur Selbst-Tests</label> 
+        <input type="radio" id="testsSelf" name="testsSelf" v-model="testsKind" value="self">
+        <label for="testsSelf">Nur Selbst-Tests</label> 
         
-        <input type="radio" id="testsAll" name="testsKind" v-model="testsKind" value="pei">
-        <label for="all">Vom PEI evaluiert (Selbst- und Profi-Tests)</label> 
+        <input type="radio" id="testsPei" name="testsPei" v-model="testsKind" value="pei">
+        <label for="testsPei">Vom PEI evaluiert (Selbst- und Profi-Tests)</label> 
         
-        <input type="radio" id="testsAll" name="testsKind" v-model="testsKind" value="all">
-        <label for="all">Alle (Selbst- und Profi-Tests)</label> 
+        <input type="radio" id="testsAll" name="testsAll" v-model="testsKind" value="all">
+        <label for="testsAll">Alle (Selbst- und Profi-Tests)</label> 
         
-        <input type="radio" id="testsAll" name="testsKind" v-model="testsKind" value="input">
-        <label for="input">Eigene Werte eingeben</label> 
+        <input type="radio" id="testsInput" name="testsInput" v-model="testsKind" value="input">
+        <label for="testsInput">Eigene Werte eingeben</label> 
         
         <template v-if="testsKind != 'input'">
           <p>Test: <select v-model="testId">
@@ -62,17 +62,17 @@
 
       <div id="incidence">
         <h2>Aktuelle Inzidenz</h2>
-        <input type="radio" id="incidenceGermany" name="incidenceSource" v-model="incidenceSource" value="germany">
-        <label for="self">Ganz Deutschland</label> 
+        <input type="radio" id="incidenceGermany" name="incidenceGermany" v-model="incidenceSource" value="germany">
+        <label for="incidenceGermany">Ganz Deutschland</label> 
         
-        <input type="radio" id="incidenceState" name="incidenceSource" v-model="incidenceSource" value="state">
-        <label for="all">Nach Bundesland</label> 
+        <input type="radio" id="incidenceState" name="incidenceState" v-model="incidenceSource" value="state">
+        <label for="incidenceState">Nach Bundesland</label> 
 
-        <input type="radio" id="incidenceDistrict" name="incidenceSource" v-model="incidenceSource" value="district">
-        <label for="all">Nach Landkreis</label> 
+        <input type="radio" id="incidenceDistrict" name="incidenceDistrict" v-model="incidenceSource" value="district">
+        <label for="incidenceDistrict">Nach Landkreis</label> 
         
-        <input type="radio" id="incidenceSelf" name="incidenceSource" v-model="incidenceSource" value="input">
-        <label for="input">Eigenen Wert eingeben</label> 
+        <input type="radio" id="incidenceSelf" name="incidenceSelf" v-model="incidenceSource" value="input">
+        <label for="incidenceSelf">Eigenen Wert eingeben</label> 
        
         <template v-if="incidenceSource == 'state'">
           <p>Bundesland:
@@ -91,7 +91,7 @@
         </template>
         
         <template v-if="incidenceSource == 'input'">
-          <p>7-Tage Inzidenz je 100.000: <input v-model="incidenceString" /></p>
+          <p>7-Tage Prävalenz je 100.000: <input v-model="incidenceString" /></p>
         </template>
         <template v-else>
           <p>7-Tage Inzidenz je 100.000 diese Woche: <input disabled :value="formatNumber(incidence)" /></p>
