@@ -23,6 +23,8 @@ const HelloVueApp = {
             riskProfilePrivate: "1.0",
             riskProfileProfessional: "0.8",
             additionalRiskString: "0",
+            confidence: "avg",
+            intermediate: false,
 
             // symptoms
             sympSmell: false,
@@ -139,7 +141,7 @@ const HelloVueApp = {
                 return parseFloat(this.sensitivityString.replace(",", ".").replace("%", "")) / 100.0;
             } else {
                 if (this.selectedTest) {
-                    return this.selectedTest.sensitivity.avg;
+                    return this.selectedTest.sensitivity[this.confidence];
                 } else {
                     return 0.8;
                 }
@@ -150,7 +152,7 @@ const HelloVueApp = {
                 return parseFloat(this.specificityString.replace(",", ".").replace("%", "")) / 100.0;
             } else {
                 if (this.selectedTest) {
-                    return this.selectedTest.specificity.avg;
+                    return this.selectedTest.specificity[this.confidence];
                 } else {
                     return 0.8;
                 }

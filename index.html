@@ -25,6 +25,8 @@
      <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/lG4VkPoG3ko" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
       <p>Diese Website stellt eine einfache Weise dar, um die Berechnungen auf die konkreten Werte für Deutschland anzuwenden.</p>
 
+      <input type="checkbox" id="intermediate" name="intermediate" v-model="intermediate"><label for="intermediate">Detaillierte Angaben anzeigen</label>
+
       <div id="tests">
         <h2>Test-Auswahl</h2>
         <input type="radio" id="testsSelf" name="testsSelf" v-model="testsKind" value="self">
@@ -42,7 +44,18 @@
         <template v-if="testsKind != 'input'">
           <p>Test: <select v-model="testId">
             <option v-for="test in visibleTests" :value="test.id">{{ getTestDisplayName(test) }}</option>
-          </select>
+          </select></p>
+          <p v-if="intermediate">
+            <input type="radio" id="confidenceAvg" name="confidenceAvg" v-model="confidence" value="avg">
+            <label for="confidenceAvg">Durchschnitt</label> 
+        
+            <input type="radio" id="confidenceMin" name="confidenceMin" v-model="confidence" value="min">
+            <label for="confidenceMin">Minimum</label> 
+        
+            <input type="radio" id="confidenceMax" name="confidenceMax" v-model="confidence" value="max">
+            <label for="confidenceMax">Maximum</label> 
+        
+          </p>
           <p>Sensitivität: <input disabled v-bind:value="formatPercent(sensitivity)" /></p>
           <p>Spezifität:   <input disabled v-bind:value="formatPercent(specificity)" /></p>
         </template>
@@ -51,7 +64,7 @@
           <p>Spezifität:   <input v-model="specificityString" /></p>
         </template>
       </div>
-      <div id="factors">
+      <div id="factors" v-if="intermediate">
         <h2>Abgeleitete Werte:</h2>
         <p>Falsch-Negativ-Rate: <input disabled v-bind:value="formatPercent(fnr)" /></p>
         <p>Falsch-Positiv-Rate: <input disabled v-bind:value="formatPercent(fpr)" /></p>
@@ -93,11 +106,13 @@
         <template v-if="incidenceSource == 'input'">
           <p>7-Tage Prävalenz je 100.000: <input v-model="incidenceString" /></p>
         </template>
-        <template v-else>
-          <p>7-Tage Inzidenz je 100.000 diese Woche: <input disabled :value="formatNumber(incidence)" /></p>
-          <p>7-Tage Inzidenz je 100.000 vorherige Woche: <input disabled :value="formatNumber(incidencePrev)" /></p>
+        <template v-if="intermediate">
+          <template v-if="incidenceSource != 'input'">
+            <p>7-Tage Inzidenz je 100.000 diese Woche: <input disabled :value="formatNumber(incidence)" /></p>
+            <p>7-Tage Inzidenz je 100.000 vorherige Woche: <input disabled :value="formatNumber(incidencePrev)" /></p>
+          </template>
+          <p>Angepasste Prävalenz: <input disabled :value="formatNumber(incidenceAdjusted)" /></p>
         </template>
-        <p>Angepasste Prävalenz: <input disabled :value="formatNumber(incidenceAdjusted)" /></p>
       </div>
 
       <div id="case">
@@ -143,7 +158,7 @@
 
         <p>(verdächtige Symptome sind z.B. Schnupfen, Bronchitis, Pneumonie, Atemnot, Halsschmerzen, Kopf- und Gliederschmerzen, Appetitlosigkeit, Gewichtsverlust, Übelkeit, Bauchschmerzen, Erbrechen, Durchfall, Konjunktivitis, Hautausschlag, Lymphknotenschwellung, Apathie, Somnolenz)</p>
 
-        <template v-if="anySymptoms">
+        <template v-if="anySymptoms && intermediate">
           <p>C19 Rule score: <input disabled v-bind:value="ruleScore" /></p>
           <p>C19 Rule likelyhood ratio: <input disabled v-bind:value="formatNumber(ruleLR)" /></p>
           <p>Symptom-Faktor: <input disabled v-bind:value="formatNumber(ruleLR*anySymptomFactor)" /></p>
