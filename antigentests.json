@@ -10,15 +10,20 @@
     "distributors": [
       "Abbott Rapid Diagnostics Germany GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.914,
-      "min": 0.85,
-      "max": 0.95
-    },
-    "specificity": {
-      "avg": 0.998,
-      "min": 0.988,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.914,
+          "min": 0.85,
+          "max": 0.95
+        },
+        "specificity": {
+          "avg": 0.998,
+          "min": 0.988,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -34,15 +39,40 @@
     "distributors": [
       "Abbott Rapid Diagnostics Germany GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.981,
-      "min": 0.93,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 0.998,
-      "min": 0.986,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.981,
+          "min": 0.93,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.998,
+          "min": 0.986,
+          "max": 1
+        }
+      },
+      "FINDdx": {
+        "author": "FINDdx",
+        "location": "Germany",
+        "quadas": "low concern",
+        "independent": "yes",
+        "sampleCondition": "fresh",
+        "sampleType": "AN/MT",
+        "sampleSize": "281",
+        "sensitivity": {
+          "avg": 86.4,
+          "min": 95,
+          "max": 73.3
+        },
+        "specificity": {
+          "avg": 99.2,
+          "min": 95,
+          "max": 97
+        },
+        "testId": "AT116/21"
+      }
     },
     "selftest": false,
     "shops": []
@@ -58,15 +88,20 @@
     "distributors": [
       "Abioteq"
     ],
-    "sensitivity": {
-      "avg": 0.987,
-      "min": 0.96,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 0.998,
-      "min": 0.9926999999999999,
-      "max": 0.9995
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.987,
+          "min": 0.96,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.998,
+          "min": 0.9926999999999999,
+          "max": 0.9995
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -82,15 +117,20 @@
     "distributors": [
       "Praxisdienst GmbH & Co. KG"
     ],
-    "sensitivity": {
-      "avg": 0.9570000000000001,
-      "min": 0.9,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 0.992,
-      "min": 0.976,
-      "max": 0.998
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9570000000000001,
+          "min": 0.9,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 0.992,
+          "min": 0.976,
+          "max": 0.998
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -107,15 +147,20 @@
     "distributors": [
       "Gesundheit2000 F. Steege e.K.MePro GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9690000000000001,
-      "min": 0.92,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 0.995,
-      "min": 0.981,
-      "max": 0.9990000000000001
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9690000000000001,
+          "min": 0.92,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 0.995,
+          "min": 0.981,
+          "max": 0.9990000000000001
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -131,15 +176,20 @@
     "distributors": [
       "MePro GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9690000000000001,
-      "min": 0.92,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 0.995,
-      "min": 0.981,
-      "max": 0.9990000000000001
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9690000000000001,
+          "min": 0.92,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 0.995,
+          "min": 0.981,
+          "max": 0.9990000000000001
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -155,15 +205,20 @@
     "distributors": [
       "AlphaMetrix Biotech GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9712000000000001,
-      "min": 0.92,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 0.996,
-      "min": 0.9779000000000001,
-      "max": 0.9998999999999999
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9712000000000001,
+          "min": 0.92,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.996,
+          "min": 0.9779000000000001,
+          "max": 0.9998999999999999
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -179,15 +234,20 @@
     "distributors": [
       "Cerascreen GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.96,
-      "min": 0.91,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 0.98,
-      "min": 0.95,
-      "max": 0.99
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.96,
+          "min": 0.91,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.98,
+          "min": 0.95,
+          "max": 0.99
+        }
+      }
     },
     "selftest": true,
     "shops": [
@@ -205,15 +265,20 @@
     "distributors": [
       "adico Joachim Hevler"
     ],
-    "sensitivity": {
-      "avg": 0.937,
-      "min": 0.89,
-      "max": 0.97
-    },
-    "specificity": {
-      "avg": 0.992,
-      "min": 0.9769,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.937,
+          "min": 0.89,
+          "max": 0.97
+        },
+        "specificity": {
+          "avg": 0.992,
+          "min": 0.9769,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -229,15 +294,20 @@
     "distributors": [
       ""
     ],
-    "sensitivity": {
-      "avg": 0.9731000000000001,
-      "min": 0.93,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 0.9975,
-      "min": 0.9861,
-      "max": 0.9998999999999999
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9731000000000001,
+          "min": 0.93,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.9975,
+          "min": 0.9861,
+          "max": 0.9998999999999999
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -253,15 +323,20 @@
     "distributors": [
       "Globi-Pharm GmbH & Co KG"
     ],
-    "sensitivity": {
-      "avg": 0.8278,
-      "min": 0.74,
-      "max": 0.89
-    },
-    "specificity": {
-      "avg": 0.9734,
-      "min": 0.93,
-      "max": 0.99
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.8278,
+          "min": 0.74,
+          "max": 0.89
+        },
+        "specificity": {
+          "avg": 0.9734,
+          "min": 0.93,
+          "max": 0.99
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -277,15 +352,20 @@
     "distributors": [
       "Dr. Lonsdorfer GmbH & Co. KG"
     ],
-    "sensitivity": {
-      "avg": 0.973,
-      "min": 0.9,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.966,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.973,
+          "min": 0.9,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.966,
+          "max": 1
+        }
+      }
     },
     "selftest": true,
     "shops": []
@@ -301,15 +381,20 @@
     "distributors": [
       "Bold Sales GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9505,
-      "min": 0.88,
-      "max": 0.97
-    },
-    "specificity": {
-      "avg": 0.9954999999999999,
-      "min": 0.9747,
-      "max": 0.9992
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9505,
+          "min": 0.88,
+          "max": 0.97
+        },
+        "specificity": {
+          "avg": 0.9954999999999999,
+          "min": 0.9747,
+          "max": 0.9992
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -326,15 +411,20 @@
     "distributors": [
       "AMEYA GmbHInfiniti-Options GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9926999999999999,
-      "min": 0.98,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.9704999999999999,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9926999999999999,
+          "min": 0.98,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.9704999999999999,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -350,15 +440,20 @@
     "distributors": [
       "Bold Sales GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9636,
-      "min": 0.87,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.9619,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9636,
+          "min": 0.87,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.9619,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -374,15 +469,20 @@
     "distributors": [
       "KUM Consulting & Trading GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.971,
-      "min": 0.9,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 0.998,
-      "min": 0.9440000000000001,
-      "max": 0.9990000000000001
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.971,
+          "min": 0.9,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 0.998,
+          "min": 0.9440000000000001,
+          "max": 0.9990000000000001
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -401,15 +501,20 @@
     "distributors": [
       "Dr. Grob Healthcar GmbHFa. CRYOFOS Medical GmbHKUM Consulting & Trading GmbHQuinn Healthcare"
     ],
-    "sensitivity": {
-      "avg": 0.9570000000000001,
-      "min": 0.91,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 0.993,
-      "min": 0.961,
-      "max": 0.997
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9570000000000001,
+          "min": 0.91,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.993,
+          "min": 0.961,
+          "max": 0.997
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -425,15 +530,20 @@
     "distributors": [
       "Ellecom GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9640000000000001,
-      "min": 0.9,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 0.998,
-      "min": 0.9440000000000001,
-      "max": 0.9990000000000001
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9640000000000001,
+          "min": 0.9,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 0.998,
+          "min": 0.9440000000000001,
+          "max": 0.9990000000000001
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -450,15 +560,20 @@
       "STRACARE",
       " Turgut Sertoglu"
     ],
-    "sensitivity": {
-      "avg": 0.9773999999999999,
-      "min": 0.97,
-      "max": 0.97
-    },
-    "specificity": {
-      "avg": 0.9945,
-      "min": 0.9942,
-      "max": 0.9947
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9773999999999999,
+          "min": 0.97,
+          "max": 0.97
+        },
+        "specificity": {
+          "avg": 0.9945,
+          "min": 0.9942,
+          "max": 0.9947
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -474,15 +589,20 @@
     "distributors": [
       "TUTMONDA UG (HB)"
     ],
-    "sensitivity": {
-      "avg": 0.9127,
-      "min": 0.84,
-      "max": 0.95
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.992,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9127,
+          "min": 0.84,
+          "max": 0.95
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.992,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -498,15 +618,20 @@
     "distributors": [
       "ARIES HEALTH  SOLUTIONS GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9467,
-      "min": 0.89,
-      "max": 0.97
-    },
-    "specificity": {
-      "avg": 0.9771,
-      "min": 0.9555,
-      "max": 0.9901000000000001
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9467,
+          "min": 0.89,
+          "max": 0.97
+        },
+        "specificity": {
+          "avg": 0.9771,
+          "min": 0.9555,
+          "max": 0.9901000000000001
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -522,15 +647,20 @@
     "distributors": [
       "O2O EurAsia GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.802,
-      "min": 0.73,
-      "max": 0.85
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.977,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.802,
+          "min": 0.73,
+          "max": 0.85
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.977,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -546,15 +676,20 @@
     "distributors": [
       "Servacon Austria"
     ],
-    "sensitivity": {
-      "avg": 0.976,
-      "min": 0.91,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 0.992,
-      "min": 0.9740000000000001,
-      "max": 0.998
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.976,
+          "min": 0.91,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.992,
+          "min": 0.9740000000000001,
+          "max": 0.998
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -570,15 +705,20 @@
     "distributors": [
       "IMACO GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9318000000000001,
-      "min": 0.89,
-      "max": 0.97
-    },
-    "specificity": {
-      "avg": 0.9932,
-      "min": 0.9555,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9318000000000001,
+          "min": 0.89,
+          "max": 0.97
+        },
+        "specificity": {
+          "avg": 0.9932,
+          "min": 0.9555,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -594,15 +734,20 @@
     "distributors": [
       "AXIOM Diagnostics"
     ],
-    "sensitivity": {
-      "avg": 0.981,
-      "min": 0.95,
-      "max": 1
-    },
-    "specificity": {
-      "avg": 0.9933,
-      "min": 0.9802,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.981,
+          "min": 0.95,
+          "max": 1
+        },
+        "specificity": {
+          "avg": 0.9933,
+          "min": 0.9802,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -618,15 +763,20 @@
     "distributors": [
       "AXIOM Diagnostics"
     ],
-    "sensitivity": {
-      "avg": 0.981,
-      "min": 0.95,
-      "max": 1
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 1,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.981,
+          "min": 0.95,
+          "max": 1
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 1,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -642,15 +792,20 @@
     "distributors": [
       "NanoRepro AG"
     ],
-    "sensitivity": {
-      "avg": 0.943,
-      "min": 0.84,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 0.991,
-      "min": 0.9840000000000001,
-      "max": 0.995
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.943,
+          "min": 0.84,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 0.991,
+          "min": 0.9840000000000001,
+          "max": 0.995
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -666,15 +821,112 @@
     "distributors": [
       "BD GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.84,
-      "min": 0.67,
-      "max": 0.93
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.98,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.84,
+          "min": 0.67,
+          "max": 0.93
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.98,
+          "max": 1
+        }
+      },
+      "Pekosz, A., et al.": {
+        "author": "Pekosz, A., et al.",
+        "location": "USA",
+        "quadas": "high concern",
+        "independent": "no",
+        "sampleCondition": "fresh",
+        "sampleType": "NP",
+        "sampleSize": "251",
+        "sensitivity": {
+          "avg": 96.4,
+          "min": 95,
+          "max": 82.3
+        },
+        "specificity": {
+          "avg": 98.7,
+          "min": 95,
+          "max": 96.1
+        },
+        "testId": "AT200/20"
+      },
+      "Van der Moeren, N., et al.": {
+        "author": "Van der Moeren, N., et al.",
+        "location": "Netherlands",
+        "quadas": "intermediate concern",
+        "independent": "yes",
+        "sampleCondition": "banked",
+        "sampleType": "NP/OP",
+        "sampleSize": "351*",
+        "sensitivity": {
+          "avg": 94.1,
+          "min": 95,
+          "max": 71.1
+        },
+        "specificity": {
+          "avg": 100,
+          "min": 95,
+          "max": 98.9
+        },
+        "testId": "AT200/20"
+      },
+      "Marti, J.L.G., et al.": {
+        "author": "Marti, J.L.G., et al.",
+        "location": "USA",
+        "quadas": "unclear",
+        "independent": "yes",
+        "sampleCondition": "fresh",
+        "sampleType": "AN",
+        "sampleSize": "unknown",
+        "sensitivity": {
+          "avg": 93.8
+        },
+        "specificity": {
+          "avg": 100
+        },
+        "testId": "AT200/20"
+      },
+      "Young, S., et al.": {
+        "author": "Young, S., et al.",
+        "location": "USA",
+        "quadas": "intermediate concern",
+        "independent": "no",
+        "sampleCondition": "banked",
+        "sampleType": "NP",
+        "sampleSize": "251",
+        "sensitivity": {
+          "avg": 76.3,
+          "min": 95,
+          "max": 60.8
+        },
+        "specificity": {
+          "avg": 99.5,
+          "min": 95,
+          "max": 97.4
+        },
+        "testId": "AT200/20"
+      },
+      "Caruana, G., et al.": {
+        "author": "Caruana, G., et al.",
+        "location": "Switzerland",
+        "quadas": "intermediate concern",
+        "independent": "yes",
+        "sampleCondition": "fresh",
+        "sampleType": "NP",
+        "sampleSize": "532",
+        "sensitivity": {
+          "avg": 41.2
+        },
+        "specificity": {
+          "avg": 99.7
+        },
+        "testId": "AT200/20"
+      }
     },
     "selftest": false,
     "shops": []
@@ -694,15 +946,20 @@
     "distributors": [
       "CHF Export Import GmbHHandelshaus Lerch e.k.High Lux International Trading GmbHPromotion Pets GmbHS2 Health GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.965,
-      "min": 0.93,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 0.997,
-      "min": 0.99,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.965,
+          "min": 0.93,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.997,
+          "min": 0.99,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -718,15 +975,20 @@
     "distributors": [
       "fameditec GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9732999999999999,
-      "min": 0.95,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 0.9918,
-      "min": 0.9792000000000001,
-      "max": 0.9978
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9732999999999999,
+          "min": 0.95,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 0.9918,
+          "min": 0.9792000000000001,
+          "max": 0.9978
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -744,15 +1006,20 @@
     "distributors": [
       "Der Werbemarkt GmbHDr. Grob Healthcare GmbHunizell Medicare GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.96,
-      "min": 0.9,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 0.9978,
-      "min": 0.988,
-      "max": 0.9990000000000001
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.96,
+          "min": 0.9,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 0.9978,
+          "min": 0.988,
+          "max": 0.9990000000000001
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -780,15 +1047,20 @@
     "distributors": [
       "ALSCO Berufskleidungs-Service GmbHCareline GmbH & Co. KGDer Werbemarkt GmbHDetools GmbHDr. Grob HealthcareIgefa Handelsgesellschaft mbH & Co. KGMaiMed GmbHTextil One GmbHVT Medical by Vegan Travel UG (haftungsbeschraenkt)Weforyou Gmbhdeucin GmbHmr sanicom GmbHunizell Medicare GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.971,
-      "min": 0.93,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 0.9976,
-      "min": 0.9865,
-      "max": 0.9998999999999999
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.971,
+          "min": 0.93,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 0.9976,
+          "min": 0.9865,
+          "max": 0.9998999999999999
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -804,15 +1076,20 @@
     "distributors": [
       "Dr. Grob Healthcare GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9537,
-      "min": 0.89,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 0.9913,
-      "min": 0.9523999999999999,
-      "max": 0.9984999999999999
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9537,
+          "min": 0.89,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 0.9913,
+          "min": 0.9523999999999999,
+          "max": 0.9984999999999999
+        }
+      }
     },
     "selftest": true,
     "shops": []
@@ -829,15 +1106,20 @@
     "distributors": [
       "KL GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9688,
-      "min": 0.92,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.9856999999999999,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9688,
+          "min": 0.92,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.9856999999999999,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -853,15 +1135,20 @@
     "distributors": [
       "GESINO GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9618000000000001,
-      "min": 0.91,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.9854,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9618000000000001,
+          "min": 0.91,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.9854,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -880,15 +1167,20 @@
     "distributors": [
       "BIOTREND Chemikalien GmbHBauer -KarlsruheMPV MEDICAL GmbHTemiz AVZ GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.92,
-      "min": 0.83,
-      "max": 0.96
-    },
-    "specificity": {
-      "avg": 0.9926,
-      "min": 0.9592,
-      "max": 0.9987
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.92,
+          "min": 0.83,
+          "max": 0.96
+        },
+        "specificity": {
+          "avg": 0.9926,
+          "min": 0.9592,
+          "max": 0.9987
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -921,15 +1213,20 @@
       "Dentognostics GmbHDeutsche HansaGT GmbHDixion Vertrieb medizinischer Geräte GmbHFa. CRYOFOS Medical GmbHFrohvogel Medizinprodukte UGHC Healthcare Consulting GmbHHager & Werken GmbH & Co KGI.T.S. Deutschland GmbHIcon Medlab GmbHImmunodiagnostic Systems Deutschland GmbHMedi-Manage Innovation GmbHNGMedical GmbHNeucomed Deutschland GmbHPCR-Lab-Products GbRPanther Med",
       " OKM GmbHROBEX ENERGY SYSTEMS GmbHSaleoMed Medizintechnik GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.92,
-      "min": 0.83,
-      "max": 0.96
-    },
-    "specificity": {
-      "avg": 0.9926,
-      "min": 0.9592,
-      "max": 0.9987
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.92,
+          "min": 0.83,
+          "max": 0.96
+        },
+        "specificity": {
+          "avg": 0.9926,
+          "min": 0.9592,
+          "max": 0.9987
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -945,15 +1242,20 @@
     "distributors": [
       "MPV MEDICAL GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9048,
-      "min": 0.83,
-      "max": 0.94
-    },
-    "specificity": {
-      "avg": 0.9954999999999999,
-      "min": 0.9749,
-      "max": 0.9992
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9048,
+          "min": 0.83,
+          "max": 0.94
+        },
+        "specificity": {
+          "avg": 0.9954999999999999,
+          "min": 0.9749,
+          "max": 0.9992
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -969,15 +1271,20 @@
     "distributors": [
       "SALUBRIS Handelsagentur Dr. Christian Hemerka"
     ],
-    "sensitivity": {
-      "avg": 0.9375,
-      "min": 0.88,
-      "max": 0.96
-    },
-    "specificity": {
-      "avg": 0.997,
-      "min": 0.9834,
-      "max": 0.9995
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9375,
+          "min": 0.88,
+          "max": 0.96
+        },
+        "specificity": {
+          "avg": 0.997,
+          "min": 0.9834,
+          "max": 0.9995
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -994,15 +1301,20 @@
     "distributors": [
       "Detools GmbHSanbio BV"
     ],
-    "sensitivity": {
-      "avg": 0.966,
-      "min": 0.92,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 0.9690000000000001,
-      "min": 0.9529000000000001,
-      "max": 0.98
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.966,
+          "min": 0.92,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 0.9690000000000001,
+          "min": 0.9529000000000001,
+          "max": 0.98
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -1018,15 +1330,20 @@
     "distributors": [
       "HUMAN Gesellschaft für Biochemica und Diagnostica mbH"
     ],
-    "sensitivity": {
-      "avg": 0.961,
-      "min": 0.92,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 0.983,
-      "min": 0.9689,
-      "max": 0.9913
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.961,
+          "min": 0.92,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 0.983,
+          "min": 0.9689,
+          "max": 0.9913
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -1042,15 +1359,20 @@
     "distributors": [
       "ScheBo Biotech AG"
     ],
-    "sensitivity": {
-      "avg": 0.9677,
-      "min": 0.88,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 0.9894,
-      "min": 0.9621,
-      "max": 0.9987
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9677,
+          "min": 0.88,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.9894,
+          "min": 0.9621,
+          "max": 0.9987
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -1066,15 +1388,20 @@
     "distributors": [
       ""
     ],
-    "sensitivity": {
-      "avg": 0.9570000000000001,
-      "min": 0.9,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 0.991,
-      "min": 0.966,
-      "max": 0.997
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9570000000000001,
+          "min": 0.9,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 0.991,
+          "min": 0.966,
+          "max": 0.997
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -1090,15 +1417,20 @@
     "distributors": [
       "MICRO-MEDICAL Instrumente GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9470000000000001,
-      "min": 0.89,
-      "max": 0.97
-    },
-    "specificity": {
-      "avg": 0.997,
-      "min": 0.981,
-      "max": 0.9990000000000001
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9470000000000001,
+          "min": 0.89,
+          "max": 0.97
+        },
+        "specificity": {
+          "avg": 0.997,
+          "min": 0.981,
+          "max": 0.9990000000000001
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -1114,15 +1446,20 @@
     "distributors": [
       "Concile GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.892,
-      "min": 0.81,
-      "max": 0.93
-    },
-    "specificity": {
-      "avg": 0.976,
-      "min": 0.951,
-      "max": 0.988
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.892,
+          "min": 0.81,
+          "max": 0.93
+        },
+        "specificity": {
+          "avg": 0.976,
+          "min": 0.951,
+          "max": 0.988
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -1138,15 +1475,20 @@
     "distributors": [
       "concile GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.892,
-      "min": 0.81,
-      "max": 0.93
-    },
-    "specificity": {
-      "avg": 0.973,
-      "min": 0.948,
-      "max": 0.986
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.892,
+          "min": 0.81,
+          "max": 0.93
+        },
+        "specificity": {
+          "avg": 0.973,
+          "min": 0.948,
+          "max": 0.986
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -1163,15 +1505,20 @@
     "distributors": [
       "Aidian Germany GmbHHirsch Apotheke OHG"
     ],
-    "sensitivity": {
-      "avg": 0.96,
-      "min": 0.93,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 1,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.96,
+          "min": 0.93,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 1,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -1187,15 +1534,20 @@
     "distributors": [
       "Medical Care Professional GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9333,
-      "min": 0.77,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.9159,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9333,
+          "min": 0.77,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.9159,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -1211,15 +1563,20 @@
     "distributors": [
       "gurumB GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.95,
-      "min": 0.91,
-      "max": 0.97
-    },
-    "specificity": {
-      "avg": 0.993,
-      "min": 0.9761,
-      "max": 0.9992
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.95,
+          "min": 0.91,
+          "max": 0.97
+        },
+        "specificity": {
+          "avg": 0.993,
+          "min": 0.9761,
+          "max": 0.9992
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -1235,15 +1592,40 @@
     "distributors": [
       "WS Laborbetriebsgesellschaft mbH"
     ],
-    "sensitivity": {
-      "avg": 0.904,
-      "min": 0.83,
-      "max": 0.94
-    },
-    "specificity": {
-      "avg": 0.976,
-      "min": 0.915,
-      "max": 0.993
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.904,
+          "min": 0.83,
+          "max": 0.94
+        },
+        "specificity": {
+          "avg": 0.976,
+          "min": 0.915,
+          "max": 0.993
+        }
+      },
+      "FINDdx": {
+        "author": "FINDdx",
+        "location": "Switzerland",
+        "quadas": "low concern",
+        "independent": "yes",
+        "sampleCondition": "fresh",
+        "sampleType": "NP",
+        "sampleSize": "232",
+        "sensitivity": {
+          "avg": 73.2,
+          "min": 95,
+          "max": 58.1
+        },
+        "specificity": {
+          "avg": 100,
+          "min": 95,
+          "max": 98
+        },
+        "testId": "AT050/20"
+      }
     },
     "selftest": false,
     "shops": []
@@ -1259,15 +1641,20 @@
     "distributors": [
       "Biozol Diagnostica Vertrieb GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9059999999999999,
-      "min": 0.84,
-      "max": 0.94
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.9853000000000001,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9059999999999999,
+          "min": 0.84,
+          "max": 0.94
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.9853000000000001,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -1286,15 +1673,20 @@
     "distributors": [
       "BIOTREND Chemikalien GmbHDiaSorin Deutschland GmbHHenry Schein Medical GmbHNanoRepro AG"
     ],
-    "sensitivity": {
-      "avg": 0.9455,
-      "min": 0.83,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.971,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9455,
+          "min": 0.83,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.971,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -1310,15 +1702,20 @@
     "distributors": [
       "bestbion dx GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.929,
-      "min": 0.76,
-      "max": null
-    },
-    "specificity": {
-      "avg": 0.996,
-      "min": 0.976,
-      "max": null
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.929,
+          "min": 0.76,
+          "max": null
+        },
+        "specificity": {
+          "avg": 0.996,
+          "min": 0.976,
+          "max": null
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -1334,15 +1731,20 @@
     "distributors": [
       "bestbion dx GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.929,
-      "min": 0.76,
-      "max": null
-    },
-    "specificity": {
-      "avg": 0.996,
-      "min": 0.976,
-      "max": null
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.929,
+          "min": 0.76,
+          "max": null
+        },
+        "specificity": {
+          "avg": 0.996,
+          "min": 0.976,
+          "max": null
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -1358,15 +1760,20 @@
     "distributors": [
       "bestbion dx GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.929,
-      "min": 0.76,
-      "max": null
-    },
-    "specificity": {
-      "avg": 0.996,
-      "min": 0.976,
-      "max": null
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.929,
+          "min": 0.76,
+          "max": null
+        },
+        "specificity": {
+          "avg": 0.996,
+          "min": 0.976,
+          "max": null
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -1382,15 +1789,20 @@
     "distributors": [
       ""
     ],
-    "sensitivity": {
-      "avg": 0.9854999999999999,
-      "min": 0.96,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 0.9956999999999999,
-      "min": 0.9845999999999999,
-      "max": 0.9995
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9854999999999999,
+          "min": 0.96,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.9956999999999999,
+          "min": 0.9845999999999999,
+          "max": 0.9995
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -1406,15 +1818,20 @@
     "distributors": [
       "Servacon Austria"
     ],
-    "sensitivity": {
-      "avg": 0.9831,
-      "min": 0.9,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 0.9918,
-      "min": 0.9551999999999999,
-      "max": 0.9998
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9831,
+          "min": 0.9,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.9918,
+          "min": 0.9551999999999999,
+          "max": 0.9998
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -1430,15 +1847,20 @@
     "distributors": [
       "SALUTIS-Deutschland"
     ],
-    "sensitivity": {
-      "avg": 0.9640000000000001,
-      "min": 0.91,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 0.992,
-      "min": 0.978,
-      "max": 0.997
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9640000000000001,
+          "min": 0.91,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 0.992,
+          "min": 0.978,
+          "max": 0.997
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -1454,15 +1876,20 @@
     "distributors": [
       "Salutis-Deutschland"
     ],
-    "sensitivity": {
-      "avg": 0.922,
-      "min": 0.86,
-      "max": 0.95
-    },
-    "specificity": {
-      "avg": 0.991,
-      "min": 0.9790000000000001,
-      "max": 0.996
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.922,
+          "min": 0.86,
+          "max": 0.95
+        },
+        "specificity": {
+          "avg": 0.991,
+          "min": 0.9790000000000001,
+          "max": 0.996
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -1478,15 +1905,20 @@
     "distributors": [
       "Convergent Technologies"
     ],
-    "sensitivity": {
-      "avg": 0.9503,
-      "min": 0.9,
-      "max": 0.97
-    },
-    "specificity": {
-      "avg": 0.9902,
-      "min": 0.9652,
-      "max": 0.9987999999999999
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9503,
+          "min": 0.9,
+          "max": 0.97
+        },
+        "specificity": {
+          "avg": 0.9902,
+          "min": 0.9652,
+          "max": 0.9987999999999999
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -1502,15 +1934,20 @@
     "distributors": [
       "AXNAR GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.981,
-      "min": 0.94,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 0.996,
-      "min": 0.982,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.981,
+          "min": 0.94,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.996,
+          "min": 0.982,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -1526,15 +1963,20 @@
     "distributors": [
       "Canea Pharma Chemisch Pharmazeutische Vertriebsgesellschaft mbH"
     ],
-    "sensitivity": {
-      "avg": 0.976,
-      "min": 0.93,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 0.991,
-      "min": 0.9790000000000001,
-      "max": 0.997
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.976,
+          "min": 0.93,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.991,
+          "min": 0.9790000000000001,
+          "max": 0.997
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -1551,15 +1993,20 @@
     "distributors": [
       "Pharma-Peter GmbHPromotion Pets GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.975,
-      "min": 0.91,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.9598,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.975,
+          "min": 0.91,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.9598,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -1575,15 +2022,20 @@
     "distributors": [
       ""
     ],
-    "sensitivity": {
-      "avg": 0.965,
-      "min": 0.92,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 0.995,
-      "min": 0.972,
-      "max": 0.9990000000000001
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.965,
+          "min": 0.92,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 0.995,
+          "min": 0.972,
+          "max": 0.9990000000000001
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -1600,15 +2052,20 @@
       "DiaLab GmbH",
       " Labordiagnostik"
     ],
-    "sensitivity": {
-      "avg": 0.973,
-      "min": 0.9,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.9772,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.973,
+          "min": 0.9,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.9772,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -1624,15 +2081,20 @@
     "distributors": [
       "DiaSorin Deutschland GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.971,
-      "min": 0.85,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.9670000000000001,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.971,
+          "min": 0.85,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.9670000000000001,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -1648,15 +2110,20 @@
     "distributors": [
       "Brunner.ident"
     ],
-    "sensitivity": {
-      "avg": 0.9375,
-      "min": 0.89,
-      "max": 0.97
-    },
-    "specificity": {
-      "avg": 0.9956,
-      "min": 0.9869,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9375,
+          "min": 0.89,
+          "max": 0.97
+        },
+        "specificity": {
+          "avg": 0.9956,
+          "min": 0.9869,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -1672,15 +2139,20 @@
     "distributors": [
       "TECOmedical GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9570000000000001,
-      "min": 0.9,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 0.991,
-      "min": 0.966,
-      "max": 0.997
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9570000000000001,
+          "min": 0.9,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 0.991,
+          "min": 0.966,
+          "max": 0.997
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -1696,15 +2168,20 @@
     "distributors": [
       "Andanza Int."
     ],
-    "sensitivity": {
-      "avg": 0.9259999999999999,
-      "min": 0.83,
-      "max": 0.97
-    },
-    "specificity": {
-      "avg": 0.986,
-      "min": 0.9440000000000001,
-      "max": 0.998
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9259999999999999,
+          "min": 0.83,
+          "max": 0.97
+        },
+        "specificity": {
+          "avg": 0.986,
+          "min": 0.9440000000000001,
+          "max": 0.998
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -1720,15 +2197,20 @@
     "distributors": [
       "TECOmedical GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9570000000000001,
-      "min": 0.9,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 0.991,
-      "min": 0.966,
-      "max": 0.997
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9570000000000001,
+          "min": 0.9,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 0.991,
+          "min": 0.966,
+          "max": 0.997
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -1744,15 +2226,75 @@
     "distributors": [
       "Fujirebio Germany GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.917,
-      "min": 0.74,
-      "max": 0.97
-    },
-    "specificity": {
-      "avg": 0.973,
-      "min": 0.948,
-      "max": 0.986
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.917,
+          "min": 0.74,
+          "max": 0.97
+        },
+        "specificity": {
+          "avg": 0.973,
+          "min": 0.948,
+          "max": 0.986
+        }
+      },
+      "Yokota, I., et al.": {
+        "author": "Yokota, I., et al.",
+        "location": "Japan",
+        "quadas": "high concern",
+        "independent": "no",
+        "sampleCondition": "banked",
+        "sampleType": "saliva",
+        "sampleSize": "17",
+        "sensitivity": {
+          "avg": 82.4,
+          "min": 95,
+          "max": 56.6
+        },
+        "testId": "AT056/20"
+      },
+      "Basso, D., et al.": {
+        "author": "Basso, D., et al.",
+        "location": "Italy",
+        "quadas": "low concern",
+        "independent": "yes",
+        "sampleCondition": "fresh",
+        "sampleType": "saliva",
+        "sampleSize": "223",
+        "sensitivity": {
+          "avg": 41.3,
+          "min": 95,
+          "max": 30.4
+        },
+        "specificity": {
+          "avg": 98.6,
+          "min": 95,
+          "max": 95
+        },
+        "testId": "AT056/20"
+      },
+      "Menchinelli, G., et al.": {
+        "author": "Menchinelli, G., et al.",
+        "location": "Italy",
+        "quadas": "intermediate concern",
+        "independent": "yes",
+        "sampleCondition": "banked",
+        "sampleType": "NP",
+        "sampleSize": "594",
+        "sensitivity": {
+          "avg": 79.9,
+          "min": 95,
+          "max": 73.6
+        },
+        "specificity": {
+          "avg": 99.3,
+          "min": 95,
+          "max": 97.8
+        },
+        "testId": "AT056/20"
+      }
     },
     "selftest": false,
     "shops": []
@@ -1768,15 +2310,55 @@
     "distributors": [
       "Mast Diagnostica GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.8059999999999999,
-      "min": 0.69,
-      "max": 0.88
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.963,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.8059999999999999,
+          "min": 0.69,
+          "max": 0.88
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.963,
+          "max": 1
+        }
+      },
+      "Takeda, Y., et al.": {
+        "author": "Takeda, Y., et al.",
+        "location": "Japan",
+        "quadas": "high concern",
+        "independent": "no",
+        "sampleCondition": "unclear",
+        "sampleType": "NP",
+        "sampleSize": "162",
+        "sensitivity": {
+          "avg": 80.7,
+          "min": 95,
+          "max": 68.6
+        },
+        "specificity": {
+          "avg": 100,
+          "min": 95,
+          "max": 96.4
+        },
+        "testId": "AT029/20"
+      },
+      "Yokota, I., et al.": {
+        "author": "Yokota, I., et al.",
+        "location": "Japan",
+        "quadas": "high concern",
+        "independent": "no",
+        "sampleCondition": "banked",
+        "sampleType": "saliva",
+        "sampleSize": "17",
+        "sensitivity": {
+          "avg": 23.5,
+          "min": 95,
+          "max": 6.8
+        },
+        "testId": "AT029/20"
+      }
     },
     "selftest": false,
     "shops": []
@@ -1792,15 +2374,20 @@
     "distributors": [
       "GA Generic Assays GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9706,
-      "min": 0.91,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 0.992,
-      "min": 0.9795999999999999,
-      "max": 0.9978
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9706,
+          "min": 0.91,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.992,
+          "min": 0.9795999999999999,
+          "max": 0.9978
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -1819,15 +2406,20 @@
     "distributors": [
       "ASCANUS Pharma GmbHIVC Pragen GmbHMeridian Bioscience Europe SRLPreventor µTBC GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9,
-      "min": 0.73,
-      "max": 0.97
-    },
-    "specificity": {
-      "avg": 0.98,
-      "min": 0.9296,
-      "max": 0.9976
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9,
+          "min": 0.73,
+          "max": 0.97
+        },
+        "specificity": {
+          "avg": 0.98,
+          "min": 0.9296,
+          "max": 0.9976
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -1845,15 +2437,20 @@
     "distributors": [
       "ASCANUS Pharma GmbHIVC Pragen GmbHMTG GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9682999999999999,
-      "min": 0.92,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 0.9918,
-      "min": 0.9725,
-      "max": 0.9959
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9682999999999999,
+          "min": 0.92,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.9918,
+          "min": 0.9725,
+          "max": 0.9959
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -1875,15 +2472,20 @@
       "Detools GmbHDropshippers Germany",
       " Ingo GrebeImuGeX GmbHTriPart-Logistic GmbHmedienkraftwerk GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9503,
-      "min": 0.9,
-      "max": 0.97
-    },
-    "specificity": {
-      "avg": 0.9902,
-      "min": 0.9652,
-      "max": 0.9987999999999999
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9503,
+          "min": 0.9,
+          "max": 0.97
+        },
+        "specificity": {
+          "avg": 0.9902,
+          "min": 0.9652,
+          "max": 0.9987999999999999
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -1899,15 +2501,20 @@
     "distributors": [
       "Infarct Protect AG"
     ],
-    "sensitivity": {
-      "avg": 0.9686,
-      "min": 0.93,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.9897,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9686,
+          "min": 0.93,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.9897,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -1923,15 +2530,20 @@
     "distributors": [
       "Diagenics Group SE"
     ],
-    "sensitivity": {
-      "avg": 0.9673,
-      "min": 0.92,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.9838,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9673,
+          "min": 0.92,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.9838,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -1949,15 +2561,20 @@
     "distributors": [
       "Diagenics Group SEDiagenics Group SEVEWA-Handelsgesellschaft m.b.H."
     ],
-    "sensitivity": {
-      "avg": 0.9686,
-      "min": 0.93,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.9897,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9686,
+          "min": 0.93,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.9897,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -1973,15 +2590,20 @@
     "distributors": [
       "MediaConcepts GmbH Abteilung AsiaTrading-Group"
     ],
-    "sensitivity": {
-      "avg": 0.9706,
-      "min": 0.93,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 0.9871,
-      "min": 0.9673,
-      "max": 0.995
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9706,
+          "min": 0.93,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 0.9871,
+          "min": 0.9673,
+          "max": 0.995
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -1997,15 +2619,20 @@
     "distributors": [
       "Trendy Store GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9706,
-      "min": 0.89,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 0.9871,
-      "min": 0.9542,
-      "max": 0.9964
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9706,
+          "min": 0.89,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.9871,
+          "min": 0.9542,
+          "max": 0.9964
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -2021,15 +2648,20 @@
     "distributors": [
       ""
     ],
-    "sensitivity": {
-      "avg": 0.9009999999999999,
-      "min": 0.85,
-      "max": 0.93
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.9840000000000001,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9009999999999999,
+          "min": 0.85,
+          "max": 0.93
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.9840000000000001,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -2045,15 +2677,20 @@
     "distributors": [
       "Stephana GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.966,
-      "min": 0.92,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 0.9906999999999999,
-      "min": 0.9668000000000001,
-      "max": 0.9989
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.966,
+          "min": 0.92,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 0.9906999999999999,
+          "min": 0.9668000000000001,
+          "max": 0.9989
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -2069,15 +2706,20 @@
     "distributors": [
       "Bio-Gram Diagnostics GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9,
-      "min": 0.78,
-      "max": 0.95
-    },
-    "specificity": {
-      "avg": 0.992,
-      "min": 0.9793000000000001,
-      "max": 0.9969
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9,
+          "min": 0.78,
+          "max": 0.95
+        },
+        "specificity": {
+          "avg": 0.992,
+          "min": 0.9793000000000001,
+          "max": 0.9969
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -2093,15 +2735,20 @@
     "distributors": [
       "Pharmadoc"
     ],
-    "sensitivity": {
-      "avg": 0.9667,
-      "min": 0.88,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 0.995,
-      "min": 0.9722,
-      "max": 0.9991
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9667,
+          "min": 0.88,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.995,
+          "min": 0.9722,
+          "max": 0.9991
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -2117,15 +2764,20 @@
     "distributors": [
       "PHARMADOC GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9565,
-      "min": 0.9,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 0.9843999999999999,
-      "min": 0.9448000000000001,
-      "max": 0.9956999999999999
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9565,
+          "min": 0.9,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 0.9843999999999999,
+          "min": 0.9448000000000001,
+          "max": 0.9956999999999999
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -2142,15 +2794,20 @@
     "distributors": [
       "KL GmbHLifetec Electronics GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9783,
-      "min": 0.93,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 0.9908,
-      "min": 0.9673,
-      "max": 0.9989
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9783,
+          "min": 0.93,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.9908,
+          "min": 0.9673,
+          "max": 0.9989
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -2166,15 +2823,20 @@
     "distributors": [
       "Comtex GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.976,
-      "min": 0.93,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 0.9909,
-      "min": 0.9675,
-      "max": 0.9989
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.976,
+          "min": 0.93,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.9909,
+          "min": 0.9675,
+          "max": 0.9989
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -2200,15 +2862,40 @@
     "distributors": [
       "D&W The Motion Corporation GmbH & Co. KGHaemato Pharm GmbHKL GmbHKLT Health Trade GmbHLifetec Electronics GmbHLinus Handelshaus GmbHNeucomed Deutschland GmbHTRADEPAS GmbHmedienkraftwerk GmbHulti med Products (Deutschland) GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9618000000000001,
-      "min": 0.94,
-      "max": 0.97
-    },
-    "specificity": {
-      "avg": 0.9972,
-      "min": 0.9845,
-      "max": 0.9995
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9618000000000001,
+          "min": 0.94,
+          "max": 0.97
+        },
+        "specificity": {
+          "avg": 0.9972,
+          "min": 0.9845,
+          "max": 0.9995
+        }
+      },
+      "FINDdx": {
+        "author": "FINDdx",
+        "location": "Switzerland",
+        "quadas": "low concern",
+        "independent": "yes",
+        "sampleCondition": "fresh",
+        "sampleType": "NP",
+        "sampleSize": "328",
+        "sensitivity": {
+          "avg": 85.7,
+          "min": 95,
+          "max": 74.3
+        },
+        "specificity": {
+          "avg": 100,
+          "min": 95,
+          "max": 98.6
+        },
+        "testId": "AT125/20"
+      }
     },
     "selftest": false,
     "shops": []
@@ -2224,15 +2911,20 @@
     "distributors": [
       "Biamed GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.976,
-      "min": 0.93,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 0.9909,
-      "min": 0.9675,
-      "max": 0.9989
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.976,
+          "min": 0.93,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.9909,
+          "min": 0.9675,
+          "max": 0.9989
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -2248,15 +2940,20 @@
     "distributors": [
       "Global Human Health&Care AG"
     ],
-    "sensitivity": {
-      "avg": 0.976,
-      "min": 0.93,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 0.9909,
-      "min": 0.9675,
-      "max": 0.9989
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.976,
+          "min": 0.93,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.9909,
+          "min": 0.9675,
+          "max": 0.9989
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -2272,15 +2969,20 @@
     "distributors": [
       "LumiraDx GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.95,
-      "min": 0.83,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 0.992,
-      "min": 0.976,
-      "max": 0.998
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.95,
+          "min": 0.83,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.992,
+          "min": 0.976,
+          "max": 0.998
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -2296,15 +2998,20 @@
     "distributors": [
       "LumiraDx GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.95,
-      "min": 0.83,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 0.992,
-      "min": 0.976,
-      "max": 0.998
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.95,
+          "min": 0.83,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.992,
+          "min": 0.976,
+          "max": 0.998
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -2320,15 +3027,20 @@
     "distributors": [
       "ETH Wertstoffrecycling GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.899,
-      "min": 0.83,
-      "max": 0.94
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.982,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.899,
+          "min": 0.83,
+          "max": 0.94
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.982,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -2345,15 +3057,20 @@
     "distributors": [
       "Adooha GmbHDeutsche HansaGT GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.914,
-      "min": 0.85,
-      "max": 0.94
-    },
-    "specificity": {
-      "avg": 0.9940000000000001,
-      "min": 0.981,
-      "max": 0.998
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.914,
+          "min": 0.85,
+          "max": 0.94
+        },
+        "specificity": {
+          "avg": 0.9940000000000001,
+          "min": 0.981,
+          "max": 0.998
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -2369,15 +3086,20 @@
     "distributors": [
       "ulti med Products (Deutschland) GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.975,
-      "min": 0.92,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 0.9940000000000001,
-      "min": 0.981,
-      "max": 0.998
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.975,
+          "min": 0.92,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.9940000000000001,
+          "min": 0.981,
+          "max": 0.998
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -2394,15 +3116,20 @@
     "distributors": [
       "Detools GmbHDunox GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.968,
-      "min": 0.92,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 0.996,
-      "min": 0.985,
-      "max": 0.9990000000000001
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.968,
+          "min": 0.92,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 0.996,
+          "min": 0.985,
+          "max": 0.9990000000000001
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -2445,15 +3172,20 @@
     "distributors": [
       "Alpha-Medics GmbHBIOTREND Chemikalien GmbHBauer -KarlsruheDH Mobility B.V.Der Werbemarkt GmbHDetools GmbHDeutsche HansaGT GmbHDixion Vertrieb medizinischer Geräte GmbHDunox GmbHEYBEL GmbHEmotive Systems GmbHEnkatex Workwear GmbHErwin Kowsky GmbH & Co. KGGESINO GmbHGesundheit2000 F. Steege e.K.Haemato Pharm GmbHPCR-Lab-Products GbRPraxisdienst GmbH & Co. KGPromo Trading GmbHS2 Health GmbHS2 Health GmbHSchreiner Elektronik GmbHSolenal GmbHSwissbrands GmbHWinlong GmbHmedienkraftwerk GmbHulti med Products (Deutschland) GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.985,
-      "min": 0.91,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.982,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.985,
+          "min": 0.91,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.982,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -2469,15 +3201,20 @@
     "distributors": [
       "Alpha-Medics GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.975,
-      "min": 0.92,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 0.9940000000000001,
-      "min": 0.981,
-      "max": 0.998
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.975,
+          "min": 0.92,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.9940000000000001,
+          "min": 0.981,
+          "max": 0.998
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -2495,15 +3232,20 @@
     "distributors": [
       "Praxisdienst GmbH & Co. KGSolenal GmbHSundoc EU GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.977,
-      "min": 0.93,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 0.998,
-      "min": 0.988,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.977,
+          "min": 0.93,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.998,
+          "min": 0.988,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -2519,15 +3261,20 @@
     "distributors": [
       ""
     ],
-    "sensitivity": {
-      "avg": 0.973,
-      "min": 0.85,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.9494,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.973,
+          "min": 0.85,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.9494,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -2543,15 +3290,20 @@
     "distributors": [
       "Brand-New Trading GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9106000000000001,
-      "min": 0.84,
-      "max": 0.95
-    },
-    "specificity": {
-      "avg": 0.9867,
-      "min": 0.9495999999999999,
-      "max": 0.9994
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9106000000000001,
+          "min": 0.84,
+          "max": 0.95
+        },
+        "specificity": {
+          "avg": 0.9867,
+          "min": 0.9495999999999999,
+          "max": 0.9994
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -2567,15 +3319,20 @@
     "distributors": [
       "Spreenic GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.956,
-      "min": 0.88,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.9878,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.956,
+          "min": 0.88,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.9878,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -2591,15 +3348,20 @@
     "distributors": [
       "Brand-New Trading GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9439,
-      "min": 0.88,
-      "max": null
-    },
-    "specificity": {
-      "avg": 0.9767,
-      "min": 0.97,
-      "max": null
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9439,
+          "min": 0.88,
+          "max": null
+        },
+        "specificity": {
+          "avg": 0.9767,
+          "min": 0.97,
+          "max": null
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -2615,15 +3377,20 @@
     "distributors": [
       "Lissner Qi GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9616,
-      "min": 0.93,
-      "max": 0.97
-    },
-    "specificity": {
-      "avg": 0.997,
-      "min": 0.9892,
-      "max": 0.9995999999999999
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9616,
+          "min": 0.93,
+          "max": 0.97
+        },
+        "specificity": {
+          "avg": 0.997,
+          "min": 0.9892,
+          "max": 0.9995999999999999
+        }
+      }
     },
     "selftest": true,
     "shops": []
@@ -2640,15 +3407,20 @@
     "distributors": [
       "Biorepair GmbHWinlong GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9629000000000001,
-      "min": 0.92,
-      "max": 1
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.998,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9629000000000001,
+          "min": 0.92,
+          "max": 1
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.998,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -2676,15 +3448,20 @@
     "distributors": [
       "Deutsche HansaGT GmbHDropshippers GermanyGeSino GmbHIMPORA GLOBAL GmbHInfiniti-Options GmbHKLT Health Trade GmbHKMU Zentrale GmbHMS Print Inh. Michael ScholzPOPLUX GmbHSinoma Europe GmbHTREKSTOR GmbHWinlong GmbHZebra Invest Handelshaus UG (haftungsbeschränkt)"
     ],
-    "sensitivity": {
-      "avg": 0.929,
-      "min": 0.87,
-      "max": 0.96
-    },
-    "specificity": {
-      "avg": 0.9958,
-      "min": 0.9739,
-      "max": 0.9998999999999999
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.929,
+          "min": 0.87,
+          "max": 0.96
+        },
+        "specificity": {
+          "avg": 0.9958,
+          "min": 0.9739,
+          "max": 0.9998999999999999
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -2738,15 +3515,20 @@
       " NL GermanyAzure Trading GmbHBrawa GmbHDetools GmbHDeutsche HansaGT GmbHDr. Grob Healthcare GmbHDropshippers Germany",
       " Ingo GrebeEmanto GmbHFa.CRYOFOS Medical GmbHFortuna GmbHGESINO GmbHGTRD GmbHHATEX AS GmbH & Co. KGHygienevertrieb UllrichIMPORA GLOBAL GmbHIONTO Health & Beauty GmbHInfiniti-Options GmbHKLT Health Trade GmbHKock & Sack GmbHLifetec Electronics GmbHNordic Supplies GmbHPHARMADOC GmbHPOPLUX GmbHPPE Germany GmbHPharmadrug International GmbH (Steppensohn Medicals)S2 Health GmbHSinoma Europe GmbHSwissbrands GmbHTREKSTOR GmbHTextil One GmbHTriPart-Logistic GmbHWiBaMedWinlong GmbHZINNZ GmbHZebra Invest Handelshaus UG (haftungsbeschränkt)fameditec GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9617,
-      "min": 0.92,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 0.9990000000000001,
-      "min": 0.9848,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9617,
+          "min": 0.92,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 0.9990000000000001,
+          "min": 0.9848,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -2764,15 +3546,20 @@
     "distributors": [
       "KL GmbHMTC GmbHmedienkraftwerk GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9209999999999999,
-      "min": 0.87,
-      "max": 0.93
-    },
-    "specificity": {
-      "avg": 0.981,
-      "min": 0.9514,
-      "max": 0.9944
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9209999999999999,
+          "min": 0.87,
+          "max": 0.93
+        },
+        "specificity": {
+          "avg": 0.981,
+          "min": 0.9514,
+          "max": 0.9944
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -2788,15 +3575,20 @@
     "distributors": [
       "Brawa GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9359999999999999,
-      "min": 0.92,
-      "max": 0.94
-    },
-    "specificity": {
-      "avg": 0.988,
-      "min": 0.985,
-      "max": 0.991
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9359999999999999,
+          "min": 0.92,
+          "max": 0.94
+        },
+        "specificity": {
+          "avg": 0.988,
+          "min": 0.985,
+          "max": 0.991
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -2813,15 +3605,20 @@
     "distributors": [
       "Brawa GmbHGTRD GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.976,
-      "min": 0.94,
-      "max": 1
-    },
-    "specificity": {
-      "avg": 0.9840000000000001,
-      "min": 0.9690000000000001,
-      "max": 0.9990000000000001
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.976,
+          "min": 0.94,
+          "max": 1
+        },
+        "specificity": {
+          "avg": 0.9840000000000001,
+          "min": 0.9690000000000001,
+          "max": 0.9990000000000001
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -2837,15 +3634,40 @@
     "distributors": [
       "Quinn Healthcare"
     ],
-    "sensitivity": {
-      "avg": 0.9832,
-      "min": 0.94,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 0.996,
-      "min": 0.9883,
-      "max": 0.9992
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9832,
+          "min": 0.94,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.996,
+          "min": 0.9883,
+          "max": 0.9992
+        }
+      },
+      "Favresse, J., et al.": {
+        "author": "Favresse, J., et al.",
+        "location": "Belgium",
+        "quadas": "intermediate concern",
+        "independent": "yes",
+        "sampleCondition": "fresh",
+        "sampleType": "NP",
+        "sampleSize": "188",
+        "sensitivity": {
+          "avg": 77.1,
+          "min": 95,
+          "max": 67.4
+        },
+        "specificity": {
+          "avg": 96.7,
+          "min": 95,
+          "max": 90.8
+        },
+        "testId": "AT079/21"
+      }
     },
     "selftest": false,
     "shops": []
@@ -2863,15 +3685,80 @@
     "distributors": [
       "A. Menarini DiagnosticsSiemens Healthcare GmbHTriPart Logistic GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9725,
-      "min": 0.92,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.9716,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9725,
+          "min": 0.92,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.9716,
+          "max": 1
+        }
+      },
+      "Torres, I. et al.": {
+        "author": "Torres, I. et al.",
+        "location": "Spain",
+        "quadas": "low concern",
+        "independent": "yes",
+        "sampleCondition": "fresh",
+        "sampleType": "NP",
+        "sampleSize": "92",
+        "sensitivity": {
+          "avg": 60,
+          "min": 95,
+          "max": 40.7
+        },
+        "specificity": {
+          "avg": 100,
+          "min": 95,
+          "max": 94.6
+        },
+        "testId": "AT001/20"
+      },
+      "Olearo, F., et al.": {
+        "author": "Olearo, F., et al.",
+        "location": "Germany",
+        "quadas": "intermediate concern",
+        "independent": "yes",
+        "sampleCondition": "unclear",
+        "sampleType": "OP",
+        "sampleSize": "170",
+        "sensitivity": {
+          "avg": 54.9,
+          "min": 95,
+          "max": 43.4
+        },
+        "specificity": {
+          "avg": 100,
+          "min": 95,
+          "max": 96.3
+        },
+        "testId": "AT001/20"
+      },
+      "Baro, B., et al.": {
+        "author": "Baro, B., et al.",
+        "location": "Spain",
+        "quadas": "intermediate concern",
+        "independent": "yes",
+        "sampleCondition": "banked",
+        "sampleType": "NP",
+        "sampleSize": "286",
+        "sensitivity": {
+          "avg": 51.5,
+          "min": 95,
+          "max": 41.3
+        },
+        "specificity": {
+          "avg": 98.4,
+          "min": 95,
+          "max": 95.3
+        },
+        "testId": "AT001/20"
+      }
     },
     "selftest": true,
     "shops": []
@@ -2887,15 +3774,20 @@
     "distributors": [
       "CJST Med UG"
     ],
-    "sensitivity": {
-      "avg": 0.9802,
-      "min": 0.93,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 0.993,
-      "min": 0.963,
-      "max": 0.9987999999999999
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9802,
+          "min": 0.93,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.993,
+          "min": 0.963,
+          "max": 0.9987999999999999
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -2912,15 +3804,20 @@
     "distributors": [
       "GS Global Europe gmbhgoodscare GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.955,
-      "min": 0.9,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.98,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.955,
+          "min": 0.9,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.98,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -2936,15 +3833,20 @@
     "distributors": [
       "SALUTIS-Deutschland"
     ],
-    "sensitivity": {
-      "avg": 0.9640000000000001,
-      "min": 0.91,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 0.992,
-      "min": 0.978,
-      "max": 0.997
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9640000000000001,
+          "min": 0.91,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 0.992,
+          "min": 0.978,
+          "max": 0.997
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -2960,15 +3862,20 @@
     "distributors": [
       "Ysion UG"
     ],
-    "sensitivity": {
-      "avg": 0.956,
-      "min": 0.93,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 0.9998999999999999,
-      "min": 0.9712000000000001,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.956,
+          "min": 0.93,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 0.9998999999999999,
+          "min": 0.9712000000000001,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -2985,15 +3892,20 @@
     "distributors": [
       "Swissbrands GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.963,
-      "min": 0.91,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 0.9934000000000001,
-      "min": 0.987,
-      "max": 0.9971
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.963,
+          "min": 0.91,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 0.9934000000000001,
+          "min": 0.987,
+          "max": 0.9971
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -3009,15 +3921,20 @@
     "distributors": [
       "NYKS Company"
     ],
-    "sensitivity": {
-      "avg": 0.963,
-      "min": 0.91,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 0.9934000000000001,
-      "min": 0.987,
-      "max": 0.9971
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.963,
+          "min": 0.91,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 0.9934000000000001,
+          "min": 0.987,
+          "max": 0.9971
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -3033,15 +3950,20 @@
     "distributors": [
       "Detools GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.963,
-      "min": 0.91,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 0.9934000000000001,
-      "min": 0.987,
-      "max": 0.9971
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.963,
+          "min": 0.91,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 0.9934000000000001,
+          "min": 0.987,
+          "max": 0.9971
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -3057,15 +3979,20 @@
     "distributors": [
       "Yiwu Commodity City GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9664,
-      "min": 0.91,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 0.991,
-      "min": 0.9677,
-      "max": 0.9989
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9664,
+          "min": 0.91,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.991,
+          "min": 0.9677,
+          "max": 0.9989
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -3081,15 +4008,20 @@
     "distributors": [
       "ALIC Deutschland GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9873999999999999,
-      "min": 0.96,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.9913,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9873999999999999,
+          "min": 0.96,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.9913,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -3105,15 +4037,20 @@
     "distributors": [
       "ALIC Deutschland GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9758,
-      "min": 0.95,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.9818000000000001,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9758,
+          "min": 0.95,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.9818000000000001,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -3129,15 +4066,20 @@
     "distributors": [
       "ALIC Deutschland GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9726,
-      "min": 0.93,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.9721,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9726,
+          "min": 0.93,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.9721,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -3154,15 +4096,20 @@
     "distributors": [
       "Praxisdienst GmbH & Co. KGcare impuls Vertriebs GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.95,
-      "min": 0.86,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.8843000000000001,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.95,
+          "min": 0.86,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.8843000000000001,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -3178,15 +4125,20 @@
     "distributors": [
       "care impuls Vertriebs GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.961,
-      "min": 0.88,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 0.981,
-      "min": 0.953,
-      "max": 0.995
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.961,
+          "min": 0.88,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.981,
+          "min": 0.953,
+          "max": 0.995
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -3210,15 +4162,20 @@
     "distributors": [
       "Alpha-Medics GmbHDeutsche HansaGT GmbHDr. Grob Healthcare GmbHEmotive Systems GmbHEybel GmbHGESINO GmbHKFMS GmbHMP Med GmbHMediMode GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.951,
-      "min": 0.88,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.986,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.951,
+          "min": 0.88,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.986,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -3242,15 +4199,20 @@
     "distributors": [
       "ADVENT GROUP SARLAdooha GmbHDeutsche HansaGT GmbHDr. Grob Healthcare GmbHImuGeX GmbHKröner Medizintechnik GmbHNeucomed Deutschland GmbHNew Mobility AG"
     ],
-    "sensitivity": {
-      "avg": 0.9872,
-      "min": 0.93,
-      "max": 1
-    },
-    "specificity": {
-      "avg": 0.9732,
-      "min": 0.924,
-      "max": 0.9940000000000001
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9872,
+          "min": 0.93,
+          "max": 1
+        },
+        "specificity": {
+          "avg": 0.9732,
+          "min": 0.924,
+          "max": 0.9940000000000001
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -3266,15 +4228,20 @@
     "distributors": [
       "enverque GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.985,
-      "min": 0.97,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 0.993,
-      "min": 0.985,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.985,
+          "min": 0.97,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.993,
+          "min": 0.985,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -3290,15 +4257,20 @@
     "distributors": [
       "NanoRepro AG"
     ],
-    "sensitivity": {
-      "avg": 0.963,
-      "min": 0.89,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 0.973,
-      "min": 0.9481,
-      "max": 0.9884000000000001
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.963,
+          "min": 0.89,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.973,
+          "min": 0.9481,
+          "max": 0.9884000000000001
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -3314,15 +4286,20 @@
     "distributors": [
       ""
     ],
-    "sensitivity": {
-      "avg": 0.9444,
-      "min": 0.88,
-      "max": 0.97
-    },
-    "specificity": {
-      "avg": 0.9828,
-      "min": 0.9390999999999999,
-      "max": 0.9979
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9444,
+          "min": 0.88,
+          "max": 0.97
+        },
+        "specificity": {
+          "avg": 0.9828,
+          "min": 0.9390999999999999,
+          "max": 0.9979
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -3338,15 +4315,20 @@
     "distributors": [
       "Siegmund Care GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9333,
-      "min": 0.86,
-      "max": 0.97
-    },
-    "specificity": {
-      "avg": 0.9915999999999999,
-      "min": 0.9668000000000001,
-      "max": 0.9984999999999999
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9333,
+          "min": 0.86,
+          "max": 0.97
+        },
+        "specificity": {
+          "avg": 0.9915999999999999,
+          "min": 0.9668000000000001,
+          "max": 0.9984999999999999
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -3363,15 +4345,20 @@
     "distributors": [
       "Catus Biotech GmbHMedipro medizinische diagnostische produkte gmbh"
     ],
-    "sensitivity": {
-      "avg": 0.937,
-      "min": 0.89,
-      "max": 0.97
-    },
-    "specificity": {
-      "avg": 0.988,
-      "min": 0.965,
-      "max": 0.9998999999999999
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.937,
+          "min": 0.89,
+          "max": 0.97
+        },
+        "specificity": {
+          "avg": 0.988,
+          "min": 0.965,
+          "max": 0.9998999999999999
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -3387,15 +4374,60 @@
     "distributors": [
       "Lumiradx GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.938,
-      "min": 0.89,
-      "max": 0.96
-    },
-    "specificity": {
-      "avg": 0.988,
-      "min": 0.976,
-      "max": 0.9940000000000001
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.938,
+          "min": 0.89,
+          "max": 0.96
+        },
+        "specificity": {
+          "avg": 0.988,
+          "min": 0.976,
+          "max": 0.9940000000000001
+        }
+      },
+      "Drain, P.K., et al.": {
+        "author": "Drain, P.K., et al.",
+        "location": "UK/US",
+        "quadas": "low concern",
+        "independent": "no",
+        "sampleCondition": "fresh",
+        "sampleType": "NP",
+        "sampleSize": "255",
+        "sensitivity": {
+          "avg": 97.5,
+          "min": 95,
+          "max": 87.1
+        },
+        "specificity": {
+          "avg": 97.7,
+          "min": 95,
+          "max": 94.7
+        },
+        "testId": "AT075/20"
+      },
+      "Kohmer, N., et al.": {
+        "author": "Kohmer, N., et al.",
+        "location": "Germany",
+        "quadas": "intermediate concern",
+        "independent": "yes",
+        "sampleCondition": "fresh",
+        "sampleType": "NP",
+        "sampleSize": "100",
+        "sensitivity": {
+          "avg": 50,
+          "min": 95,
+          "max": 38.1
+        },
+        "specificity": {
+          "avg": 100,
+          "min": 95,
+          "max": 86.8
+        },
+        "testId": "AT075/20"
+      }
     },
     "selftest": false,
     "shops": []
@@ -3411,15 +4443,20 @@
     "distributors": [
       "GOSC GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.956,
-      "min": 0.94,
-      "max": 0.96
-    },
-    "specificity": {
-      "avg": 0.99,
-      "min": 0.9826999999999999,
-      "max": 0.9948999999999999
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.956,
+          "min": 0.94,
+          "max": 0.96
+        },
+        "specificity": {
+          "avg": 0.99,
+          "min": 0.9826999999999999,
+          "max": 0.9948999999999999
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -3435,15 +4472,20 @@
     "distributors": [
       "meVita-Berlin GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9652,
-      "min": 0.91,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.9773999999999999,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9652,
+          "min": 0.91,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.9773999999999999,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -3459,15 +4501,20 @@
     "distributors": [
       "TP Medicare GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9545,
-      "min": 0.78,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.9036,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9545,
+          "min": 0.78,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.9036,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -3483,15 +4530,20 @@
     "distributors": [
       ""
     ],
-    "sensitivity": {
-      "avg": 0.9670000000000001,
-      "min": 0.91,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.992,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9670000000000001,
+          "min": 0.91,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.992,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -3507,15 +4559,20 @@
     "distributors": [
       ""
     ],
-    "sensitivity": {
-      "avg": 0.925,
-      "min": 0.86,
-      "max": 0.96
-    },
-    "specificity": {
-      "avg": 0.998,
-      "min": 0.9890000000000001,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.925,
+          "min": 0.86,
+          "max": 0.96
+        },
+        "specificity": {
+          "avg": 0.998,
+          "min": 0.9890000000000001,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -3531,15 +4588,40 @@
     "distributors": [
       ""
     ],
-    "sensitivity": {
-      "avg": 0.925,
-      "min": 0.86,
-      "max": 0.96
-    },
-    "specificity": {
-      "avg": 0.998,
-      "min": 0.9890000000000001,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.925,
+          "min": 0.86,
+          "max": 0.96
+        },
+        "specificity": {
+          "avg": 0.998,
+          "min": 0.9890000000000001,
+          "max": 1
+        }
+      },
+      "Olearo, F., et al.": {
+        "author": "Olearo, F., et al.",
+        "location": "Germany",
+        "quadas": "intermediate concern",
+        "independent": "yes",
+        "sampleCondition": "unclear",
+        "sampleType": "OP",
+        "sampleSize": "184",
+        "sensitivity": {
+          "avg": 45.8,
+          "min": null,
+          "max": 35.5
+        },
+        "specificity": {
+          "avg": 97,
+          "min": null,
+          "max": 91.5
+        },
+        "testId": "AT012/20"
+      }
     },
     "selftest": false,
     "shops": []
@@ -3555,15 +4637,20 @@
     "distributors": [
       "EightPlus Kft"
     ],
-    "sensitivity": {
-      "avg": 0.9505,
-      "min": 0.88,
-      "max": 0.97
-    },
-    "specificity": {
-      "avg": 0.9899,
-      "min": 0.945,
-      "max": 0.9982
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9505,
+          "min": 0.88,
+          "max": 0.97
+        },
+        "specificity": {
+          "avg": 0.9899,
+          "min": 0.945,
+          "max": 0.9982
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -3580,15 +4667,20 @@
     "distributors": [
       "MEXACARE GmbHMedVec"
     ],
-    "sensitivity": {
-      "avg": 0.9565,
-      "min": 0.91,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 0.9937999999999999,
-      "min": 0.985,
-      "max": 0.9990000000000001
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9565,
+          "min": 0.91,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.9937999999999999,
+          "min": 0.985,
+          "max": 0.9990000000000001
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -3605,15 +4697,20 @@
     "distributors": [
       "MEXACARE GmbHMedVec"
     ],
-    "sensitivity": {
-      "avg": 0.9375,
-      "min": 0.86,
-      "max": 0.97
-    },
-    "specificity": {
-      "avg": 0.983,
-      "min": 0.9109999999999999,
-      "max": 0.9990000000000001
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9375,
+          "min": 0.86,
+          "max": 0.97
+        },
+        "specificity": {
+          "avg": 0.983,
+          "min": 0.9109999999999999,
+          "max": 0.9990000000000001
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -3631,15 +4728,20 @@
     "distributors": [
       "Axon Lab AGCare 1 Solution GmbH & Co. KG"
     ],
-    "sensitivity": {
-      "avg": 0.9725,
-      "min": 0.92,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 0.9998999999999999,
-      "min": 0.9716,
-      "max": 0.9998999999999999
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9725,
+          "min": 0.92,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.9998999999999999,
+          "min": 0.9716,
+          "max": 0.9998999999999999
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -3655,15 +4757,20 @@
     "distributors": [
       ""
     ],
-    "sensitivity": {
-      "avg": 0.9639,
-      "min": 0.92,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 0.9903,
-      "min": 0.9809,
-      "max": 0.9998
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9639,
+          "min": 0.92,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.9903,
+          "min": 0.9809,
+          "max": 0.9998
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -3679,15 +4786,20 @@
     "distributors": [
       "MSP bodmann GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9612,
-      "min": 0.9,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 0.9998999999999999,
-      "min": 0.9863,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9612,
+          "min": 0.9,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 0.9998999999999999,
+          "min": 0.9863,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -3704,15 +4816,53 @@
     "distributors": [
       "Axon Lab AG"
     ],
-    "sensitivity": {
-      "avg": 0.976,
-      "min": 0.93,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 0.9990000000000001,
-      "min": 0.977,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.976,
+          "min": 0.93,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.9990000000000001,
+          "min": 0.977,
+          "max": 1
+        }
+      },
+      "Strömer, A., et al.": {
+        "author": "Strömer, A., et al.",
+        "location": "Germany",
+        "quadas": "high concern",
+        "independent": "yes",
+        "sampleCondition": "banked",
+        "sampleType": "NP",
+        "sampleSize": "124",
+        "sensitivity": {
+          "avg": 73.1
+        },
+        "testId": "AT021/20"
+      },
+      "Kohmer, N., et al.": {
+        "author": "Kohmer, N., et al.",
+        "location": "Germany",
+        "quadas": "intermediate concern",
+        "independent": "yes",
+        "sampleCondition": "fresh",
+        "sampleType": "NP",
+        "sampleSize": "100",
+        "sensitivity": {
+          "avg": 24.3,
+          "min": 95,
+          "max": 15.1
+        },
+        "specificity": {
+          "avg": 100,
+          "min": 95,
+          "max": 86.8
+        },
+        "testId": "AT021/20"
+      }
     },
     "selftest": false,
     "shops": []
@@ -3728,15 +4878,20 @@
     "distributors": [
       ""
     ],
-    "sensitivity": {
-      "avg": 0.971,
-      "min": 0.93,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 0.9990000000000001,
-      "min": 0.991,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.971,
+          "min": 0.93,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 0.9990000000000001,
+          "min": 0.991,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -3752,15 +4907,20 @@
     "distributors": [
       ""
     ],
-    "sensitivity": {
-      "avg": 0.976,
-      "min": 0.93,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 0.9990000000000001,
-      "min": 0.977,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.976,
+          "min": 0.93,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.9990000000000001,
+          "min": 0.977,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -3777,15 +4937,20 @@
       "Syn diagnostic",
       " Dr. W. Gottstein"
     ],
-    "sensitivity": {
-      "avg": 0.9231,
-      "min": 0.79,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 0.9726,
-      "min": 0.9045000000000001,
-      "max": 0.9967
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9231,
+          "min": 0.79,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 0.9726,
+          "min": 0.9045000000000001,
+          "max": 0.9967
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -3801,15 +4966,20 @@
     "distributors": [
       ""
     ],
-    "sensitivity": {
-      "avg": 0.9320999999999999,
-      "min": 0.88,
-      "max": 0.96
-    },
-    "specificity": {
-      "avg": 0.9929000000000001,
-      "min": 0.9795,
-      "max": 0.9984999999999999
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9320999999999999,
+          "min": 0.88,
+          "max": 0.96
+        },
+        "specificity": {
+          "avg": 0.9929000000000001,
+          "min": 0.9795,
+          "max": 0.9984999999999999
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -3825,15 +4995,20 @@
     "distributors": [
       "KL GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9194,
-      "min": 0.82,
-      "max": 0.96
-    },
-    "specificity": {
-      "avg": 0.9706,
-      "min": 0.9405,
-      "max": 0.9856999999999999
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9194,
+          "min": 0.82,
+          "max": 0.96
+        },
+        "specificity": {
+          "avg": 0.9706,
+          "min": 0.9405,
+          "max": 0.9856999999999999
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -3849,15 +5024,20 @@
     "distributors": [
       "MS Med-Tech Supplies GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9412,
-      "min": 0.78,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.9393,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9412,
+          "min": 0.78,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.9393,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -3874,15 +5054,20 @@
     "distributors": [
       "Vice Vertriebs GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.97,
-      "min": 0.91,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 0.98,
-      "min": 0.9570000000000001,
-      "max": 0.993
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.97,
+          "min": 0.91,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.98,
+          "min": 0.9570000000000001,
+          "max": 0.993
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -3898,15 +5083,20 @@
     "distributors": [
       "NanoRepro AG"
     ],
-    "sensitivity": {
-      "avg": 0.981,
-      "min": 0.95,
-      "max": 1
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 1,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.981,
+          "min": 0.95,
+          "max": 1
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 1,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -3922,15 +5112,20 @@
     "distributors": [
       "Erwin Kowsky GmbH & Co. KG"
     ],
-    "sensitivity": {
-      "avg": 0.981,
-      "min": 0.95,
-      "max": 1
-    },
-    "specificity": {
-      "avg": 0.9933,
-      "min": 0.9802,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.981,
+          "min": 0.95,
+          "max": 1
+        },
+        "specificity": {
+          "avg": 0.9933,
+          "min": 0.9802,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -3946,15 +5141,20 @@
     "distributors": [
       "ROBEX ENERGY SYSTEMS GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.973,
-      "min": 0.92,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 0.992,
-      "min": 0.958,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.973,
+          "min": 0.92,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.992,
+          "min": 0.958,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -3970,15 +5170,20 @@
     "distributors": [
       "ROBEX ENERGY SYSTEMS GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.98,
-      "min": 0.9,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 0.991,
-      "min": 0.9520000000000001,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.98,
+          "min": 0.9,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.991,
+          "min": 0.9520000000000001,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -3994,15 +5199,20 @@
     "distributors": [
       "Futuring Sales S.A.R.L."
     ],
-    "sensitivity": {
-      "avg": 0.83,
-      "min": 0.74,
-      "max": 0.9
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.96,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.83,
+          "min": 0.74,
+          "max": 0.9
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.96,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -4018,15 +5228,20 @@
     "distributors": [
       "LINUS Handelshaus GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.892,
-      "min": 0.82,
-      "max": 0.94
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.929,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.892,
+          "min": 0.82,
+          "max": 0.94
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.929,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -4042,15 +5257,20 @@
     "distributors": [
       ""
     ],
-    "sensitivity": {
-      "avg": 0.9754,
-      "min": 0.93,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.9853000000000001,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9754,
+          "min": 0.93,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.9853000000000001,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -4066,15 +5286,20 @@
     "distributors": [
       "Casada International GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9636,
-      "min": 0.91,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 0.9804,
-      "min": 0.9614,
-      "max": 0.9994
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9636,
+          "min": 0.91,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.9804,
+          "min": 0.9614,
+          "max": 0.9994
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -4090,15 +5315,20 @@
     "distributors": [
       ""
     ],
-    "sensitivity": {
-      "avg": 0.978,
-      "min": 0.88,
-      "max": 1
-    },
-    "specificity": {
-      "avg": 0.992,
-      "min": 0.958,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.978,
+          "min": 0.88,
+          "max": 1
+        },
+        "specificity": {
+          "avg": 0.992,
+          "min": 0.958,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -4117,15 +5347,20 @@
       "Gesellschaft zur Forschung",
       " Entwicklung  und Distribution von Diagnostika  im Blutspendewesen mbHHGHSerumwerk Bernburg AG"
     ],
-    "sensitivity": {
-      "avg": 0.9492,
-      "min": 0.8,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 0.9998999999999999,
-      "min": 0.9487000000000001,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9492,
+          "min": 0.8,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.9998999999999999,
+          "min": 0.9487000000000001,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -4141,15 +5376,20 @@
     "distributors": [
       "JingCheng Asia Group Limited"
     ],
-    "sensitivity": {
-      "avg": 0.9428,
-      "min": 0.92,
-      "max": 0.95
-    },
-    "specificity": {
-      "avg": 0.9911,
-      "min": 0.9793999999999999,
-      "max": 0.9962000000000001
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9428,
+          "min": 0.92,
+          "max": 0.95
+        },
+        "specificity": {
+          "avg": 0.9911,
+          "min": 0.9793999999999999,
+          "max": 0.9962000000000001
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -4165,15 +5405,36 @@
     "distributors": [
       "Axon Lab AG"
     ],
-    "sensitivity": {
-      "avg": 0.9388,
-      "min": 0.83,
-      "max": 0.97
-    },
-    "specificity": {
-      "avg": 0.98,
-      "min": 0.895,
-      "max": 0.996
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9388,
+          "min": 0.83,
+          "max": 0.97
+        },
+        "specificity": {
+          "avg": 0.98,
+          "min": 0.895,
+          "max": 0.996
+        }
+      },
+      "Caruana, G., et al.": {
+        "author": "Caruana, G., et al.",
+        "location": "Switzerland",
+        "quadas": "intermediate concern",
+        "independent": "yes",
+        "sampleCondition": "fresh",
+        "sampleType": "NP",
+        "sampleSize": "532",
+        "sensitivity": {
+          "avg": 48.3
+        },
+        "specificity": {
+          "avg": 99.5
+        },
+        "testId": "AT078/20"
+      }
     },
     "selftest": false,
     "shops": []
@@ -4189,15 +5450,20 @@
     "distributors": [
       "LMS Consult GmbH &Co. KG"
     ],
-    "sensitivity": {
-      "avg": 0.9556,
-      "min": 0.9,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 0.9958,
-      "min": 0.985,
-      "max": 0.9990000000000001
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9556,
+          "min": 0.9,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 0.9958,
+          "min": 0.985,
+          "max": 0.9990000000000001
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -4213,15 +5479,20 @@
     "distributors": [
       ""
     ],
-    "sensitivity": {
-      "avg": 0.95,
-      "min": 0.88,
-      "max": 0.97
-    },
-    "specificity": {
-      "avg": 0.9975,
-      "min": 0.986,
-      "max": 0.9995999999999999
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.95,
+          "min": 0.88,
+          "max": 0.97
+        },
+        "specificity": {
+          "avg": 0.9975,
+          "min": 0.986,
+          "max": 0.9995999999999999
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -4238,15 +5509,20 @@
     "distributors": [
       "MIKKA GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.95,
-      "min": 0.88,
-      "max": 0.97
-    },
-    "specificity": {
-      "avg": 0.9975,
-      "min": 0.986,
-      "max": 0.9995999999999999
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.95,
+          "min": 0.88,
+          "max": 0.97
+        },
+        "specificity": {
+          "avg": 0.9975,
+          "min": 0.986,
+          "max": 0.9995999999999999
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -4262,15 +5538,96 @@
     "distributors": [
       "Quidel Germany GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9670000000000001,
-      "min": 0.83,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.9790000000000001,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9670000000000001,
+          "min": 0.83,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.9790000000000001,
+          "max": 1
+        }
+      },
+      "Porte, L., et al.": {
+        "author": "Porte, L., et al.",
+        "location": "Chile",
+        "quadas": "high concern",
+        "independent": "no",
+        "sampleCondition": "banked",
+        "sampleType": "NP/OP",
+        "sampleSize": "64",
+        "sensitivity": {
+          "avg": 93.8,
+          "min": 95,
+          "max": 79.9
+        },
+        "specificity": {
+          "avg": 96.9,
+          "min": 95,
+          "max": 84.3
+        },
+        "testId": "AT006/20"
+      },
+      "Beck, E.T., et al.": {
+        "author": "Beck, E.T., et al.",
+        "location": "USA",
+        "quadas": "intermediate concern",
+        "independent": "yes",
+        "sampleCondition": "fresh",
+        "sampleType": "NP",
+        "sampleSize": "346",
+        "sensitivity": {
+          "avg": 77,
+          "min": 95,
+          "max": 64.5
+        },
+        "specificity": {
+          "avg": 99.6,
+          "min": 95,
+          "max": 98.1
+        },
+        "testId": "AT006/20"
+      },
+      "Herrera, V., et al.": {
+        "author": "Herrera, V., et al.",
+        "location": "USA",
+        "quadas": "unclear",
+        "independent": "yes",
+        "sampleCondition": "unclear",
+        "sampleType": "unclear",
+        "sampleSize": "1172",
+        "sensitivity": {
+          "avg": 76.8,
+          "min": 95,
+          "max": 72.6
+        },
+        "specificity": {
+          "avg": 99.2,
+          "min": 95,
+          "max": 98.2
+        },
+        "testId": "AT006/20"
+      },
+      "Marti, J.L.G., et al.": {
+        "author": "Marti, J.L.G., et al.",
+        "location": "USA",
+        "quadas": "unclear",
+        "independent": "yes",
+        "sampleCondition": "fresh",
+        "sampleType": "MT",
+        "sampleSize": "427",
+        "sensitivity": {
+          "avg": 72
+        },
+        "specificity": {
+          "avg": 99
+        },
+        "testId": "AT006/20"
+      }
     },
     "selftest": false,
     "shops": []
@@ -4286,15 +5643,60 @@
     "distributors": [
       "R-Biopharm AG"
     ],
-    "sensitivity": {
-      "avg": 0.95,
-      "min": 0.84,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.94,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.95,
+          "min": 0.84,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.94,
+          "max": 1
+        }
+      },
+      "Toptan, T., et al.": {
+        "author": "Toptan, T., et al.",
+        "location": "Germany",
+        "quadas": "unclear",
+        "independent": "no",
+        "sampleCondition": "banked",
+        "sampleType": "NP/OP",
+        "sampleSize": "70",
+        "sensitivity": {
+          "avg": 50,
+          "min": 95,
+          "max": 31.9
+        },
+        "specificity": {
+          "avg": 100,
+          "min": 95,
+          "max": 90.8
+        },
+        "testId": "AT008/20"
+      },
+      "Kohmer, N., et al.": {
+        "author": "Kohmer, N., et al.",
+        "location": "Germany",
+        "quadas": "intermediate concern",
+        "independent": "yes",
+        "sampleCondition": "fresh",
+        "sampleType": "NP",
+        "sampleSize": "100",
+        "sensitivity": {
+          "avg": 39.2,
+          "min": 95,
+          "max": 28
+        },
+        "specificity": {
+          "avg": 96.2,
+          "min": 95,
+          "max": 80.4
+        },
+        "testId": "AT008/20"
+      }
     },
     "selftest": false,
     "shops": []
@@ -4310,15 +5712,20 @@
     "distributors": [
       "ROXALL Medizin GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9697,
-      "min": 0.84,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.9565,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9697,
+          "min": 0.84,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.9565,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -4337,15 +5744,20 @@
       "Detools GmbHDropshippers Germany",
       " Ingo GrebeFigura Pharma GmbH & Co. KG"
     ],
-    "sensitivity": {
-      "avg": 0.9727,
-      "min": 0.94,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 0.9942,
-      "min": 0.9793000000000001,
-      "max": 0.9993000000000001
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9727,
+          "min": 0.94,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 0.9942,
+          "min": 0.9793000000000001,
+          "max": 0.9993000000000001
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -4361,15 +5773,20 @@
     "distributors": [
       "Figura Pharma GmbH & Co. KG"
     ],
-    "sensitivity": {
-      "avg": 0.9704,
-      "min": 0.92,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 0.9944,
-      "min": 0.9693999999999999,
-      "max": 0.9998999999999999
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9704,
+          "min": 0.92,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.9944,
+          "min": 0.9693999999999999,
+          "max": 0.9998999999999999
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -4385,15 +5802,20 @@
     "distributors": [
       ""
     ],
-    "sensitivity": {
-      "avg": 0.9704,
-      "min": 0.92,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 0.9944,
-      "min": 0.9693999999999999,
-      "max": 0.9998999999999999
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9704,
+          "min": 0.92,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.9944,
+          "min": 0.9693999999999999,
+          "max": 0.9998999999999999
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -4409,15 +5831,20 @@
     "distributors": [
       "Figura Pharma GmbH & Co. KG"
     ],
-    "sensitivity": {
-      "avg": 0.9704,
-      "min": 0.92,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 0.9944,
-      "min": 0.9693999999999999,
-      "max": 0.9998999999999999
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9704,
+          "min": 0.92,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.9944,
+          "min": 0.9693999999999999,
+          "max": 0.9998999999999999
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -4433,15 +5860,20 @@
     "distributors": [
       "Detools GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.985,
-      "min": 0.94,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 0.9945,
-      "min": 0.9699,
-      "max": 0.9998999999999999
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.985,
+          "min": 0.94,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.9945,
+          "min": 0.9699,
+          "max": 0.9998999999999999
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -4457,15 +5889,20 @@
     "distributors": [
       "Figura Pharma GmbH & Co. KG"
     ],
-    "sensitivity": {
-      "avg": 0.985,
-      "min": 0.94,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 0.9945,
-      "min": 0.9699,
-      "max": 0.9998999999999999
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.985,
+          "min": 0.94,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.9945,
+          "min": 0.9699,
+          "max": 0.9998999999999999
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -4481,15 +5918,20 @@
     "distributors": [
       "Promeditech GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.899,
-      "min": 0.83,
-      "max": 0.94
-    },
-    "specificity": {
-      "avg": 0.9990000000000001,
-      "min": 0.982,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.899,
+          "min": 0.83,
+          "max": 0.94
+        },
+        "specificity": {
+          "avg": 0.9990000000000001,
+          "min": 0.982,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -4505,15 +5947,20 @@
     "distributors": [
       "Promeditech GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.927,
-      "min": 0.88,
-      "max": 0.95
-    },
-    "specificity": {
-      "avg": 0.9990000000000001,
-      "min": 0.991,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.927,
+          "min": 0.88,
+          "max": 0.95
+        },
+        "specificity": {
+          "avg": 0.9990000000000001,
+          "min": 0.991,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -4530,15 +5977,20 @@
     "distributors": [
       "HWV R. Blome GmbHPromeditech GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9590000000000001,
-      "min": 0.91,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 0.9890000000000001,
-      "min": 0.9740000000000001,
-      "max": 0.995
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9590000000000001,
+          "min": 0.91,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 0.9890000000000001,
+          "min": 0.9740000000000001,
+          "max": 0.995
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -4554,15 +6006,40 @@
     "distributors": [
       "HWV R. Blome GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.927,
-      "min": 0.88,
-      "max": null
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.991,
-      "max": null
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.927,
+          "min": 0.88,
+          "max": null
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.991,
+          "max": null
+        }
+      },
+      "Ahava, M.J., et al.": {
+        "author": "Ahava, M.J., et al.",
+        "location": "Finland",
+        "quadas": "high concern",
+        "independent": "yes",
+        "sampleCondition": "frozen",
+        "sampleType": "serum",
+        "sampleSize": "148",
+        "sensitivity": {
+          "avg": 96.2,
+          "min": 95,
+          "max": 80.4
+        },
+        "specificity": {
+          "avg": 98,
+          "min": 95,
+          "max": 94.2
+        },
+        "testId": "AT093/21"
+      }
     },
     "selftest": false,
     "shops": []
@@ -4578,15 +6055,20 @@
     "distributors": [
       ""
     ],
-    "sensitivity": {
-      "avg": 0.9505,
-      "min": 0.88,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.9943000000000001,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9505,
+          "min": 0.88,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.9943000000000001,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -4602,15 +6084,20 @@
     "distributors": [
       "ScheBo Biotech AG"
     ],
-    "sensitivity": {
-      "avg": 0.9677,
-      "min": 0.88,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 0.9894,
-      "min": 0.9621,
-      "max": 0.9987
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9677,
+          "min": 0.88,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.9894,
+          "min": 0.9621,
+          "max": 0.9987
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -4626,15 +6113,80 @@
     "distributors": [
       "bestbion dx GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9712000000000001,
-      "min": 0.91,
-      "max": null
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.9904999999999999,
-      "max": null
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9712000000000001,
+          "min": 0.91,
+          "max": null
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.9904999999999999,
+          "max": null
+        }
+      },
+      "Nikolai, O., et al.": {
+        "author": "Nikolai, O., et al.",
+        "location": "Germany",
+        "quadas": "low concern",
+        "independent": "yes",
+        "sampleCondition": "fresh",
+        "sampleType": "AN",
+        "sampleSize": "132",
+        "sensitivity": {
+          "avg": 86.1,
+          "min": 95,
+          "max": 71.3
+        },
+        "specificity": {
+          "avg": 100,
+          "min": 95,
+          "max": 89
+        },
+        "testId": "AT394/21"
+      },
+      "Linder, A.K., et al.": {
+        "author": "Linder, A.K., et al.",
+        "location": "Germany",
+        "quadas": "low concern",
+        "independent": "yes",
+        "sampleCondition": "fresh",
+        "sampleType": "MT",
+        "sampleSize": "180",
+        "sensitivity": {
+          "avg": 80.5,
+          "min": 95,
+          "max": 66
+        },
+        "specificity": {
+          "avg": 98.6,
+          "min": 95,
+          "max": 94.9
+        },
+        "testId": "AT394/21"
+      },
+      "Stohr, J.J.J.M., et al.": {
+        "author": "Stohr, J.J.J.M., et al.",
+        "location": "Netherlands",
+        "quadas": "low concern",
+        "independent": "yes",
+        "sampleCondition": "fresh",
+        "sampleType": "AN",
+        "sampleSize": "1611",
+        "sensitivity": {
+          "avg": 61.5,
+          "min": 95,
+          "max": 54.4
+        },
+        "specificity": {
+          "avg": 99.7,
+          "min": 95,
+          "max": 99.3
+        },
+        "testId": "AT394/21"
+      }
     },
     "selftest": false,
     "shops": []
@@ -4650,15 +6202,120 @@
     "distributors": [
       "bestbion dx GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.94,
-      "min": 0.8,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 0.97,
-      "min": 0.833,
-      "max": 0.9992
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.94,
+          "min": 0.8,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.97,
+          "min": 0.833,
+          "max": 0.9992
+        }
+      },
+      "Porte, L., et al.": {
+        "author": "Porte, L., et al.",
+        "location": "Chile",
+        "quadas": "high concern",
+        "independent": "no",
+        "sampleCondition": "banked",
+        "sampleType": "NP/OP",
+        "sampleSize": "64",
+        "sensitivity": {
+          "avg": 90.6,
+          "min": 95,
+          "max": 75.8
+        },
+        "specificity": {
+          "avg": 96.9,
+          "min": 95,
+          "max": 84.3
+        },
+        "testId": "AT022/20"
+      },
+      "FINDdx": {
+        "author": "FINDdx",
+        "location": "Brazil",
+        "quadas": "low concern",
+        "independent": "yes",
+        "sampleCondition": "fresh",
+        "sampleType": "NP",
+        "sampleSize": "453",
+        "sensitivity": {
+          "avg": 77.5,
+          "min": 95,
+          "max": 69.2
+        },
+        "specificity": {
+          "avg": 97.9,
+          "min": 95,
+          "max": 95.7
+        },
+        "testId": "AT022/20"
+      },
+      "Drevinek, P., et al.": {
+        "author": "Drevinek, P., et al.",
+        "location": "Czech Republic",
+        "quadas": "low concern",
+        "independent": "yes",
+        "sampleCondition": "fresh",
+        "sampleType": "NP",
+        "sampleSize": "591",
+        "sensitivity": {
+          "avg": 62.3,
+          "min": 95,
+          "max": 55.8
+        },
+        "specificity": {
+          "avg": 99.5,
+          "min": 95,
+          "max": 98
+        },
+        "testId": "AT022/20"
+      },
+      "Osterman, A., et al.": {
+        "author": "Osterman, A., et al.",
+        "location": "Germany",
+        "quadas": "high concern",
+        "independent": "yes",
+        "sampleCondition": "unclear",
+        "sampleType": "NP/OP",
+        "sampleSize": "360",
+        "sensitivity": {
+          "avg": 60.9,
+          "min": 95,
+          "max": 53.7
+        },
+        "specificity": {
+          "avg": 97.8,
+          "min": 95,
+          "max": 95.7
+        },
+        "testId": "AT022/20"
+      },
+      "Liotti, F.M., et al.": {
+        "author": "Liotti, F.M., et al.",
+        "location": "Italy",
+        "quadas": "intermediate concern",
+        "independent": "yes",
+        "sampleCondition": "banked",
+        "sampleType": "NP",
+        "sampleSize": "359",
+        "sensitivity": {
+          "avg": 47.1,
+          "min": 95,
+          "max": 37.1
+        },
+        "specificity": {
+          "avg": 98.4,
+          "min": 95,
+          "max": 96
+        },
+        "testId": "AT022/20"
+      }
     },
     "selftest": false,
     "shops": []
@@ -4674,15 +6331,20 @@
     "distributors": [
       "bestbion dx GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9652,
-      "min": 0.91,
-      "max": null
-    },
-    "specificity": {
-      "avg": 0.9968,
-      "min": 0.9822,
-      "max": 0.9998999999999999
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9652,
+          "min": 0.91,
+          "max": null
+        },
+        "specificity": {
+          "avg": 0.9968,
+          "min": 0.9822,
+          "max": 0.9998999999999999
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -4698,15 +6360,20 @@
     "distributors": [
       "Roche Diagnostics GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9652,
-      "min": 0.91,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 0.9968,
-      "min": 0.9822,
-      "max": 0.9998999999999999
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9652,
+          "min": 0.91,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.9968,
+          "min": 0.9822,
+          "max": 0.9998999999999999
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -4722,15 +6389,20 @@
     "distributors": [
       "Roche Diagnostics GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.8270000000000001,
-      "min": 0.75,
-      "max": 0.88
-    },
-    "specificity": {
-      "avg": 0.991,
-      "min": 0.9790000000000001,
-      "max": 0.997
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.8270000000000001,
+          "min": 0.75,
+          "max": 0.88
+        },
+        "specificity": {
+          "avg": 0.991,
+          "min": 0.9790000000000001,
+          "max": 0.997
+        }
+      }
     },
     "selftest": true,
     "shops": []
@@ -4746,15 +6418,20 @@
     "distributors": [
       "Roger´s GmbH (Care4u medical Suppleis)"
     ],
-    "sensitivity": {
-      "avg": 0.966,
-      "min": 0.94,
-      "max": 0.97
-    },
-    "specificity": {
-      "avg": 0.99,
-      "min": 0.9768000000000001,
-      "max": 0.9967
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.966,
+          "min": 0.94,
+          "max": 0.97
+        },
+        "specificity": {
+          "avg": 0.99,
+          "min": 0.9768000000000001,
+          "max": 0.9967
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -4770,15 +6447,20 @@
     "distributors": [
       "Detools GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9084,
-      "min": 0.84,
-      "max": 0.94
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.9814,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9084,
+          "min": 0.84,
+          "max": 0.94
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.9814,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -4794,15 +6476,20 @@
     "distributors": [
       "Dixion Vertrieb Medizinischer Geräte GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9534999999999999,
-      "min": 0.9,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 0.9754999999999999,
-      "min": 0.9384,
-      "max": 0.9933
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9534999999999999,
+          "min": 0.9,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 0.9754999999999999,
+          "min": 0.9384,
+          "max": 0.9933
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -4818,15 +6505,20 @@
     "distributors": [
       "audasia Handelsgesellschaft UG"
     ],
-    "sensitivity": {
-      "avg": 0.98,
-      "min": 0.97,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.9812000000000001,
-      "max": 0.9998999999999999
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.98,
+          "min": 0.97,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.9812000000000001,
+          "max": 0.9998999999999999
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -4843,15 +6535,20 @@
     "distributors": [
       "MediHands AGSVAN International Import & Export Co. Ltd."
     ],
-    "sensitivity": {
-      "avg": 0.9127,
-      "min": 0.91,
-      "max": 1
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.9673,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9127,
+          "min": 0.91,
+          "max": 1
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.9673,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -4868,15 +6565,20 @@
     "distributors": [
       "MediHands AGSVAN International Import & Export Co. Ltd."
     ],
-    "sensitivity": {
-      "avg": 0.8968,
-      "min": 0.89,
-      "max": 1
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.9673,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.8968,
+          "min": 0.89,
+          "max": 1
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.9673,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -4892,15 +6594,20 @@
     "distributors": [
       "Sysmex Europe GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9083,
-      "min": 0.84,
-      "max": 0.94
-    },
-    "specificity": {
-      "avg": 0.9913,
-      "min": 0.9689,
-      "max": 0.9976
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9083,
+          "min": 0.84,
+          "max": 0.94
+        },
+        "specificity": {
+          "avg": 0.9913,
+          "min": 0.9689,
+          "max": 0.9976
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -4917,15 +6624,20 @@
     "distributors": [
       "HUMAN Gesellschaft für Biochemica und Diagnostica mbHSysmex Europe GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9515,
-      "min": 0.89,
-      "max": 0.97
-    },
-    "specificity": {
-      "avg": 0.9912000000000001,
-      "min": 0.9686,
-      "max": 0.9976
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9515,
+          "min": 0.89,
+          "max": 0.97
+        },
+        "specificity": {
+          "avg": 0.9912000000000001,
+          "min": 0.9686,
+          "max": 0.9976
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -4942,15 +6654,20 @@
     "distributors": [
       "Motokay GmbHspreenic GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.96,
-      "min": 0.92,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 0.97,
-      "min": 0.9309999999999999,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.96,
+          "min": 0.92,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.97,
+          "min": 0.9309999999999999,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -4966,15 +6683,20 @@
     "distributors": [
       "Spring Healthcare Services AG"
     ],
-    "sensitivity": {
-      "avg": 0.9617,
-      "min": 0.92,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 0.9990000000000001,
-      "min": 0.9898,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9617,
+          "min": 0.92,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 0.9990000000000001,
+          "min": 0.9898,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -4992,15 +6714,20 @@
     "distributors": [
       "DiaSys Deutschland Vertriebs-GmbHMTG GmbHProtoPharma Engineering GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.951,
-      "min": 0.9,
-      "max": 0.97
-    },
-    "specificity": {
-      "avg": 0.99,
-      "min": 0.945,
-      "max": 0.998
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.951,
+          "min": 0.9,
+          "max": 0.97
+        },
+        "specificity": {
+          "avg": 0.99,
+          "min": 0.945,
+          "max": 0.998
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -5016,15 +6743,40 @@
     "distributors": [
       "VWR part of Avantor"
     ],
-    "sensitivity": {
-      "avg": 0.9455,
-      "min": 0.83,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.971,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9455,
+          "min": 0.83,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.971,
+          "max": 1
+        }
+      },
+      "Baro, B., et al.": {
+        "author": "Baro, B., et al.",
+        "location": "Spain",
+        "quadas": "intermediate concern",
+        "independent": "yes",
+        "sampleCondition": "banked",
+        "sampleType": "NP",
+        "sampleSize": "286",
+        "sensitivity": {
+          "avg": 28.8,
+          "min": 95,
+          "max": 20.2
+        },
+        "specificity": {
+          "avg": 97.8,
+          "min": 95,
+          "max": 94.5
+        },
+        "testId": "AT186/20"
+      }
     },
     "selftest": false,
     "shops": []
@@ -5040,15 +6792,20 @@
     "distributors": [
       "Smart OTC GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.958,
-      "min": 0.86,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 0.986,
-      "min": 0.9259999999999999,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.958,
+          "min": 0.86,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 0.986,
+          "min": 0.9259999999999999,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -5065,15 +6822,20 @@
     "distributors": [
       "CARDIMAC"
     ],
-    "sensitivity": {
-      "avg": 0.9129999999999999,
-      "min": 0.73,
-      "max": 0.97
-    },
-    "specificity": {
-      "avg": 0.986,
-      "min": 0.9259999999999999,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9129999999999999,
+          "min": 0.73,
+          "max": 0.97
+        },
+        "specificity": {
+          "avg": 0.986,
+          "min": 0.9259999999999999,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -5089,15 +6851,20 @@
     "distributors": [
       "Rensolc GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.966,
-      "min": 0.91,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.971,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.966,
+          "min": 0.91,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.971,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -5113,15 +6880,20 @@
     "distributors": [
       "S.C.O.T.T. Science Center of Technology Transfer B.V."
     ],
-    "sensitivity": {
-      "avg": 1,
-      "min": 0.95,
-      "max": 1
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.9921,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 1,
+          "min": 0.95,
+          "max": 1
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.9921,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -5137,15 +6909,20 @@
     "distributors": [
       ""
     ],
-    "sensitivity": {
-      "avg": 0.9565,
-      "min": 0.9,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 0.9843999999999999,
-      "min": 0.9448000000000001,
-      "max": 0.9956999999999999
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9565,
+          "min": 0.9,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 0.9843999999999999,
+          "min": 0.9448000000000001,
+          "max": 0.9956999999999999
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -5161,15 +6938,20 @@
     "distributors": [
       "Science&Care Vertriebs GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9743999999999999,
-      "min": 0.95,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 0.993,
-      "min": 0.9868000000000001,
-      "max": 0.9968
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9743999999999999,
+          "min": 0.95,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 0.993,
+          "min": 0.9868000000000001,
+          "max": 0.9968
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -5186,15 +6968,20 @@
     "distributors": [
       "Abacus Medicine GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9672,
-      "min": 0.88,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 0.9922,
-      "min": 0.9721,
-      "max": 0.9991
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9672,
+          "min": 0.88,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.9922,
+          "min": 0.9721,
+          "max": 0.9991
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -5210,15 +6997,20 @@
     "distributors": [
       "Imex-Co GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9676,
-      "min": 0.93,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 0.9929000000000001,
-      "min": 0.9745,
-      "max": 0.9991
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9676,
+          "min": 0.93,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 0.9929000000000001,
+          "min": 0.9745,
+          "max": 0.9991
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -5234,15 +7026,20 @@
     "distributors": [
       "Imex-Co GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.973,
-      "min": 0.95,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 0.99,
-      "min": 0.9781,
-      "max": 0.9969
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.973,
+          "min": 0.95,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 0.99,
+          "min": 0.9781,
+          "max": 0.9969
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -5258,15 +7055,20 @@
     "distributors": [
       "HOLZHÄUSER Ihr starker Partner für Betriebshygiene HOLZHÄUSER Fachhandel e.K."
     ],
-    "sensitivity": {
-      "avg": 0.953,
-      "min": 0.92,
-      "max": 0.97
-    },
-    "specificity": {
-      "avg": 0.991,
-      "min": 0.9356,
-      "max": 0.9893000000000001
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.953,
+          "min": 0.92,
+          "max": 0.97
+        },
+        "specificity": {
+          "avg": 0.991,
+          "min": 0.9356,
+          "max": 0.9893000000000001
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -5282,15 +7084,20 @@
     "distributors": [
       "PMB Systems GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9545,
-      "min": 0.9,
-      "max": 0.97
-    },
-    "specificity": {
-      "avg": 0.9998999999999999,
-      "min": 0.9912000000000001,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9545,
+          "min": 0.9,
+          "max": 0.97
+        },
+        "specificity": {
+          "avg": 0.9998999999999999,
+          "min": 0.9912000000000001,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -5311,15 +7118,20 @@
     "distributors": [
       "IME-DC GmbH International Medical Equipment - Diabetes CareM-Key Technology GmbHMED TRUST GmbH.MSP bodmann GmbHPHARMADOC GmbHSkymont Trading International GmbH & Co. KG"
     ],
-    "sensitivity": {
-      "avg": 0.9545,
-      "min": 0.9,
-      "max": 0.97
-    },
-    "specificity": {
-      "avg": 0.9998999999999999,
-      "min": 0.9912000000000001,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9545,
+          "min": 0.9,
+          "max": 0.97
+        },
+        "specificity": {
+          "avg": 0.9998999999999999,
+          "min": 0.9912000000000001,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -5336,15 +7148,20 @@
     "distributors": [
       "MSP bodmann GmbHNeucomed Deutschland GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9612,
-      "min": 0.9,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 0.9998999999999999,
-      "min": 0.9863,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9612,
+          "min": 0.9,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 0.9998999999999999,
+          "min": 0.9863,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -5360,15 +7177,20 @@
     "distributors": [
       "IME-DC GmbH International Medical Equipment - Diabetes Care"
     ],
-    "sensitivity": {
-      "avg": 0.9826,
-      "min": 0.95,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 0.9998999999999999,
-      "min": 0.9912000000000001,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9826,
+          "min": 0.95,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.9998999999999999,
+          "min": 0.9912000000000001,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -5384,15 +7206,20 @@
     "distributors": [
       "CARE diagnostica PuV Gmbh"
     ],
-    "sensitivity": {
-      "avg": 0.941,
-      "min": 0.78,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 0.985,
-      "min": 0.9420000000000001,
-      "max": 0.997
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.941,
+          "min": 0.78,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 0.985,
+          "min": 0.9420000000000001,
+          "max": 0.997
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -5408,15 +7235,20 @@
     "distributors": [
       "Detools GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9615,
-      "min": 0.91,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 0.9926,
-      "min": 0.9784,
-      "max": 0.9975
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9615,
+          "min": 0.91,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 0.9926,
+          "min": 0.9784,
+          "max": 0.9975
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -5432,15 +7264,20 @@
     "distributors": [
       ""
     ],
-    "sensitivity": {
-      "avg": 0.9267,
-      "min": 0.87,
-      "max": 0.96
-    },
-    "specificity": {
-      "avg": 0.9829000000000001,
-      "min": 0.9631000000000001,
-      "max": 0.9937
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9267,
+          "min": 0.87,
+          "max": 0.96
+        },
+        "specificity": {
+          "avg": 0.9829000000000001,
+          "min": 0.9631000000000001,
+          "max": 0.9937
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -5457,15 +7294,20 @@
     "distributors": [
       "Biozol Diagnostica Vertrieb GmbHDialab GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9632999999999999,
-      "min": 0.9,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 0.9956999999999999,
-      "min": 0.976,
-      "max": 0.9990000000000001
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9632999999999999,
+          "min": 0.9,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 0.9956999999999999,
+          "min": 0.976,
+          "max": 0.9990000000000001
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -5481,15 +7323,20 @@
     "distributors": [
       ""
     ],
-    "sensitivity": {
-      "avg": 0.96,
-      "min": 0.88,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.9834,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.96,
+          "min": 0.88,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.9834,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -5509,15 +7356,20 @@
     "distributors": [
       "Löwe MedizintechnikMEDICE Arzneimittel Pütter GmbH & Co. KGMedipro medizinische diagnostische Produkte GmbHTREKSTOR GmbHTechnomed Service GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9649,
-      "min": 0.91,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 0.9903,
-      "min": 0.9809,
-      "max": 0.9998
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9649,
+          "min": 0.91,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.9903,
+          "min": 0.9809,
+          "max": 0.9998
+        }
+      }
     },
     "selftest": true,
     "shops": [
@@ -5538,15 +7390,20 @@
     "distributors": [
       "MTC GmbHMTC GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9439,
-      "min": 0.9,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.9691,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9439,
+          "min": 0.9,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.9691,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -5563,15 +7420,20 @@
     "distributors": [
       "Dunox GmbHH.M.S Handel-Marketing-Service GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.963,
-      "min": 0.89,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.9853000000000001,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.963,
+          "min": 0.89,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.9853000000000001,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -5587,15 +7449,20 @@
     "distributors": [
       "Crenano GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9591,
-      "min": 0.93,
-      "max": 0.97
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.9926,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9591,
+          "min": 0.93,
+          "max": 0.97
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.9926,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -5612,15 +7479,20 @@
     "distributors": [
       "Crenano GmbHEJOY GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9534999999999999,
-      "min": 0.92,
-      "max": 0.97
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.9931,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9534999999999999,
+          "min": 0.92,
+          "max": 0.97
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.9931,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -5636,15 +7508,20 @@
     "distributors": [
       "Crenano GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9667,
-      "min": 0.94,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.9934999999999999,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9667,
+          "min": 0.94,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.9934999999999999,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -5660,15 +7537,20 @@
     "distributors": [
       "Dixion Vertrieb medizinischer Geräte GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.917,
-      "min": 0.82,
-      "max": 0.95
-    },
-    "specificity": {
-      "avg": 0.996,
-      "min": 0.9675,
-      "max": 0.9990000000000001
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.917,
+          "min": 0.82,
+          "max": 0.95
+        },
+        "specificity": {
+          "avg": 0.996,
+          "min": 0.9675,
+          "max": 0.9990000000000001
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -5684,15 +7566,20 @@
     "distributors": [
       "MEDBest GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.917,
-      "min": 0.82,
-      "max": 0.95
-    },
-    "specificity": {
-      "avg": 0.996,
-      "min": 0.9670000000000001,
-      "max": 0.9990000000000001
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.917,
+          "min": 0.82,
+          "max": 0.95
+        },
+        "specificity": {
+          "avg": 0.996,
+          "min": 0.9670000000000001,
+          "max": 0.9990000000000001
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -5708,15 +7595,20 @@
     "distributors": [
       "Rogers GmbH ( Care4u Medical Supplies )"
     ],
-    "sensitivity": {
-      "avg": 0.968,
-      "min": 0.92,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 0.996,
-      "min": 0.985,
-      "max": 0.9990000000000001
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.968,
+          "min": 0.92,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 0.996,
+          "min": 0.985,
+          "max": 0.9990000000000001
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -5732,15 +7624,20 @@
     "distributors": [
       "Bereket Megamarkt"
     ],
-    "sensitivity": {
-      "avg": 0.8438,
-      "min": 0.72,
-      "max": 0.93
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.9712999999999999,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.8438,
+          "min": 0.72,
+          "max": 0.93
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.9712999999999999,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -5758,15 +7655,20 @@
     "distributors": [
       "AlphaScience GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.958,
-      "min": 0.89,
-      "max": 0.94
-    },
-    "specificity": {
-      "avg": 0.99,
-      "min": 0.9120999999999999,
-      "max": 0.9768000000000001
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.958,
+          "min": 0.89,
+          "max": 0.94
+        },
+        "specificity": {
+          "avg": 0.99,
+          "min": 0.9120999999999999,
+          "max": 0.9768000000000001
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -5782,15 +7684,20 @@
     "distributors": [
       "Brand-New Trading GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.935,
-      "min": 0.9,
-      "max": 0.95
-    },
-    "specificity": {
-      "avg": 0.9940000000000001,
-      "min": 0.9118999999999999,
-      "max": 0.9756
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.935,
+          "min": 0.9,
+          "max": 0.95
+        },
+        "specificity": {
+          "avg": 0.9940000000000001,
+          "min": 0.9118999999999999,
+          "max": 0.9756
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -5806,15 +7713,20 @@
     "distributors": [
       "Brand-New Trading GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.975,
-      "min": 0.89,
-      "max": 0.94
-    },
-    "specificity": {
-      "avg": 0.991,
-      "min": 0.9120999999999999,
-      "max": 0.9768000000000001
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.975,
+          "min": 0.89,
+          "max": 0.94
+        },
+        "specificity": {
+          "avg": 0.991,
+          "min": 0.9120999999999999,
+          "max": 0.9768000000000001
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -5839,15 +7751,20 @@
     "distributors": [
       "A. Menarini DiagnsoticsAlphaScience GmbHAlphascience GmbHAspilos GmbHBio-RadHäffner GmbH & Co KGImmunodiagnostic Systems Deutschland GmbHLumiraDx GmbHPraxisdienst GmbH & Co. KGisopharm GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9672,
-      "min": 0.88,
-      "max": 0.99
-    },
-    "specificity": {
-      "avg": 0.9922,
-      "min": 0.9721,
-      "max": 0.9991
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9672,
+          "min": 0.88,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.9922,
+          "min": 0.9721,
+          "max": 0.9991
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -5863,15 +7780,20 @@
     "distributors": [
       "Careshield GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9333,
-      "min": 0.83,
-      "max": 0.98
-    },
-    "specificity": {
-      "avg": 1,
-      "min": 0.9697,
-      "max": 1
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9333,
+          "min": 0.83,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.9697,
+          "max": 1
+        }
+      }
     },
     "selftest": false,
     "shops": []
@@ -5887,15 +7809,20 @@
     "distributors": [
       "deucin GmbH"
     ],
-    "sensitivity": {
-      "avg": 0.9327,
-      "min": 0.9,
-      "max": 0.95
-    },
-    "specificity": {
-      "avg": 0.9947,
-      "min": 0.9819,
-      "max": 0.9984999999999999
+    "studies": {
+      "manufacturer": {
+        "author": "manufacturer",
+        "sensitivity": {
+          "avg": 0.9327,
+          "min": 0.9,
+          "max": 0.95
+        },
+        "specificity": {
+          "avg": 0.9947,
+          "min": 0.9819,
+          "max": 0.9984999999999999
+        }
+      }
     },
     "selftest": false,
     "shops": []

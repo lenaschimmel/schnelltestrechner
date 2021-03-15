@@ -154,7 +154,7 @@ const HelloVueApp = {
                 return parseFloat(this.sensitivityString.replace(",", ".").replace("%", "")) / 100.0;
             } else {
                 if (this.selectedTest) {
-                    return this.selectedTest.sensitivity[this.confidence];
+                    return this.selectedTest.studies["manufacturer"].sensitivity[this.confidence];
                 } else {
                     return 0.8;
                 }
@@ -165,7 +165,7 @@ const HelloVueApp = {
                 return parseFloat(this.specificityString.replace(",", ".").replace("%", "")) / 100.0;
             } else {
                 if (this.selectedTest) {
-                    return this.selectedTest.specificity[this.confidence];
+                    return this.selectedTest.studies["manufacturer"].specificity[this.confidence];
                 } else {
                     return 0.8;
                 }

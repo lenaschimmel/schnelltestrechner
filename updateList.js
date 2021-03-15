@@ -1,14 +1,13 @@
 const fs = require('fs');
 const parse = require('csv-parse/lib/sync');
+var latestEvaluationName = "";
+var latestMapping = null;
 
-input = fs.readFileSync("antigentests.csv", {encoding: "latin1"});
-selftests = JSON.parse(fs.readFileSync("selftests.json", {encoding: "utf8"}));
-
-function getColumnNames(firstLine) {
-    return firstLine.map(convertColumnName);
+function getAntigenTestColumnNames(firstLine) {
+    return firstLine.map(convertAntigenTestColumnName);
 }
 
-function convertColumnName(origName) {
+function convertAntigenTestColumnName(origName) {
     switch(origName) {
         case "Test-ID": return "id";
         case "Handelsname des Herstellers / Europ. Bevollmächtigten": return "name";
@@ -26,14 +25,15 @@ function convertColumnName(origName) {
 
 bools = {"Ja": true, "Nein":false,"":undefined};
 
-function onRecord(record, context) {
+function onAntigenTestRecord(record, context) {
     record.pei = bools[record.pei];
-    record.sensitivity = {
+    record.studies = { "manufacturer": { "author": "manufacturer" }};
+    record.studies.manufacturer.sensitivity = {
         avg: parseFloat((record.sensitivityAvg + "").replace(",", ".")) / 100.0,
         min: parseFloat(record.sensitivityRange.split("-")[0]) / 100.0,
         max: parseFloat(record.sensitivityRange.split("-")[1]) / 100.0
     };
-    record.specificity = {
+    record.studies.manufacturer.specificity = {
         avg: parseFloat((record.specificityAvg + "").replace(",", ".")) / 100.0,
         min: parseFloat((record.specificityRange.split("-")[0] + "").replace(",", ".")) / 100.0,
         max: parseFloat((record.specificityRange.split("-")[1] + "").replace(",", ".")) / 100.0
@@ -45,7 +45,7 @@ function onRecord(record, context) {
     record.distributors = record.distributors.split(",");
     record.tradename = record.tradename.split(",");
 
-    let matchingSelftests = selftests.filter(selftest => selftest.id == record.id);
+    let matchingSelftests = jsonSelftests.filter(selftest => selftest.id == record.id);
 
     record.selftest = (matchingSelftests.length == 1);
     if (record.selftest) {
@@ -54,16 +54,99 @@ function onRecord(record, context) {
         record.shops = [];
     }
 
+    // add independent studies
+    jsonEvaluation.filter(study => study.testId == record.id).forEach(study => {
+        record.studies[study.author] = study;
+    });
+
     return record;
 }
 
-const records = parse(input, {
-  columns: getColumnNames,
+function getEvaluationColumnNames(firstLine) {
+    return firstLine.map(convertEvaluationColumnName);
+}
+
+function convertEvaluationColumnName(origName) {
+    switch(origName) {
+        case "Author": return "author";
+        case "Study location": return "location";
+        case "QUADAS": return "quadas";
+        case "Independent": return "independent";
+        case "Sample condition": return "sampleCondition";
+        case "Sample type": return "sampleType";
+        case "Sample size": return "sampleSize";
+        case "Sensitivity (95% CI)": return "sensitivity";
+        case "Specificity (95% CI)": return "specificity";
+    }
+    return origName;
+}
+
+function onEvaluationRecord(record, context) {
+    const nonEmpty = Object.values(record).filter(v => v != "").length;
+    if (nonEmpty == 0) {
+        return null;
+    }
+
+    if (nonEmpty == 1) {
+        latestEvaluationName = record.author; // this is the name of the antigen test, but it's saved in the 'author' column
+        let mapping = jsonEvaluationNameMapping[latestEvaluationName];
+        if (mapping && mapping.startsWith("AT")) {
+            latestMapping = mapping;
+        } else {
+            latestMapping = null;
+        }
+        // console.log("Got name: " + latestEvaluationName + " a.k.a. " + latestMapping);
+        return null;
+    }
+
+    record.testId = latestMapping;
+    record.sensitivity = parseEvaluationRange(record.sensitivity);
+    record.specificity = parseEvaluationRange(record.specificity);
+
+    return record;
+}
+
+function parseEvaluationRange(input) {
+    // matches strings like "52.5% (95% CI 46.7-58.3)" with several variations
+    var re = /(\d+(\.\d+)?)%\*? \((95% CI )?(CI 95% )?(\d+(\.\d+)?)%?\*?-(\d+(\.\d+)?)%?\*?\)/i;
+    var found = input.match(re);
+    if (found) {
+        return {
+            avg: parseFloat(found[1]),
+            min: parseFloat(found[3]),
+            max: parseFloat(found[5])
+        };
+    } else {
+        // try if the string looks like "41.2% (not provided)"
+        var re = /(\d+(\.\d+)?)%\*? \(not provided\)/i;
+        var found = input.match(re);
+        if (found) {
+            return {
+                avg: parseFloat(found[1])
+            };
+        } else {
+            console.log("Cound not match " + input);
+        }
+    }
+}
+
+const csvAntigenTests = fs.readFileSync("antigentests.csv", {encoding: "latin1"});
+const jsonSelftests = JSON.parse(fs.readFileSync("selftests.json", {encoding: "utf8"}));
+const csvEvaluation = fs.readFileSync("evaluation.csv", {encoding: "utf8"});
+const jsonEvaluationNameMapping = JSON.parse(fs.readFileSync("evaluation_name_mapping.json", {encoding: "utf8"}));
+
+const jsonEvaluation = parse(csvEvaluation, {
+    on_record: onEvaluationRecord,
+    columns: getEvaluationColumnNames,
+    delimiter: ";",
+});
+console.log(jsonEvaluation);
+
+const jsonAntigenTests = parse(csvAntigenTests, {
+  columns: getAntigenTestColumnNames,
+  on_record: onAntigenTestRecord,
   skip_empty_lines: true,
   delimiter: ";",
-  on_record: onRecord,
 });
 
-console.log(records);
-
-fs.writeFileSync("antigentests.json", JSON.stringify(records, null, 2));
+fs.writeFileSync("antigentests.json", JSON.stringify(jsonAntigenTests, null, 2));
