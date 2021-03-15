@@ -127,7 +127,32 @@
         </p>
         <p>Zusätzliche Risiken in den letzten 10 Tagen laut <a href="https://www.microcovid.org">microCOVID.org</a>: <input v-model="additionalRiskString" /> µCoV</p>
 
-        <p>A-Priori: <input disabled v-bind:value="formatPercent(priorProb)" /></p>
+        <p>A-Priori vor Symptomen: <input disabled v-bind:value="formatPercent(priorProb)" /></p>
+      </div>
+      <div>
+        <h2>Symptome</h2>
+        <p>
+          <input type="checkbox" id="sympSmell" name="sympSmell" v-model="sympSmell"><label for="sympSmell">Geruchsverlust</label>
+          <input type="checkbox" id="sympTaste" name="sympTaste" v-model="sympTaste"><label for="sympTaste">Geschmacksverlust</label>
+          <input type="checkbox" id="sympFever" name="sympFever" v-model="sympFever"><label for="sympFever">Fieber</label>
+          <input type="checkbox" id="sympCough" name="sympCough" v-model="sympCough"><label for="sympCough">Husten</label>
+          <input type="checkbox" id="sympChest" name="sympChest" v-model="sympChest"><label for="sympChest">Engeefühl in der Brust</label>
+          <input type="checkbox" id="sympWheez" name="sympWheez" v-model="sympWheez"><label for="sympWheez">Keuchen</label>
+          <input type="checkbox" id="sympOther" name="sympOther" v-model="sympOther"><label for="sympOther">Sonstige verdächtige Symptome</label>
+        </p>
+
+        <p>(verdächtige Symptome sind z.B. Schnupfen, Bronchitis, Pneumonie, Atemnot, Halsschmerzen, Kopf- und Gliederschmerzen, Appetitlosigkeit, Gewichtsverlust, Übelkeit, Bauchschmerzen, Erbrechen, Durchfall, Konjunktivitis, Hautausschlag, Lymphknotenschwellung, Apathie, Somnolenz)</p>
+
+        <template v-if="anySymptoms">
+          <p>C19 Rule score: <input disabled v-bind:value="ruleScore" /></p>
+          <p>C19 Rule likelyhood ratio: <input disabled v-bind:value="formatNumber(ruleLR)" /></p>
+          <p>Symptom-Faktor: <input disabled v-bind:value="formatNumber(ruleLR*anySymptomFactor)" /></p>
+        </template>
+        <p>A-Priori nach Symptomen: <input disabled v-bind:value="formatPercent(priorProbSymptoms)" /></p>
+      </div>
+      <div>
+        <h2>Ergenisse</h2>
+
         <p>A-Posteriori bei positivem Test: <input disabled v-bind:value="formatPercent(updatedProbPos)" /></p>
         <p>A-Posteriori bei negativem Test: <input disabled v-bind:value="formatPercent(updatedProbNeg)" /></p>
       </div>

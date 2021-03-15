@@ -9,6 +9,11 @@ const apiDistricts = "/districts/history/incidence/8";
 const HelloVueApp = {
     data() {
         return {
+            // showing any symtomps that might lead to PCR testing in Germany 
+            // increases odds by 18.8, which is based on some very rough 
+            // calculations based on data from the end of february
+            anySymptomFactor: 18.8,
+
             // user selections
             testId: null,
             stateId: null,
@@ -18,6 +23,15 @@ const HelloVueApp = {
             riskProfilePrivate: "1.0",
             riskProfileProfessional: "0.8",
             additionalRiskString: "0",
+
+            // symptoms
+            sympSmell: false,
+            sympTaste: false,
+            sympFever: false,
+            sympCough: false,
+            sympChest: false,
+            sympWheez: false,
+            sympOther: false,
 
             // user inputs
             incidenceString: "100",
@@ -215,13 +229,41 @@ const HelloVueApp = {
             if (prior > 0.999) prior = 0.999; // 1.00 would give computational erros for updates probabilities
             return prior;
         },
-        updatedProbPos() {
+        anySymptoms() {
+            return this.sympSmell || this.sympTaste || this.sympFever || this.sympCough || this.sympWheez || this.sympChest || this.sympOther;
+        },
+        ruleScore() {
+            let score = 0.0;
+            if (this.sympSmell || this.sympTaste) score +=  2;
+            if (this.sympFever && this.sympCough) score +=  1;
+            if (this.sympWheez || this.sympChest) score += -1;
+            return score;
+        },
+        ruleLR() {
+            switch(this.ruleScore) {
+                case  3: return 15.0;
+                case  2: return  4.2;
+                case  1: return  1.2;
+                case  0: return  0.7;
+                case -1: return  0.1;
+            };
+            return 0.0;
+        },
+        priorProbSymptoms() {
             let priorOdds = this.priorProb / (1.0 - this.priorProb);
+            let updatedOddsPos = priorOdds;
+            if (this.anySymptoms) {
+                updatedOddsPos = priorOdds * this.ruleLR * this.anySymptomFactor;
+            }
+            return updatedOddsPos / (1.0 + updatedOddsPos);
+        },
+        updatedProbPos() {
+            let priorOdds = this.priorProbSymptoms / (1.0 - this.priorProbSymptoms);
             let updatedOddsPos = priorOdds * this.bayesFactorPos;
             return updatedOddsPos / (1.0 + updatedOddsPos);
         },
         updatedProbNeg() {
-            let priorOdds = this.priorProb / (1.0 - this.priorProb);
+            let priorOdds = this.priorProbSymptoms / (1.0 - this.priorProbSymptoms);
             let updatedOddsNeg = priorOdds * this.bayesFactorNeg;
             return updatedOddsNeg / (1.0 + updatedOddsNeg);
         },
