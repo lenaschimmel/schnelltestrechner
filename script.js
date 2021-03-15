@@ -25,6 +25,7 @@ const HelloVueApp = {
             additionalRiskString: "0",
             confidence: "avg",
             intermediate: false,
+            studyId: "manufacturer",
 
             // symptoms
             sympSmell: false,
@@ -121,15 +122,23 @@ const HelloVueApp = {
             }
             return test.id + " - " + test.name;
         },
+        getStudyDisplayName(study) {
+            if (study.quadas) {
+                return study.author + " (" + study.quadas + ")";
+            } else if (study.author == "manufacturer")
+                return "Herstellerangaben";
+            else {
+                return study.author;
+            }
+        },
     },
-    /* watch: {
-         "selectedTest" : function (val){
-             if (val) {
-                 this.sensitivity = val.sensitivity.avg;
-                 this.specificity = val.specificity.avg;
+    watch: {
+         "selectedTest" : function (newVal, oldVal){
+             if (newVal != oldVal) {
+                 this.studyId = Object.values(newVal.studies).filter(study => study.author == "manufacturer")[0].id;
              }
          }
-     }, */
+     },
     computed: {
         visibleTests() {
             if (this.tests && this.testsKind == "self") {
@@ -139,6 +148,12 @@ const HelloVueApp = {
             } else {
                 return this.tests;
             }
+        },
+        studies() {
+            if (this.selectedTest) {
+                return this.selectedTest.studies;
+            }
+            return [];
         },
         selectedTest() {
             if (this.testId) {
@@ -153,8 +168,8 @@ const HelloVueApp = {
             if (this.testsKind == "input") {
                 return parseFloat(this.sensitivityString.replace(",", ".").replace("%", "")) / 100.0;
             } else {
-                if (this.selectedTest) {
-                    return this.selectedTest.studies["manufacturer"].sensitivity[this.confidence];
+                if (this.selectedTest && this.selectedTest.studies[this.studyId]) {
+                    return this.selectedTest.studies[this.studyId].sensitivity[this.confidence];
                 } else {
                     return 0.8;
                 }
@@ -164,8 +179,8 @@ const HelloVueApp = {
             if (this.testsKind == "input") {
                 return parseFloat(this.specificityString.replace(",", ".").replace("%", "")) / 100.0;
             } else {
-                if (this.selectedTest) {
-                    return this.selectedTest.studies["manufacturer"].specificity[this.confidence];
+                if (this.selectedTest && this.selectedTest.studies[this.studyId]) {
+                    return this.selectedTest.studies[this.studyId].specificity[this.confidence];
                 } else {
                     return 0.8;
                 }

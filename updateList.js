@@ -1,7 +1,9 @@
+const util = require ('util');
 const fs = require('fs');
 const parse = require('csv-parse/lib/sync');
 var latestEvaluationName = "";
 var latestMapping = null;
+var currentStudyId = 1;
 
 function getAntigenTestColumnNames(firstLine) {
     return firstLine.map(convertAntigenTestColumnName);
@@ -27,13 +29,14 @@ bools = {"Ja": true, "Nein":false,"":undefined};
 
 function onAntigenTestRecord(record, context) {
     record.pei = bools[record.pei];
-    record.studies = { "manufacturer": { "author": "manufacturer" }};
-    record.studies.manufacturer.sensitivity = {
+    let manufacturerStudyId = currentStudyId++;
+    record.studies = { [manufacturerStudyId]: { "author": "manufacturer", "id": manufacturerStudyId }};
+    record.studies[manufacturerStudyId].sensitivity = {
         avg: parseFloat((record.sensitivityAvg + "").replace(",", ".")) / 100.0,
         min: parseFloat(record.sensitivityRange.split("-")[0]) / 100.0,
         max: parseFloat(record.sensitivityRange.split("-")[1]) / 100.0
     };
-    record.studies.manufacturer.specificity = {
+    record.studies[manufacturerStudyId].specificity = {
         avg: parseFloat((record.specificityAvg + "").replace(",", ".")) / 100.0,
         min: parseFloat((record.specificityRange.split("-")[0] + "").replace(",", ".")) / 100.0,
         max: parseFloat((record.specificityRange.split("-")[1] + "").replace(",", ".")) / 100.0
@@ -56,7 +59,7 @@ function onAntigenTestRecord(record, context) {
 
     // add independent studies
     jsonEvaluation.filter(study => study.testId == record.id).forEach(study => {
-        record.studies[study.author] = study;
+        record.studies[study.id] = study;
     });
 
     return record;
@@ -102,6 +105,7 @@ function onEvaluationRecord(record, context) {
     record.testId = latestMapping;
     record.sensitivity = parseEvaluationRange(record.sensitivity);
     record.specificity = parseEvaluationRange(record.specificity);
+    record.id = currentStudyId++;
 
     return record;
 }
@@ -112,9 +116,9 @@ function parseEvaluationRange(input) {
     var found = input.match(re);
     if (found) {
         return {
-            avg: parseFloat(found[1]),
-            min: parseFloat(found[3]),
-            max: parseFloat(found[5])
+            avg: parseFloat(found[1]) / 100.0,
+            min: parseFloat(found[5]) / 100.0,
+            max: parseFloat(found[7]) / 100.0
         };
     } else {
         // try if the string looks like "41.2% (not provided)"
@@ -122,7 +126,7 @@ function parseEvaluationRange(input) {
         var found = input.match(re);
         if (found) {
             return {
-                avg: parseFloat(found[1])
+                avg: parseFloat(found[1]) / 100.0
             };
         } else {
             console.log("Cound not match " + input);
@@ -140,7 +144,7 @@ const jsonEvaluation = parse(csvEvaluation, {
     columns: getEvaluationColumnNames,
     delimiter: ";",
 });
-console.log(jsonEvaluation);
+//console.log(jsonEvaluation);
 
 const jsonAntigenTests = parse(csvAntigenTests, {
   columns: getAntigenTestColumnNames,

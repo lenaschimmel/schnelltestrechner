@@ -45,17 +45,25 @@
           <p>Test: <select v-model="testId">
             <option v-for="test in visibleTests" :value="test.id">{{ getTestDisplayName(test) }}</option>
           </select></p>
-          <p v-if="intermediate">
-            <input type="radio" id="confidenceAvg" name="confidenceAvg" v-model="confidence" value="avg">
-            <label for="confidenceAvg">Durchschnitt</label> 
+          <template v-if="intermediate">
+            <p>
+              Studie: <select v-model="studyId">
+                <option v-for="study in studies" :value="study.id">{{ getStudyDisplayName(study) }}</option>
+              </select>
+            </p>
+
+            <p>
+              <input type="radio" id="confidenceAvg" name="confidenceAvg" v-model="confidence" value="avg">
+              <label for="confidenceAvg">Durchschnitt</label> 
+          
+              <input type="radio" id="confidenceMin" name="confidenceMin" v-model="confidence" value="min">
+              <label for="confidenceMin">Minimum</label> 
+          
+              <input type="radio" id="confidenceMax" name="confidenceMax" v-model="confidence" value="max">
+              <label for="confidenceMax">Maximum</label> 
+            </p>
         
-            <input type="radio" id="confidenceMin" name="confidenceMin" v-model="confidence" value="min">
-            <label for="confidenceMin">Minimum</label> 
-        
-            <input type="radio" id="confidenceMax" name="confidenceMax" v-model="confidence" value="max">
-            <label for="confidenceMax">Maximum</label> 
-        
-          </p>
+          </template>
           <p>Sensitivität: <input disabled v-bind:value="formatPercent(sensitivity)" /></p>
           <p>Spezifität:   <input disabled v-bind:value="formatPercent(specificity)" /></p>
         </template>

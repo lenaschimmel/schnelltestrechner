@@ -10,13 +10,12 @@ __Dies ist eine sehr frühe, ungestestete Version der Website. Sie ersetzt keine
 
 ## Quellen und Berechnungsweisen
 
-Die Daten über verfügbare Schnelltests kommen von des Listen des BfArM:
- * [Liste der Tests zur Eigenanwendung durch Laien](https://www.bfarm.de/DE/Medizinprodukte/Antigentests/_node.html)
- * [Liste der Antigen-Tests zum direkten Erregernachweis des Coronavirus SARS-CoV-2](https://antigentest.bfarm.de/ords/f?p=ANTIGENTESTS-AUF-SARS-COV-2)
+Die Daten über verfügbare Schnelltests kommen aus diesen Quellen:
+ * [Liste der Tests zur Eigenanwendung durch Laien](https://www.bfarm.de/DE/Medizinprodukte/Antigentests/_node.html) des BfArM
+ * [Liste der Antigen-Tests zum direkten Erregernachweis des Coronavirus SARS-CoV-2](https://antigentest.bfarm.de/ords/f?p=ANTIGENTESTS-AUF-SARS-COV-2) des BfArM
+ * [Ergebnisse unabhängiger Studien](https://www.klinikum.uni-heidelberg.de/diagnostics-global-health), zusammen getragen von der Uni Heidelberg
 
-In Kürze sollen auch die Ergebnisse unabhängiger Studien, [zusammen getragen von der Uni Heidelberg](https://www.klinikum.uni-heidelberg.de/diagnostics-global-health), einbezogen werden.
-
-Die Einschätzung der a-priori Wahrscheinlichkeit basier auf:
+Die Einschätzung der a-priori Wahrscheinlichkeit basiert auf:
  * den Inzidenzen gemäß [corona-zahlen.org](https://api.corona-zahlen.org/docs/)
  * einer Extrapolation der Inzidenz durch das Wachstum seit der Vor-Woche
  * einer Abschätzung des Underreporting-Faktors von 4-6 durch das [RKI](https://www.rki.de/DE/Content/Infekt/EpidBull/Archiv/2020/Ausgaben/50_20.pdf?__blob=publicationFile)
