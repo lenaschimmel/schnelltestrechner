@@ -6,15 +6,18 @@ Abbott, BinaxNOW™;;;;;;;;
 Pollock, N.R., et al.;USA;low concern;yes;fresh;AN;2308;78.1% (95% CI 77.4-72.2);99.4% (95% CI 99.0-99.7)
 Pilarowski, G., et al.;USA;low concern;no;fresh;AN;878;57.7% (95% CI 36.9*-76.7*);100%* (95% CI 99.6*-100*)
 James, A. E., et al.;USA;low concern;yes;fresh;AN;2339;56.5% (95% CI 48.7-64.5);99.9% (95% CI 99.7-100)
+Okoye, N.C., et al.;USA;intermediate concern;unclear;fresh;MT;2645;53.3% (95% CI 39.1-67.1);100% (95% CI 99.9-100)
 Prince-Guerra, J.L., et al.;USA;low concern;yes;stored;AN;3419;52.5% (95% CI 46.7-58.3);99.9% (95% CI 99.7-100)
 ;;;;;;;;
 Abbott, Panbio™ (NP sampling);;;;;;;;
+Domínguez Fernández, M., et al.;Spain;intermediate concern;unclear;fresh;unclear;30;95.0% (not provided);100% (not provided)
 Alemany, A., et al.;Spain;intermediate concern;yes;banked;NP;919;93.4% (95% CI 91.5-95.0);100% (95% CI 95.8-100)
 FINDdx;Germany;low concern;yes;fresh;NP;281;90.9% (95% CI 78.8-96.4);99.2% (95% CI 97.0-99.8)
 Merino-Amador, P., et al.;Spain;low concern;no;fresh;NP;958;90.5% (95% CI 87.5-93.6);98.8% (95% CI 98.0-99.7)
 Krüger, L.J., et al.;Germany;low concern;yes;fresh;NP;1034;87.5% (95% CI 79.8-92.5);99.9% (95% CI 99.4-100)
 Schwob, J.M., et al.;Switzerland;low concern;yes;fresh;NP;271;86.1% (95% CI 78.6-91.7);100% (95% CI 97.6*-100*)
 Berger, A., et al.;Switzerland;low concern;yes;fresh;NP;535;85.5% (95% CI 78.0-91.2);100% (95% CI 99.1-100)
+Jääskeläinen, A.E., et al.;Finland;high concern;yes;banked;NP;190;83.0% (95% CI 76.1-88.1);100% (not provided)
 Abdulrahman, A., et al.;Bahrain;intermediate concern;yes;fresh;AN;4183;82.1% (95% CI 79.2-84.8);99.1% (95% CI 98.8-99.4)
 Gremmels, H., et al.;Netherlands;intermediate concern;yes;fresh;NP;208;81.0% (95% CI 69.0-89.9);100% (95% CI 97.5-100)
 Ngo Nsoga, M.T., et al.;Switzerland;intermediate concern;yes;fresh;OP;402;81.0% (95% CI 74.2-86.6);99.1% (95% CI 96.9-99.9)
@@ -28,10 +31,12 @@ Bulilete, O., et al.;Spain;low concern;yes;fresh;NP;1362*;71.4% (95% CI 63.2*-78
 Akingba, O.L., et al.;Southafrica;unclear;yes;fresh;NP;677;69.2% (95% CI 61.4-75.8);99.0% (95% CI 98.8-99.2)
 Favresse, J., et al.;Belgium;intermediate concern;yes;fresh;NP;188;67.7% (95% CI 57.4-76.9);100% (95% CI 96.1-100)
 Drevinek, P., et al.;Czech Republic;low concern;yes;fresh;NP;591;66.4% (95% CI 59.9-72.2);100% (95% CI 99.0-100)
+Pérez-García, F., et al.;Spain;high concern;no;banked;NP;320;60.0% (95% CI 52.2-67.4);100% (95% CI 97.6-100)
 Agullo, V., et al.;Spain;low concern;yes;fresh;NP;652*;57.3% (95% CI 48.3-65.8);99.8% (95% CI 98.8-100)
 Schildgen, V., et al.;Germany;high concern;yes;unclear;BAL/TW;73;50.0% (95% CI 34.2*-65.8*);77.4% (95% CI 58.9*-90.4*)
 Krüger, L.J., et al.;Germany;high concern;yes;fresh;OP;74;50.0% (95% CI 1.3-98.7);100% (95% CI 94.9-100)
 Torres, I., et al.;Spain;low concern;no;fresh;NP;634;48.1% (95% CI 37.4-58.9);100% (95% CI 99.3-100)
+Villaverde, S., et al.;Spain;intermediate concern;yes;fresh;NP;1620;45.4% (95% CI 34.1-57.2);99.8% (95% CI 99.4-99.9)
 Agullo, V., et al.;Spain;intermediate concern;yes;fresh;AN;659;44.7% (95% CI 36.1-53.6);100% (95% CI 99.1-100)
 Olearo, F., et al.;Germany;intermediate concern;yes;unclear;OP;184;44.6% (95% CI 34.3-55.3);100% (95% CI 96.3-100)
 Caruana, G., et al.;Switzerland;intermediate concern;yes;fresh;NP;532;41.2% (not provided);995% (not provided)
@@ -56,9 +61,13 @@ Weitzel, T., et al.;Chile;high concern;no;banked;NP/OP;109;16.7% (95% CI 10.0-26
 ;;;;;;;;
 Bionote, NowCheck®;;;;;;;;
 FINDdx;Brazil;low concern;yes;fresh;NP;400;89.2% (95% CI 81.7-93.9);97.3% (95% CI 94.8-98.6)
+Rottenstreich, A., et al.;Israel;low concern;yes;unclear;NP;1326;55.6% (95% CI 21.2-86.3);100% (95% CI 99.7-100)
 ;;;;;;;;
 Biotical Health, SARS-CoV-2 Ag Card;;;;;;;;
 Favresse, J., et al.;Belgium;intermediate concern;yes;fresh;NP;188;66.7% (95% CI 56.3-76.0);98.8% (95% CI 94.1-99.9)
+;;;;;;;;
+CerTest Biotec, SARS-CoV-2 one step test card;;;;;;;;
+Pérez-García, F., et al.;Spain;high concern;no;banked;NP;320;53.5% (95% CI 45.7-61.2);100% (95% CI 97.6-100)
 ;;;;;;;;
 Coris BioConcept, COVID-19 Ag Respi-Strip;;;;;;;;
 Mertens, P., et al.;Belgium;intermediate concern;no;banked;NP;328;57.6% (95% CI 48.7*-66.1*);99.5% (95% CI 97.2*-100*)
@@ -80,7 +89,9 @@ Yokota, I., et al.;Japan;high concern;no;banked;NP;17;58.8%* (95% CI 32.9*-81.6*
 Yokota, I., et al.;Japan;high concern;no;banked;saliva;17;23.5%* (95% CI 6.8*-49.9*);not provided
 ;;;;;;;;
 Fujirebio, Lumipulse® G SARS-CoV-2 Ag;;;;;;;;
+Gili, A., et al.;Italy;intermediate concern;yes;banked;NP;226;100% (95% CI 96.0-100);94.8% (95% CI 93.6-95.8)
 Yokota, I., et al.;Japan;high concern;no;banked;NP;17;100% (95% CI 80.5*-100);not provided
+Gili, A., et al.;Italy;intermediate concern;yes;fresh;NP;1738;92.6% (95% CI 85.4-97.0);90.8% (95% CI 84.5-95.2)
 Yokota, I., et al.;Japan;high concern;no;banked;saliva;17;82.4%* (95% CI 56.6*-96.2*);not provided
 Basso, D., et al.;Italy;low concern;yes;fresh;NP;234;81.6% (95% CI 71.0-89.5);93.8% (95% CI 86.2-98.0)
 Menchinelli, G., et al.;Italy;intermediate concern;yes;banked;NP;594;79.9% (95% CI 73.6-85.3);99.3% (95% CI 97.8-99.8)
@@ -100,6 +111,7 @@ Houston, H., et al.;United Kingdom;low concern;yes;fresh;NP;242;86.4% (CI 95% 81
 Peto, T., et al.;United Kingdom;unclear;yes;unclear;unclear;6954;not provided;99.7% (not provided)
 Peto, T., et al.;United Kingdom;unclear;yes;unclear;unclear;198;78.8% (95% CI 72.4-84.3);not provided
 Peto, T., et al.;United Kingdom;unclear;yes;unclear;unclear;223;70.0% (95% CI 63.5-75.9);not provided
+Young, B.C., et al.;United Kingdom;unclear;yes;fresh;NP;803;62.4% (95% CI 55.6-69.0);100% (95% CI 99.4-100)
 Peto, T., et al.;United Kingdom;unclear;yes;unclear;unclear;372;57.5% (95% CI 52.3-62.6);not provided
 ;;;;;;;;
 JOYSBIO Biotechnology, COVID-19 Antigen Rapid Test Kit;;;;;;;;
@@ -131,6 +143,7 @@ Caruana, G., et al.;Switzerland;intermediate concern;yes;fresh;NP;532;48.3% (not
 ;;;;;;;;
 QUIDEL, Sofia SARS Antigen FIA;;;;;;;;
 Porte, L., et al.;Chile;high concern;no;banked;NP/OP;64;93.8% (95% CI 79.9-98.3);96.9% (95% CI 84.3-99.4)
+Jääskeläinen, A.E., et al.;Finland;high concern;yes;banked;NP;188;80.0% (95% CI 73.3-86.0);100% (not provided)
 Beck, E.T., et al.;USA;intermediate concern;yes;fresh;NP;346;77.0% (95% CI 64.5*-86.9*);99.6% (95% CI 98.1*-100*)
 Herrera, V., et al.;USA;unclear;yes;unclear;unclear;1172;76.8% (95% CI 72.6-80.5);99.2% (95% CI 98.2-99.7)
 Marti, J.L.G., et al.;USA;unclear;yes;fresh;MT;427;72.0% (not provided);99.0% (not provided)
@@ -166,12 +179,14 @@ Schildgen, V., et al.;Germany;high concern;yes;unclear;BAL/TW;73;88.1% (95% CI 7
 Lindner, A.K., et al.;Germany;low concern;yes;fresh;NP;139;85.0% (955 CI 70.9-92.9);99.1% (95% CI 94.8-99.5)
 Iglὁi, Z., et al.;Netherlands;low concern;yes;fresh;NP;970;84.9% (95% CI 79.1-89.4);99.5% (95% CI 98.7-99.8)
 Gupta, A., et al.;India;low concern;yes;fresh;NP;330;81.8% (95% CI 71.3-89.6);99.6% (95% CI 97.8-99.9)
+Jääskeläinen, A.E., et al.;Finland;high concern;yes;banked;NP;198;81.0% (95% CI 74.2-86.4);100% (not provided)
 Turcato, G., et al.;Italy;unclear;unclear;fresh;NP;3410;80.3% (95% CI 74.9-85.4);99.1% (95% CI 98.6-99.3)
 Lindner, A.K., et al.;Germany;low concern;yes;fresh;NP;289;79.5% (95% CI 64.5-89.2);99.6% (95% CI 97.8-100)
 Krüger, L.J., et al.;Germany/England;intermediate concern;yes;unclear;NP/OP;1263;76.6% (95% CI 62.8-86.4);99.3% (95% CI 98.6-99.6)
 Möckel, M., et al.;Germany;intermediate concern;yes;fresh;NP/OP;271;75.3% (95% CI 65.8-83.4);100% (95% CI 98.4-100)
 Lindner, A.K., et al.;Germany;intermediate concern;yes;fresh;AN;289;74.4% (95% CI 58.9-85.4);99.2% (95% CI 97.1-99.8)
 Lindner, A.K., et al.;Germany;low concern;yes;fresh;NP;180;73.0% (95% CI 58.1-84.3);99.3% (95% CI 96.0-100)
+Salvagno, G.L., et al.;Italy;intermediate concern;yes;unclear;NP;321;72.5% (95% CI 64.6-79.5);99.4% (95% CI 96.8-100)
 Cerutti, F., et al.;Italy;unclear;yes;unclear;NP;185;72.1% (95% CI 62.5*-80.5*);100% (95% CI 95.6*-100*)
 Möckel, M., et al.;Germany;intermediate concern;yes;fresh;NP/OP;2020;72.0% (95% CI 53.3-86.7);99.4% (95% CI 97.3-99.9)
 Krüttgen, A., et al.;Germany;high concern;yes;banked;NP;150;70.7% (95% CI 59.0*-80.6*);96.0% (95% CI 88.9*-99.2*)

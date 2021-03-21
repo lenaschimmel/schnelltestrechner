@@ -4,6 +4,7 @@ const parse = require('csv-parse/lib/sync');
 var latestEvaluationName = "";
 var latestMapping = null;
 var currentStudyId = 1;
+var currentTestId = 1;
 
 function getAntigenTestColumnNames(firstLine) {
     return firstLine.map(convertAntigenTestColumnName);
@@ -129,9 +130,19 @@ function parseEvaluationRange(input) {
                 avg: parseFloat(found[1]) / 100.0
             };
         } else {
-            console.log("Cound not match " + input);
+            console.log("Could not match '" + input + "'.");
         }
     }
+}
+
+function getSelftestsWithoutId() {
+    return jsonSelftests.filter(test => test.id == null).map(test => {
+        test.selftest = true;
+        test.pei = false;
+        test.studies = {};
+        test.id = "NO-AT-" + (currentTestId++);
+        return test;
+    });
 }
 
 const csvAntigenTests = fs.readFileSync("antigentests.csv", {encoding: "latin1"});
@@ -144,7 +155,6 @@ const jsonEvaluation = parse(csvEvaluation, {
     columns: getEvaluationColumnNames,
     delimiter: ";",
 });
-//console.log(jsonEvaluation);
 
 const jsonAntigenTests = parse(csvAntigenTests, {
   columns: getAntigenTestColumnNames,
@@ -152,5 +162,8 @@ const jsonAntigenTests = parse(csvAntigenTests, {
   skip_empty_lines: true,
   delimiter: ";",
 });
+
+// this works in principle, but the frontend can't handle tests without studies yet
+// jsonAntigenTests.push(... getSelftestsWithoutId());
 
 fs.writeFileSync("antigentests.json", JSON.stringify(jsonAntigenTests, null, 2));

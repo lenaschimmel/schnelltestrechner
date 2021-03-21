@@ -1,9 +1,94 @@
 [
-    { "id": "AT001/20", "available": [] },
-    { "id": "AT116/20", "available": ["dm", "LIDL", "Rossmann"] },
-    { "id": "AT011/20", "available": [] },
-    { "id": "AT307/21", "available": [] },
-    { "id": "AT033/20", "available": [] },
-    { "id": "AT282/21", "available": [] },
-    { "id": "AT363/20", "available": ["Aldi"] }    
+    {
+        "reference": "5640-S-004/21",
+        "id": "AT001/20",
+        "available": []
+    },
+    {
+        "reference": "5640-S-007/21",
+        "id": "AT116/20",
+        "available": [
+            "dm",
+            "LIDL",
+            "Rossmann"
+        ]
+    },
+    {
+        "reference": "5640-S-009/21",
+        "id": "AT011/20",
+        "available": []
+    },
+    {
+        "reference": "5640-S-025/21",
+        "id": "AT307/21",
+        "available": []
+    },
+    {
+        "reference": "5640-S-062/21",
+        "id": "AT033/20",
+        "available": []
+    },
+    {
+        "reference": "5640-S-057/21",
+        "id": "AT282/21",
+        "available": []
+    },
+    {
+        "reference": "5640-S-022/21",
+        "id": "AT363/20",
+        "available": [
+            "Aldi"
+        ]
+    },
+    {
+        "reference": "5640-S-061/21",
+        "id": "AT033/20",
+        "available": []
+    },
+    {
+        "reference": "5640-S-096/21",
+        "manufacturer": "NanoRepro AG",
+        "antragsteller": "NanoRepro AG",
+        "name": "NanoRepro Antigen Schnelltest (Viromed)/NanoRepro Antigen Rapid Test (Viromed)",
+        "id": null
+    },
+    {
+        "reference": "5640-S-076/21",
+        "manufacturer": "MP Biomedicals Germany GmbH",
+        "antragsteller": "MP Biomedicals Germany GmbH",
+        "name": "Rapid SARS-CoV-2 Antigen Test Card",
+        "id": null
+    },
+    {
+        "reference": "5640-S-041/21",
+        "id": "AT025/20",
+        "available": []
+    },
+    {
+        "reference": "5640-S-168/21",
+        "manufacturer": "Hangzhou Clongene Biotech Co., Ltd.",
+        "antragsteller": "Hangzhou Clongene Biotech Co., Ltd.",
+        "name": "COVID-19 Antigen Rapid Test",
+        "id": null
+    },
+    {
+        "reference": "5640-S-128/21",
+        "manufacturer": "MEDICE Arzneimittel Pütter GmbH & Co. KG",
+        "antragsteller": "MEDICE Arzneimittel Pütter GmbH & Co. KG",
+        "name": "Medicovid-AG SARS CoV-2 Antigen SELBSTTEST NASE",
+        "id": null
+    },
+    {
+        "reference": "5640-S-116/21",
+        "manufacturer": "amec GmbH",
+        "antragsteller": "amec GmbH",
+        "name": "COVID-19 Antigen Schnelltest (Spucktest)",
+        "id": null
+    },
+    {
+        "reference": "5640-S-147/21",
+        "manufacturer": "MR Sanicom GmbH",
+        "antragsteller": "MR Sanicom GmbH",
+        "name": "COVID-19 Antigen-Schnelltest (Kolloidales Gold)"
+    }
 ]
