@@ -16,14 +16,20 @@
 
   <body>
     <div id="hello-vue" class="demo">
-      <h1>Covid-Schnelltests selbst verstehen</h1>
-      <h2>Ein Werkzeug, um Bayes-Wahrscheinlichkeiten von Covid-Schnelltests zu verstehen</h2>
-      <p><b>Dies ist eine sehr frühe Vorschau-Version dieser Seite. Sie ist weder technisch vollständig, noch von unabhängigen Menschen auf Plausibilität geprüft. Bitte verwende die Ergebnisse mit Vorsicht und Skepsis!</b></p>
-      <p>Seit Kurzem sind einige Covid-Schnelltests in Deutschland als Selbst-Tests zugelassen. Wie praktisch alle medizinischen Tests können sie gelegentlich falsche Ergebnisse liefen, z.B. einem mit SARS-CoV-2 (Corona) infizierten Menschen anzeigen, dass er nicht infiziert wäre, oder umgekehrt.</p>
-      <p>Politik und Wissenschaft haben oft darauf hingewiesen, dass der Nutzen von Covid-Schnelltests eingeschänkt ist, aber dennoch ein wichtiges Werkzeug zur Kontrolle und Beendigung der Pandemie. Dazu ist es aber wichtig, dass Menschen die Tests korrekt anwenden, und aus den Ergebnissen die richtigen Schlüsse ziehen.</p>
-      <p>Ein positives oder negatives Testergebnis sinnvoll zu interpretieren, ist gar nicht so einfach. Dazu muss man nicht Medizin studiert haben, aber es braucht etwas mathematisches Verständnis und Wissen über die Zusammenhänge. Es gibt ein wunderbares (allerdings englisch-sprachiges) Video, das diese Zusammenhänge erklärt:</p>
-     <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/lG4VkPoG3ko" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-      <p>Diese Website stellt eine einfache Weise dar, um die Berechnungen auf die konkreten Werte für Deutschland anzuwenden.</p>
+      <h1>Covid-Schnelltests - Ergebnisse richtig interpretieren</h1>
+    
+      <p><b>Dies ist eine sehr frühe Vorschau-Version dieser Seite. Sie wurde bisher nicht von unabhängigen, fachkundigen Menschen auf Plausibilität und Fehlerfreiheit geprüft. Bitte verwende die Ergebnisse mit Vorsicht und Skepsis!</b></p>
+
+      <p>Wie zuverlässig eigentlich ein Schnell- oder Selbst-Test auf Sars-CoV-2 ist, <b>lässt sich unmöglich allgemein beantworten.</b> Neben den Eigenschaften des eigentlichen Tests (<i>Sensitivität</i> und <i>Spezifität</i>) spielt auch die sogenannte <i>Vortestwahrscheinlichkeit</i> eine enorm große Rolle. Und die hängt grundsätzlich von der <i>Inzidenz</i>, sowie dem privatem und beruflichem <i>Risiko-Profil</i>ab. Wer außerdem <i>Symptome</i> hat, hat eine zusätzlich stark erhöhte Vortestwahrscheinlichkeit.</p>
+
+      <p>Um in einem konkreten Fall das Ergebnis zu bewerten müsste man also:</p>
+      <ul>
+        <li>Die mathematischen Grundprinzipien verstehen, insbesondere das scheinbare paradoxe Phänomen des <a href="https://de.wikipedia.org/wiki/Pr%C3%A4valenzfehler">Prävalenzfehlers</a></li>
+        <li>Alle oben genannten Werte recherchieren bzw. abschätzen</li>
+        <li>Diese Werte in Formeln einsetzen und Ergebnisse ausrechnen</li>
+      </ul>
+
+      <p>Diese Seite möchte bei all diesen Schritten helfen. Der Fokus liegt auf einem Test für eine bestimmte Person zu einem bestimmten Zeitpunkt, also nicht auf Abschätzungen für die Gesamtbevölkerung.</p>
 
       <input type="checkbox" id="intermediate" name="intermediate" v-model="intermediate"><label for="intermediate">Detaillierte Angaben anzeigen</label>
 
@@ -116,10 +122,11 @@
         </template>
         <template v-if="intermediate">
           <template v-if="incidenceSource != 'input'">
-            <p>7-Tage Inzidenz je 100.000 diese Woche: <input disabled :value="formatNumber(incidence)" /></p>
-            <p>7-Tage Inzidenz je 100.000 vorherige Woche: <input disabled :value="formatNumber(incidencePrev)" /></p>
+            <p><i>Quelle der Inzidenzdaten: <a href="https://api.corona-zahlen.org">api.corona-zahlen.org</a></i></p>
+            <p>Gemeldete 7-Tage Inzidenz je 100.000 diese Woche: <input disabled :value="formatNumber(incidence)" /></p>
+            <p>Gemeldete 7-Tage Inzidenz je 100.000 vorherige Woche: <input disabled :value="formatNumber(incidencePrev)" /></p>
           </template>
-          <p>Angepasste Prävalenz: <input disabled :value="formatNumber(incidenceAdjusted)" /></p>
+          <p>Geschätzte Prävalenz: <input disabled :value="formatNumber(incidenceAdjusted)" /></p>
         </template>
       </div>
 
@@ -150,7 +157,7 @@
         </p>
         <p>Zusätzliche Risiken in den letzten 10 Tagen laut <a href="https://www.microcovid.org">microCOVID.org</a>: <input v-model="additionalRiskString" /> µCoV</p>
 
-        <p>A-Priori vor Symptomen: <input disabled v-bind:value="formatPercent(priorProb)" /></p>
+        <p>Vortestwahrscheinlichkeit vor Symptomen: <input disabled v-bind:value="formatPercent(priorProb)" /></p>
       </div>
       <div>
         <h2>Symptome</h2>
@@ -159,7 +166,7 @@
           <input type="checkbox" id="sympTaste" name="sympTaste" v-model="sympTaste"><label for="sympTaste">Geschmacksverlust</label>
           <input type="checkbox" id="sympFever" name="sympFever" v-model="sympFever"><label for="sympFever">Fieber</label>
           <input type="checkbox" id="sympCough" name="sympCough" v-model="sympCough"><label for="sympCough">Husten</label>
-          <input type="checkbox" id="sympChest" name="sympChest" v-model="sympChest"><label for="sympChest">Engeefühl in der Brust</label>
+          <input type="checkbox" id="sympChest" name="sympChest" v-model="sympChest"><label for="sympChest">Engegefühl in der Brust</label>
           <input type="checkbox" id="sympWheez" name="sympWheez" v-model="sympWheez"><label for="sympWheez">Keuchen</label>
           <input type="checkbox" id="sympOther" name="sympOther" v-model="sympOther"><label for="sympOther">Sonstige verdächtige Symptome</label>
         </p>
@@ -168,17 +175,20 @@
 
         <template v-if="anySymptoms && intermediate">
           <p>C19 Rule score: <input disabled v-bind:value="ruleScore" /></p>
-          <p>C19 Rule likelyhood ratio: <input disabled v-bind:value="formatNumber(ruleLR)" /></p>
+          <p>C19 Rule likelihood ratio: <input disabled v-bind:value="formatNumber(ruleLR)" /></p>
           <p>Symptom-Faktor: <input disabled v-bind:value="formatNumber(ruleLR*anySymptomFactor)" /></p>
         </template>
-        <p>A-Priori nach Symptomen: <input disabled v-bind:value="formatPercent(priorProbSymptoms)" /></p>
+        <p>Vortestwahrscheinlichkeit nach Symptomen: <input disabled v-bind:value="formatPercent(priorProbSymptoms)" /></p>
       </div>
       <div>
-        <h2>Ergenisse</h2>
-
-        <p>A-Posteriori bei positivem Test: <input disabled v-bind:value="formatPercent(updatedProbPos)" /></p>
-        <p>A-Posteriori bei negativem Test: <input disabled v-bind:value="formatPercent(updatedProbNeg)" /></p>
-      </div>
+        <h2>Ergebnisse</h2>
+        <p><b>Bei einem positiven Testergebnis…</b></p>
+        <p>…zu {{ formatPercent(updatedProbPos) }} wirklich infiziert</p>
+        <p>…zu {{ formatPercent(1-updatedProbPos) }} nicht infiziert ("falsch-positiver" Test)</p>
+        <p><b>Bei einem negativen Testergebnis…</b></p>
+        <p>…zu {{ formatPercent(updatedProbNeg) }} trotzdem infiziert ("falsch-negativer" Test)</p>
+        <p>…zu {{ formatPercent(1-updatedProbNeg) }} wirklich nicht infiziert</p>
+        </div>
     </div>
 
     <script src="https://unpkg.com/vue@next"></script>
