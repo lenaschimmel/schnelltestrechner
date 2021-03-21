@@ -7,6 +7,7 @@ const apiStates = "/states/history/incidence/8";
 const apiDistricts = "/districts/history/incidence/8";
 
 const HelloVueApp = {
+    el: '#hello-vue',
     data() {
         return {
             // showing any symtomps that might lead to PCR testing in Germany 
@@ -300,4 +301,4 @@ const HelloVueApp = {
     }
 }
 
-Vue.createApp(HelloVueApp).mount('#hello-vue')
+var app = new Vue(HelloVueApp);
