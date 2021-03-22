@@ -2,7 +2,7 @@ const apiEndpoint = "https://api.corona-zahlen.org";
 // 7 days should be enough, but sometimes the API returns fewer entries then requested
 // also, there seems to be about 15% underreporting for the latest day, which we bypass by using 
 // data that is one day older
-const apiGermany = "/germany/history/incidence/8"; 
+const apiGermany = "/germany/history/incidence/8";
 const apiStates = "/states/history/incidence/8";
 const apiDistricts = "/districts/history/incidence/8";
 
@@ -134,12 +134,12 @@ const HelloVueApp = {
         },
     },
     watch: {
-         "selectedTest" : function (newVal, oldVal){
-             if (newVal != oldVal) {
-                 this.studyId = Object.values(newVal.studies).filter(study => study.author == "manufacturer")[0].id;
-             }
-         }
-     },
+        "selectedTest": function (newVal, oldVal) {
+            if (newVal != oldVal) {
+                this.studyId = Object.values(newVal.studies).filter(study => study.author == "manufacturer")[0].id;
+            }
+        }
+    },
     computed: {
         visibleTests() {
             if (this.tests && this.testsKind == "self") {
@@ -205,7 +205,7 @@ const HelloVueApp = {
             if (this.incidenceSource == "input") {
                 return parseFloat(this.incidenceString.replace(",", "."));
             } else if (this.incidenceSource == "germany" && this.germany) {
-                console.log("Germany: " + JSON.stringify( this.germany));
+                console.log("Germany: " + JSON.stringify(this.germany));
                 return this.germany[6].weekIncidence;
             } else if (this.incidenceSource == "state" && this.selectedState) {
                 return this.selectedState.history[6].weekIncidence;
@@ -261,22 +261,22 @@ const HelloVueApp = {
             return prior;
         },
         anySymptoms() {
-            return this.sympSmell || this.sympTaste || this.sympFever || this.sympCough || this.sympWheez || this.sympChest || this.sympOther;
+            return this.sympSmell || this.sympTaste || this.sympFever || this.sympCough || this.sympWheez || this.sympChest || this.sympOther;
         },
         ruleScore() {
             let score = 0.0;
-            if (this.sympSmell || this.sympTaste) score +=  2;
-            if (this.sympFever && this.sympCough) score +=  1;
-            if (this.sympWheez || this.sympChest) score += -1;
+            if (this.sympSmell || this.sympTaste) score += 2;
+            if (this.sympFever && this.sympCough) score += 1;
+            if (this.sympWheez || this.sympChest) score += -1;
             return score;
         },
         ruleLR() {
-            switch(this.ruleScore) {
-                case  3: return 15.0;
-                case  2: return  4.2;
-                case  1: return  1.2;
-                case  0: return  0.7;
-                case -1: return  0.1;
+            switch (this.ruleScore) {
+                case 3: return 15.0;
+                case 2: return 4.2;
+                case 1: return 1.2;
+                case 0: return 0.7;
+                case -1: return 0.1;
             };
             return 0.0;
         },

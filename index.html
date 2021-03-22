@@ -1,197 +1,215 @@
 <!DOCTYPE html>
 
 <html lang="de">
-  <head>
-    <meta charset="utf-8" />
 
-    <title>Covid-Schnelltests selbst verstehen</title>
-    <meta
-      name="description"
-      content="Ein Werkzeug, um Bayes-Wahrscheinlichkeiten von Covid-Schnelltests zu verstehen"
-    />
-    <meta name="author" content="Lena Schimmel" />
+<head>
+  <meta charset="utf-8" />
 
-    <link rel="stylesheet" href="styles.css" />
-  </head>
+  <title>Covid-Schnelltests selbst verstehen</title>
+  <meta name="description" content="Ein Werkzeug, um Bayes-Wahrscheinlichkeiten von Covid-Schnelltests zu verstehen" />
+  <meta name="author" content="Lena Schimmel" />
 
-  <body>
-    <div id="hello-vue" class="demo">
-      <h1>Covid-Schnelltests - Ergebnisse richtig interpretieren</h1>
-    
-      <p><b>Dies ist eine sehr frühe Vorschau-Version dieser Seite. Sie wurde bisher nicht von unabhängigen, fachkundigen Menschen auf Plausibilität und Fehlerfreiheit geprüft. Bitte verwende die Ergebnisse mit Vorsicht und Skepsis!</b></p>
+  <link rel="stylesheet" href="styles.css" />
+</head>
 
-      <p>Wie zuverlässig eigentlich ein Schnell- oder Selbst-Test auf Sars-CoV-2 ist, <b>lässt sich unmöglich allgemein beantworten.</b> Neben den Eigenschaften des eigentlichen Tests (<i>Sensitivität</i> und <i>Spezifität</i>) spielt auch die sogenannte <i>Vortestwahrscheinlichkeit</i> eine enorm große Rolle. Und die hängt grundsätzlich von der <i>Inzidenz</i>, sowie dem privatem und beruflichem <i>Risiko-Profil</i>ab. Wer außerdem <i>Symptome</i> hat, hat eine zusätzlich stark erhöhte Vortestwahrscheinlichkeit.</p>
+<body>
+  <div id="hello-vue" class="demo">
+    <h1>Covid-Schnelltests - Ergebnisse richtig interpretieren</h1>
 
-      <p>Um in einem konkreten Fall das Ergebnis zu bewerten müsste man also:</p>
-      <ul>
-        <li>Die mathematischen Grundprinzipien verstehen, insbesondere das scheinbare paradoxe Phänomen des <a href="https://de.wikipedia.org/wiki/Pr%C3%A4valenzfehler">Prävalenzfehlers</a></li>
-        <li>Alle oben genannten Werte recherchieren bzw. abschätzen</li>
-        <li>Diese Werte in Formeln einsetzen und Ergebnisse ausrechnen</li>
-      </ul>
+    <p><b>Dies ist eine sehr frühe Vorschau-Version dieser Seite. Sie wurde bisher nicht von unabhängigen, fachkundigen
+        Menschen auf Plausibilität und Fehlerfreiheit geprüft. Bitte verwende die Ergebnisse mit Vorsicht und
+        Skepsis!</b></p>
 
-      <p>Diese Seite möchte bei all diesen Schritten helfen. Der Fokus liegt auf einem Test für eine bestimmte Person zu einem bestimmten Zeitpunkt, also nicht auf Abschätzungen für die Gesamtbevölkerung.</p>
+    <p>Wie zuverlässig eigentlich ein Schnell- oder Selbst-Test auf Sars-CoV-2 ist, <b>lässt sich unmöglich allgemein
+        beantworten.</b> Neben den Eigenschaften des eigentlichen Tests (<i>Sensitivität</i> und <i>Spezifität</i>)
+      spielt auch die sogenannte <i>Vortestwahrscheinlichkeit</i> eine enorm große Rolle. Und die hängt grundsätzlich
+      von der <i>Inzidenz</i>, sowie dem privatem und beruflichem <i>Risiko-Profil</i>ab. Wer außerdem <i>Symptome</i>
+      hat, hat eine zusätzlich stark erhöhte Vortestwahrscheinlichkeit.</p>
 
-      <input type="checkbox" id="intermediate" name="intermediate" v-model="intermediate"><label for="intermediate">Detaillierte Angaben anzeigen</label>
+    <p>Um in einem konkreten Fall das Ergebnis zu bewerten müsste man also:</p>
+    <ul>
+      <li>Die mathematischen Grundprinzipien verstehen, insbesondere das scheinbare paradoxe Phänomen des <a
+          href="https://de.wikipedia.org/wiki/Pr%C3%A4valenzfehler">Prävalenzfehlers</a></li>
+      <li>Alle oben genannten Werte recherchieren bzw. abschätzen</li>
+      <li>Diese Werte in Formeln einsetzen und Ergebnisse ausrechnen</li>
+    </ul>
 
-      <div id="tests">
-        <h2>Test-Auswahl</h2>
-        <input type="radio" id="testsSelf" name="testsSelf" v-model="testsKind" value="self">
-        <label for="testsSelf">Nur Selbst-Tests</label> 
-        
-        <input type="radio" id="testsPei" name="testsPei" v-model="testsKind" value="pei">
-        <label for="testsPei">Vom PEI evaluiert (Selbst- und Profi-Tests)</label> 
-        
-        <input type="radio" id="testsAll" name="testsAll" v-model="testsKind" value="all">
-        <label for="testsAll">Alle (Selbst- und Profi-Tests)</label> 
-        
-        <input type="radio" id="testsInput" name="testsInput" v-model="testsKind" value="input">
-        <label for="testsInput">Eigene Werte eingeben</label> 
-        
-        <template v-if="testsKind != 'input'">
-          <p>Test: <select v-model="testId">
+    <p>Diese Seite möchte bei all diesen Schritten helfen. Der Fokus liegt auf einem Test für eine bestimmte Person zu
+      einem bestimmten Zeitpunkt, also nicht auf Abschätzungen für die Gesamtbevölkerung.</p>
+
+    <input type="checkbox" id="intermediate" name="intermediate" v-model="intermediate"><label
+      for="intermediate">Detaillierte Angaben anzeigen</label>
+
+    <div id="tests">
+      <h2>Test-Auswahl</h2>
+      <input type="radio" id="testsSelf" name="testsSelf" v-model="testsKind" value="self">
+      <label for="testsSelf">Nur Selbst-Tests</label>
+
+      <input type="radio" id="testsPei" name="testsPei" v-model="testsKind" value="pei">
+      <label for="testsPei">Vom PEI evaluiert (Selbst- und Profi-Tests)</label>
+
+      <input type="radio" id="testsAll" name="testsAll" v-model="testsKind" value="all">
+      <label for="testsAll">Alle (Selbst- und Profi-Tests)</label>
+
+      <input type="radio" id="testsInput" name="testsInput" v-model="testsKind" value="input">
+      <label for="testsInput">Eigene Werte eingeben</label>
+
+      <template v-if="testsKind != 'input'">
+        <p>Test: <select v-model="testId">
             <option v-for="test in visibleTests" :value="test.id">{{ getTestDisplayName(test) }}</option>
           </select></p>
-          <template v-if="intermediate">
-            <p>
-              Studie: <select v-model="studyId">
-                <option v-for="study in studies" :value="study.id">{{ getStudyDisplayName(study) }}</option>
-              </select>
-            </p>
+        <template v-if="intermediate">
+          <p>
+            Studie: <select v-model="studyId">
+              <option v-for="study in studies" :value="study.id">{{ getStudyDisplayName(study) }}</option>
+            </select>
+          </p>
 
-            <p>
-              <input type="radio" id="confidenceAvg" name="confidenceAvg" v-model="confidence" value="avg">
-              <label for="confidenceAvg">Durchschnitt</label> 
-          
-              <input type="radio" id="confidenceMin" name="confidenceMin" v-model="confidence" value="min">
-              <label for="confidenceMin">Minimum</label> 
-          
-              <input type="radio" id="confidenceMax" name="confidenceMax" v-model="confidence" value="max">
-              <label for="confidenceMax">Maximum</label> 
-            </p>
-        
-          </template>
-          <p>Sensitivität: <input disabled v-bind:value="formatPercent(sensitivity)" /></p>
-          <p>Spezifität:   <input disabled v-bind:value="formatPercent(specificity)" /></p>
+          <p>
+            <input type="radio" id="confidenceAvg" name="confidenceAvg" v-model="confidence" value="avg">
+            <label for="confidenceAvg">Durchschnitt</label>
+
+            <input type="radio" id="confidenceMin" name="confidenceMin" v-model="confidence" value="min">
+            <label for="confidenceMin">Minimum</label>
+
+            <input type="radio" id="confidenceMax" name="confidenceMax" v-model="confidence" value="max">
+            <label for="confidenceMax">Maximum</label>
+          </p>
+
         </template>
-        <template v-else>
-          <p>Sensitivität: <input v-model="sensitivityString" /></p>
-          <p>Spezifität:   <input v-model="specificityString" /></p>
-        </template>
-      </div>
-      <div id="factors" v-if="intermediate">
-        <h2>Abgeleitete Werte:</h2>
-        <p>Falsch-Negativ-Rate: <input disabled v-bind:value="formatPercent(fnr)" /></p>
-        <p>Falsch-Positiv-Rate: <input disabled v-bind:value="formatPercent(fpr)" /></p>
+        <p>Sensitivität: <input disabled v-bind:value="formatPercent(sensitivity)" /></p>
+        <p>Spezifität: <input disabled v-bind:value="formatPercent(specificity)" /></p>
+      </template>
+      <template v-else>
+        <p>Sensitivität: <input v-model="sensitivityString" /></p>
+        <p>Spezifität: <input v-model="specificityString" /></p>
+      </template>
+    </div>
+    <div id="factors" v-if="intermediate">
+      <h2>Abgeleitete Werte:</h2>
+      <p>Falsch-Negativ-Rate: <input disabled v-bind:value="formatPercent(fnr)" /></p>
+      <p>Falsch-Positiv-Rate: <input disabled v-bind:value="formatPercent(fpr)" /></p>
 
-        <p>Bayes-Faktor bei positivem Test: <input disabled :value="formatNumber(bayesFactorPos)" /></p>
-        <p>Bayes-Faktor bei negativem Test: <input disabled :value="formatNumber(1/bayesFactorNeg)" /></p>
-      </div>
+      <p>Bayes-Faktor bei positivem Test: <input disabled :value="formatNumber(bayesFactorPos)" /></p>
+      <p>Bayes-Faktor bei negativem Test: <input disabled :value="formatNumber(1/bayesFactorNeg)" /></p>
+    </div>
 
-      <div id="incidence">
-        <h2>Aktuelle Inzidenz</h2>
-        <input type="radio" id="incidenceGermany" name="incidenceGermany" v-model="incidenceSource" value="germany">
-        <label for="incidenceGermany">Ganz Deutschland</label> 
-        
-        <input type="radio" id="incidenceState" name="incidenceState" v-model="incidenceSource" value="state">
-        <label for="incidenceState">Nach Bundesland</label> 
+    <div id="incidence">
+      <h2>Aktuelle Inzidenz</h2>
+      <input type="radio" id="incidenceGermany" name="incidenceGermany" v-model="incidenceSource" value="germany">
+      <label for="incidenceGermany">Ganz Deutschland</label>
 
-        <input type="radio" id="incidenceDistrict" name="incidenceDistrict" v-model="incidenceSource" value="district">
-        <label for="incidenceDistrict">Nach Landkreis</label> 
-        
-        <input type="radio" id="incidenceSelf" name="incidenceSelf" v-model="incidenceSource" value="input">
-        <label for="incidenceSelf">Eigenen Wert eingeben</label> 
-       
-        <template v-if="incidenceSource == 'state'">
-          <p>Bundesland:
+      <input type="radio" id="incidenceState" name="incidenceState" v-model="incidenceSource" value="state">
+      <label for="incidenceState">Nach Bundesland</label>
+
+      <input type="radio" id="incidenceDistrict" name="incidenceDistrict" v-model="incidenceSource" value="district">
+      <label for="incidenceDistrict">Nach Landkreis</label>
+
+      <input type="radio" id="incidenceSelf" name="incidenceSelf" v-model="incidenceSource" value="input">
+      <label for="incidenceSelf">Eigenen Wert eingeben</label>
+
+      <template v-if="incidenceSource == 'state'">
+        <p>Bundesland:
           <select v-model="stateId">
             <option v-for="state in states" :value="state.id">{{ state.name }}</option>
           </select>
-          </p>
-        </template>
+        </p>
+      </template>
 
-        <template v-if="incidenceSource == 'district'">
-          <p>Landkreis:
+      <template v-if="incidenceSource == 'district'">
+        <p>Landkreis:
           <select v-model="districtId">
             <option v-for="district in districts" :value="district.ags">{{ district.name }}</option>
           </select>
-          </p>
-        </template>
-        
-        <template v-if="incidenceSource == 'input'">
-          <p>7-Tage Prävalenz je 100.000: <input v-model="incidenceString" /></p>
-        </template>
-        <template v-if="intermediate">
-          <template v-if="incidenceSource != 'input'">
-            <p><i>Quelle der Inzidenzdaten: <a href="https://api.corona-zahlen.org">api.corona-zahlen.org</a></i></p>
-            <p>Gemeldete 7-Tage Inzidenz je 100.000 diese Woche: <input disabled :value="formatNumber(incidence)" /></p>
-            <p>Gemeldete 7-Tage Inzidenz je 100.000 vorherige Woche: <input disabled :value="formatNumber(incidencePrev)" /></p>
-          </template>
-          <p>Geschätzte Prävalenz: <input disabled :value="formatNumber(incidenceAdjusted)" /></p>
-        </template>
-      </div>
-
-      <div id="case">
-        <h2>Persönliches Risiko</h2>
-        <p>Privates Risiko-Profil: 
-          <select v-model="riskProfilePrivate">
-            <option value="1.0">Durchschnittliche Person</option>
-            <option value="0.015">Lebt allein, Kontakte nur beim Einkaufen</option>
-            <option value="0.3">Ein enger Kontakt mit unbekanntem Risiko</option>
-            <option value="1.0">Vier enge Kontakte mit unbekanntem Risiko</option>
-            <option value="2.5">Zehn enge Kontakte mit unbekanntem Risiko</option>
-            <option value="15.0">Hat kürzlich eine Bar besucht</option>
-          </select>
         </p>
-        <p>Berufliches Risiko-Profil: 
-          <select v-model="riskProfileProfessional">
-            <option value="0.0">Home-Office, Arbeitlsos, etc.</option>
-            <option value="0.1">Risikoarmer Beruf</option>
-            <option value="0.4">Produktion</option>
-            <option value="0.5">Verkauf</option>
-            <option value="0.8">Büro</option>
-            <option value="1.3">Kita / Kindergarten</option>
-            <option value="1.8">Reinigungskraft</option>
-            <option value="2.2">Grundschul-Lehrkraft</option>
-            <option value="3.2">Pflege- und Gesundsheitsberuf</option>
-          </select>
-        </p>
-        <p>Zusätzliche Risiken in den letzten 10 Tagen laut <a href="https://www.microcovid.org">microCOVID.org</a>: <input v-model="additionalRiskString" /> µCoV</p>
+      </template>
 
-        <p>Vortestwahrscheinlichkeit vor Symptomen: <input disabled v-bind:value="formatPercent(priorProb)" /></p>
-      </div>
-      <div>
-        <h2>Symptome</h2>
-        <p>
-          <input type="checkbox" id="sympSmell" name="sympSmell" v-model="sympSmell"><label for="sympSmell">Geruchsverlust</label>
-          <input type="checkbox" id="sympTaste" name="sympTaste" v-model="sympTaste"><label for="sympTaste">Geschmacksverlust</label>
-          <input type="checkbox" id="sympFever" name="sympFever" v-model="sympFever"><label for="sympFever">Fieber</label>
-          <input type="checkbox" id="sympCough" name="sympCough" v-model="sympCough"><label for="sympCough">Husten</label>
-          <input type="checkbox" id="sympChest" name="sympChest" v-model="sympChest"><label for="sympChest">Engegefühl in der Brust</label>
-          <input type="checkbox" id="sympWheez" name="sympWheez" v-model="sympWheez"><label for="sympWheez">Keuchen</label>
-          <input type="checkbox" id="sympOther" name="sympOther" v-model="sympOther"><label for="sympOther">Sonstige verdächtige Symptome</label>
-        </p>
-
-        <p>(verdächtige Symptome sind z.B. Schnupfen, Bronchitis, Pneumonie, Atemnot, Halsschmerzen, Kopf- und Gliederschmerzen, Appetitlosigkeit, Gewichtsverlust, Übelkeit, Bauchschmerzen, Erbrechen, Durchfall, Konjunktivitis, Hautausschlag, Lymphknotenschwellung, Apathie, Somnolenz)</p>
-
-        <template v-if="anySymptoms && intermediate">
-          <p>C19 Rule score: <input disabled v-bind:value="ruleScore" /></p>
-          <p>C19 Rule likelihood ratio: <input disabled v-bind:value="formatNumber(ruleLR)" /></p>
-          <p>Symptom-Faktor: <input disabled v-bind:value="formatNumber(ruleLR*anySymptomFactor)" /></p>
+      <template v-if="incidenceSource == 'input'">
+        <p>7-Tage Prävalenz je 100.000: <input v-model="incidenceString" /></p>
+      </template>
+      <template v-if="intermediate">
+        <template v-if="incidenceSource != 'input'">
+          <p><i>Quelle der Inzidenzdaten: <a href="https://api.corona-zahlen.org">api.corona-zahlen.org</a></i></p>
+          <p>Gemeldete 7-Tage Inzidenz je 100.000 diese Woche: <input disabled :value="formatNumber(incidence)" /></p>
+          <p>Gemeldete 7-Tage Inzidenz je 100.000 vorherige Woche: <input disabled
+              :value="formatNumber(incidencePrev)" /></p>
         </template>
-        <p>Vortestwahrscheinlichkeit nach Symptomen: <input disabled v-bind:value="formatPercent(priorProbSymptoms)" /></p>
-      </div>
-      <div>
-        <h2>Ergebnisse</h2>
-        <p><b>Bei einem positiven Testergebnis…</b></p>
-        <p>…zu {{ formatPercent(updatedProbPos) }} wirklich infiziert</p>
-        <p>…zu {{ formatPercent(1-updatedProbPos) }} nicht infiziert ("falsch-positiver" Test)</p>
-        <p><b>Bei einem negativen Testergebnis…</b></p>
-        <p>…zu {{ formatPercent(updatedProbNeg) }} trotzdem infiziert ("falsch-negativer" Test)</p>
-        <p>…zu {{ formatPercent(1-updatedProbNeg) }} wirklich nicht infiziert</p>
-        </div>
+        <p>Geschätzte Prävalenz: <input disabled :value="formatNumber(incidenceAdjusted)" /></p>
+      </template>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
-    <script src="script.js"></script>
-  </body>
+    <div id="case">
+      <h2>Persönliches Risiko</h2>
+      <p>Privates Risiko-Profil:
+        <select v-model="riskProfilePrivate">
+          <option value="1.0">Durchschnittliche Person</option>
+          <option value="0.015">Lebt allein, Kontakte nur beim Einkaufen</option>
+          <option value="0.3">Ein enger Kontakt mit unbekanntem Risiko</option>
+          <option value="1.0">Vier enge Kontakte mit unbekanntem Risiko</option>
+          <option value="2.5">Zehn enge Kontakte mit unbekanntem Risiko</option>
+          <option value="15.0">Hat kürzlich eine Bar besucht</option>
+        </select>
+      </p>
+      <p>Berufliches Risiko-Profil:
+        <select v-model="riskProfileProfessional">
+          <option value="0.0">Home-Office, Arbeitlsos, etc.</option>
+          <option value="0.1">Risikoarmer Beruf</option>
+          <option value="0.4">Produktion</option>
+          <option value="0.5">Verkauf</option>
+          <option value="0.8">Büro</option>
+          <option value="1.3">Kita / Kindergarten</option>
+          <option value="1.8">Reinigungskraft</option>
+          <option value="2.2">Grundschul-Lehrkraft</option>
+          <option value="3.2">Pflege- und Gesundsheitsberuf</option>
+        </select>
+      </p>
+      <p>Zusätzliche Risiken in den letzten 10 Tagen laut <a href="https://www.microcovid.org">microCOVID.org</a>:
+        <input v-model="additionalRiskString" /> µCoV</p>
+
+      <p>Vortestwahrscheinlichkeit vor Symptomen: <input disabled v-bind:value="formatPercent(priorProb)" /></p>
+    </div>
+    <div>
+      <h2>Symptome</h2>
+      <p>
+        <input type="checkbox" id="sympSmell" name="sympSmell" v-model="sympSmell"><label
+          for="sympSmell">Geruchsverlust</label>
+        <input type="checkbox" id="sympTaste" name="sympTaste" v-model="sympTaste"><label
+          for="sympTaste">Geschmacksverlust</label>
+        <input type="checkbox" id="sympFever" name="sympFever" v-model="sympFever"><label for="sympFever">Fieber</label>
+        <input type="checkbox" id="sympCough" name="sympCough" v-model="sympCough"><label for="sympCough">Husten</label>
+        <input type="checkbox" id="sympChest" name="sympChest" v-model="sympChest"><label for="sympChest">Engegefühl in
+          der Brust</label>
+        <input type="checkbox" id="sympWheez" name="sympWheez" v-model="sympWheez"><label
+          for="sympWheez">Keuchen</label>
+        <input type="checkbox" id="sympOther" name="sympOther" v-model="sympOther"><label for="sympOther">Sonstige
+          verdächtige Symptome</label>
+      </p>
+
+      <p>(verdächtige Symptome sind z.B. Schnupfen, Bronchitis, Pneumonie, Atemnot, Halsschmerzen, Kopf- und
+        Gliederschmerzen, Appetitlosigkeit, Gewichtsverlust, Übelkeit, Bauchschmerzen, Erbrechen, Durchfall,
+        Konjunktivitis, Hautausschlag, Lymphknotenschwellung, Apathie, Somnolenz)</p>
+
+      <template v-if="anySymptoms && intermediate">
+        <p>C19 Rule score: <input disabled v-bind:value="ruleScore" /></p>
+        <p>C19 Rule likelihood ratio: <input disabled v-bind:value="formatNumber(ruleLR)" /></p>
+        <p>Symptom-Faktor: <input disabled v-bind:value="formatNumber(ruleLR*anySymptomFactor)" /></p>
+      </template>
+      <p>Vortestwahrscheinlichkeit nach Symptomen: <input disabled v-bind:value="formatPercent(priorProbSymptoms)" />
+      </p>
+    </div>
+    <div>
+      <h2>Ergebnisse</h2>
+      <p><b>Bei einem positiven Testergebnis…</b></p>
+      <p>…zu {{ formatPercent(updatedProbPos) }} wirklich infiziert</p>
+      <p>…zu {{ formatPercent(1-updatedProbPos) }} nicht infiziert ("falsch-positiver" Test)</p>
+      <p><b>Bei einem negativen Testergebnis…</b></p>
+      <p>…zu {{ formatPercent(updatedProbNeg) }} trotzdem infiziert ("falsch-negativer" Test)</p>
+      <p>…zu {{ formatPercent(1-updatedProbNeg) }} wirklich nicht infiziert</p>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+  <script src="script.js"></script>
+</body>
+
 </html>
