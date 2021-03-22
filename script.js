@@ -6,8 +6,9 @@ const apiGermany = "/germany/history/incidence/8";
 const apiStates = "/states/history/incidence/8";
 const apiDistricts = "/districts/history/incidence/8";
 
-const HelloVueApp = {
-    el: '#hello-vue',
+const RapidTestVueApp = {
+    el: '#rapidtest',
+    vuetify: new Vuetify(),
     data() {
         return {
             // showing any symtomps that might lead to PCR testing in Germany 
@@ -52,6 +53,26 @@ const HelloVueApp = {
             // not actually data
             percentFormatter: null,
             numberFormatter: null,
+
+            riskProfilesPrivate: [
+                { "val": "1.0", "name": "Durchschnittliche Person" },
+                { "val": "0.015", "name": "Lebt allein, Kontakte nur beim Einkaufen" },
+                { "val": "0.3", "name": "Ein enger Kontakt mit unbekanntem Risiko" },
+                { "val": "1.1", "name": "Vier enge Kontakte mit unbekanntem Risiko" },
+                { "val": "2.5", "name": "Zehn enge Kontakte mit unbekanntem Risiko" },
+                { "val": "15.0", "name": "Hat kürzlich eine Bar besucht" },
+            ],
+            riskProfilesProfessional: [
+                { "val": "0.0", "name": "Home-Office, Arbeitlsos, etc." },
+                { "val": "0.1", "name": "Risikoarmer Beruf" },
+                { "val": "0.4", "name": "Produktion" },
+                { "val": "0.5", "name": "Verkauf" },
+                { "val": "0.8", "name": "Büro" },
+                { "val": "1.3", "name": "Kita / Kindergarten" },
+                { "val": "1.8", "name": "Reinigungskraft" },
+                { "val": "2.2", "name": "Grundschul-Lehrkraft" },
+                { "val": "3.2", "name": "Pflege- und Gesundsheitsberuf" },
+            ],
         }
     },
     created() {
@@ -94,7 +115,6 @@ const HelloVueApp = {
             fetch(apiEndpoint + apiGermany)
                 .then(response => response.json())
                 .then(root => {
-                    console.log("German root: " + root);
                     this.germany = root.data;
                 })
                 .catch(error => console.log(error));
@@ -152,7 +172,7 @@ const HelloVueApp = {
         },
         studies() {
             if (this.selectedTest) {
-                return this.selectedTest.studies;
+                return Object.values(this.selectedTest.studies);
             }
             return [];
         },
@@ -205,7 +225,6 @@ const HelloVueApp = {
             if (this.incidenceSource == "input") {
                 return parseFloat(this.incidenceString.replace(",", "."));
             } else if (this.incidenceSource == "germany" && this.germany) {
-                console.log("Germany: " + JSON.stringify(this.germany));
                 return this.germany[6].weekIncidence;
             } else if (this.incidenceSource == "state" && this.selectedState) {
                 return this.selectedState.history[6].weekIncidence;
@@ -301,4 +320,4 @@ const HelloVueApp = {
     }
 }
 
-var app = new Vue(HelloVueApp);
+var app = new Vue(RapidTestVueApp);
