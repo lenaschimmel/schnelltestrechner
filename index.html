@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8" />
 
-  <title>Covid-Schnelltests selbst verstehen</title>
+  <title>SchnellTestRechner.de</title>
   <meta name="description" content="Ein Werkzeug, um Bayes-Wahrscheinlichkeiten von Covid-Schnelltests zu verstehen" />
   <meta name="author" content="Lena Schimmel" />
 
@@ -22,7 +22,7 @@
       <v-icon large>
         mdi-virus
       </v-icon>
-      <v-toolbar-title>Schnelltests richtig interpretieren</v-toolbar-title>
+      <v-toolbar-title>SchnellTestRechner.de</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-switch v-model="intermediate" label="Detaillierte Angaben" hide-details></v-switch>
       <v-btn text>Impressum</v-btn>
@@ -36,7 +36,15 @@
       </v-tooltip>
       <v-tooltip bottom>
         <template v-slot:activator="{ on, attrs }">
-          <v-btn icon v-bind="attrs" v-on="on">
+          <v-btn icon v-bind="attrs" v-on="on" href="https://twitter.com/Testrechner" target="_">
+            <v-icon>mdi-twitter</v-icon>
+          </v-btn>
+        </template>
+        <span>Zum Twitter-Account @testrechner</span>
+      </v-tooltip>
+      <v-tooltip bottom>
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn icon v-bind="attrs" v-on="on" href="https://github.com/lenaschimmel/schnelltestrechner" target="_">
             <v-icon>mdi-github</v-icon>
           </v-btn>
         </template>
