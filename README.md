@@ -36,5 +36,6 @@ Der Einfluss von Symptomen auf die a-priori Wahrscheinlichkeit einer Infektion w
 
 ## Kontakt
  * Über Twitter: [@Testrechner](https://twitter.com/Testrechner) oder direkt an [LenaSchimmel](https://twitter.com/LenaSchimmel)
+ * Per Mail: an [mail@schnelltestrechner.de](mailto:mail@schnelltestrechner.de)
 
 __Dies ist eine sehr frühe, ungestestete Version der Website. Sie ersetzt keinen ärztlichen Rat!__
