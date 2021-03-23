@@ -278,13 +278,11 @@
       </v-container>
     </v-main>
 
-    <v-footer v-if="Number.isNaN(priorProbSymptoms)" :app="$vuetify.breakpoint.mdAndUp"
-      :fixed="$vuetify.breakpoint.mdAndUp" color="red lighten-3">
+    <v-footer height="200" v-if="Number.isNaN(priorProbSymptoms)" :app="fixedFooter" :fixed="fixedFooter" color="red lighten-3" id="footer">
       <v-toolbar-title>Ergebnis kann nicht ermittelt werden, bevor die Eingaben vollständig sind.</v-toolbar-title>
     </v-footer>
-
-    <v-footer v-if="!Number.isNaN(priorProbSymptoms)" :app="$vuetify.breakpoint.mdAndUp"
-      :fixed="$vuetify.breakpoint.mdAndUp" color="light-blue lighten-3">
+    
+    <v-footer height="200" v-if="!Number.isNaN(priorProbSymptoms)" :app="fixedFooter" :fixed="fixedFooter" color="light-blue lighten-3" id="footer">
       <v-container fluid>
         <v-row>
           <v-col class="font-weight-bold text-center" cols="4">Vortestwahrscheinlichkeit
@@ -376,10 +374,17 @@
       </v-container>
     </v-footer>
 
+    <v-fab-transition>
+      <v-btn color="pink" v-show="!fixedFooter && !scrolledToBottom" fab dark fixed bottom right class="mb-8 mr-8" @click="$vuetify.goTo('#footer', { duration: 600, easing: 'easeInOutCubic' })">
+        <v-icon>mdi-chevron-triple-down</v-icon>
+      </v-btn>
+    </v-fab-transition>
+
   </v-app>
 
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+  <script src="https://unpkg.com/vue-screen/dist/vue-screen.min.js"></script>
   <script src="script.js"></script>
 </body>
 

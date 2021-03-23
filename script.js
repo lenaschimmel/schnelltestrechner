@@ -28,6 +28,7 @@ const RapidTestVueApp = {
             confidence: "avg",
             intermediate: false,
             studyId: "manufacturer",
+            scrolledToBottom: false,
 
             // symptoms
             sympSmell: false,
@@ -78,7 +79,11 @@ const RapidTestVueApp = {
     created() {
         this.percentFormatter = new Intl.NumberFormat('de-DE', { style: 'percent', minimumSignificantDigits: 2, maximumSignificantDigits: 4 });
         this.numberFormatter = new Intl.NumberFormat('de-DE', { style: 'decimal', minimumFractionDigits: 1, maximumFractionDigits: 1 });
+        window.addEventListener('scroll', this.handleScroll);
         this.fetchData();
+    },
+    destroyed() {
+        window.removeEventListener('scroll', this.handleScroll);
     },
     methods: {
         fetchData() {
@@ -110,7 +115,7 @@ const RapidTestVueApp = {
                 .then(data => {
                     this.tests = data;
                     this.tests.sort(byId);
-                    this.tests = this.tests.map(test => { if (Object.keys(test.studies).length == 0) { test.disabled = true; } return test; });
+                    this.tests = this.tests.map(test => { if (Object.keys(test.studies).length == 0) { test.disabled = true; } return test; });
                 })
                 .catch(error => console.log(error));
             fetch(apiEndpoint + apiGermany)
@@ -153,6 +158,9 @@ const RapidTestVueApp = {
                 return study.author;
             }
         },
+        handleScroll() {
+            this.scrolledToBottom = ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 100);
+        }
     },
     watch: {
         "selectedTest": function (newVal, oldVal) {
@@ -317,6 +325,9 @@ const RapidTestVueApp = {
             let priorOdds = this.priorProbSymptoms / (1.0 - this.priorProbSymptoms);
             let updatedOddsNeg = priorOdds * this.bayesFactorNeg;
             return updatedOddsNeg / (1.0 + updatedOddsNeg);
+        },
+        fixedFooter() {
+            return this.$screen.height > 750;
         },
     }
 }
