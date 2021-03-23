@@ -25,15 +25,6 @@
       <v-toolbar-title>SchnellTestRechner.de</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-switch v-model="intermediate" label="Erweiterte Ansicht" hide-details></v-switch>
-      <v-btn text>Impressum</v-btn>
-      <v-tooltip bottom>
-        <template v-slot:activator="{ on, attrs }">
-          <v-btn icon v-bind="attrs" v-on="on">
-            <v-icon>mdi-information</v-icon>
-          </v-btn>
-        </template>
-        <span>Impressum und Datenschutz</span>
-      </v-tooltip>
       <v-tooltip bottom>
         <template v-slot:activator="{ on, attrs }">
           <v-btn icon v-bind="attrs" v-on="on" href="https://twitter.com/Testrechner" target="_">
@@ -50,256 +41,466 @@
         </template>
         <span>Code auf Github ansehen</span>
       </v-tooltip>
+
+      <template v-slot:extension>
+        <v-tabs v-model="tab">
+          <v-tabs-slider color="yellow"></v-tabs-slider>
+
+          <v-tab v-for="item in tabs" :key="item.id">
+            {{ item.title }}
+          </v-tab>
+        </v-tabs>
+      </template>
     </v-app-bar>
 
     <v-main class="grey lighten-3">
-      <v-container class="fill-height">
-        <v-row class="fill-height">
-          <v-col cols="12" class="fill-height">
-            <v-alert color="red" type="warning" icon="mdi-alert">
-              Dies ist eine sehr frühe Vorschau-Version dieser Seite. Sie wurde bisher nicht von unabhängigen,
-              fachkundigen Menschen auf Plausibilität und Fehlerfreiheit geprüft. Bitte verwende die Ergebnisse
-              mit Vorsicht und Skepsis!
-            </v-alert>
+      <v-tabs-items v-model="tab">
+        <v-tab-item>
+          <!-- TAB calc -->
+          <v-container class="fill-height">
+            <v-row class="fill-height">
+              <v-col cols="12" class="fill-height">
+                <v-alert color="red" type="warning" icon="mdi-alert">
+                  <p>Dies ist eine sehr frühe Vorschau-Version dieser Seite. Sie wurde bisher nicht von unabhängigen,
+                    fachkundigen Menschen auf Plausibilität und Fehlerfreiheit geprüft. Bitte verwende die Ergebnisse
+                    mit Vorsicht und Skepsis!</p>
+                  <p>Bekannte Fehler, Probleme und Ungenauigkeiten sind in den <a
+                      href="https://github.com/lenaschimmel/schnelltestrechner/issues" target="_"
+                      class="white--text">GitHub Issues</a> erfasst. Bitte richten sie weitere Anmerkungen dorthin, oder
+                    an die verlinkten <a href="https://twitter.com/Testrechner" target="_"
+                      class="white--text">Twitter-</a> und <a href="mailto:mail@lenaschimmel.de" target="_"
+                      class="white--text">Mail</a>-Accounts.</p>
+                </v-alert>
 
-            <v-expansion-panels multiple class="mb-8" v-model="expandedPanels">
+                <v-expansion-panels multiple class="mb-8" v-model="expandedPanelsCalc">
 
-              <v-expansion-panel>
-                <v-expansion-panel-header class="font-weight-bold text-uppercase">
-                  Einleitung
-                </v-expansion-panel-header>
-                <v-expansion-panel-content>
+                  <v-expansion-panel>
+                    <v-expansion-panel-header class="font-weight-bold text-uppercase">
+                      Einleitung
+                    </v-expansion-panel-header>
+                    <v-expansion-panel-content>
 
-                  <p>Wie zuverlässig eigentlich ein Schnell- oder Selbst-Test auf Sars-CoV-2 ist, <b>lässt sich
-                      unmöglich allgemein beantworten.</b> Neben den Eigenschaften des eigentlichen Tests
-                    (<i>Sensitivität</i> und <i>Spezifität</i>) spielt auch die sogenannte
-                    <i>Vortestwahrscheinlichkeit</i> eine enorm große
-                    Rolle. Und die hängt grundsätzlich von der <i>Inzidenz</i>, sowie dem privatem und beruflichem
-                    <i>Risiko-Profil</i> ab. Wer außerdem <i>Symptome</i> hat, hat eine zusätzlich stark erhöhte
-                    Vortestwahrscheinlichkeit.
-                  </p>
+                      <p>Wie zuverlässig eigentlich ein Schnell- oder Selbst-Test auf Sars-CoV-2 ist, <b>lässt sich
+                          unmöglich allgemein beantworten.</b> Neben den Eigenschaften des eigentlichen Tests
+                        (<i>Sensitivität</i> und <i>Spezifität</i>) spielt auch die sogenannte
+                        <i>Vortestwahrscheinlichkeit</i> eine enorm große
+                        Rolle. Und die hängt grundsätzlich von der <i>Inzidenz</i>, sowie dem privatem und beruflichem
+                        <i>Risiko-Profil</i> ab. Wer außerdem <i>Symptome</i> hat, hat eine zusätzlich stark erhöhte
+                        Vortestwahrscheinlichkeit.
+                      </p>
 
-                  <p>Um in einem konkreten Fall das Ergebnis zu bewerten, müsste man also:</p>
-                  <ul class="mb-4">
-                    <li>Die mathematischen Grundprinzipien verstehen, insbesondere das scheinbare paradoxe Phänomen
-                      des <a href="https://de.wikipedia.org/wiki/Pr%C3%A4valenzfehler" target="_">Prävalenzfehlers</a>
-                    </li>
-                    <li>Alle oben genannten Werte recherchieren bzw. abschätzen</li>
-                    <li>Diese Werte in Formeln einsetzen und Ergebnisse ausrechnen</li>
-                  </ul>
+                      <p>Um in einem konkreten Fall das Ergebnis zu bewerten, müsste man also:</p>
+                      <ul class="mb-4">
+                        <li>Die mathematischen Grundprinzipien verstehen, insbesondere das scheinbare paradoxe Phänomen
+                          des <a href="https://de.wikipedia.org/wiki/Pr%C3%A4valenzfehler"
+                            target="_">Prävalenzfehlers</a>
+                        </li>
+                        <li>Alle oben genannten Werte recherchieren bzw. abschätzen</li>
+                        <li>Diese Werte in Formeln einsetzen und Ergebnisse ausrechnen</li>
+                      </ul>
 
-                  <p>Diese Seite möchte bei all diesen Schritten helfen. Der Fokus liegt auf einem Test für eine
-                    bestimmte
-                    Person zu einem bestimmten Zeitpunkt, also nicht auf Abschätzungen für die Gesamtbevölkerung.</p>
+                      <p>Diese Seite möchte bei all diesen Schritten helfen. Der Fokus liegt auf einem Test für eine
+                        bestimmte
+                        Person zu einem bestimmten Zeitpunkt, also nicht auf Abschätzungen für die Gesamtbevölkerung.
+                      </p>
 
-                </v-expansion-panel-content>
-              </v-expansion-panel>
+                    </v-expansion-panel-content>
+                  </v-expansion-panel>
 
-              <v-expansion-panel>
-                <v-expansion-panel-header class="font-weight-bold text-uppercase">
-                  Test-Auswahl
-                </v-expansion-panel-header>
-                <v-expansion-panel-content>
-                  <v-radio-group v-model="testsKind" mandatory>
-                    <v-container fluid>
-                      <v-row no-gutters>
-                        <v-col cols="12" sm="6" md="6" no-gutters>
-                          <v-radio label="Nur Selbst-Tests" value="self"></v-radio>
-                          <v-radio value="pei">
-                            <template v-slot:label>
-                              <div>Vom <acronym
-                                  title=" Paul-Ehrlich-Institut - Bundesinstitut für Impfstoffe und biomedizinische Arzneimittel">PEI</acronym>
-                                evaluiert (Selbst- und Profi-Tests)</div>
-                            </template>
-                          </v-radio>
-                        </v-col>
-                        <v-col cols="12" sm="6" md="6" no-gutters>
-                          <v-radio label="Alle (Selbst- und Profi-Tests)" value="all"></v-radio>
-                          <v-radio label="Eigene Werte eingeben" value="input"></v-radio>
-                        </v-col>
-                      </v-row>
-                    </v-container>
-                  </v-radio-group>
+                  <v-expansion-panel>
+                    <v-expansion-panel-header class="font-weight-bold text-uppercase">
+                      Test-Auswahl
+                    </v-expansion-panel-header>
+                    <v-expansion-panel-content>
+                      <v-radio-group v-model="testsKind" mandatory>
+                        <v-container fluid>
+                          <v-row no-gutters>
+                            <v-col cols="12" sm="6" md="6" no-gutters>
+                              <v-radio label="Nur Selbst-Tests" value="self"></v-radio>
+                              <v-radio value="pei">
+                                <template v-slot:label>
+                                  <div>Vom <acronym
+                                      title=" Paul-Ehrlich-Institut - Bundesinstitut für Impfstoffe und biomedizinische Arzneimittel">PEI</acronym>
+                                    evaluiert (Selbst- und Profi-Tests)</div>
+                                </template>
+                              </v-radio>
+                            </v-col>
+                            <v-col cols="12" sm="6" md="6" no-gutters>
+                              <v-radio label="Alle (Selbst- und Profi-Tests)" value="all"></v-radio>
+                              <v-radio label="Eigene Werte eingeben" value="input"></v-radio>
+                            </v-col>
+                          </v-row>
+                        </v-container>
+                      </v-radio-group>
 
-                  <template v-if="testsKind != 'input'">
-                    <p>Test:
-                      <v-select v-model="testId" :items="visibleTests" item-text="name" item-value="id" outlined
-                      :success-messages="testSelectSuccess" :error-messages="testSelectError">
+                      <template v-if="testsKind != 'input'">
+                        <p>Test:
+                          <v-select v-model="testId" :items="visibleTests" item-text="name" item-value="id" outlined
+                            :success-messages="testSelectSuccess" :error-messages="testSelectError">
 
-                      </v-select>
-                    </p>
-                    <template v-if="intermediate">
-                      <p>
-                        Studie: <v-select v-model="studyId" :items="studies" item-text="author" item-value="id"
-                          outlined>
+                          </v-select>
+                        </p>
+                        <template v-if="intermediate">
+                          <p>
+                            Studie: <v-select v-model="studyId" :items="studies" item-text="author" item-value="id"
+                              outlined>
+                            </v-select>
+                          </p>
+
+                          <p>
+                            <input type="radio" id="confidenceAvg" name="confidenceAvg" v-model="confidence"
+                              value="avg">
+                            <label for="confidenceAvg">Durchschnitt</label>
+
+                            <input type="radio" id="confidenceMin" name="confidenceMin" v-model="confidence"
+                              value="min">
+                            <label for="confidenceMin">Minimum</label>
+
+                            <input type="radio" id="confidenceMax" name="confidenceMax" v-model="confidence"
+                              value="max">
+                            <label for="confidenceMax">Maximum</label>
+                          </p>
+
+                        </template>
+                      </template>
+                      <template v-else>
+                        <p>Sensitivität:
+                          <v-text-field v-model="sensitivityString" outlined />
+                        </p>
+                        <p>Spezifität:
+                          <v-text-field v-model="specificityString" outlined />
+                        </p>
+                      </template>
+                      <div id="factors" v-if="intermediate">
+                        <h2>Abgeleitete Werte:</h2>
+                        <p>Falsch-Negativ-Rate: <input disabled v-bind:value="formatPercent(fnr)" /></p>
+                        <p>Falsch-Positiv-Rate: <input disabled v-bind:value="formatPercent(fpr)" /></p>
+
+                        <p>Bayes-Faktor bei positivem Test: <input disabled :value="formatNumber(bayesFactorPos)" /></p>
+                        <p>Bayes-Faktor bei negativem Test: <input disabled :value="formatNumber(1/bayesFactorNeg)" />
+                        </p>
+                      </div>
+                    </v-expansion-panel-content>
+                  </v-expansion-panel>
+
+                  <v-expansion-panel>
+                    <v-expansion-panel-header class="font-weight-bold text-uppercase">
+                      Inzidenz und Prävalenz
+                    </v-expansion-panel-header>
+                    <v-expansion-panel-content>
+                      <v-radio-group v-model="incidenceSource" mandatory>
+                        <v-radio value="germany" label="Ganz Deutschland"></v-radio>
+                        <v-radio value="state" label="Nach Bundesland"></v-radio>
+                        <v-radio value="district" label="Nach Landkreis"></v-radio>
+                        <v-radio value="input" label="Eigenen Wert eingeben"></v-radio>
+                      </v-radio-group>
+
+                      <template v-if="incidenceSource == 'state'">
+                        <p>Bundesland:
+                          <v-select v-model="stateId" :items="states" item-text="name" item-value="id" outlined>
+                          </v-select>
+                        </p>
+                      </template>
+
+                      <template v-if="incidenceSource == 'district'">
+                        <p>Landkreis:
+                          <v-select v-model="districtId" :items="districts" item-text="name" item-value="ags" outlined>
+                          </v-select>
+                        </p>
+                      </template>
+
+                      <template v-if="incidenceSource == 'input'">
+                        <p>7-Tage Prävalenz je 100.000:
+                          <v-text-field v-model="incidenceString" outlined />
+                        </p>
+                      </template>
+                      <template v-if="intermediate">
+                        <template v-if="incidenceSource != 'input'">
+                          <p><i>Quelle der Inzidenzdaten: <a href="https://api.corona-zahlen.org"
+                                target="_">api.corona-zahlen.org</a></i></p>
+                          <p>Gemeldete 7-Tage Inzidenz je 100.000 diese Woche: <input disabled
+                              :value="formatNumber(incidence)" /></p>
+                          <p>Gemeldete 7-Tage Inzidenz je 100.000 vorherige Woche: <input disabled
+                              :value="formatNumber(incidencePrev)" /></p>
+                        </template>
+                        <p>Geschätzte Prävalenz: <input disabled :value="formatNumber(incidenceAdjusted)" /></p>
+                      </template>
+                    </v-expansion-panel-content>
+                  </v-expansion-panel>
+
+                  <v-expansion-panel>
+                    <v-expansion-panel-header class="font-weight-bold text-uppercase">
+                      Persönliches Risiko
+                    </v-expansion-panel-header>
+                    <v-expansion-panel-content>
+                      <p>Privates Risiko-Profil:
+                        <v-select v-model="riskProfilePrivate" :items="riskProfilesPrivate" item-text="name"
+                          item-value="val" outlined>
                         </v-select>
                       </p>
-
-                      <p>
-                        <input type="radio" id="confidenceAvg" name="confidenceAvg" v-model="confidence" value="avg">
-                        <label for="confidenceAvg">Durchschnitt</label>
-
-                        <input type="radio" id="confidenceMin" name="confidenceMin" v-model="confidence" value="min">
-                        <label for="confidenceMin">Minimum</label>
-
-                        <input type="radio" id="confidenceMax" name="confidenceMax" v-model="confidence" value="max">
-                        <label for="confidenceMax">Maximum</label>
+                      <p>Berufliches Risiko-Profil:
+                        <v-select v-model="riskProfileProfessional" :items="riskProfilesProfessional" item-text="name"
+                          item-value="val" outlined>
+                        </v-select>
+                      </p>
+                      <p>Zusätzliche Risiken in den letzten 10 Tagen laut <a href="https://www.microcovid.org"
+                          target="_">microCOVID.org</a>:
+                        <v-text-field v-model="additionalRiskString" outlined />
+                        µCoV
                       </p>
 
-                    </template>
-                  </template>
-                  <template v-else>
-                    <p>Sensitivität:
-                      <v-text-field v-model="sensitivityString" outlined />
-                    </p>
-                    <p>Spezifität:
-                      <v-text-field v-model="specificityString" outlined />
-                    </p>
-                  </template>
-                  <div id="factors" v-if="intermediate">
-                    <h2>Abgeleitete Werte:</h2>
-                    <p>Falsch-Negativ-Rate: <input disabled v-bind:value="formatPercent(fnr)" /></p>
-                    <p>Falsch-Positiv-Rate: <input disabled v-bind:value="formatPercent(fpr)" /></p>
+                      <p v-if="intermediate">Vortestwahrscheinlichkeit vor Symptomen: <input disabled
+                          v-bind:value="formatPercent(priorProb)" />
+                      </p>
+                    </v-expansion-panel-content>
+                  </v-expansion-panel>
 
-                    <p>Bayes-Faktor bei positivem Test: <input disabled :value="formatNumber(bayesFactorPos)" /></p>
-                    <p>Bayes-Faktor bei negativem Test: <input disabled :value="formatNumber(1/bayesFactorNeg)" /></p>
-                  </div>
-                </v-expansion-panel-content>
-              </v-expansion-panel>
-
-              <v-expansion-panel>
-                <v-expansion-panel-header class="font-weight-bold text-uppercase">
-                  Inzidenz und Prävalenz
-                </v-expansion-panel-header>
-                <v-expansion-panel-content>
-                  <v-radio-group v-model="incidenceSource" mandatory>
-                    <v-radio value="germany" label="Ganz Deutschland"></v-radio>
-                    <v-radio value="state" label="Nach Bundesland"></v-radio>
-                    <v-radio value="district" label="Nach Landkreis"></v-radio>
-                    <v-radio value="input" label="Eigenen Wert eingeben"></v-radio>
-                  </v-radio-group>
-
-                  <template v-if="incidenceSource == 'state'">
-                    <p>Bundesland:
-                      <v-select v-model="stateId" :items="states" item-text="name" item-value="id" outlined>
-                      </v-select>
-                    </p>
-                  </template>
-
-                  <template v-if="incidenceSource == 'district'">
-                    <p>Landkreis:
-                      <v-select v-model="districtId" :items="districts" item-text="name" item-value="ags" outlined>
-                      </v-select>
-                    </p>
-                  </template>
-
-                  <template v-if="incidenceSource == 'input'">
-                    <p>7-Tage Prävalenz je 100.000:
-                      <v-text-field v-model="incidenceString" outlined />
-                    </p>
-                  </template>
-                  <template v-if="intermediate">
-                    <template v-if="incidenceSource != 'input'">
-                      <p><i>Quelle der Inzidenzdaten: <a href="https://api.corona-zahlen.org"
-                            target="_">api.corona-zahlen.org</a></i></p>
-                      <p>Gemeldete 7-Tage Inzidenz je 100.000 diese Woche: <input disabled
-                          :value="formatNumber(incidence)" /></p>
-                      <p>Gemeldete 7-Tage Inzidenz je 100.000 vorherige Woche: <input disabled
-                          :value="formatNumber(incidencePrev)" /></p>
-                    </template>
-                    <p>Geschätzte Prävalenz: <input disabled :value="formatNumber(incidenceAdjusted)" /></p>
-                  </template>
-                </v-expansion-panel-content>
-              </v-expansion-panel>
-
-              <v-expansion-panel>
-                <v-expansion-panel-header class="font-weight-bold text-uppercase">
-                  Persönliches Risiko
-                </v-expansion-panel-header>
-                <v-expansion-panel-content>
-                  <p>Privates Risiko-Profil:
-                    <v-select v-model="riskProfilePrivate" :items="riskProfilesPrivate" item-text="name"
-                      item-value="val" outlined>
-                    </v-select>
-                  </p>
-                  <p>Berufliches Risiko-Profil:
-                    <v-select v-model="riskProfileProfessional" :items="riskProfilesProfessional" item-text="name"
-                      item-value="val" outlined>
-                    </v-select>
-                  </p>
-                  <p>Zusätzliche Risiken in den letzten 10 Tagen laut <a href="https://www.microcovid.org"
-                      target="_">microCOVID.org</a>:
-                    <v-text-field v-model="additionalRiskString" outlined />
-                    µCoV
-                  </p>
-
-                  <p v-if="intermediate">Vortestwahrscheinlichkeit vor Symptomen: <input disabled
-                      v-bind:value="formatPercent(priorProb)" />
-                  </p>
-                </v-expansion-panel-content>
-              </v-expansion-panel>
-
-              <v-expansion-panel>
-                <v-expansion-panel-header class="font-weight-bold text-uppercase">
-                  Symptome
-                </v-expansion-panel-header>
-                <v-expansion-panel-content>
-                  <v-container fluid>
-                    <v-row no-gutters>
-                      <v-col cols="12" sm="4" md="4" no-gutters>
-                        <v-checkbox v-model="sympSmell" label="Geruchsverlust"></v-checkbox>
-                        <v-checkbox v-model="sympTaste" label="Geschmacksverlust"></v-checkbox>
-                      </v-col>
-                      <v-col cols="12" sm="4" md="4" no-gutters>
-                        <v-checkbox v-model="sympFever" label="Fieber"></v-checkbox>
-                        <v-checkbox v-model="sympCough" label="Husten"></v-checkbox>
-                      </v-col>
-                      <v-col cols="12" sm="4" md="4" no-gutters>
-                        <v-checkbox v-model="sympChest" label="Engegefühl in der Brust"></v-checkbox>
-                        <v-checkbox v-model="sympWheez" label="Keuchen"></v-checkbox>
-                      </v-col>
-                      <v-col cols="12" no-gutters>
-                        <v-checkbox v-model="sympOther" label="Sonstige verdächtige Symptome" hint="z.B. Schnupfen, Bronchitis, Pneumonie, Atemnot, Halsschmerzen, Kopf-
+                  <v-expansion-panel>
+                    <v-expansion-panel-header class="font-weight-bold text-uppercase">
+                      Symptome
+                    </v-expansion-panel-header>
+                    <v-expansion-panel-content>
+                      <v-container fluid>
+                        <v-row no-gutters>
+                          <v-col cols="12" sm="4" md="4" no-gutters>
+                            <v-checkbox v-model="sympSmell" label="Geruchsverlust"></v-checkbox>
+                            <v-checkbox v-model="sympTaste" label="Geschmacksverlust"></v-checkbox>
+                          </v-col>
+                          <v-col cols="12" sm="4" md="4" no-gutters>
+                            <v-checkbox v-model="sympFever" label="Fieber"></v-checkbox>
+                            <v-checkbox v-model="sympCough" label="Husten"></v-checkbox>
+                          </v-col>
+                          <v-col cols="12" sm="4" md="4" no-gutters>
+                            <v-checkbox v-model="sympChest" label="Engegefühl in der Brust"></v-checkbox>
+                            <v-checkbox v-model="sympWheez" label="Keuchen"></v-checkbox>
+                          </v-col>
+                          <v-col cols="12" no-gutters>
+                            <v-checkbox v-model="sympOther" label="Sonstige verdächtige Symptome" hint="z.B. Schnupfen, Bronchitis, Pneumonie, Atemnot, Halsschmerzen, Kopf-
                         und Gliederschmerzen, Appetitlosigkeit, Gewichtsverlust, Übelkeit, Bauchschmerzen, Erbrechen,
                         Durchfall, Konjunktivitis, Hautausschlag, Lymphknotenschwellung, Apathie, Somnolenz"
-                          persistent-hint></v-checkbox>
-                      </v-col>
-                    </v-row>
-                  </v-container>
+                              persistent-hint></v-checkbox>
+                          </v-col>
+                        </v-row>
+                      </v-container>
 
-                  <template v-if="anySymptoms && intermediate">
-                    <p>C19 Rule score: <input disabled v-bind:value="ruleScore" /></p>
-                    <p>C19 Rule likelihood ratio: <input disabled v-bind:value="formatNumber(ruleLR)" /></p>
-                    <p>Symptom-Faktor: <input disabled v-bind:value="formatNumber(ruleLR*anySymptomFactor)" /></p>
-                  </template>
-                  <p v-if="intermediate">Vortestwahrscheinlichkeit nach Symptomen: <input disabled
-                      v-bind:value="formatPercent(priorProbSymptoms)" />
-                  </p>
-                </v-expansion-panel-content>
-              </v-expansion-panel>
-            </v-expansion-panels>
-            <v-spacer></v-spacer>
-          </v-col>
-        </v-row>
-      </v-container>
+                      <template v-if="anySymptoms && intermediate">
+                        <p>C19 Rule score: <input disabled v-bind:value="ruleScore" /></p>
+                        <p>C19 Rule likelihood ratio: <input disabled v-bind:value="formatNumber(ruleLR)" /></p>
+                        <p>Symptom-Faktor: <input disabled v-bind:value="formatNumber(ruleLR*anySymptomFactor)" /></p>
+                      </template>
+                      <p v-if="intermediate">Vortestwahrscheinlichkeit nach Symptomen: <input disabled
+                          v-bind:value="formatPercent(priorProbSymptoms)" />
+                      </p>
+                    </v-expansion-panel-content>
+                  </v-expansion-panel>
+                </v-expansion-panels>
+                <v-spacer></v-spacer>
+              </v-col>
+            </v-row>
+          </v-container>
+        </v-tab-item>
+
+
+
+        <v-tab-item>
+          <!-- TAB info -->
+          <v-container class="fill-height">
+            <v-row class="fill-height">
+              <v-col cols="12" class="fill-height">
+                <v-expansion-panels multiple class="mb-8" v-model="expandedPanelsInfo">
+
+                  <v-expansion-panel>
+                    <v-expansion-panel-header class="font-weight-bold text-uppercase">
+                      Verwende Quellen und Methoden
+                    </v-expansion-panel-header>
+                    <v-expansion-panel-content>
+
+                      <p class="font-weight-bold">Die Daten über verfügbare Schnelltests kommen aus diesen Quellen:</p>
+                      <ul>
+                        <li><a href="https://www.bfarm.de/DE/Medizinprodukte/Antigentests/_node.html"
+                            rel="nofollow">Liste der Tests zur Eigenanwendung durch Laien</a> des BfArM</li>
+                        <li><a href="https://antigentest.bfarm.de/ords/f?p=ANTIGENTESTS-AUF-SARS-COV-2"
+                            rel="nofollow">Liste der Antigen-Tests zum direkten Erregernachweis des Coronavirus
+                            SARS-CoV-2</a> des BfArM</li>
+                        <li><a href="https://www.klinikum.uni-heidelberg.de/diagnostics-global-health"
+                            rel="nofollow">Ergebnisse unabhängiger Studien</a>, zusammen getragen von der Uni Heidelberg
+                        </li>
+                      </ul>
+                      <p class="font-weight-bold mt-4">Die Einschätzung der a-priori Wahrscheinlichkeit basiert auf:</p>
+                      <ul>
+                        <li>den Inzidenzen gemäß <a href="https://api.corona-zahlen.org/docs/"
+                            rel="nofollow">corona-zahlen.org</a></li>
+                        <li>einer Extrapolation der Inzidenz durch das Wachstum seit der Vor-Woche</li>
+                        <li>einer Abschätzung des Underreporting-Faktors von 4-6 durch das <a
+                            href="https://www.rki.de/DE/Content/Infekt/EpidBull/Archiv/2020/Ausgaben/50_20.pdf?__blob=publicationFile"
+                            rel="nofollow">RKI</a></li>
+                        <li>Faktoren für das private Infektionsrisiko die an <a href="https://www.microcovid.org"
+                            rel="nofollow">Microcovid</a> angelehnt sind</li>
+                        <li>Faktoren für das berufliche Risiko die beispielhaft aus Grafiken von <a
+                            href="https://www.addendum.org/coronavirus/berufe-ansteckungsrisiko/"
+                            rel="nofollow">www.addendum.org</a> entnommen wurden</li>
+                      </ul>
+                      <p class="mt-4">Die Berechnung der Bayes-Faktoren und der A-Posteriori-Wahrscheinlichkeiten folgt der
+                        Berechnung des Videos <a href="https://www.youtube.com/watch?v=lG4VkPoG3ko&amp;t"
+                          rel="nofollow">The medical test paradox: Can redesigning Bayes rule help?</a> von 3Blue1Brown.
+                      </p>
+                      <p>Der Einfluss von Symptomen auf die a-priori Wahrscheinlichkeit einer Infektion wurde nach der
+                        <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7584484/" rel="nofollow">Punkteregel nach
+                          Smith, Richey und Brunetto</a> implementiert. Die Punkteregel ist darauf auslegt, die a-priori
+                        Wahrscheinlichkeit eines symptomatischen Patienten (mit unklaren Symptomen, die grob auf Covid
+                        19 hindeuten) anhand seiner spezifischen Symptome zu verfeinern. Dazu wird die Prävalenz um den
+                        Faktor 18,8 angehoben, sobald Symptome vorhanden sind, um anschließend die Punkteregel
+                        anzuwenden. <strong>Der Faktor 18,8 basiert auf sehr groben Abschätzungen und stellt
+                          wahrscheinlich die größte Ungenauigkeit innerhalb der gesamten Berechnung dar. Er sollte
+                          dringend durch einen wissenschaftlich basierten Wert ersetzt werden.</strong></p>
+
+                    </v-expansion-panel-content>
+                  </v-expansion-panel>
+
+                  <v-expansion-panel>
+                    <v-expansion-panel-header class="font-weight-bold text-uppercase">
+                      Weitere Informationsquellen
+                    </v-expansion-panel-header>
+                    <v-expansion-panel-content>
+
+                      <p>Diese Seite hat nicht den Anspruch, sämtliche Informationen zu SARS-CoV-2-Tests vollständig und
+                        fehlerfrei anzubieten. Daher empfehlen wir ausdrücklich, auch weitere Informationsquellen zu
+                        Rate zu ziehen!</p>
+                      <ul>
+                        <li><a href="https://www.zusammengegencorona.de/informieren/testen/" target="_">Informationen
+                            zum Testen</a> vom Bundesministerium für Gesundheit</li>
+                        <li><a href="https://www.infektionsschutz.de/coronavirus/tests-auf-sars-cov-2.html"
+                            target="_">Tests auf das Coronavirus SARS-CoV-2</a> von der Bundeszentrale für
+                          gesundheitliche Aufklärung (BZgA)</li>
+                        <li>Sämtlche Informationen des <a
+                            href="https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/nCoV.html"
+                            target="_">Robert Koch Instituts (RKI)</a></li>
+                      </ul>
+
+                    </v-expansion-panel-content>
+                  </v-expansion-panel>
+                </v-expansion-panels>
+              </v-col>
+            </v-row>
+          </v-container>
+        </v-tab-item>
+
+
+        <v-tab-item>
+          <!-- TAB imprint -->
+          <v-container class="fill-height">
+            <v-row class="fill-height">
+              <v-col cols="12" class="fill-height">
+                <v-expansion-panels multiple class="mb-8" v-model="expandedPanelsImprint">
+
+                  <v-expansion-panel>
+                    <v-expansion-panel-header class="font-weight-bold text-uppercase">
+                      Verantwortliche
+                    </v-expansion-panel-header>
+                    <v-expansion-panel-content>
+                      <h2>Angaben gemäß § 5 TMG und Verantwortliche für den Inhalt nach § 55 Abs. 2 RStV
+                      </h2>
+                      <ul>
+                        <li>Lena Schimmel</li>
+                        <li>Chemnitzstr. 7</li>
+                        <li>38118 Braunschweig</li>
+                        <li>E-Mail: <a href="mailto:mail@lenaschimmel.de">mail@lenaschimmel.de</a></li>
+                      </ul>
+                    </v-expansion-panel-content>
+                  </v-expansion-panel>
+
+                  <v-expansion-panel>
+                    <v-expansion-panel-header class="font-weight-bold text-uppercase">
+                      Haftung für Inhalte
+                    </v-expansion-panel-header>
+                    <v-expansion-panel-content>
+                      <p>Die Inhalte meiner Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit,
+                        Vollständigkeit und Aktualität der Inhalte kann ich jedoch keine Gewähr übernehmen. Als
+                        Diensteanbieter bin ich gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den
+                        allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG bin ich als Diensteanbieter jedoch
+                        nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach
+                        Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur
+                        Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben
+                        hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis
+                        einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden
+                        Rechtsverletzungen werde ich diese Inhalte umgehend entfernen.</p>
+                    </v-expansion-panel-content>
+                  </v-expansion-panel>
+
+                  <v-expansion-panel>
+                    <v-expansion-panel-header class="font-weight-bold text-uppercase">
+                      Haftung für Links
+                    </v-expansion-panel-header>
+                    <v-expansion-panel-content>
+                      <p>Mein Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss
+                        haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die
+                        Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten
+                        verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche
+                        Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht
+                        erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete
+                        Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen
+                        werde ich derartige Links umgehend entfernen.</p>
+                    </v-expansion-panel-content>
+                  </v-expansion-panel>
+
+                  <v-expansion-panel>
+                    <v-expansion-panel-header class="font-weight-bold text-uppercase">
+                      Datenschutz
+                    </v-expansion-panel-header>
+                    <v-expansion-panel-content>
+                      <p>Bei der Nutzung dieser Webseite werden keine personenbezogenen Daten, insbesondere keine
+                        Gesundheitsdaten erhoben, da alle Eingaben lokal im Browser verarbeitet werden.</p>
+
+                      <p>In dieser Vorschau-Version werden Daten aus externen Quellen nachgeladen, wodurch die folgenden
+                        Anbieter die anfragende IP-Addresse erfahren:</p>
+
+                      <ul>
+                        <li><a href="https://cdn.jsdelivr.net/">JSDELIVR</a></li>
+                        <li><a href="https://unpkg.com/">UNPKG</a></li>
+                        <li><a href="https://api.corona-zahlen.org">corona-zahlen.org</a></li>
+                        <li><a href="https://fonts.googleapis.com">Google Fonts</a></li>
+                      </ul>
+
+                      <p>Die externen Anfragen sowie diese Hinweise sollten vor der eigentlichen Veröffentlichung der
+                        Seite entfernt werden.</p>
+
+                      <p>Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten durch Dritte zur
+                        Übersendung von nicht ausdrücklich angeforderter Werbung und Informationsmaterialien wird
+                        hiermit ausdrücklich widersprochen. Die Betreiber der Seiten behalten sich ausdrücklich
+                        rechtliche Schritte im Falle der unverlangten Zusendung von Werbeinformationen, etwa durch
+                        Spam-Mails, vor.</p>
+                    </v-expansion-panel-content>
+                  </v-expansion-panel>
+
+                </v-expansion-panels>
+              </v-col>
+            </v-row>
+          </v-container>
+        </v-tab-item>
+
+      </v-tabs-items>
     </v-main>
 
-    <v-footer height="50" v-if="!resultValid" :app="fixedFooter" :fixed="fixedFooter"
-      color="red lighten-3" id="footer">
-      <v-toolbar-title>Ergebnis kann nicht ermittelt werden, bevor die Eingaben vollständig sind.</v-toolbar-title>
+    <v-footer height="70" v-if="tab == 0 && !resultValid" :app="fixedFooter" :fixed="fixedFooter" color="red lighten-3"
+      id="footer">
+      <v-card-text>Ergebnis kann nicht ermittelt werden, bevor die Eingaben vollständig sind.</v-card-text>
     </v-footer>
 
-    <v-footer height="200" v-if="resultValid" :app="fixedFooter" :fixed="fixedFooter"
+    <v-footer height="200" v-if="tab == 0 && resultValid" :app="fixedFooter" :fixed="fixedFooter"
       color="light-blue lighten-3" id="footer">
       <v-container fluid>
-        <v-row>
+        <v-row v-if="$vuetify.breakpoint.smAndUp">
           <v-col class="font-weight-bold text-center" cols="4">Vortestwahrscheinlichkeit
           </v-col>
           <v-col class="font-weight-bold text-center" cols="8">Aussagekraft des Tests
           </v-col>
         </v-row>
+        <v-row v-if="$vuetify.breakpoint.xsOnly">
+          <v-col class="font-weight-bold text-center" cols="12">Vortestwahrscheinlichkeit {{ formatPercent(priorProbSymptoms) }}
+          </v-col>
+        </v-row>
         <v-row>
-          <v-col cols="12" sm="4" class="text-h4">
+          <v-col cols="12" sm="4" class="text-h4" v-if="$vuetify.breakpoint.smAndUp">
             <v-card class="pt-7 pb-7 text-center">
               {{ formatPercent(priorProbSymptoms) }}
             </v-card>
@@ -322,7 +523,7 @@
                   <tr>
                     <td class="text-left font-weight-bold">Test positiv</td>
                     <td class="text-left">
-                      {{ formatPercent(updatedProbPos) }}<template v-if=""> echt-positiv</template>
+                      {{ formatPercent(updatedProbPos) }} <template v-if="$vuetify.breakpoint.mdAndUp">echt-positiv</template>
                       <v-tooltip top>
                         <template v-slot:activator="{ on, attrs }">
                           <v-icon color="primary" small v-bind="attrs" v-on="on">
@@ -334,7 +535,7 @@
                       </v-tooltip>
                     </td>
                     <td class="text-left">
-                      {{ formatPercent(1-updatedProbPos) }} falsch-positiv
+                      {{ formatPercent(1-updatedProbPos) }}  <template v-if="$vuetify.breakpoint.mdAndUp">falsch-positiv</template>
                       <v-tooltip top>
                         <template v-slot:activator="{ on, attrs }">
                           <v-icon color="primary" small v-bind="attrs" v-on="on">
@@ -349,7 +550,7 @@
                   <tr>
                     <td class="text-left font-weight-bold">Test negativ</td>
                     <td class="text-left">
-                      {{ formatPercent(updatedProbNeg) }} falsch-negativ
+                      {{ formatPercent(updatedProbNeg) }}  <template v-if="$vuetify.breakpoint.mdAndUp">falsch-negativ</template>
                       <v-tooltip top>
                         <template v-slot:activator="{ on, attrs }">
                           <v-icon color="primary" small v-bind="attrs" v-on="on">
@@ -362,7 +563,7 @@
                       </v-tooltip>
                     </td>
                     <td class="text-left">
-                      {{ formatPercent(1-updatedProbNeg) }} echt-negativ
+                      {{ formatPercent(1-updatedProbNeg) }} <template v-if="$vuetify.breakpoint.mdAndUp">echt-negativ</template>
                       <v-tooltip top>
                         <template v-slot:activator="{ on, attrs }">
                           <v-icon color="primary" small v-bind="attrs" v-on="on">
@@ -382,7 +583,7 @@
       </v-container>
     </v-footer>
 
-    <v-fab-transition>
+    <v-fab-transition v-if="tab == 0">
       <v-btn color="pink" v-show="!fixedFooter && !scrolledToBottom" fab dark fixed bottom right class="mb-8 mr-8"
         @click="$vuetify.goTo('#footer', { duration: 600, easing: 'easeInOutCubic' })">
         <v-icon>mdi-chevron-triple-down</v-icon>

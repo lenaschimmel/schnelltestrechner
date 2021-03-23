@@ -30,7 +30,10 @@ const RapidTestVueApp = {
             studyId: "manufacturer",
 
             scrolledToBottom: false,
-            expandedPanels: [0, 1],
+            expandedPanelsCalc: [0, 1],
+            expandedPanelsInfo: [],
+            expandedPanelsImprint: [0, 1, 2, 3],
+            tab: null,
 
             // symptoms
             sympSmell: false,
@@ -341,19 +344,33 @@ const RapidTestVueApp = {
             return !Number.isNaN(this.priorProbSymptoms) && !Number.isNaN(this.sensitivity) && !Number.isNaN(this.specificity);
         },
         testSelectSuccess() {
-            if(!Number.isNaN(this.sensitivity) && !Number.isNaN(this.specificity)) 
+            if (!Number.isNaN(this.sensitivity) && !Number.isNaN(this.specificity))
                 return this.formatPercent(this.sensitivity) + ' Sensitivität, ' + this.formatPercent(this.specificity) + ' Spezifität';
-            else 
+            else
                 return null;
         },
         testSelectError() {
-            if(!Number.isNaN(this.sensitivity) && !Number.isNaN(this.specificity)) 
+            if (!Number.isNaN(this.sensitivity) && !Number.isNaN(this.specificity))
                 return null;
 
-            if(!this.selectedTest)
+            if (!this.selectedTest)
                 return "Bitte einen Test auswählen";
-             
+
             return "Keine Daten für diesen Test verfügbar";
+        },
+        tabs() {
+            if (this.$vuetify.breakpoint.xsOnly)
+                return [
+                    { "id": "calc", "title": 'Rechner' },
+                    { "id": "info", "title": 'Infos' },
+                    { "id": "imprint", "title": 'Impressum' },
+                ];
+            else
+                return [
+                    { "id": "calc", "title": 'Rechner' },
+                    { "id": "info", "title": 'Weitere Infos' },
+                    { "id": "imprint", "title": 'Impressum / Datenschutz' },
+                ];
         },
     }
 }
