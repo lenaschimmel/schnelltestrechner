@@ -28,7 +28,9 @@ const RapidTestVueApp = {
             confidence: "avg",
             intermediate: false,
             studyId: "manufacturer",
+
             scrolledToBottom: false,
+            expandedPanels: [0, 1],
 
             // symptoms
             sympSmell: false,
@@ -115,7 +117,8 @@ const RapidTestVueApp = {
                 .then(data => {
                     this.tests = data;
                     this.tests.sort(byId);
-                    this.tests = this.tests.map(test => { if (Object.keys(test.studies).length == 0) { test.disabled = true; } return test; });
+                    // Disable tests which have no studies. This works, but usability is bad.
+                    // this.tests = this.tests.map(test => { if (Object.keys(test.studies).length == 0) { test.disabled = true; } return test; });
                 })
                 .catch(error => console.log(error));
             fetch(apiEndpoint + apiGermany)
@@ -171,13 +174,18 @@ const RapidTestVueApp = {
     },
     computed: {
         visibleTests() {
+            let retVal = [];
             if (this.tests && this.testsKind == "self") {
-                return this.tests.filter(test => test.selftest);
+                retVal = this.tests.filter(test => test.selftest);
             } else if (this.tests && this.testsKind == "pei") {
-                return this.tests.filter(test => test.pei);
+                retVal = this.tests.filter(test => test.pei);
             } else {
-                return this.tests;
+                retVal = this.tests;
             }
+            if (!retVal.some(test => test.id == this.testId)) {
+                this.testId = null;
+            }
+            return retVal;
         },
         studies() {
             if (this.selectedTest) {
@@ -201,7 +209,7 @@ const RapidTestVueApp = {
                 if (this.selectedTest && this.selectedTest.studies[this.studyId]) {
                     return this.selectedTest.studies[this.studyId].sensitivity[this.confidence];
                 } else {
-                    return 0.8;
+                    return Number.NaN;
                 }
             }
         },
@@ -212,7 +220,7 @@ const RapidTestVueApp = {
                 if (this.selectedTest && this.selectedTest.studies[this.studyId]) {
                     return this.selectedTest.studies[this.studyId].specificity[this.confidence];
                 } else {
-                    return 0.8;
+                    return Number.NaN;
                 }
             }
         },
@@ -328,6 +336,24 @@ const RapidTestVueApp = {
         },
         fixedFooter() {
             return this.$screen.height > 750;
+        },
+        resultValid() {
+            return !Number.isNaN(this.priorProbSymptoms) && !Number.isNaN(this.sensitivity) && !Number.isNaN(this.specificity);
+        },
+        testSelectSuccess() {
+            if(!Number.isNaN(this.sensitivity) && !Number.isNaN(this.specificity)) 
+                return this.formatPercent(this.sensitivity) + ' Sensitivität, ' + this.formatPercent(this.specificity) + ' Spezifität';
+            else 
+                return null;
+        },
+        testSelectError() {
+            if(!Number.isNaN(this.sensitivity) && !Number.isNaN(this.specificity)) 
+                return null;
+
+            if(!this.selectedTest)
+                return "Bitte einen Test auswählen";
+             
+            return "Keine Daten für diesen Test verfügbar";
         },
     }
 }

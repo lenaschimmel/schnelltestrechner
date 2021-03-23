@@ -62,7 +62,7 @@
               mit Vorsicht und Skepsis!
             </v-alert>
 
-            <v-expansion-panels multiple class="mb-8">
+            <v-expansion-panels multiple class="mb-8" v-model="expandedPanels">
 
               <v-expansion-panel>
                 <v-expansion-panel-header class="font-weight-bold text-uppercase">
@@ -100,28 +100,33 @@
                   Test-Auswahl
                 </v-expansion-panel-header>
                 <v-expansion-panel-content>
-
-                  <p>Tests filtern:</p>
                   <v-radio-group v-model="testsKind" mandatory>
-                    <v-radio label="Nur Selbst-Tests" value="self"></v-radio>
-                    <v-radio value="pei">
-                      <template v-slot:label>
-                        <div>Vom <acronym
-                            title=" Paul-Ehrlich-Institut - Bundesinstitut für Impfstoffe und biomedizinische Arzneimittel">PEI</acronym>
-                          evaluiert (Selbst- und Profi-Tests)</div>
-                      </template>
-                    </v-radio>
-                    <v-radio label="Alle (Selbst- und Profi-Tests)" value="all"></v-radio>
-                    <v-radio label="Eigene Werte eingeben" value="input"></v-radio>
+                    <v-container fluid>
+                      <v-row no-gutters>
+                        <v-col cols="12" sm="6" md="6" no-gutters>
+                          <v-radio label="Nur Selbst-Tests" value="self"></v-radio>
+                          <v-radio value="pei">
+                            <template v-slot:label>
+                              <div>Vom <acronym
+                                  title=" Paul-Ehrlich-Institut - Bundesinstitut für Impfstoffe und biomedizinische Arzneimittel">PEI</acronym>
+                                evaluiert (Selbst- und Profi-Tests)</div>
+                            </template>
+                          </v-radio>
+                        </v-col>
+                        <v-col cols="12" sm="6" md="6" no-gutters>
+                          <v-radio label="Alle (Selbst- und Profi-Tests)" value="all"></v-radio>
+                          <v-radio label="Eigene Werte eingeben" value="input"></v-radio>
+                        </v-col>
+                      </v-row>
+                    </v-container>
                   </v-radio-group>
 
                   <template v-if="testsKind != 'input'">
                     <p>Test:
                       <v-select v-model="testId" :items="visibleTests" item-text="name" item-value="id" outlined
-                        :success-messages="formatPercent(sensitivity) + ' Sensitivität, ' + formatPercent(specificity) + ' Spezifität'">
+                      :success-messages="testSelectSuccess" :error-messages="testSelectError">
 
                       </v-select>
-
                     </p>
                     <template v-if="intermediate">
                       <p>
@@ -228,7 +233,8 @@
                     µCoV
                   </p>
 
-                  <p>Vortestwahrscheinlichkeit vor Symptomen: <input disabled v-bind:value="formatPercent(priorProb)" />
+                  <p v-if="intermediate">Vortestwahrscheinlichkeit vor Symptomen: <input disabled
+                      v-bind:value="formatPercent(priorProb)" />
                   </p>
                 </v-expansion-panel-content>
               </v-expansion-panel>
@@ -266,7 +272,7 @@
                     <p>C19 Rule likelihood ratio: <input disabled v-bind:value="formatNumber(ruleLR)" /></p>
                     <p>Symptom-Faktor: <input disabled v-bind:value="formatNumber(ruleLR*anySymptomFactor)" /></p>
                   </template>
-                  <p>Vortestwahrscheinlichkeit nach Symptomen: <input disabled
+                  <p v-if="intermediate">Vortestwahrscheinlichkeit nach Symptomen: <input disabled
                       v-bind:value="formatPercent(priorProbSymptoms)" />
                   </p>
                 </v-expansion-panel-content>
@@ -278,11 +284,13 @@
       </v-container>
     </v-main>
 
-    <v-footer height="200" v-if="Number.isNaN(priorProbSymptoms)" :app="fixedFooter" :fixed="fixedFooter" color="red lighten-3" id="footer">
+    <v-footer height="50" v-if="!resultValid" :app="fixedFooter" :fixed="fixedFooter"
+      color="red lighten-3" id="footer">
       <v-toolbar-title>Ergebnis kann nicht ermittelt werden, bevor die Eingaben vollständig sind.</v-toolbar-title>
     </v-footer>
-    
-    <v-footer height="200" v-if="!Number.isNaN(priorProbSymptoms)" :app="fixedFooter" :fixed="fixedFooter" color="light-blue lighten-3" id="footer">
+
+    <v-footer height="200" v-if="resultValid" :app="fixedFooter" :fixed="fixedFooter"
+      color="light-blue lighten-3" id="footer">
       <v-container fluid>
         <v-row>
           <v-col class="font-weight-bold text-center" cols="4">Vortestwahrscheinlichkeit
@@ -293,7 +301,7 @@
         <v-row>
           <v-col cols="12" sm="4" class="text-h4">
             <v-card class="pt-7 pb-7 text-center">
-            {{ formatPercent(priorProbSymptoms) }}
+              {{ formatPercent(priorProbSymptoms) }}
             </v-card>
           </v-col>
           <v-col cols="12" sm="8">
@@ -375,7 +383,8 @@
     </v-footer>
 
     <v-fab-transition>
-      <v-btn color="pink" v-show="!fixedFooter && !scrolledToBottom" fab dark fixed bottom right class="mb-8 mr-8" @click="$vuetify.goTo('#footer', { duration: 600, easing: 'easeInOutCubic' })">
+      <v-btn color="pink" v-show="!fixedFooter && !scrolledToBottom" fab dark fixed bottom right class="mb-8 mr-8"
+        @click="$vuetify.goTo('#footer', { duration: 600, easing: 'easeInOutCubic' })">
         <v-icon>mdi-chevron-triple-down</v-icon>
       </v-btn>
     </v-fab-transition>

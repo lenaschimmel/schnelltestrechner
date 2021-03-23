@@ -1,0 +1,7 @@
+.v-messages {
+    font-size: 16px !important;
+}
+
+v-messages__message {
+    line-height: 16px !important;
+}
