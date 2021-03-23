@@ -1,14 +1,23 @@
-const apiEndpoint = "https://api.corona-zahlen.org";
 // 7 days should be enough, but sometimes the API returns fewer entries then requested
 // also, there seems to be about 15% underreporting for the latest day, which we bypass by using 
 // data that is one day older
-const apiGermany = "/germany/history/incidence/8";
-const apiStates = "/states/history/incidence/8";
-const apiDistricts = "/districts/history/incidence/8";
+// const apiEndpoint = "https://api.corona-zahlen.org";
+// const apiGermany = "/germany/history/incidence/8";
+// const apiStates = "/states/history/incidence/8";
+// const apiDistricts = "/districts/history/incidence/8";
+const apiGermany = "/data/germany.json";
+const apiStates = "/data/states.json";
+const apiDistricts = "/data/districts.json";
+const apiTests = "/data/antigentests.json";
+
 
 const RapidTestVueApp = {
     el: '#rapidtest',
-    vuetify: new Vuetify(),
+    vuetify: new Vuetify({
+        icons: {
+            iconfont: 'mdi', // default - only for display purposes
+        },
+    }),
     data() {
         return {
             // showing any symtomps that might lead to PCR testing in Germany 
@@ -31,7 +40,7 @@ const RapidTestVueApp = {
 
             scrolledToBottom: false,
             expandedPanelsCalc: [0, 1],
-            expandedPanelsInfo: [],
+            expandedPanelsInfo: [0, 1],
             expandedPanelsImprint: [0, 1, 2, 3],
             tab: null,
 
@@ -115,7 +124,7 @@ const RapidTestVueApp = {
                 return 0;
             };
 
-            fetch('./antigentests.json')
+            fetch(apiTests)
                 .then(response => response.json())
                 .then(data => {
                     this.tests = data;
@@ -124,19 +133,19 @@ const RapidTestVueApp = {
                     // this.tests = this.tests.map(test => { if (Object.keys(test.studies).length == 0) { test.disabled = true; } return test; });
                 })
                 .catch(error => console.log(error));
-            fetch(apiEndpoint + apiGermany)
+            fetch(apiGermany)
                 .then(response => response.json())
                 .then(root => {
                     this.germany = root.data;
                 })
                 .catch(error => console.log(error));
-            fetch(apiEndpoint + apiStates)
+            fetch(apiStates)
                 .then(response => response.json())
                 .then(root => {
                     this.states = Object.values(root.data).sort(byName);
                 })
                 .catch(error => console.log(error));
-            fetch(apiEndpoint + apiDistricts)
+            fetch(apiDistricts)
                 .then(response => response.json())
                 .then(root => {
                     this.districts = Object.values(root.data).sort(byName);

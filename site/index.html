@@ -9,10 +9,10 @@
   <meta name="description" content="Ein Werkzeug, um Bayes-Wahrscheinlichkeiten von Covid-Schnelltests zu verstehen" />
   <meta name="author" content="Lena Schimmel" />
 
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="stylesheet" href="/css/fonts.css" />
+  <link rel="stylesheet" href="/css/icons.css" />
+  <link rel="stylesheet" href="/css/vuetify.min.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
 </head>
 
@@ -53,7 +53,7 @@
       </template>
     </v-app-bar>
 
-    <v-main class="grey lighten-3">
+    <v-main class="white">
       <v-tabs-items v-model="tab">
         <v-tab-item>
           <!-- TAB calc -->
@@ -340,7 +340,8 @@
                             href="https://www.addendum.org/coronavirus/berufe-ansteckungsrisiko/"
                             rel="nofollow">www.addendum.org</a> entnommen wurden</li>
                       </ul>
-                      <p class="mt-4">Die Berechnung der Bayes-Faktoren und der A-Posteriori-Wahrscheinlichkeiten folgt der
+                      <p class="mt-4">Die Berechnung der Bayes-Faktoren und der A-Posteriori-Wahrscheinlichkeiten folgt
+                        der
                         Berechnung des Videos <a href="https://www.youtube.com/watch?v=lG4VkPoG3ko&amp;t"
                           rel="nofollow">The medical test paradox: Can redesigning Bayes rule help?</a> von 3Blue1Brown.
                       </p>
@@ -352,7 +353,8 @@
                         Faktor 18,8 angehoben, sobald Symptome vorhanden sind, um anschließend die Punkteregel
                         anzuwenden. <strong>Der Faktor 18,8 basiert auf sehr groben Abschätzungen und stellt
                           wahrscheinlich die größte Ungenauigkeit innerhalb der gesamten Berechnung dar. Er sollte
-                          dringend durch einen wissenschaftlich basierten Wert ersetzt werden.</strong></p>
+                          dringend durch einen wissenschaftlich basierten Wert ersetzt werden.</strong>
+                      </p>
 
                     </v-expansion-panel-content>
                   </v-expansion-panel>
@@ -449,20 +451,8 @@
                     </v-expansion-panel-header>
                     <v-expansion-panel-content>
                       <p>Bei der Nutzung dieser Webseite werden keine personenbezogenen Daten, insbesondere keine
-                        Gesundheitsdaten erhoben, da alle Eingaben lokal im Browser verarbeitet werden.</p>
-
-                      <p>In dieser Vorschau-Version werden Daten aus externen Quellen nachgeladen, wodurch die folgenden
-                        Anbieter die anfragende IP-Addresse erfahren:</p>
-
-                      <ul>
-                        <li><a href="https://cdn.jsdelivr.net/">JSDELIVR</a></li>
-                        <li><a href="https://unpkg.com/">UNPKG</a></li>
-                        <li><a href="https://api.corona-zahlen.org">corona-zahlen.org</a></li>
-                        <li><a href="https://fonts.googleapis.com">Google Fonts</a></li>
-                      </ul>
-
-                      <p>Die externen Anfragen sowie diese Hinweise sollten vor der eigentlichen Veröffentlichung der
-                        Seite entfernt werden.</p>
+                        Gesundheitsdaten erhoben, da alle Eingaben lokal im Browser verarbeitet werden. Es werden keine
+                        Cookies o.Ä. verwendet, und keine Anfragen an andere Anbieter und Domains gemacht.</p>
 
                       <p>Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten durch Dritte zur
                         Übersendung von nicht ausdrücklich angeforderter Werbung und Informationsmaterialien wird
@@ -496,7 +486,8 @@
           </v-col>
         </v-row>
         <v-row v-if="$vuetify.breakpoint.xsOnly">
-          <v-col class="font-weight-bold text-center" cols="12">Vortestwahrscheinlichkeit {{ formatPercent(priorProbSymptoms) }}
+          <v-col class="font-weight-bold text-center" cols="12">Vortestwahrscheinlichkeit {{
+            formatPercent(priorProbSymptoms) }}
           </v-col>
         </v-row>
         <v-row>
@@ -523,7 +514,8 @@
                   <tr>
                     <td class="text-left font-weight-bold">Test positiv</td>
                     <td class="text-left">
-                      {{ formatPercent(updatedProbPos) }} <template v-if="$vuetify.breakpoint.mdAndUp">echt-positiv</template>
+                      {{ formatPercent(updatedProbPos) }} <template
+                        v-if="$vuetify.breakpoint.mdAndUp">echt-positiv</template>
                       <v-tooltip top>
                         <template v-slot:activator="{ on, attrs }">
                           <v-icon color="primary" small v-bind="attrs" v-on="on">
@@ -535,7 +527,8 @@
                       </v-tooltip>
                     </td>
                     <td class="text-left">
-                      {{ formatPercent(1-updatedProbPos) }}  <template v-if="$vuetify.breakpoint.mdAndUp">falsch-positiv</template>
+                      {{ formatPercent(1-updatedProbPos) }} <template
+                        v-if="$vuetify.breakpoint.mdAndUp">falsch-positiv</template>
                       <v-tooltip top>
                         <template v-slot:activator="{ on, attrs }">
                           <v-icon color="primary" small v-bind="attrs" v-on="on">
@@ -550,7 +543,8 @@
                   <tr>
                     <td class="text-left font-weight-bold">Test negativ</td>
                     <td class="text-left">
-                      {{ formatPercent(updatedProbNeg) }}  <template v-if="$vuetify.breakpoint.mdAndUp">falsch-negativ</template>
+                      {{ formatPercent(updatedProbNeg) }} <template
+                        v-if="$vuetify.breakpoint.mdAndUp">falsch-negativ</template>
                       <v-tooltip top>
                         <template v-slot:activator="{ on, attrs }">
                           <v-icon color="primary" small v-bind="attrs" v-on="on">
@@ -563,7 +557,8 @@
                       </v-tooltip>
                     </td>
                     <td class="text-left">
-                      {{ formatPercent(1-updatedProbNeg) }} <template v-if="$vuetify.breakpoint.mdAndUp">echt-negativ</template>
+                      {{ formatPercent(1-updatedProbNeg) }} <template
+                        v-if="$vuetify.breakpoint.mdAndUp">echt-negativ</template>
                       <v-tooltip top>
                         <template v-slot:activator="{ on, attrs }">
                           <v-icon color="primary" small v-bind="attrs" v-on="on">
@@ -592,10 +587,10 @@
 
   </v-app>
 
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
-  <script src="https://unpkg.com/vue-screen/dist/vue-screen.min.js"></script>
-  <script src="script.js"></script>
+  <script src="/js/vue.js"></script>
+  <script src="/js/vuetify.js"></script>
+  <script src="/js/vue-screen.min.js"></script>
+  <script src="/js/script.js"></script>
 </body>
 
 </html>
