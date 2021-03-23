@@ -9982,5 +9982,45 @@
     "pei": false,
     "studies": {},
     "id": "NO-AT-6"
+  },
+  {
+    "reference": "5640-S-079/21",
+    "manufacturer": "Teda Laukoetter Technologie GmbH",
+    "antragsteller": "Teda Laukoetter Technologie GmbH",
+    "name": "ANBIO Corona Antigen Nasentupfer",
+    "selftest": true,
+    "pei": false,
+    "studies": {},
+    "id": "NO-AT-7"
+  },
+  {
+    "reference": "5460-S-178/21",
+    "manufacturer": "Haemato Pharm GmbH",
+    "antragsteller": "Haemato Pharm GmbH",
+    "name": "Wondfo 2019-nCoV Antigen Test (Lateral-Flow-Methode) Selbsttest",
+    "selftest": true,
+    "pei": false,
+    "studies": {},
+    "id": "NO-AT-8"
+  },
+  {
+    "reference": "5460-S-146/21",
+    "manufacturer": "OFM GmbH",
+    "antragsteller": "OFM GmbH",
+    "name": "Sensitivo COVID-19 Antigen Test",
+    "selftest": true,
+    "pei": false,
+    "studies": {},
+    "id": "NO-AT-9"
+  },
+  {
+    "reference": "5460-S-104/21",
+    "manufacturer": "Beijing Lepu Medical Technology Co., Ltd.",
+    "antragsteller": "Beijing Lepu Medical Technology Co., Ltd.",
+    "name": "NASOCHECKcomfort SARS-CoV-2 Antigen-Schnelltest",
+    "selftest": true,
+    "pei": false,
+    "studies": {},
+    "id": "NO-AT-10"
   }
 ]

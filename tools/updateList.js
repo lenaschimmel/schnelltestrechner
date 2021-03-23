@@ -145,10 +145,10 @@ function getSelftestsWithoutId() {
     });
 }
 
-const csvAntigenTests = fs.readFileSync("antigentests.csv", {encoding: "latin1"});
-const jsonSelftests = JSON.parse(fs.readFileSync("selftests.json", {encoding: "utf8"}));
-const csvEvaluation = fs.readFileSync("evaluation.csv", {encoding: "utf8"});
-const jsonEvaluationNameMapping = JSON.parse(fs.readFileSync("evaluation_name_mapping.json", {encoding: "utf8"}));
+const csvAntigenTests = fs.readFileSync("../data/antigentests.csv", {encoding: "latin1"});
+const jsonSelftests = JSON.parse(fs.readFileSync("../data/selftests.json", {encoding: "utf8"}));
+const csvEvaluation = fs.readFileSync("../data/evaluation.csv", {encoding: "utf8"});
+const jsonEvaluationNameMapping = JSON.parse(fs.readFileSync("../data/evaluation_name_mapping.json", {encoding: "utf8"}));
 
 const jsonEvaluation = parse(csvEvaluation, {
     on_record: onEvaluationRecord,
@@ -163,7 +163,6 @@ const jsonAntigenTests = parse(csvAntigenTests, {
   delimiter: ";",
 });
 
-// this works in principle, but the frontend can't handle tests without studies yet
-// jsonAntigenTests.push(... getSelftestsWithoutId());
+jsonAntigenTests.push(... getSelftestsWithoutId());
 
-fs.writeFileSync("antigentests.json", JSON.stringify(jsonAntigenTests, null, 2));
+fs.writeFileSync("../site/data/antigentests.json", JSON.stringify(jsonAntigenTests, null, 2));
