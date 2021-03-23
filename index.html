@@ -24,7 +24,7 @@
       </v-icon>
       <v-toolbar-title>SchnellTestRechner.de</v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-switch v-model="intermediate" label="Detaillierte Angaben" hide-details></v-switch>
+      <v-switch v-model="intermediate" label="Erweiterte Ansicht" hide-details></v-switch>
       <v-btn text>Impressum</v-btn>
       <v-tooltip bottom>
         <template v-slot:activator="{ on, attrs }">
@@ -71,20 +71,19 @@
                 <v-expansion-panel-content>
 
                   <p>Wie zuverlässig eigentlich ein Schnell- oder Selbst-Test auf Sars-CoV-2 ist, <b>lässt sich
-                      unmöglich
-                      allgemein beantworten.</b> Neben den Eigenschaften des eigentlichen Tests (<i>Sensitivität</i>
-                    und
-                    <i>Spezifität</i>) spielt auch die sogenannte <i>Vortestwahrscheinlichkeit</i> eine enorm große
-                    Rolle.
-                    Und die hängt grundsätzlich von der <i>Inzidenz</i>, sowie dem privatem und beruflichem
-                    <i>Risiko-Profil</i>ab. Wer außerdem <i>Symptome</i> hat, hat eine zusätzlich stark erhöhte
+                      unmöglich allgemein beantworten.</b> Neben den Eigenschaften des eigentlichen Tests
+                    (<i>Sensitivität</i> und <i>Spezifität</i>) spielt auch die sogenannte
+                    <i>Vortestwahrscheinlichkeit</i> eine enorm große
+                    Rolle. Und die hängt grundsätzlich von der <i>Inzidenz</i>, sowie dem privatem und beruflichem
+                    <i>Risiko-Profil</i> ab. Wer außerdem <i>Symptome</i> hat, hat eine zusätzlich stark erhöhte
                     Vortestwahrscheinlichkeit.
                   </p>
 
-                  <p>Um in einem konkreten Fall das Ergebnis zu bewerten müsste man also:</p>
-                  <ul>
+                  <p>Um in einem konkreten Fall das Ergebnis zu bewerten, müsste man also:</p>
+                  <ul class="mb-4">
                     <li>Die mathematischen Grundprinzipien verstehen, insbesondere das scheinbare paradoxe Phänomen
-                      des <a href="https://de.wikipedia.org/wiki/Pr%C3%A4valenzfehler">Prävalenzfehlers</a></li>
+                      des <a href="https://de.wikipedia.org/wiki/Pr%C3%A4valenzfehler" target="_">Prävalenzfehlers</a>
+                    </li>
                     <li>Alle oben genannten Werte recherchieren bzw. abschätzen</li>
                     <li>Diese Werte in Formeln einsetzen und Ergebnisse ausrechnen</li>
                   </ul>
@@ -102,23 +101,27 @@
                 </v-expansion-panel-header>
                 <v-expansion-panel-content>
 
-                  <input type="radio" id="testsSelf" name="testsSelf" v-model="testsKind" value="self" />
-                  <label for="testsSelf">Nur Selbst-Tests</label>
-
-                  <input type="radio" id="testsPei" name="testsPei" v-model="testsKind" value="pei" />
-                  <label for="testsPei">Vom PEI evaluiert (Selbst- und Profi-Tests)</label>
-
-                  <input type="radio" id="testsAll" name="testsAll" v-model="testsKind" value="all" />
-                  <label for="testsAll">Alle (Selbst- und Profi-Tests)</label>
-
-                  <input type="radio" id="testsInput" name="testsInput" v-model="testsKind" value="input" />
-                  <label for="testsInput">Eigene Werte eingeben</label>
+                  <p>Tests filtern:</p>
+                  <v-radio-group v-model="testsKind" mandatory>
+                    <v-radio label="Nur Selbst-Tests" value="self"></v-radio>
+                    <v-radio value="pei">
+                      <template v-slot:label>
+                        <div>Vom <acronym
+                            title=" Paul-Ehrlich-Institut - Bundesinstitut für Impfstoffe und biomedizinische Arzneimittel">PEI</acronym>
+                          evaluiert (Selbst- und Profi-Tests)</div>
+                      </template>
+                    </v-radio>
+                    <v-radio label="Alle (Selbst- und Profi-Tests)" value="all"></v-radio>
+                    <v-radio label="Eigene Werte eingeben" value="input"></v-radio>
+                  </v-radio-group>
 
                   <template v-if="testsKind != 'input'">
                     <p>Test:
-                      <v-select v-model="testId" :items="visibleTests" item-text="name" item-value="id" outlined>
+                      <v-select v-model="testId" :items="visibleTests" item-text="name" item-value="id" outlined
+                        :success-messages="formatPercent(sensitivity) + ' Sensitivität, ' + formatPercent(specificity) + ' Spezifität'">
 
                       </v-select>
+
                     </p>
                     <template v-if="intermediate">
                       <p>
@@ -139,8 +142,6 @@
                       </p>
 
                     </template>
-                    <p>Sensitivität: <input disabled v-bind:value="formatPercent(sensitivity)" /></p>
-                    <p>Spezifität: <input disabled v-bind:value="formatPercent(specificity)" /></p>
                   </template>
                   <template v-else>
                     <p>Sensitivität:
@@ -163,22 +164,15 @@
 
               <v-expansion-panel>
                 <v-expansion-panel-header class="font-weight-bold text-uppercase">
-                  Aktuelle Inzidenz
+                  Inzidenz und Prävalenz
                 </v-expansion-panel-header>
                 <v-expansion-panel-content>
-                  <input type="radio" id="incidenceGermany" name="incidenceGermany" v-model="incidenceSource"
-                    value="germany">
-                  <label for="incidenceGermany">Ganz Deutschland</label>
-
-                  <input type="radio" id="incidenceState" name="incidenceState" v-model="incidenceSource" value="state">
-                  <label for="incidenceState">Nach Bundesland</label>
-
-                  <input type="radio" id="incidenceDistrict" name="incidenceDistrict" v-model="incidenceSource"
-                    value="district">
-                  <label for="incidenceDistrict">Nach Landkreis</label>
-
-                  <input type="radio" id="incidenceSelf" name="incidenceSelf" v-model="incidenceSource" value="input">
-                  <label for="incidenceSelf">Eigenen Wert eingeben</label>
+                  <v-radio-group v-model="incidenceSource" mandatory>
+                    <v-radio value="germany" label="Ganz Deutschland"></v-radio>
+                    <v-radio value="state" label="Nach Bundesland"></v-radio>
+                    <v-radio value="district" label="Nach Landkreis"></v-radio>
+                    <v-radio value="input" label="Eigenen Wert eingeben"></v-radio>
+                  </v-radio-group>
 
                   <template v-if="incidenceSource == 'state'">
                     <p>Bundesland:
@@ -201,8 +195,8 @@
                   </template>
                   <template v-if="intermediate">
                     <template v-if="incidenceSource != 'input'">
-                      <p><i>Quelle der Inzidenzdaten: <a
-                            href="https://api.corona-zahlen.org">api.corona-zahlen.org</a></i></p>
+                      <p><i>Quelle der Inzidenzdaten: <a href="https://api.corona-zahlen.org"
+                            target="_">api.corona-zahlen.org</a></i></p>
                       <p>Gemeldete 7-Tage Inzidenz je 100.000 diese Woche: <input disabled
                           :value="formatNumber(incidence)" /></p>
                       <p>Gemeldete 7-Tage Inzidenz je 100.000 vorherige Woche: <input disabled
@@ -228,8 +222,8 @@
                       item-value="val" outlined>
                     </v-select>
                   </p>
-                  <p>Zusätzliche Risiken in den letzten 10 Tagen laut <a
-                      href="https://www.microcovid.org">microCOVID.org</a>:
+                  <p>Zusätzliche Risiken in den letzten 10 Tagen laut <a href="https://www.microcovid.org"
+                      target="_">microCOVID.org</a>:
                     <v-text-field v-model="additionalRiskString" outlined />
                     µCoV
                   </p>
@@ -244,30 +238,28 @@
                   Symptome
                 </v-expansion-panel-header>
                 <v-expansion-panel-content>
-                  <p>
-                    <input type="checkbox" id="sympSmell" name="sympSmell" v-model="sympSmell"><label
-                      for="sympSmell">Geruchsverlust</label>
-                    <input type="checkbox" id="sympTaste" name="sympTaste" v-model="sympTaste"><label
-                      for="sympTaste">Geschmacksverlust</label>
-                    <input type="checkbox" id="sympFever" name="sympFever" v-model="sympFever"><label
-                      for="sympFever">Fieber</label>
-                    <input type="checkbox" id="sympCough" name="sympCough" v-model="sympCough"><label
-                      for="sympCough">Husten</label>
-                    <input type="checkbox" id="sympChest" name="sympChest" v-model="sympChest"><label
-                      for="sympChest">Engegefühl
-                      in der Brust</label>
-                    <input type="checkbox" id="sympWheez" name="sympWheez" v-model="sympWheez"><label
-                      for="sympWheez">Keuchen</label>
-                    <input type="checkbox" id="sympOther" name="sympOther" v-model="sympOther"><label
-                      for="sympOther">Sonstige
-                      verdächtige Symptome</label>
-                  </p>
-
-                  <p>(verdächtige Symptome sind z.B. Schnupfen, Bronchitis, Pneumonie, Atemnot, Halsschmerzen, Kopf-
-                    und
-                    Gliederschmerzen, Appetitlosigkeit, Gewichtsverlust, Übelkeit, Bauchschmerzen, Erbrechen,
-                    Durchfall,
-                    Konjunktivitis, Hautausschlag, Lymphknotenschwellung, Apathie, Somnolenz)</p>
+                  <v-container fluid>
+                    <v-row no-gutters>
+                      <v-col cols="12" sm="4" md="4" no-gutters>
+                        <v-checkbox v-model="sympSmell" label="Geruchsverlust"></v-checkbox>
+                        <v-checkbox v-model="sympTaste" label="Geschmacksverlust"></v-checkbox>
+                      </v-col>
+                      <v-col cols="12" sm="4" md="4" no-gutters>
+                        <v-checkbox v-model="sympFever" label="Fieber"></v-checkbox>
+                        <v-checkbox v-model="sympCough" label="Husten"></v-checkbox>
+                      </v-col>
+                      <v-col cols="12" sm="4" md="4" no-gutters>
+                        <v-checkbox v-model="sympChest" label="Engegefühl in der Brust"></v-checkbox>
+                        <v-checkbox v-model="sympWheez" label="Keuchen"></v-checkbox>
+                      </v-col>
+                      <v-col cols="12" no-gutters>
+                        <v-checkbox v-model="sympOther" label="Sonstige verdächtige Symptome" hint="z.B. Schnupfen, Bronchitis, Pneumonie, Atemnot, Halsschmerzen, Kopf-
+                        und Gliederschmerzen, Appetitlosigkeit, Gewichtsverlust, Übelkeit, Bauchschmerzen, Erbrechen,
+                        Durchfall, Konjunktivitis, Hautausschlag, Lymphknotenschwellung, Apathie, Somnolenz"
+                          persistent-hint></v-checkbox>
+                      </v-col>
+                    </v-row>
+                  </v-container>
 
                   <template v-if="anySymptoms && intermediate">
                     <p>C19 Rule score: <input disabled v-bind:value="ruleScore" /></p>
@@ -288,88 +280,100 @@
 
     <v-footer v-if="Number.isNaN(priorProbSymptoms)" :app="$vuetify.breakpoint.mdAndUp"
       :fixed="$vuetify.breakpoint.mdAndUp" color="red lighten-3">
-      <v-toolbar-title>Ergebnis kann nicht ermittelt werden. Bitte die Eingaben weiter oben prüfen.</v-toolbar-title>
+      <v-toolbar-title>Ergebnis kann nicht ermittelt werden, bevor die Eingaben vollständig sind.</v-toolbar-title>
     </v-footer>
 
     <v-footer v-if="!Number.isNaN(priorProbSymptoms)" :app="$vuetify.breakpoint.mdAndUp"
       :fixed="$vuetify.breakpoint.mdAndUp" color="light-blue lighten-3">
-      <v-toolbar-title>Aussagekraft des Tests bei {{ formatPercent(priorProbSymptoms) }} Vortestwahrscheinlichkeit
-      </v-toolbar-title>
+      <v-container fluid>
+        <v-row>
+          <v-col class="font-weight-bold text-center" cols="4">Vortestwahrscheinlichkeit
+          </v-col>
+          <v-col class="font-weight-bold text-center" cols="8">Aussagekraft des Tests
+          </v-col>
+        </v-row>
+        <v-row>
+          <v-col cols="12" sm="4" class="text-h4">
+            <v-card class="pt-7 pb-7 text-center">
+            {{ formatPercent(priorProbSymptoms) }}
+            </v-card>
+          </v-col>
+          <v-col cols="12" sm="8">
+            <v-simple-table color="light-blue lighten-5" dense>
+              <template v-slot:default>
+                <tbody>
+                  <tr>
+                    <td class="text-left font-weight-bold">
 
-      <v-col class="text-center" cols="12">
-        <v-simple-table color="light-blue lighten-5" dense>
-          <template v-slot:default>
-            <tbody>
-              <tr>
-                <td class="text-left font-weight-bold">
+                    </td>
+                    <td class="text-left font-weight-bold">
+                      Infiziert
+                    </td>
+                    <td class="text-left font-weight-bold">
+                      Nicht infiziert
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-left font-weight-bold">Test positiv</td>
+                    <td class="text-left">
+                      {{ formatPercent(updatedProbPos) }}<template v-if=""> echt-positiv</template>
+                      <v-tooltip top>
+                        <template v-slot:activator="{ on, attrs }">
+                          <v-icon color="primary" small v-bind="attrs" v-on="on">
+                            mdi-help-circle
+                          </v-icon>
+                        </template>
+                        <span>Bei einem positiven Testergbnis liegt zu {{ formatPercent(updatedProbPos) }} wirklich eine
+                          Infektion vor (echt-positiv).</span>
+                      </v-tooltip>
+                    </td>
+                    <td class="text-left">
+                      {{ formatPercent(1-updatedProbPos) }} falsch-positiv
+                      <v-tooltip top>
+                        <template v-slot:activator="{ on, attrs }">
+                          <v-icon color="primary" small v-bind="attrs" v-on="on">
+                            mdi-help-circle
+                          </v-icon>
+                        </template>
+                        <span>Bei einem positives Testergbnis liegt zu {{ formatPercent(1-updatedProbPos) }} keine
+                          Infektion vor (falsch-positiv).</span>
+                      </v-tooltip>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-left font-weight-bold">Test negativ</td>
+                    <td class="text-left">
+                      {{ formatPercent(updatedProbNeg) }} falsch-negativ
+                      <v-tooltip top>
+                        <template v-slot:activator="{ on, attrs }">
+                          <v-icon color="primary" small v-bind="attrs" v-on="on">
+                            mdi-help-circle
+                          </v-icon>
+                        </template>
+                        <span>Bei einem negativen Testergbnis liegt zu {{ formatPercent(updatedProbNeg) }} trotzdem
+                          eine Infektion vor (falsch-negativ).</span>
 
-                </td>
-                <td class="text-left font-weight-bold">
-                  Infiziert
-                </td>
-                <td class="text-left font-weight-bold">
-                  Nicht infiziert
-                </td>
-              </tr>
-              <tr>
-                <td class="text-left font-weight-bold">Test positiv</td>
-                <td class="text-left">
-                  {{ formatPercent(updatedProbPos) }} echt-positiv
-                  <v-tooltip top>
-                    <template v-slot:activator="{ on, attrs }">
-                      <v-icon color="primary" small v-bind="attrs" v-on="on">
-                        mdi-help-circle
-                      </v-icon>
-                    </template>
-                    <span>Bei einem positiven Testergbnis liegt zu {{ formatPercent(updatedProbPos) }} wirklich eine
-                      Infektion vor (echt-positiv).</span>
-                  </v-tooltip>
-                </td>
-                <td class="text-left">
-                  {{ formatPercent(1-updatedProbPos) }} falsch-positiv
-                  <v-tooltip top>
-                    <template v-slot:activator="{ on, attrs }">
-                      <v-icon color="primary" small v-bind="attrs" v-on="on">
-                        mdi-help-circle
-                      </v-icon>
-                    </template>
-                    <span>Bei einem positives Testergbnis liegt zu {{ formatPercent(1-updatedProbPos) }} keine
-                      Infektion vor (falsch-positiv).</span>
-                  </v-tooltip>
-                </td>
-              </tr>
-              <tr>
-                <td class="text-left font-weight-bold">Test negativ</td>
-                <td class="text-left">
-                  {{ formatPercent(updatedProbNeg) }} falsch-negativ
-                  <v-tooltip top>
-                    <template v-slot:activator="{ on, attrs }">
-                      <v-icon color="primary" small v-bind="attrs" v-on="on">
-                        mdi-help-circle
-                      </v-icon>
-                    </template>
-                    <span>Bei einem negativen Testergbnis liegt zu {{ formatPercent(updatedProbNeg) }} trotzdem
-                      eine Infektion vor (falsch-negativ).</span>
-
-                  </v-tooltip>
-                </td>
-                <td class="text-left">
-                  {{ formatPercent(1-updatedProbNeg) }} echt-negativ
-                  <v-tooltip top>
-                    <template v-slot:activator="{ on, attrs }">
-                      <v-icon color="primary" small v-bind="attrs" v-on="on">
-                        mdi-help-circle
-                      </v-icon>
-                    </template>
-                    <span>Bei einem negativen Testergbnis liegt zu {{ formatPercent(1-updatedProbNeg) }}
-                      keine Infektion vor (echt-negativ).</span>
-                  </v-tooltip>
-                </td>
-              </tr>
-            </tbody>
-          </template>
-        </v-simple-table>
-      </v-col>
+                      </v-tooltip>
+                    </td>
+                    <td class="text-left">
+                      {{ formatPercent(1-updatedProbNeg) }} echt-negativ
+                      <v-tooltip top>
+                        <template v-slot:activator="{ on, attrs }">
+                          <v-icon color="primary" small v-bind="attrs" v-on="on">
+                            mdi-help-circle
+                          </v-icon>
+                        </template>
+                        <span>Bei einem negativen Testergbnis liegt zu {{ formatPercent(1-updatedProbNeg) }}
+                          keine Infektion vor (echt-negativ).</span>
+                      </v-tooltip>
+                    </td>
+                  </tr>
+                </tbody>
+              </template>
+            </v-simple-table>
+          </v-col>
+        </v-row>
+      </v-container>
     </v-footer>
 
   </v-app>

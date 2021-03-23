@@ -63,7 +63,7 @@ const RapidTestVueApp = {
                 { "val": "15.0", "name": "Hat kürzlich eine Bar besucht" },
             ],
             riskProfilesProfessional: [
-                { "val": "0.0", "name": "Home-Office, Arbeitlsos, etc." },
+                { "val": "0.0", "name": "Home-Office, Arbeitslos, etc." },
                 { "val": "0.1", "name": "Risikoarmer Beruf" },
                 { "val": "0.4", "name": "Produktion" },
                 { "val": "0.5", "name": "Verkauf" },
@@ -110,6 +110,7 @@ const RapidTestVueApp = {
                 .then(data => {
                     this.tests = data;
                     this.tests.sort(byId);
+                    this.tests = this.tests.map(test => { if (Object.keys(test.studies).length == 0) { test.disabled = true; } return test; });
                 })
                 .catch(error => console.log(error));
             fetch(apiEndpoint + apiGermany)
