@@ -17,7 +17,17 @@
 </head>
 
 <body>
-  <v-app id="rapidtest">
+  <div id="loading">
+    <h1>Die Seite lädt…</h1>
+    Bitte haben Sie etwas Geduld, da die Seite noch nicht auf schnelle Ladezeiten optimiert ist.
+  </div>
+  <noscript>
+    <h1>JavaScript benötigt</h1>
+    Diese Seite funktioniert nur mit aktiviertem JavaScript in einem (halbwegs) aktuellen Browser. Das JavaScript wird
+    zum einen für ein schönes Layout benötigt, insbeonsere aber auch, da die sie berechnungen direkt im Browser
+    druchführt, um den Schutz ihrer persönlinen, gesundheits-bezogenen Daten sicher zu stellen.
+  </noscript>
+  <v-app id="rapidtest" class="hidden">
     <v-app-bar app dark color="light-blue darken-2" flat clipped-right>
       <v-icon large>
         mdi-virus

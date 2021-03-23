@@ -95,6 +95,8 @@ const RapidTestVueApp = {
         this.numberFormatter = new Intl.NumberFormat('de-DE', { style: 'decimal', minimumFractionDigits: 1, maximumFractionDigits: 1 });
         window.addEventListener('scroll', this.handleScroll);
         this.fetchData();
+        document.getElementById("rapidtest").classList.remove("hidden");
+        document.getElementById("loading").classList.add("hidden");
     },
     destroyed() {
         window.removeEventListener('scroll', this.handleScroll);

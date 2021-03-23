@@ -5,3 +5,7 @@
 .v-messages__message {
     line-height: 19px !important;
 }
+
+.hidden {
+    display: none;
+}
