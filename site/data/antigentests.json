@@ -381,6 +381,7 @@
       }
     },
     "selftest": true,
+    "reference": "5640-S-022/21",
     "shops": [
       "Aldi"
     ]
@@ -1441,6 +1442,7 @@
       }
     },
     "selftest": true,
+    "reference": "5640-S-057/21",
     "shops": []
   },
   {
@@ -1968,6 +1970,7 @@
       }
     },
     "selftest": true,
+    "reference": "5640-S-041/21",
     "shops": []
   },
   {
@@ -4359,6 +4362,7 @@
       }
     },
     "selftest": true,
+    "reference": "5640-S-009/21",
     "shops": []
   },
   {
@@ -4809,6 +4813,7 @@
       }
     },
     "selftest": true,
+    "reference": "5640-S-004/21",
     "shops": []
   },
   {
@@ -8138,6 +8143,7 @@
       }
     },
     "selftest": true,
+    "reference": "5640-S-025/21",
     "shops": []
   },
   {
@@ -9361,6 +9367,7 @@
       }
     },
     "selftest": true,
+    "reference": "5640-S-007/21",
     "shops": [
       "dm",
       "LIDL",

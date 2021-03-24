@@ -53,6 +53,7 @@ function onAntigenTestRecord(record, context) {
 
     record.selftest = (matchingSelftests.length == 1);
     if (record.selftest) {
+        record.reference = matchingSelftests[0].reference;
         record.shops = matchingSelftests[0].available;
     } else {
         record.shops = [];
