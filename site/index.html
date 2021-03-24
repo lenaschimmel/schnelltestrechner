@@ -153,17 +153,17 @@
                     </v-expansion-panel-header>
                     <v-expansion-panel-content color="blue lighten-5" class="pt-4">
 
-                      <v-btn-toggle v-model="testsKind" shaped>
+                      <v-btn-toggle v-model="testsKind">
                         <v-btn value="list">
                           <span class="hidden-xs-only">Aus Liste wählen</span>
-                          <v-icon right>
+                          <v-icon>
                             mdi-format-list-checkbox
                           </v-icon>
                         </v-btn>
 
                         <v-btn value="input">
                           <span class="hidden-xs-only">Eigene Werte eingeben</span>
-                          <v-icon right>
+                          <v-icon>
                             mdi-numeric
                           </v-icon>
                         </v-btn>
@@ -264,19 +264,28 @@
                           </p>
 
                           <p>
-                            Wert innerhalb des 95%-Konfidenzinervalls:
-                            
-                            <input type="radio" id="confidenceMin" name="confidenceMin" v-model="confidence"
-                            value="min" class="ml-8">
-                            <label for="confidenceMin">Minimum</label>
+                            Werte innerhalb des 95%-Konfidenzinervalls:
 
-                            <input type="radio" id="confidenceAvg" name="confidenceAvg" v-model="confidence"
-                              value="avg" class="ml-4">
-                            <label for="confidenceAvg">Durchschnitt</label>
-
-                            <input type="radio" id="confidenceMax" name="confidenceMax" v-model="confidence"
-                              value="max" class="ml-4">
-                            <label for="confidenceMax">Maximum</label>
+                            <v-btn-toggle v-model="confidence" class="mt-2">
+                              <v-btn value="min">
+                                <span class="hidden-xs-only">Niedrigste</span>
+                                <v-icon>
+                                  mdi-format-vertical-align-bottom
+                                </v-icon>
+                              </v-btn>
+                              <v-btn value="avg">
+                                <span class="hidden-xs-only">Mittlere</span>
+                                <v-icon>
+                                  mdi-format-vertical-align-center
+                                </v-icon>
+                              </v-btn>
+                              <v-btn value="max">
+                                <span class="hidden-xs-only">Höchste</span>
+                                <v-icon>
+                                  mdi-format-vertical-align-top
+                                </v-icon>
+                              </v-btn>
+                            </v-btn-toggle>                       
                           </p>
                         </template>
 
