@@ -29,7 +29,6 @@ const RapidTestVueApp = {
             selectedTests: [],
             stateId: null,
             districtId: null,
-            testsKind: "self",
             incidenceSource: "germany",
             riskProfilePrivate: "1.0",
             riskProfileProfessional: "0.8",
@@ -37,6 +36,9 @@ const RapidTestVueApp = {
             confidence: "avg",
             intermediate: false,
             studyId: "manufacturer",
+            testsKind: "list",
+            testFilterSelf: true,
+            testFilterPei: false,
 
             scrolledToBottom: false,
             expandedPanelsCalc: [0, 1],
@@ -74,7 +76,7 @@ const RapidTestVueApp = {
                 { text: 'AT-Nummer', value: 'id' },
                 { text: 'Hersteller', value: 'manufacturer' },
                 { text: 'Name', value: 'name' },
-                { text: 'Selbst-Test', value: 'selftest' },
+                { text: 'Merkmal', value: 'attrib', sortable: false },
                 { text: 'Daten', value: 'studies', sortable: false },
             ],
 
@@ -235,7 +237,32 @@ const RapidTestVueApp = {
 
             return text;
         },
+        getAttribCircles(test) {
+            let array = [];
+            if (!test.selftest) array.push({ "icon": "mdi-doctor", "color": "red darken-2" });
+            if (test.selftest) array.push({ "icon": "mdi-account", "color": "green darken-2" });
+            if (test.pei) array.push({ "icon": "mdi-certificate", "color": "blue darken-2" });
+            if (test.shops && test.shops.length > 0) array.push({ "icon": "mdi-cart", "color": "purple darken-2" });
+
+            return array;
+        },
+        getAttribText(test) {
+            let text = "";
+
+            if (!test.selftest) text += "Profi-Test. ";
+            if (test.selftest) text += "Selbst-Test. ";
+            if (test.pei) text += "Vom PEI evaluiert. ";
+            if (test.shops && test.shops.length > 0) text += "Im Einzelhandel erhältlich bei: " +  test.shops.join(", ");
+
+            return text;
+        },
         testMatchesFiler(test) {
+            if (this.testFilterSelf && !test.selftest)
+               return false;
+
+            if (this.testFilterPei && !test.pei)
+                return false;
+
             let textMatch = false;
             let filter = this.testFilter.toLowerCase();
             if (this.testFilter == "") {
@@ -245,9 +272,10 @@ const RapidTestVueApp = {
                 textMatch |= (test.id && test.id.toLowerCase().includes(filter));
                 textMatch |= (test.name && test.name.toLowerCase().includes(filter));
                 textMatch |= (test.manufacturer && test.manufacturer.toLowerCase().includes(filter));
-                textMatch |= (test.tradename && test.tradename.some(t => t.toLowerCase().includes(this.filter)));
-                textMatch |= (test.distributors && test.distributors.some(t => t.toLowerCase().includes(this.filter)));
+                textMatch |= (test.tradename && test.tradename.some(t => t.toLowerCase().includes(filter)));
+                textMatch |= (test.distributors && test.distributors.some(t => t.toLowerCase().includes(filter)));
             }
+
             return textMatch;
         },
     },

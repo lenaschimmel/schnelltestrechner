@@ -114,10 +114,10 @@
                 <v-expansion-panels multiple class="mb-8" v-model="expandedPanelsCalc">
 
                   <v-expansion-panel>
-                    <v-expansion-panel-header class="font-weight-bold text-uppercase">
+                    <v-expansion-panel-header class="font-weight-bold text-uppercase" color="indigo lighten-3">
                       Einleitung
                     </v-expansion-panel-header>
-                    <v-expansion-panel-content>
+                    <v-expansion-panel-content color="indigo lighten-5" class="pt-4">
 
                       <p>Wie zuverlässig eigentlich ein Schnell- oder Selbst-Test auf Sars-CoV-2 ist, <b>lässt sich
                           unmöglich allgemein beantworten.</b> Neben den Eigenschaften des eigentlichen Tests
@@ -148,66 +148,99 @@
                   </v-expansion-panel>
 
                   <v-expansion-panel>
-                    <v-expansion-panel-header class="font-weight-bold text-uppercase">
+                    <v-expansion-panel-header class="font-weight-bold text-uppercase" color="blue lighten-3">
                       Test-Auswahl
                     </v-expansion-panel-header>
-                    <v-expansion-panel-content>
-                      <v-radio-group v-model="testsKind" mandatory>
+                    <v-expansion-panel-content color="blue lighten-5" class="pt-4">
+
+                      <v-btn-toggle v-model="testsKind" shaped>
+                        <v-btn value="list">
+                          <span class="hidden-sm-and-down">Aus Liste wählen</span>
+                          <v-icon right>
+                            mdi-format-list-checkbox
+                          </v-icon>
+                        </v-btn>
+
+                        <v-btn value="input">
+                          <span class="hidden-sm-and-down">Eigene Werte eingeben</span>
+                          <v-icon right>
+                            mdi-numeric
+                          </v-icon>
+                        </v-btn>
+                      </v-btn-toggle>
+
+                      <template v-if="testsKind == 'list'">
                         <v-container fluid>
                           <v-row no-gutters>
-                            <v-col cols="12" sm="6" md="6" no-gutters>
-                              <v-radio label="Nur Selbst-Tests" value="self"></v-radio>
-                              <v-radio value="pei">
-                                <template v-slot:label>
-                                  <div>Vom <acronym
-                                      title="Paul-Ehrlich-Institut - Bundesinstitut für Impfstoffe und biomedizinische Arzneimittel">PEI</acronym>
-                                    evaluiert (Selbst- und Profi-Tests)</div>
-                                </template>
-                              </v-radio>
+                            <v-col cols="12" sm="4" md="4" no-gutters>
+                              <v-checkbox label="Nur Selbst-Tests" v-model="testFilterSelf"></v-checkbox>
                             </v-col>
-                            <v-col cols="12" sm="6" md="6" no-gutters>
-                              <v-radio label="Alle (Selbst- und Profi-Tests)" value="all"></v-radio>
-                              <v-radio label="Eigene Werte eingeben" value="input"></v-radio>
+                            <v-col cols="12" sm="8" md="8" no-gutters>
+                              <v-checkbox v-model="testFilterPei">
+                                <template v-slot:label>
+                                  <div>Nur vom <acronym
+                                      title="Paul-Ehrlich-Institut - Bundesinstitut für Impfstoffe und biomedizinische Arzneimittel">PEI</acronym>
+                                    evaluiert</div>
+                                </template>
+                              </v-checkbox>
                             </v-col>
                           </v-row>
                         </v-container>
-                      </v-radio-group>
-
-                      <template v-if="testsKind != 'input'">
-                        <v-card-title>
-                          <v-text-field v-model="testFilter" append-icon="mdi-magnify" label="Suchbegriff"
-                            placeholder="Suche nach Hersteller, Name, Distributor, AT-Nummer, Sonderzulassungsnummer"></v-text-field>
-                        </v-card-title>
-                        <v-data-table v-model="selectedTests" :items="visibleTests" :headers="testHeaders"
-                          show-select single-select locale="de-DE">
-                          <template v-slot:item.selftest="{ item }">
-                            <v-chip :color="item.selftest ? 'green' : 'red'" dark>
-                              {{ item.selftest ? "Ja" : "Nein" }}
-                            </v-chip>
-                          </template>
-                          <template v-slot:item.studies="{ item }">
-                            <v-tooltip left>
-                              <template v-slot:activator="{ on, attrs }">
-                                <div v-bind="attrs" v-on="on">
-                                  <v-icon v-for="circle in getDataCircles(item.studies)" :key="circle.color" small
-                                    :color="circle.color">
-                                    {{ circle.icon }}
-                                  </v-icon>
-                                </div>
-                              </template>
-                              <span>{{ getDataText(item.studies) }}</span>
-                            </v-tooltip>
-                          </template>
-                        </v-data-table>
+                       
+                        <v-text-field solo v-model="testFilter" append-icon="mdi-magnify" label="Suchbegriff"
+                          placeholder="Suche nach Hersteller, Name, Distributor, AT-Nummer, Sonderzulassungsnummer">
+                        </v-text-field>
+                  
+                        <v-card>
+                          <v-data-table v-model="selectedTests" :items="visibleTests" :headers="testHeaders" show-select
+                            single-select locale="de-DE">
+                            <template v-slot:item.selftest="{ item }">
+                              <v-chip :color="item.selftest ? 'green' : 'red'" dark>
+                                {{ item.selftest ? "Ja" : "Nein" }}
+                              </v-chip>
+                            </template>
+                            <template v-slot:item.studies="{ item }">
+                              <v-tooltip left>
+                                <template v-slot:activator="{ on, attrs }">
+                                  <div v-bind="attrs" v-on="on">
+                                    <v-icon v-for="circle in getDataCircles(item.studies)" :key="circle.color" small
+                                      :color="circle.color">
+                                      {{ circle.icon }}
+                                    </v-icon>
+                                  </div>
+                                </template>
+                                <span>{{ getDataText(item.studies) }}</span>
+                              </v-tooltip>
+                            </template>
+                            <template v-slot:item.attrib="{ item }">
+                              <v-tooltip left>
+                                <template v-slot:activator="{ on, attrs }">
+                                  <div v-bind="attrs" v-on="on">
+                                    <v-icon v-for="circle in getAttribCircles(item)" :key="circle.color" small
+                                      :color="circle.color">
+                                      {{ circle.icon }}
+                                    </v-icon>
+                                  </div>
+                                </template>
+                                <span>{{ getAttribText(item) }}</span>
+                              </v-tooltip>
+                            </template>
+                          </v-data-table>
+                        </v-card>
                       </template>
 
                       <template v-else>
-                        <p>Sensitivität:
-                          <v-text-field v-model="sensitivityString" outlined />
-                        </p>
-                        <p>Spezifität:
-                          <v-text-field v-model="specificityString" outlined />
-                        </p>
+                        <v-container fluid class="pt-8">
+                          <v-row>
+                            <v-col cols="12" sm="4" md="2" no-gutters>
+                              <v-text-field label="Sensitivität" v-model="sensitivityString" solo />
+                            </v-col>
+                            <v-col cols="12" sm="4" md="2" no-gutters>
+                              <v-text-field label="Spezifität" v-model="specificityString" solo />
+                            </v-col>
+                          </v-row>
+                        </v-container>
+
                       </template>
                       <div id="factors" v-if="intermediate">
                         <h2>Abgeleitete Werte:</h2>
@@ -222,10 +255,10 @@
                   </v-expansion-panel>
 
                   <v-expansion-panel>
-                    <v-expansion-panel-header class="font-weight-bold text-uppercase">
+                    <v-expansion-panel-header class="font-weight-bold text-uppercase" color="light-blue lighten-3">
                       Inzidenz und Prävalenz
                     </v-expansion-panel-header>
-                    <v-expansion-panel-content>
+                    <v-expansion-panel-content color="light-blue lighten-5">
                       <v-radio-group v-model="incidenceSource" mandatory>
                         <v-radio value="germany" label="Ganz Deutschland"></v-radio>
                         <v-radio value="state" label="Nach Bundesland"></v-radio>
@@ -235,21 +268,21 @@
 
                       <template v-if="incidenceSource == 'state'">
                         <p>Bundesland:
-                          <v-select v-model="stateId" :items="states" item-text="name" item-value="id" outlined>
+                          <v-select v-model="stateId" :items="states" item-text="name" item-value="id" solo>
                           </v-select>
                         </p>
                       </template>
 
                       <template v-if="incidenceSource == 'district'">
                         <p>Landkreis:
-                          <v-select v-model="districtId" :items="districts" item-text="name" item-value="ags" outlined>
+                          <v-select v-model="districtId" :items="districts" item-text="name" item-value="ags" solo>
                           </v-select>
                         </p>
                       </template>
 
                       <template v-if="incidenceSource == 'input'">
                         <p>7-Tage Prävalenz je 100.000:
-                          <v-text-field v-model="incidenceString" outlined />
+                          <v-text-field v-model="incidenceString" solo />
                         </p>
                       </template>
                       <template v-if="intermediate">
@@ -267,25 +300,25 @@
                   </v-expansion-panel>
 
                   <v-expansion-panel>
-                    <v-expansion-panel-header class="font-weight-bold text-uppercase">
+                    <v-expansion-panel-header class="font-weight-bold text-uppercase" color="cyan lighten-3">
                       Persönliches Risiko
                     </v-expansion-panel-header>
-                    <v-expansion-panel-content>
-                      <p>Privates Risiko-Profil:
-                        <v-select v-model="riskProfilePrivate" :items="riskProfilesPrivate" item-text="name"
-                          item-value="val" outlined>
-                        </v-select>
-                      </p>
-                      <p>Berufliches Risiko-Profil:
-                        <v-select v-model="riskProfileProfessional" :items="riskProfilesProfessional" item-text="name"
-                          item-value="val" outlined>
-                        </v-select>
-                      </p>
-                      <p>Zusätzliche Risiken in den letzten 10 Tagen laut <a href="https://www.microcovid.org"
-                          target="_">microCOVID.org</a>:
-                        <v-text-field v-model="additionalRiskString" outlined />
-                        µCoV
-                      </p>
+                    <v-expansion-panel-content color="cyan lighten-5" class="pt-4">
+
+                      <v-select label="Privates Risiko-Profil" v-model="riskProfilePrivate" :items="riskProfilesPrivate"
+                        item-text="name" item-value="val" solo>
+                      </v-select>
+
+                      <v-select label="Berufliches Risiko-Profil" v-model="riskProfileProfessional"
+                        :items="riskProfilesProfessional" item-text="name" item-value="val" solo>
+                      </v-select>
+
+                      <v-text-field v-model="additionalRiskString" solo suffix="µCoV">
+                        <template v-slot:label>
+                          Zusätzliche Risiken in den letzten 10 Tagen laut <a href="https://www.microcovid.org"
+                            target="_">microCOVID.org</a>
+                        </template>
+                      </v-text-field>
 
                       <p v-if="intermediate">Vortestwahrscheinlichkeit vor Symptomen: <input disabled
                           v-bind:value="formatPercent(priorProb)" />
@@ -294,10 +327,10 @@
                   </v-expansion-panel>
 
                   <v-expansion-panel>
-                    <v-expansion-panel-header class="font-weight-bold text-uppercase">
+                    <v-expansion-panel-header class="font-weight-bold text-uppercase" color="teal lighten-3">
                       Symptome
                     </v-expansion-panel-header>
-                    <v-expansion-panel-content>
+                    <v-expansion-panel-content color="teal lighten-5">
                       <v-container fluid>
                         <v-row no-gutters>
                           <v-col cols="12" sm="4" md="4" no-gutters>
