@@ -46,8 +46,8 @@
   <noscript>
     <h1>JavaScript benötigt</h1>
     Diese Seite funktioniert nur mit aktiviertem JavaScript in einem (halbwegs) aktuellen Browser. Das JavaScript wird
-    zum einen für ein schönes Layout benötigt, insbeonsere aber auch, da die sie Berechnungen direkt im Browser
-    druchführt, um den Schutz deiner persönlinen, gesundheits-bezogenen Daten sicher zu stellen.
+    zum einen für ein schönes Layout benötigt, insbesondere aber auch, da sie die Berechnungen direkt im Browser
+    durchführt, um den Schutz deiner persönlichen, gesundheits-bezogenen Daten sicher zu stellen.
   </noscript>
   <v-app id="rapidtest" class="hidden">
     <v-app-bar app dark color="light-blue darken-2" flat clipped-right>
@@ -151,7 +151,7 @@
                               <v-radio value="pei">
                                 <template v-slot:label>
                                   <div>Vom <acronym
-                                      title=" Paul-Ehrlich-Institut - Bundesinstitut für Impfstoffe und biomedizinische Arzneimittel">PEI</acronym>
+                                      title="Paul-Ehrlich-Institut - Bundesinstitut für Impfstoffe und biomedizinische Arzneimittel">PEI</acronym>
                                     evaluiert (Selbst- und Profi-Tests)</div>
                                 </template>
                               </v-radio>
@@ -365,20 +365,20 @@
                         <li>einer Abschätzung des Underreporting-Faktors von 4-6 durch das <a
                             href="https://www.rki.de/DE/Content/Infekt/EpidBull/Archiv/2020/Ausgaben/50_20.pdf?__blob=publicationFile"
                             rel="nofollow">RKI</a></li>
-                        <li>Faktoren für das private Infektionsrisiko die an <a href="https://www.microcovid.org"
+                        <li>Faktoren für das private Infektionsrisiko, die an <a href="https://www.microcovid.org"
                             rel="nofollow">Microcovid</a> angelehnt sind</li>
-                        <li>Faktoren für das berufliche Risiko die beispielhaft aus Grafiken von <a
+                        <li>Faktoren für das berufliche Risiko, die beispielhaft aus Grafiken von <a
                             href="https://www.addendum.org/coronavirus/berufe-ansteckungsrisiko/"
                             rel="nofollow">www.addendum.org</a> entnommen wurden</li>
                       </ul>
                       <p class="mt-4">Die Berechnung der Bayes-Faktoren und der A-Posteriori-Wahrscheinlichkeiten folgt
                         der
-                        Berechnung des Videos <a href="https://www.youtube.com/watch?v=lG4VkPoG3ko&amp;t"
+                        Berechnung des Videos <a href="https://www.youtube.com/watch?v=lG4VkPoG3ko"
                           rel="nofollow">The medical test paradox: Can redesigning Bayes rule help?</a> von 3Blue1Brown.
                       </p>
                       <p>Der Einfluss von Symptomen auf die a-priori Wahrscheinlichkeit einer Infektion wurde nach der
                         <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7584484/" rel="nofollow">Punkteregel nach
-                          Smith, Richey und Brunetto</a> implementiert. Die Punkteregel ist darauf auslegt, die a-priori
+                          Smith, Richey und Brunetto</a> implementiert. Die Punkteregel ist darauf ausgelegt, die a-priori
                         Wahrscheinlichkeit eines symptomatischen Patienten (mit unklaren Symptomen, die grob auf Covid
                         19 hindeuten) anhand seiner spezifischen Symptome zu verfeinern. Dazu wird die Prävalenz um den
                         Faktor 18,8 angehoben, sobald Symptome vorhanden sind, um anschließend die Punkteregel
@@ -405,7 +405,7 @@
                         <li><a href="https://www.infektionsschutz.de/coronavirus/tests-auf-sars-cov-2.html"
                             target="_">Tests auf das Coronavirus SARS-CoV-2</a> von der Bundeszentrale für
                           gesundheitliche Aufklärung (BZgA)</li>
-                        <li>Sämtlche Informationen des <a
+                        <li>Sämtliche Informationen des <a
                             href="https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/nCoV.html"
                             target="_">Robert Koch Instituts (RKI)</a></li>
                       </ul>
@@ -552,7 +552,7 @@
                             mdi-help-circle
                           </v-icon>
                         </template>
-                        <span>Bei einem positiven Testergbnis liegt zu {{ formatPercent(updatedProbPos) }} wirklich eine
+                        <span>Bei einem positiven Testergebnis liegt zu {{ formatPercent(updatedProbPos) }} wirklich eine
                           Infektion vor (echt-positiv).</span>
                       </v-tooltip>
                     </td>
@@ -565,7 +565,7 @@
                             mdi-help-circle
                           </v-icon>
                         </template>
-                        <span>Bei einem positives Testergbnis liegt zu {{ formatPercent(1-updatedProbPos) }} keine
+                        <span>Bei einem positives Testergebnis liegt zu {{ formatPercent(1-updatedProbPos) }} keine
                           Infektion vor (falsch-positiv).</span>
                       </v-tooltip>
                     </td>
@@ -581,7 +581,7 @@
                             mdi-help-circle
                           </v-icon>
                         </template>
-                        <span>Bei einem negativen Testergbnis liegt zu {{ formatPercent(updatedProbNeg) }} trotzdem
+                        <span>Bei einem negativen Testergebnis liegt zu {{ formatPercent(updatedProbNeg) }} trotzdem
                           eine Infektion vor (falsch-negativ).</span>
 
                       </v-tooltip>
@@ -595,7 +595,7 @@
                             mdi-help-circle
                           </v-icon>
                         </template>
-                        <span>Bei einem negativen Testergbnis liegt zu {{ formatPercent(1-updatedProbNeg) }}
+                        <span>Bei einem negativen Testergebnis liegt zu {{ formatPercent(1-updatedProbNeg) }}
                           keine Infektion vor (echt-negativ).</span>
                       </v-tooltip>
                     </td>
