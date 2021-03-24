@@ -176,10 +176,10 @@
                       <template v-if="testsKind != 'input'">
                         <v-card-title>
                           <v-text-field v-model="testFilter" append-icon="mdi-magnify" label="Suchbegriff"
-                            placeholder="z.B. Name oder Hersteller"></v-text-field>
+                            placeholder="Suche nach Hersteller, Name, Distributor, AT-Nummer, Sonderzulassungsnummer"></v-text-field>
                         </v-card-title>
                         <v-data-table v-model="selectedTests" :items="visibleTests" :headers="testHeaders"
-                          :search="testFilter" show-select single-select locale="de-DE">
+                          show-select single-select locale="de-DE">
                           <template v-slot:item.selftest="{ item }">
                             <v-chip :color="item.selftest ? 'green' : 'red'" dark>
                               {{ item.selftest ? "Ja" : "Nein" }}

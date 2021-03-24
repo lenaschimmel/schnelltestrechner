@@ -235,6 +235,21 @@ const RapidTestVueApp = {
 
             return text;
         },
+        testMatchesFiler(test) {
+            let textMatch = false;
+            let filter = this.testFilter.toLowerCase();
+            if (this.testFilter == "") {
+                textMatch = true;
+            } else {
+                textMatch |= (test.reference && test.reference.toLowerCase().includes(filter));
+                textMatch |= (test.id && test.id.toLowerCase().includes(filter));
+                textMatch |= (test.name && test.name.toLowerCase().includes(filter));
+                textMatch |= (test.manufacturer && test.manufacturer.toLowerCase().includes(filter));
+                textMatch |= (test.tradename && test.tradename.some(t => t.toLowerCase().includes(this.filter)));
+                textMatch |= (test.distributors && test.distributors.some(t => t.toLowerCase().includes(this.filter)));
+            }
+            return textMatch;
+        },
     },
     watch: {
         "selectedTest": function (newVal, oldVal) {
@@ -257,18 +272,10 @@ const RapidTestVueApp = {
                 return null;
         },
         visibleTests() {
-            let retVal = [];
-            if (this.tests && this.testsKind == "self") {
-                retVal = this.tests.filter(test => test.selftest);
-            } else if (this.tests && this.testsKind == "pei") {
-                retVal = this.tests.filter(test => test.pei);
-            } else {
-                retVal = this.tests;
-            }
-            if (!retVal.some(test => test.id == this.testId)) {
-                this.testId = null;
-            }
-            return retVal;
+            if (!this.tests)
+                return [];
+ 
+            return this.tests.filter(test => this.testMatchesFiler(test));
         },
         studies() {
             if (this.selectedTest) {
