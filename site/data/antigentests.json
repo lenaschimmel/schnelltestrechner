@@ -1443,7 +1443,10 @@
     },
     "selftest": true,
     "reference": "5640-S-057/21",
-    "shops": []
+    "shops": [
+      "Aldi",
+      "Real"
+    ]
   },
   {
     "id": "AT205/20",
@@ -9371,7 +9374,9 @@
     "shops": [
       "dm",
       "LIDL",
-      "Rossmann"
+      "Rossmann",
+      "Netto (mit Hund)",
+      "Aldi"
     ]
   },
   {

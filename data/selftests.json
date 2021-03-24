@@ -10,7 +10,9 @@
         "available": [
             "dm",
             "LIDL",
-            "Rossmann"
+            "Rossmann",
+            "Netto (mit Hund)",
+            "Aldi"
         ]
     },
     {
@@ -31,7 +33,10 @@
     {
         "reference": "5640-S-057/21",
         "id": "AT282/21",
-        "available": []
+        "available": [
+            "Aldi",
+            "Real"
+        ]
     },
     {
         "reference": "5640-S-022/21",
