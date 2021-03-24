@@ -130,7 +130,7 @@ const RapidTestVueApp = {
                 .then(response => response.json())
                 .then(data => {
                     this.tests = data;
-                    this.tests.sort(byId);
+                    this.tests.sort(byName);
                     // Disable tests which have no studies. This works, but usability is bad.
                     // this.tests = this.tests.map(test => { if (Object.keys(test.studies).length == 0) { test.disabled = true; } return test; });
                 })
