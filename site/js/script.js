@@ -26,7 +26,7 @@ const RapidTestVueApp = {
             anySymptomFactor: 18.8,
 
             // user selections
-            testId: null,
+            selectedTests: [],
             stateId: null,
             districtId: null,
             testsKind: "self",
@@ -57,6 +57,7 @@ const RapidTestVueApp = {
             incidenceString: "100",
             sensitivityString: "80,0 %",
             specificityString: "80,0 %",
+            testFilter: "",
 
             // Data from own JSON
             tests: [],
@@ -68,6 +69,14 @@ const RapidTestVueApp = {
             // not actually data
             percentFormatter: null,
             numberFormatter: null,
+
+            testHeaders: [
+                { text: 'AT-Nummer', value: 'id' },
+                { text: 'Hersteller', value: 'manufacturer' },
+                { text: 'Name', value: 'name' },
+                { text: 'Selbst-Test', value: 'selftest' },
+                { text: 'Daten', value: 'studies', sortable: false },
+            ],
 
             riskProfilesPrivate: [
                 { "val": "1.0", "name": "Durchschnittliche Person" },
@@ -177,16 +186,76 @@ const RapidTestVueApp = {
         },
         handleScroll() {
             this.scrolledToBottom = ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 100);
-        }
+        },
+        getDataCircles(studiesObject) {
+            numMax = function (num) {
+                if (num > 9)
+                    return "9-plus";
+                else
+                    return "" + num;
+            }
+
+            let studies = Object.values(studiesObject);
+            let count = studies.length;
+            let manCount = studies.filter(study => study.author == "manufacturer").length;
+            let lcCount = studies.filter(study => study.quadas == "low concern").length;
+            let icCount = studies.filter(study => study.quadas == "intermediate concern").length;
+            let hcCount = studies.filter(study => study.quadas == "high concern").length;
+            let nonManCount = count - manCount;
+            let array = [];
+
+            if (manCount > 0) array.push({ "icon": "mdi-alpha-h-circle", "color": "blue darken-2" });
+            if (lcCount > 0) array.push({ "icon": "mdi-numeric-" + numMax(lcCount) + "-circle", "color": "green darken-2" });
+            if (icCount > 0) array.push({ "icon": "mdi-numeric-" + numMax(icCount) + "-circle", "color": "yellow darken-2" });
+            if (hcCount > 0) array.push({ "icon": "mdi-numeric-" + numMax(hcCount) + "-circle", "color": "red darken-2" });
+
+            if (array.length == 0) array.push({ "icon": "mdi-numeric-0-circle-outline", "color": "grey darken-2" });
+
+            return array;
+        },
+        getDataText(studiesObject) {
+            let studies = Object.values(studiesObject);
+            let count = studies.length;
+            let manCount = studies.filter(study => study.author == "manufacturer").length;
+            let lcCount = studies.filter(study => study.quadas == "low concern").length;
+            let icCount = studies.filter(study => study.quadas == "intermediate concern").length;
+            let hcCount = studies.filter(study => study.quadas == "high concern").length;
+            let nonManCount = count - manCount;
+
+            let text = "";
+
+            if (manCount > 0) text += "Hersteller-Angaben vorhanden. ";
+            if (nonManCount > 0) text += nonManCount + " Studie(n), darunter ";
+            if (lcCount > 0) text += lcCount + " mit hoher Qualität, ";
+            if (icCount > 0) text += icCount + " mit mittlerer Qualität, ";
+            if (hcCount > 0) text += hcCount + " mit geringer Qualität, ";
+            if (nonManCount > 0) text += " vorhanden.";
+
+            if (text == "") text = "Keine Daten vorhanden.";
+
+            return text;
+        },
     },
     watch: {
         "selectedTest": function (newVal, oldVal) {
-            if (newVal != oldVal) {
-                this.studyId = Object.values(newVal.studies).filter(study => study.author == "manufacturer")[0].id;
+            if (newVal == null) {
+                this.studyId = null;
+            } else if (newVal != oldVal) {
+                let studies = Object.values(newVal.studies).filter(study => study.author == "manufacturer");
+                if (studies.length > 0)
+                    this.studyId = studies[0].id;
+                else
+                    this.studyId = null;
             }
         }
     },
     computed: {
+        selectedTest() {
+            if (this.selectedTests.length > 0)
+                return this.selectedTests[0];
+            else
+                return null;
+        },
         visibleTests() {
             let retVal = [];
             if (this.tests && this.testsKind == "self") {
@@ -206,15 +275,6 @@ const RapidTestVueApp = {
                 return Object.values(this.selectedTest.studies);
             }
             return [];
-        },
-        selectedTest() {
-            if (this.testId) {
-                let matchingTests = this.tests.filter(t => t.id == this.testId);
-                if (matchingTests.length == 1) {
-                    return matchingTests[0];
-                }
-            }
-            return null;
         },
         sensitivity() {
             if (this.testsKind == "input") {
