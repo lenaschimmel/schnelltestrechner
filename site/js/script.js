@@ -270,6 +270,13 @@ const RapidTestVueApp = {
 
             return textMatch;
         },
+        studyTitle(study) {
+            if (study.author == "manufacturer") {
+                return "Angaben des Herstellers";
+            } else {
+                return "Studie von " + study.author + ", (n = " + study.sampleSize + ", " + study.quadas + ")";
+            }
+        }
     },
     watch: {
         "selectedTest": function (newVal, oldVal) {

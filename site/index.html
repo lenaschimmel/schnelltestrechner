@@ -248,6 +248,38 @@
                             </template>
                           </v-data-table>
                         </v-card>
+
+                        <template v-if="intermediate && this.selectedTest && Object.keys(this.selectedTest.studies).length > 0">
+                          <p v-if="Object.keys(this.selectedTest.studies).length > 1" class="mt-4">
+                            Quelle der Angaben zu Sensitivität und Spezifität:
+                            <v-select v-model="studyId" :items="studies" item-text="author" item-value="id"
+                              solo>
+                              <template v-slot:item="{ parent, item, on, attrs}">
+                                {{ studyTitle(item) }}
+                              </template>
+                              <template v-slot:selection="{ parent, item, index }">
+                                {{ studyTitle(item) }}
+                              </template>
+                            </v-select>
+                          </p>
+
+                          <p>
+                            Wert innerhalb des 95%-Konfidenzinervalls:
+                            
+                            <input type="radio" id="confidenceMin" name="confidenceMin" v-model="confidence"
+                            value="min" class="ml-8">
+                            <label for="confidenceMin">Minimum</label>
+
+                            <input type="radio" id="confidenceAvg" name="confidenceAvg" v-model="confidence"
+                              value="avg" class="ml-4">
+                            <label for="confidenceAvg">Durchschnitt</label>
+
+                            <input type="radio" id="confidenceMax" name="confidenceMax" v-model="confidence"
+                              value="max" class="ml-4">
+                            <label for="confidenceMax">Maximum</label>
+                          </p>
+                        </template>
+
                         <v-container fluid class="pt-8" v-if="!Number.isNaN(this.sensitivity)">
                           <v-row>
                             <v-col cols="12" sm="6" md="3" no-gutters>
@@ -256,39 +288,63 @@
                             <v-col cols="12" sm="6" md="3" no-gutters>
                               Spezifität: {{ formatPercent(specificity) }}
                             </v-col>
+                          </v-row>
+                          <v-row>
 
                             <template v-if="intermediate">
-                              <v-col cols="12" sm="6" md="3" no-gutters>Falsch-Negativ-Rate:             {{ formatPercent(fnr) }}</v-col>
-                              <v-col cols="12" sm="6" md="3" no-gutters>Falsch-Positiv-Rate:             {{ formatPercent(fpr) }}</v-col>
-                              <v-col cols="12" sm="6" md="3" no-gutters>Bayes-Faktor bei positivem Test: {{ formatNumber(bayesFactorPos) }}</v-col>
-                              <v-col cols="12" sm="6" md="3" no-gutters>Bayes-Faktor bei negativem Test: {{ formatNumber(1/bayesFactorNeg) }}</v-col>
+                              <v-col cols="12" sm="6" md="3" no-gutters>Falsch-Negativ-Rate: {{ formatPercent(fnr) }}
+                              </v-col>
+                              <v-col cols="12" sm="6" md="3" no-gutters>Falsch-Positiv-Rate: {{ formatPercent(fpr) }}
+                              </v-col>
+                              <v-col cols="12" sm="6" md="3" no-gutters>Bayes-Faktor bei positivem Test: {{
+                                formatNumber(bayesFactorPos) }}</v-col>
+                              <v-col cols="12" sm="6" md="3" no-gutters>Bayes-Faktor bei negativem Test: {{
+                                formatNumber(1/bayesFactorNeg) }}</v-col>
                             </template>
                           </v-row>
                         </v-container>
 
-                        <v-alert icon="mdi-alert" dense outlined type="warning" text class="mt-4" v-if="this.selectedTest != null && Number.isNaN(this.sensitivity)">
-                          Zu diesem Test hat der Hersteller keine Sensitivität und Spezifität angegeben. Bitte einen anderen Test auswählen oder Daten selbst eingeben.
+                        <v-alert icon="mdi-alert" dense outlined type="warning" text class="mt-4"
+                          v-if="this.selectedTest != null && Number.isNaN(this.sensitivity)">
+                          Zu diesem Test hat der Hersteller keine Sensitivität und Spezifität angegeben. Bitte einen
+                          anderen Test auswählen oder Daten selbst eingeben.
                         </v-alert>
 
-                        <v-alert icon="mdi-alert" dense outlined type="warning" text class="mt-4" v-if="this.selectedTest == null">
-                         Bitte einen Test auswählen oder eigene Daten zu Sensitivität und Spezifität eingeben.
+                        <v-alert icon="mdi-alert" dense outlined type="warning" text class="mt-4"
+                          v-if="this.selectedTest == null">
+                          Bitte einen Test auswählen oder eigene Daten zu Sensitivität und Spezifität eingeben.
                         </v-alert>
                       </template>
 
                       <template v-else>
                         <v-container fluid class="pt-8">
                           <v-row>
-                            <v-col cols="12" sm="4" md="2" no-gutters>
-                              <v-text-field label="Sensitivität" v-model="sensitivityString" solo />
+                            <v-col cols="12" sm="6" md="3" no-gutters>
+                              Sensitivität:
+                              <v-text-field v-model="sensitivityString" solo />
                             </v-col>
-                            <v-col cols="12" sm="4" md="2" no-gutters>
-                              <v-text-field label="Spezifität" v-model="specificityString" solo />
+                            <v-col cols="12" sm="6" md="3" no-gutters>
+                              Spezifität:
+                              <v-text-field v-model="specificityString" solo />
                             </v-col>
+                          </v-row>
+                          <v-row>
+
+                            <template v-if="intermediate">
+                              <v-col cols="12" sm="6" md="3" no-gutters>Falsch-Negativ-Rate: {{ formatPercent(fnr) }}
+                              </v-col>
+                              <v-col cols="12" sm="6" md="3" no-gutters>Falsch-Positiv-Rate: {{ formatPercent(fpr) }}
+                              </v-col>
+                              <v-col cols="12" sm="6" md="3" no-gutters>Bayes-Faktor bei positivem Test: {{
+                                formatNumber(bayesFactorPos) }}</v-col>
+                              <v-col cols="12" sm="6" md="3" no-gutters>Bayes-Faktor bei negativem Test: {{
+                                formatNumber(1/bayesFactorNeg) }}</v-col>
+                            </template>
                           </v-row>
                         </v-container>
                       </template>
 
-                     
+
                     </v-expansion-panel-content>
                   </v-expansion-panel>
 
