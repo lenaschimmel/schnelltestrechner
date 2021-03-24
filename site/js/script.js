@@ -72,14 +72,6 @@ const RapidTestVueApp = {
             percentFormatter: null,
             numberFormatter: null,
 
-            testHeaders: [
-                { text: 'AT-Nummer', value: 'id' },
-                { text: 'Hersteller', value: 'manufacturer' },
-                { text: 'Name', value: 'name' },
-                { text: 'Merkmal', value: 'attrib', sortable: false },
-                { text: 'Daten', value: 'studies', sortable: false },
-            ],
-
             riskProfilesPrivate: [
                 { "val": "1.0", "name": "Durchschnittliche Person" },
                 { "val": "0.015", "name": "Lebt allein, Kontakte nur beim Einkaufen" },
@@ -252,13 +244,13 @@ const RapidTestVueApp = {
             if (!test.selftest) text += "Profi-Test. ";
             if (test.selftest) text += "Selbst-Test. ";
             if (test.pei) text += "Vom PEI evaluiert. ";
-            if (test.shops && test.shops.length > 0) text += "Im Einzelhandel erhältlich bei: " +  test.shops.join(", ");
+            if (test.shops && test.shops.length > 0) text += "Im Einzelhandel erhältlich bei: " + test.shops.join(", ");
 
             return text;
         },
         testMatchesFiler(test) {
             if (this.testFilterSelf && !test.selftest)
-               return false;
+                return false;
 
             if (this.testFilterPei && !test.pei)
                 return false;
@@ -302,7 +294,7 @@ const RapidTestVueApp = {
         visibleTests() {
             if (!this.tests)
                 return [];
- 
+
             return this.tests.filter(test => this.testMatchesFiler(test));
         },
         studies() {
@@ -477,6 +469,20 @@ const RapidTestVueApp = {
                     { "id": "info", "title": 'Weitere Infos' },
                     { "id": "imprint", "title": 'Impressum / Datenschutz' },
                 ];
+        },
+        testHeaders() {
+            if (this.$vuetify.breakpoint.xsOnly)
+                return [
+                    { text: 'Hersteller und Name', value: 'manufacturer_name' },
+                    { text: 'Merkmale', value: 'attrib_and_studies', sortable: false },
+                ]
+            else
+                return [
+                    { text: 'Hersteller', value: 'manufacturer' },
+                    { text: 'Name', value: 'name' },
+                    { text: 'Merkmal', value: 'attrib', sortable: false },
+                    { text: 'Daten', value: 'studies', sortable: false },
+                ]
         },
     }
 }

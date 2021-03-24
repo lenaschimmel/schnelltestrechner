@@ -114,10 +114,10 @@
                 <v-expansion-panels multiple class="mb-8" v-model="expandedPanelsCalc">
 
                   <v-expansion-panel>
-                    <v-expansion-panel-header class="font-weight-bold text-uppercase" color="indigo lighten-3">
+                    <v-expansion-panel-header class="font-weight-bold text-uppercase" color="blue lighten-3">
                       Einleitung
                     </v-expansion-panel-header>
-                    <v-expansion-panel-content color="indigo lighten-5" class="pt-4">
+                    <v-expansion-panel-content color="blue lighten-5" class="pt-4">
 
                       <p>Wie zuverlässig eigentlich ein Schnell- oder Selbst-Test auf Sars-CoV-2 ist, <b>lässt sich
                           unmöglich allgemein beantworten.</b> Neben den Eigenschaften des eigentlichen Tests
@@ -155,14 +155,14 @@
 
                       <v-btn-toggle v-model="testsKind" shaped>
                         <v-btn value="list">
-                          <span class="hidden-sm-and-down">Aus Liste wählen</span>
+                          <span class="hidden-xs-only">Aus Liste wählen</span>
                           <v-icon right>
                             mdi-format-list-checkbox
                           </v-icon>
                         </v-btn>
 
                         <v-btn value="input">
-                          <span class="hidden-sm-and-down">Eigene Werte eingeben</span>
+                          <span class="hidden-xs-only">Eigene Werte eingeben</span>
                           <v-icon right>
                             mdi-numeric
                           </v-icon>
@@ -186,14 +186,14 @@
                             </v-col>
                           </v-row>
                         </v-container>
-                       
+
                         <v-text-field solo v-model="testFilter" append-icon="mdi-magnify" label="Suchbegriff"
                           placeholder="Suche nach Hersteller, Name, Distributor, AT-Nummer, Sonderzulassungsnummer">
                         </v-text-field>
-                  
+
                         <v-card>
-                          <v-data-table v-model="selectedTests" :items="visibleTests" :headers="testHeaders" show-select
-                            single-select locale="de-DE">
+                          <v-data-table dense v-model="selectedTests" :items="visibleTests" :headers="testHeaders"
+                            show-select single-select locale="de-DE" mobile-breakpoint="360" :options="{ itemsPerPage: 5 }">
                             <template v-slot:item.selftest="{ item }">
                               <v-chip :color="item.selftest ? 'green' : 'red'" dark>
                                 {{ item.selftest ? "Ja" : "Nein" }}
@@ -225,6 +225,26 @@
                                 <span>{{ getAttribText(item) }}</span>
                               </v-tooltip>
                             </template>
+                            <template v-slot:item.attrib_and_studies="{ item }">
+                              <v-tooltip left>
+                                <template v-slot:activator="{ on, attrs }">
+                                  <div v-bind="attrs" v-on="on">
+                                    <v-icon v-for="circle in getDataCircles(item.studies)" :key="circle.color" small
+                                      :color="circle.color">
+                                      {{ circle.icon }}
+                                    </v-icon>
+                                    <v-icon v-for="circle in getAttribCircles(item)" :key="circle.color" small
+                                      :color="circle.color">
+                                      {{ circle.icon }}
+                                    </v-icon>
+                                  </div>
+                                </template>
+                                <span>{{ getDataText(item.studies) + " - " + getAttribText(item) }}</span>
+                              </v-tooltip>
+                            </template>
+                            <template v-slot:item.manufacturer_name="{ item }">
+                              {{ item.manufacturer + " - " + item.name}}
+                            </template>
                           </v-data-table>
                         </v-card>
                       </template>
@@ -255,10 +275,10 @@
                   </v-expansion-panel>
 
                   <v-expansion-panel>
-                    <v-expansion-panel-header class="font-weight-bold text-uppercase" color="light-blue lighten-3">
+                    <v-expansion-panel-header class="font-weight-bold text-uppercase" color="blue lighten-3">
                       Inzidenz und Prävalenz
                     </v-expansion-panel-header>
-                    <v-expansion-panel-content color="light-blue lighten-5">
+                    <v-expansion-panel-content color="blue lighten-5">
                       <v-radio-group v-model="incidenceSource" mandatory>
                         <v-radio value="germany" label="Ganz Deutschland"></v-radio>
                         <v-radio value="state" label="Nach Bundesland"></v-radio>
@@ -300,24 +320,24 @@
                   </v-expansion-panel>
 
                   <v-expansion-panel>
-                    <v-expansion-panel-header class="font-weight-bold text-uppercase" color="cyan lighten-3">
+                    <v-expansion-panel-header class="font-weight-bold text-uppercase" color="blue lighten-3">
                       Persönliches Risiko
                     </v-expansion-panel-header>
-                    <v-expansion-panel-content color="cyan lighten-5" class="pt-4">
+                    <v-expansion-panel-content color="blue lighten-5" class="pt-4">
 
-                      <v-select label="Privates Risiko-Profil" v-model="riskProfilePrivate" :items="riskProfilesPrivate"
-                        item-text="name" item-value="val" solo>
+                      Privates Risiko-Profil:
+                      <v-select v-model="riskProfilePrivate" :items="riskProfilesPrivate" item-text="name"
+                        item-value="val" solo>
                       </v-select>
 
-                      <v-select label="Berufliches Risiko-Profil" v-model="riskProfileProfessional"
-                        :items="riskProfilesProfessional" item-text="name" item-value="val" solo>
+                      Berufliches Risiko-Profil:
+                      <v-select v-model="riskProfileProfessional" :items="riskProfilesProfessional" item-text="name"
+                        item-value="val" solo>
                       </v-select>
 
-                      <v-text-field v-model="additionalRiskString" solo suffix="µCoV">
-                        <template v-slot:label>
-                          Zusätzliche Risiken in den letzten 10 Tagen laut <a href="https://www.microcovid.org"
-                            target="_">microCOVID.org</a>
-                        </template>
+                      Zusätzliche Risiken in den letzten 10 Tagen laut <a href="https://www.microcovid.org"
+                        target="_">microCOVID.org</a>:
+                      <v-text-field v-model="additionalRiskString" background-color="white" suffix="µCoV" solo>
                       </v-text-field>
 
                       <p v-if="intermediate">Vortestwahrscheinlichkeit vor Symptomen: <input disabled
@@ -327,10 +347,10 @@
                   </v-expansion-panel>
 
                   <v-expansion-panel>
-                    <v-expansion-panel-header class="font-weight-bold text-uppercase" color="teal lighten-3">
+                    <v-expansion-panel-header class="font-weight-bold text-uppercase" color="blue lighten-3">
                       Symptome
                     </v-expansion-panel-header>
-                    <v-expansion-panel-content color="teal lighten-5">
+                    <v-expansion-panel-content color="blue lighten-5">
                       <v-container fluid>
                         <v-row no-gutters>
                           <v-col cols="12" sm="4" md="4" no-gutters>
@@ -419,10 +439,10 @@
                       <p>Der Einfluss von Symptomen auf die a-priori Wahrscheinlichkeit einer Infektion wurde nach der
                         <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7584484/" rel="nofollow">Punkteregel nach
                           Smith, Richey und Brunetto</a> implementiert. Die Punkteregel ist darauf ausgelegt, die
-                        a-priori
-                        Wahrscheinlichkeit eines symptomatischen Patienten (mit unklaren Symptomen, die grob auf Covid
-                        19 hindeuten) anhand seiner spezifischen Symptome zu verfeinern. Dazu wird die Prävalenz um den
-                        Faktor 18,8 angehoben, sobald Symptome vorhanden sind, um anschließend die Punkteregel
+                        a-priori Wahrscheinlichkeit eines symptomatischen Patienten (mit unklaren Symptomen, die grob
+                        auf
+                        Covid-19 hindeuten) anhand seiner spezifischen Symptome zu verfeinern. Dazu wird die Prävalenz
+                        um den Faktor 18,8 angehoben, sobald Symptome vorhanden sind, um anschließend die Punkteregel
                         anzuwenden. <strong>Der Faktor 18,8 basiert auf sehr groben Abschätzungen und stellt
                           wahrscheinlich die größte Ungenauigkeit innerhalb der gesamten Berechnung dar. Er sollte
                           dringend durch einen wissenschaftlich basierten Wert ersetzt werden.</strong>

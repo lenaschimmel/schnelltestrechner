@@ -9,3 +9,7 @@
 .hidden {
     display: none;
 }
+
+.v-data-table td {
+    padding: 0 8px !important;
+}
