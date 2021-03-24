@@ -250,12 +250,19 @@
                         </v-card>
                         <v-container fluid class="pt-8" v-if="!Number.isNaN(this.sensitivity)">
                           <v-row>
-                            <v-col cols="12" sm="4" md="2" no-gutters>
+                            <v-col cols="12" sm="6" md="3" no-gutters>
                               Sensitivität: {{ formatPercent(sensitivity) }}
                             </v-col>
-                            <v-col cols="12" sm="4" md="2" no-gutters>
+                            <v-col cols="12" sm="6" md="3" no-gutters>
                               Spezifität: {{ formatPercent(specificity) }}
                             </v-col>
+
+                            <template v-if="intermediate">
+                              <v-col cols="12" sm="6" md="3" no-gutters>Falsch-Negativ-Rate:             {{ formatPercent(fnr) }}</v-col>
+                              <v-col cols="12" sm="6" md="3" no-gutters>Falsch-Positiv-Rate:             {{ formatPercent(fpr) }}</v-col>
+                              <v-col cols="12" sm="6" md="3" no-gutters>Bayes-Faktor bei positivem Test: {{ formatNumber(bayesFactorPos) }}</v-col>
+                              <v-col cols="12" sm="6" md="3" no-gutters>Bayes-Faktor bei negativem Test: {{ formatNumber(1/bayesFactorNeg) }}</v-col>
+                            </template>
                           </v-row>
                         </v-container>
 
@@ -281,15 +288,7 @@
                         </v-container>
                       </template>
 
-                      <div id="factors" v-if="intermediate">
-                        <h2>Abgeleitete Werte:</h2>
-                        <p>Falsch-Negativ-Rate: <input disabled v-bind:value="formatPercent(fnr)" /></p>
-                        <p>Falsch-Positiv-Rate: <input disabled v-bind:value="formatPercent(fpr)" /></p>
-
-                        <p>Bayes-Faktor bei positivem Test: <input disabled :value="formatNumber(bayesFactorPos)" /></p>
-                        <p>Bayes-Faktor bei negativem Test: <input disabled :value="formatNumber(1/bayesFactorNeg)" />
-                        </p>
-                      </div>
+                     
                     </v-expansion-panel-content>
                   </v-expansion-panel>
 
