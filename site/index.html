@@ -193,7 +193,8 @@
 
                         <v-card>
                           <v-data-table dense v-model="selectedTests" :items="visibleTests" :headers="testHeaders"
-                            show-select single-select locale="de-DE" mobile-breakpoint="360" :options="{ itemsPerPage: 5 }">
+                            show-select single-select locale="de-DE" mobile-breakpoint="360"
+                            :options="{ itemsPerPage: 5 }">
                             <template v-slot:item.selftest="{ item }">
                               <v-chip :color="item.selftest ? 'green' : 'red'" dark>
                                 {{ item.selftest ? "Ja" : "Nein" }}
@@ -247,6 +248,24 @@
                             </template>
                           </v-data-table>
                         </v-card>
+                        <v-container fluid class="pt-8" v-if="!Number.isNaN(this.sensitivity)">
+                          <v-row>
+                            <v-col cols="12" sm="4" md="2" no-gutters>
+                              Sensitivität: {{ formatPercent(sensitivity) }}
+                            </v-col>
+                            <v-col cols="12" sm="4" md="2" no-gutters>
+                              Spezifität: {{ formatPercent(specificity) }}
+                            </v-col>
+                          </v-row>
+                        </v-container>
+
+                        <v-alert icon="mdi-alert" dense outlined type="warning" text class="mt-4" v-if="this.selectedTest != null && Number.isNaN(this.sensitivity)">
+                          Zu diesem Test hat der Hersteller keine Sensitivität und Spezifität angegeben. Bitte einen anderen Test auswählen oder Daten selbst eingeben.
+                        </v-alert>
+
+                        <v-alert icon="mdi-alert" dense outlined type="warning" text class="mt-4" v-if="this.selectedTest == null">
+                         Bitte einen Test auswählen oder eigene Daten zu Sensitivität und Spezifität eingeben.
+                        </v-alert>
                       </template>
 
                       <template v-else>
@@ -260,8 +279,8 @@
                             </v-col>
                           </v-row>
                         </v-container>
-
                       </template>
+
                       <div id="factors" v-if="intermediate">
                         <h2>Abgeleitete Werte:</h2>
                         <p>Falsch-Negativ-Rate: <input disabled v-bind:value="formatPercent(fnr)" /></p>
