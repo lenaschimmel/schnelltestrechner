@@ -119,5 +119,17 @@
         "manufacturer": "Beijing Lepu Medical Technology Co., Ltd.",
         "antragsteller": "Beijing Lepu Medical Technology Co., Ltd.",
         "name": "NASOCHECKcomfort SARS-CoV-2 Antigen-Schnelltest"
+    },
+    {
+        "reference": "5640-S-100/21",
+        "manufacturer": "Aripa Biotec GmbH",
+        "antragsteller": "Aripa Biotec GmbH",
+        "name": "COVID-19-N-Antigen Schnelltest SARS-CoV-2 (vorderer Nasenabstrich)"
+    },
+    {
+        "reference": "5640-S-140/21",
+        "manufacturer": "OFM GmbH",
+        "antragsteller": "OFM GmbH",
+        "name": "Deni COVID-19 Antigen Test"
     }
 ]
