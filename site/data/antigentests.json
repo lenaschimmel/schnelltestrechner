@@ -17,6 +17,668 @@
       "Abbott Rapid Diagnostics Germany GmbH"
     ],
     "studies": {
+      "7": {
+        "author": "Domínguez Fernández, M., et al.",
+        "location": "Spain",
+        "quadas": "intermediate concern",
+        "independent": "unclear",
+        "sampleCondition": "fresh",
+        "sampleType": "unclear",
+        "sampleSize": "30",
+        "sensitivity": {
+          "avg": 0.95
+        },
+        "specificity": {
+          "avg": 1
+        },
+        "testId": "AT005/20",
+        "id": 7
+      },
+      "8": {
+        "author": "Alemany, A., et al.",
+        "location": "Spain",
+        "quadas": "intermediate concern",
+        "independent": "yes",
+        "sampleCondition": "banked",
+        "sampleType": "NP",
+        "sampleSize": "919",
+        "sensitivity": {
+          "avg": 0.934,
+          "min": 0.915,
+          "max": 0.95
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.958,
+          "max": 1
+        },
+        "testId": "AT005/20",
+        "id": 8
+      },
+      "9": {
+        "author": "FINDdx",
+        "location": "Germany",
+        "quadas": "low concern",
+        "independent": "yes",
+        "sampleCondition": "fresh",
+        "sampleType": "NP",
+        "sampleSize": "281",
+        "sensitivity": {
+          "avg": 0.909,
+          "min": 0.7879999999999999,
+          "max": 0.9640000000000001
+        },
+        "specificity": {
+          "avg": 0.992,
+          "min": 0.97,
+          "max": 0.998
+        },
+        "testId": "AT005/20",
+        "id": 9
+      },
+      "10": {
+        "author": "Merino-Amador, P., et al.",
+        "location": "Spain",
+        "quadas": "low concern",
+        "independent": "no",
+        "sampleCondition": "fresh",
+        "sampleType": "NP",
+        "sampleSize": "958",
+        "sensitivity": {
+          "avg": 0.905,
+          "min": 0.875,
+          "max": 0.9359999999999999
+        },
+        "specificity": {
+          "avg": 0.988,
+          "min": 0.98,
+          "max": 0.997
+        },
+        "testId": "AT005/20",
+        "id": 10
+      },
+      "11": {
+        "author": "Krüger, L.J., et al.",
+        "location": "Germany",
+        "quadas": "low concern",
+        "independent": "yes",
+        "sampleCondition": "fresh",
+        "sampleType": "NP",
+        "sampleSize": "1034",
+        "sensitivity": {
+          "avg": 0.875,
+          "min": 0.7979999999999999,
+          "max": 0.925
+        },
+        "specificity": {
+          "avg": 0.9990000000000001,
+          "min": 0.9940000000000001,
+          "max": 1
+        },
+        "testId": "AT005/20",
+        "id": 11
+      },
+      "12": {
+        "author": "Schwob, J.M., et al.",
+        "location": "Switzerland",
+        "quadas": "low concern",
+        "independent": "yes",
+        "sampleCondition": "fresh",
+        "sampleType": "NP",
+        "sampleSize": "271",
+        "sensitivity": {
+          "avg": 0.861,
+          "min": 0.7859999999999999,
+          "max": 0.917
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.976,
+          "max": 1
+        },
+        "testId": "AT005/20",
+        "id": 12
+      },
+      "13": {
+        "author": "Berger, A., et al.",
+        "location": "Switzerland",
+        "quadas": "low concern",
+        "independent": "yes",
+        "sampleCondition": "fresh",
+        "sampleType": "NP",
+        "sampleSize": "535",
+        "sensitivity": {
+          "avg": 0.855,
+          "min": 0.78,
+          "max": 0.912
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.991,
+          "max": 1
+        },
+        "testId": "AT005/20",
+        "id": 13
+      },
+      "14": {
+        "author": "Jääskeläinen, A.E., et al.",
+        "location": "Finland",
+        "quadas": "high concern",
+        "independent": "yes",
+        "sampleCondition": "banked",
+        "sampleType": "NP",
+        "sampleSize": "190",
+        "sensitivity": {
+          "avg": 0.83,
+          "min": 0.7609999999999999,
+          "max": 0.8809999999999999
+        },
+        "specificity": {
+          "avg": 1
+        },
+        "testId": "AT005/20",
+        "id": 14
+      },
+      "15": {
+        "author": "Abdulrahman, A., et al.",
+        "location": "Bahrain",
+        "quadas": "intermediate concern",
+        "independent": "yes",
+        "sampleCondition": "fresh",
+        "sampleType": "AN",
+        "sampleSize": "4183",
+        "sensitivity": {
+          "avg": 0.821,
+          "min": 0.792,
+          "max": 0.848
+        },
+        "specificity": {
+          "avg": 0.991,
+          "min": 0.988,
+          "max": 0.9940000000000001
+        },
+        "testId": "AT005/20",
+        "id": 15
+      },
+      "16": {
+        "author": "Gremmels, H., et al.",
+        "location": "Netherlands",
+        "quadas": "intermediate concern",
+        "independent": "yes",
+        "sampleCondition": "fresh",
+        "sampleType": "NP",
+        "sampleSize": "208",
+        "sensitivity": {
+          "avg": 0.81,
+          "min": 0.69,
+          "max": 0.899
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.975,
+          "max": 1
+        },
+        "testId": "AT005/20",
+        "id": 16
+      },
+      "17": {
+        "author": "Ngo Nsoga, M.T., et al.",
+        "location": "Switzerland",
+        "quadas": "intermediate concern",
+        "independent": "yes",
+        "sampleCondition": "fresh",
+        "sampleType": "OP",
+        "sampleSize": "402",
+        "sensitivity": {
+          "avg": 0.81,
+          "min": 0.742,
+          "max": 0.866
+        },
+        "specificity": {
+          "avg": 0.991,
+          "min": 0.9690000000000001,
+          "max": 0.9990000000000001
+        },
+        "testId": "AT005/20",
+        "id": 17
+      },
+      "18": {
+        "author": "Albert, E., et al.",
+        "location": "Spain",
+        "quadas": "low concern",
+        "independent": "no",
+        "sampleCondition": "fresh",
+        "sampleType": "NP",
+        "sampleSize": "412",
+        "sensitivity": {
+          "avg": 0.7959999999999999,
+          "min": 0.67,
+          "max": 0.888
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.987,
+          "max": 1
+        },
+        "testId": "AT005/20",
+        "id": 18
+      },
+      "19": {
+        "author": "Alemany, A., et al.",
+        "location": "Spain",
+        "quadas": "intermediate concern",
+        "independent": "yes",
+        "sampleCondition": "banked",
+        "sampleType": "MT",
+        "sampleSize": "487",
+        "sensitivity": {
+          "avg": 0.795,
+          "min": 0.71,
+          "max": 0.8640000000000001
+        },
+        "specificity": {
+          "avg": 0.987,
+          "min": 0.9690000000000001,
+          "max": 0.996
+        },
+        "testId": "AT005/20",
+        "id": 19
+      },
+      "20": {
+        "author": "Fenollar, F., et al.",
+        "location": "France",
+        "quadas": "low concern",
+        "independent": "yes",
+        "sampleCondition": "fresh",
+        "sampleType": "NP",
+        "sampleSize": "341",
+        "sensitivity": {
+          "avg": 0.755,
+          "min": 0.695,
+          "max": 0.815
+        },
+        "specificity": {
+          "avg": 0.9490000000000001,
+          "min": 0.912,
+          "max": 0.986
+        },
+        "testId": "AT005/20",
+        "id": 20
+      },
+      "21": {
+        "author": "Linares, M., et al.",
+        "location": "Spain",
+        "quadas": "unclear",
+        "independent": "yes",
+        "sampleCondition": "fresh",
+        "sampleType": "NP",
+        "sampleSize": "255",
+        "sensitivity": {
+          "avg": 0.733,
+          "min": 0.622,
+          "max": 0.838
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.981,
+          "max": 1
+        },
+        "testId": "AT005/20",
+        "id": 21
+      },
+      "22": {
+        "author": "Gremmels, H., et al.",
+        "location": "Netherlands",
+        "quadas": "intermediate concern",
+        "independent": "yes",
+        "sampleCondition": "fresh",
+        "sampleType": "NP",
+        "sampleSize": "1367",
+        "sensitivity": {
+          "avg": 0.726,
+          "min": 0.645,
+          "max": 0.799
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.997,
+          "max": 1
+        },
+        "testId": "AT005/20",
+        "id": 22
+      },
+      "23": {
+        "author": "Halfon, P. et al.",
+        "location": "France",
+        "quadas": "intermediate concern",
+        "independent": "yes",
+        "sampleCondition": "unclear",
+        "sampleType": "NP",
+        "sampleSize": "200",
+        "sensitivity": {
+          "avg": 0.72,
+          "min": 0.62,
+          "max": 0.81
+        },
+        "specificity": {
+          "avg": 0.99,
+          "min": 0.95,
+          "max": 1
+        },
+        "testId": "AT005/20",
+        "id": 23
+      },
+      "24": {
+        "author": "Bulilete, O., et al.",
+        "location": "Spain",
+        "quadas": "low concern",
+        "independent": "yes",
+        "sampleCondition": "fresh",
+        "sampleType": "NP",
+        "sampleSize": "1362*",
+        "sensitivity": {
+          "avg": 0.7140000000000001,
+          "min": 0.632,
+          "max": 0.787
+        },
+        "specificity": {
+          "avg": 0.998,
+          "min": 0.9940000000000001,
+          "max": 0.9990000000000001
+        },
+        "testId": "AT005/20",
+        "id": 24
+      },
+      "25": {
+        "author": "Akingba, O.L., et al.",
+        "location": "Southafrica",
+        "quadas": "unclear",
+        "independent": "yes",
+        "sampleCondition": "fresh",
+        "sampleType": "NP",
+        "sampleSize": "677",
+        "sensitivity": {
+          "avg": 0.6920000000000001,
+          "min": 0.614,
+          "max": 0.758
+        },
+        "specificity": {
+          "avg": 0.99,
+          "min": 0.988,
+          "max": 0.992
+        },
+        "testId": "AT005/20",
+        "id": 25
+      },
+      "26": {
+        "author": "Favresse, J., et al.",
+        "location": "Belgium",
+        "quadas": "intermediate concern",
+        "independent": "yes",
+        "sampleCondition": "fresh",
+        "sampleType": "NP",
+        "sampleSize": "188",
+        "sensitivity": {
+          "avg": 0.677,
+          "min": 0.574,
+          "max": 0.769
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.961,
+          "max": 1
+        },
+        "testId": "AT005/20",
+        "id": 26
+      },
+      "27": {
+        "author": "Drevinek, P., et al.",
+        "location": "Czech Republic",
+        "quadas": "low concern",
+        "independent": "yes",
+        "sampleCondition": "fresh",
+        "sampleType": "NP",
+        "sampleSize": "591",
+        "sensitivity": {
+          "avg": 0.664,
+          "min": 0.599,
+          "max": 0.722
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.99,
+          "max": 1
+        },
+        "testId": "AT005/20",
+        "id": 27
+      },
+      "28": {
+        "author": "Pérez-García, F., et al.",
+        "location": "Spain",
+        "quadas": "high concern",
+        "independent": "no",
+        "sampleCondition": "banked",
+        "sampleType": "NP",
+        "sampleSize": "320",
+        "sensitivity": {
+          "avg": 0.6,
+          "min": 0.522,
+          "max": 0.674
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.976,
+          "max": 1
+        },
+        "testId": "AT005/20",
+        "id": 28
+      },
+      "29": {
+        "author": "Agullo, V., et al.",
+        "location": "Spain",
+        "quadas": "low concern",
+        "independent": "yes",
+        "sampleCondition": "fresh",
+        "sampleType": "NP",
+        "sampleSize": "652*",
+        "sensitivity": {
+          "avg": 0.573,
+          "min": 0.483,
+          "max": 0.6579999999999999
+        },
+        "specificity": {
+          "avg": 0.998,
+          "min": 0.988,
+          "max": 1
+        },
+        "testId": "AT005/20",
+        "id": 29
+      },
+      "30": {
+        "author": "Schildgen, V., et al.",
+        "location": "Germany",
+        "quadas": "high concern",
+        "independent": "yes",
+        "sampleCondition": "unclear",
+        "sampleType": "BAL/TW",
+        "sampleSize": "73",
+        "sensitivity": {
+          "avg": 0.5,
+          "min": 0.342,
+          "max": 0.6579999999999999
+        },
+        "specificity": {
+          "avg": 0.774,
+          "min": 0.589,
+          "max": 0.904
+        },
+        "testId": "AT005/20",
+        "id": 30
+      },
+      "31": {
+        "author": "Krüger, L.J., et al.",
+        "location": "Germany",
+        "quadas": "high concern",
+        "independent": "yes",
+        "sampleCondition": "fresh",
+        "sampleType": "OP",
+        "sampleSize": "74",
+        "sensitivity": {
+          "avg": 0.5,
+          "min": 0.013000000000000001,
+          "max": 0.987
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.9490000000000001,
+          "max": 1
+        },
+        "testId": "AT005/20",
+        "id": 31
+      },
+      "32": {
+        "author": "Torres, I., et al.",
+        "location": "Spain",
+        "quadas": "low concern",
+        "independent": "no",
+        "sampleCondition": "fresh",
+        "sampleType": "NP",
+        "sampleSize": "634",
+        "sensitivity": {
+          "avg": 0.48100000000000004,
+          "min": 0.374,
+          "max": 0.589
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.993,
+          "max": 1
+        },
+        "testId": "AT005/20",
+        "id": 32
+      },
+      "33": {
+        "author": "Villaverde, S., et al.",
+        "location": "Spain",
+        "quadas": "intermediate concern",
+        "independent": "yes",
+        "sampleCondition": "fresh",
+        "sampleType": "NP",
+        "sampleSize": "1620",
+        "sensitivity": {
+          "avg": 0.45399999999999996,
+          "min": 0.341,
+          "max": 0.5720000000000001
+        },
+        "specificity": {
+          "avg": 0.998,
+          "min": 0.9940000000000001,
+          "max": 0.9990000000000001
+        },
+        "testId": "AT005/20",
+        "id": 33
+      },
+      "34": {
+        "author": "Agullo, V., et al.",
+        "location": "Spain",
+        "quadas": "intermediate concern",
+        "independent": "yes",
+        "sampleCondition": "fresh",
+        "sampleType": "AN",
+        "sampleSize": "659",
+        "sensitivity": {
+          "avg": 0.447,
+          "min": 0.361,
+          "max": 0.536
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.991,
+          "max": 1
+        },
+        "testId": "AT005/20",
+        "id": 34
+      },
+      "35": {
+        "author": "Olearo, F., et al.",
+        "location": "Germany",
+        "quadas": "intermediate concern",
+        "independent": "yes",
+        "sampleCondition": "unclear",
+        "sampleType": "OP",
+        "sampleSize": "184",
+        "sensitivity": {
+          "avg": 0.446,
+          "min": 0.34299999999999997,
+          "max": 0.5529999999999999
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.963,
+          "max": 1
+        },
+        "testId": "AT005/20",
+        "id": 35
+      },
+      "36": {
+        "author": "Caruana, G., et al.",
+        "location": "Switzerland",
+        "quadas": "intermediate concern",
+        "independent": "yes",
+        "sampleCondition": "fresh",
+        "sampleType": "NP",
+        "sampleSize": "532",
+        "sensitivity": {
+          "avg": 0.41200000000000003
+        },
+        "specificity": {
+          "avg": 9.95
+        },
+        "testId": "AT005/20",
+        "id": 36
+      },
+      "37": {
+        "author": "Baro, B., et al.",
+        "location": "Spain",
+        "quadas": "intermediate concern",
+        "independent": "yes",
+        "sampleCondition": "banked",
+        "sampleType": "NP",
+        "sampleSize": "286",
+        "sensitivity": {
+          "avg": 0.386,
+          "min": 0.29100000000000004,
+          "max": 0.488
+        },
+        "specificity": {
+          "avg": 0.995,
+          "min": 0.97,
+          "max": 1
+        },
+        "testId": "AT005/20",
+        "id": 37
+      },
+      "38": {
+        "author": "Agullo, V., et al.",
+        "location": "Spain",
+        "quadas": "intermediate concern",
+        "independent": "yes",
+        "sampleCondition": "fresh",
+        "sampleType": "saliva",
+        "sampleSize": "610",
+        "sensitivity": {
+          "avg": 0.231,
+          "min": 0.162,
+          "max": 0.319
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.99,
+          "max": 1
+        },
+        "testId": "AT005/20",
+        "id": 38
+      },
       "152": {
         "author": "manufacturer",
         "id": 152,
