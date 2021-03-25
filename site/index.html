@@ -492,7 +492,32 @@
                     </v-expansion-panel-header>
                     <v-expansion-panel-content color="blue lighten-5">
 
-                      <p class="mt-4">Erklärung folgt später…</p>
+                      <p class="mt-4">Hier kann die Sensititvität und Spezifität von Schnelltests grafisch verglichen
+                        werden.</p>
+
+                      <p>Die Filterung funktioniert grundsätzlich wie im Testrechner. Zusätzlich können beliebig viele
+                        Tests mit der Checkbox in der linken Spalte für einen engeren Vergleich ausgewählt werden. Wenn
+                        anschließend der Filter "Ausgewählte" aktiviert wird, werden nur noch diese angezeigt.
+                      </p>
+
+                      <p>
+                        Die Grafiken für Sensititvität und Spezifität bilden jeweils einen Bereich von 0% (links) bis
+                        100% (rechts) ab.
+                        Jede Zeile steht für eine Datenquelle, also die Herstellerangaben oder eine Studie aus der <a
+                          href="https://www.klinikum.uni-heidelberg.de/diagnostics-global-health" rel="nofollow">Liste
+                          unabhängiger Studien</a> der Uni Heidelberg. Kurze, vertikale Linie gibt den Mittelwert an,
+                        die längere, horizontale Linie das 95%-Konfidenzintervall.
+                      </p>
+                      <p>Die Farben der Linien haben folgende Bedeutung:</p>
+                      <ul>
+                        <li><b>Blau:</b> Hersteller-Angaben</li>
+                        <li><b>Grün:</b> Studie hoher Qualität</li>
+                        <li><b>Gelb:</b> Studie mittlerer Qualität</li>
+                        <li><b>Rot:</b> Studie geringer Qualität</li>
+                        <li><b>Schwarz:</b> Studie unklarer Qualität</li>
+                      </ul>
+                      <p>Mit der Maus kann über den einzelnen Zeilen gehovert werden, um die Autor_innen der Studie und
+                        die exakten Werte in einem Tooltip anzuzeigen.</p>
 
                     </v-expansion-panel-content>
                   </v-expansion-panel>
@@ -527,8 +552,9 @@
                       </v-container>
 
                       <v-card class="mt-4">
-                        <v-data-table dense v-model="compareTests" :items="visibleCompareTests" :headers="compareHeaders" show-select
-                          locale="de-DE" mobile-breakpoint="360" :options="{ itemsPerPage: 15 }">
+                        <v-data-table dense v-model="compareTests" :items="visibleCompareTests"
+                          :headers="compareHeaders" show-select locale="de-DE" mobile-breakpoint="360"
+                          :options="{ itemsPerPage: 15 }">
                           <template v-slot:item.sensitivity="{ item }">
                             <svg xmlns="http://www.w3.org/2000/svg" :height="20 * Object.values(item.studies).length"
                               width="201">
@@ -536,18 +562,22 @@
                                 style="fill:rgb(255,255,255);stroke-width:1;stroke:rgb(0,0,0)" />
                               <line v-for="x in [10,20,30,40,50,60,70,80,90]" :key="x" :x1="x*2" :x2="x*2" y1="0"
                                 :y2="20 * Object.values(item.studies).length" :style="'stroke:grey;stroke-width:1'" />
-                              
+
                               <template v-for="(study,i) in Object.values(item.studies)">
                                 <template v-if="study && study.sensitivity">
-                                  <rect width="201" :height="20" :y="20 * i" style="fill:transparent;stroke:none" :key="study.id+'_sp1'">
-                                    <title>{{ formatPercent(study.sensitivity.avg) + ' (95% CI: ' + formatPercent(study.sensitivity.min) + ' bis ' + formatPercent(study.sensitivity.max) + ') - ' + study.author + ', n = ' + (study.sampleSize || 'unbekannt') }}</title>
+                                  <rect width="201" :height="20" :y="20 * i" style="fill:transparent;stroke:none"
+                                    :key="study.id+'_sp1'">
+                                    <title>{{ formatPercent(study.sensitivity.avg) + ' (95% CI: ' +
+                                      formatPercent(study.sensitivity.min) + ' bis ' +
+                                      formatPercent(study.sensitivity.max) + ') - ' + study.author + ', n = ' +
+                                      (study.sampleSize || 'unbekannt') }}</title>
                                   </rect>
-                                  <line :key="study.id+'_sp2'"
-                                    :x1="study.sensitivity.min*200" :x2="study.sensitivity.max*200" :y1="10 + i * 20"
-                                    :y2="10 + i * 20" :style="'stroke:' + getStudyColor(study) + ';stroke-width:2'" />
-                                  <line :key="study.id+'_sp3'"
-                                    :x1="study.sensitivity.avg*200" :x2="study.sensitivity.avg*200" :y1="5 + i * 20"
-                                    :y2="15 + i * 20" :style="'stroke:' + getStudyColor(study) + ';stroke-width:2'" />
+                                  <line :key="study.id+'_sp2'" :x1="study.sensitivity.min*200"
+                                    :x2="study.sensitivity.max*200" :y1="10 + i * 20" :y2="10 + i * 20"
+                                    :style="'stroke:' + getStudyColor(study) + ';stroke-width:2'" />
+                                  <line :key="study.id+'_sp3'" :x1="study.sensitivity.avg*200"
+                                    :x2="study.sensitivity.avg*200" :y1="5 + i * 20" :y2="15 + i * 20"
+                                    :style="'stroke:' + getStudyColor(study) + ';stroke-width:2'" />
                                 </template>
                               </template>
 
@@ -562,18 +592,22 @@
                                 style="fill:rgb(255,255,255);stroke-width:1;stroke:rgb(0,0,0)" />
                               <line v-for="x in [10,20,30,40,50,60,70,80,90]" :key="x" :x1="x*2" :x2="x*2" y1="0"
                                 :y2="20 * Object.values(item.studies).length" :style="'stroke:grey;stroke-width:1'" />
-                              
+
                               <template v-for="(study,i) in Object.values(item.studies)">
                                 <template v-if="study && study.specificity">
-                                  <rect width="201" :height="20" :y="20 * i" style="fill:transparent;stroke:none" :key="study.id+'_sp1'">
-                                    <title>{{ formatPercent(study.specificity.avg) + ' (95% CI: ' + formatPercent(study.specificity.min) + ' bis ' + formatPercent(study.specificity.max) + ') - ' + study.author + ', n = ' + (study.sampleSize || 'unbekannt') }}</title>
+                                  <rect width="201" :height="20" :y="20 * i" style="fill:transparent;stroke:none"
+                                    :key="study.id+'_sp1'">
+                                    <title>{{ formatPercent(study.specificity.avg) + ' (95% CI: ' +
+                                      formatPercent(study.specificity.min) + ' bis ' +
+                                      formatPercent(study.specificity.max) + ') - ' + study.author + ', n = ' +
+                                      (study.sampleSize || 'unbekannt') }}</title>
                                   </rect>
-                                  <line :key="study.id+'_sp2'"
-                                    :x1="study.specificity.min*200" :x2="study.specificity.max*200" :y1="10 + i * 20"
-                                    :y2="10 + i * 20" :style="'stroke:' + getStudyColor(study) + ';stroke-width:2'" />
-                                  <line :key="study.id+'_sp3'"
-                                    :x1="study.specificity.avg*200" :x2="study.specificity.avg*200" :y1="5 + i * 20"
-                                    :y2="15 + i * 20" :style="'stroke:' + getStudyColor(study) + ';stroke-width:2'" />
+                                  <line :key="study.id+'_sp2'" :x1="study.specificity.min*200"
+                                    :x2="study.specificity.max*200" :y1="10 + i * 20" :y2="10 + i * 20"
+                                    :style="'stroke:' + getStudyColor(study) + ';stroke-width:2'" />
+                                  <line :key="study.id+'_sp3'" :x1="study.specificity.avg*200"
+                                    :x2="study.specificity.avg*200" :y1="5 + i * 20" :y2="15 + i * 20"
+                                    :style="'stroke:' + getStudyColor(study) + ';stroke-width:2'" />
                                 </template>
                               </template>
 
