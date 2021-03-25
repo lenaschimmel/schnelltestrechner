@@ -40,6 +40,12 @@ const RapidTestVueApp = {
             testsKind: "list",
             testFilterSelf: true,
             testFilterPei: false,
+            testFilterStudies: false,
+
+            compareFilterSelf: false,
+            compareFilterPei: false,
+            compareFilterStudies: false,
+            compareFilterSelected: false,
 
             scrolledToBottom: false,
             expandedPanelsCalc: [0, 1],
@@ -184,11 +190,11 @@ const RapidTestVueApp = {
             this.scrolledToBottom = ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 100);
         },
         getStudyColor(study) {
-            
-            if(study.author == "manufacturer") return "#1976D2";
-            if(study.quadas == "low concern") return "#388E3C";
-            if(study.quadas == "intermediate concern") return "#FBC02D";
-            if(study.quadas == "high concern") return "#D32F2F";
+
+            if (study.author == "manufacturer") return "#1976D2";
+            if (study.quadas == "low concern") return "#388E3C";
+            if (study.quadas == "intermediate concern") return "#FBC02D";
+            if (study.quadas == "high concern") return "#D32F2F";
             return "black";
         },
         getDataCircles(studiesObject) {
@@ -280,6 +286,21 @@ const RapidTestVueApp = {
 
             return textMatch;
         },
+        testMatchesCompareFiler(test) {
+            if (this.compareFilterSelf && !test.selftest)
+                return false;
+
+            if (this.compareFilterPei && !test.pei)
+                return false;
+
+            if (this.compareFilterStudies && ! Object.values(test.studies).some(study => study.author != "manufacturer"))
+                return false;
+
+            if (this.compareFilterSelected && !this.compareTests.includes(test))
+                return false;
+
+            return true;
+        },
         studyTitle(study) {
             if (study.author == "manufacturer") {
                 return "Angaben des Herstellers";
@@ -313,6 +334,12 @@ const RapidTestVueApp = {
                 return [];
 
             return this.tests.filter(test => this.testMatchesFiler(test));
+        },
+        visibleCompareTests() {
+            if (!this.tests)
+                return [];
+
+            return this.tests.filter(test => this.testMatchesCompareFiler(test));
         },
         studies() {
             if (this.selectedTest) {
@@ -504,12 +531,12 @@ const RapidTestVueApp = {
                 ]
         },
         compareHeaders() {
-                return [
-                    { text: 'Hersteller und Name', value: 'manufacturer_name' },
-                    { text: 'Sensitivität', value: 'sensitivity', sortable: false, width: "210px" },
-                    { text: 'Spezifität', value: 'specificity', sortable: false, width: "210px" },
-                ]
-            
+            return [
+                { text: 'Hersteller und Name', value: 'manufacturer_name' },
+                { text: 'Sensitivität', value: 'sensitivity', sortable: false, width: "210px" },
+                { text: 'Spezifität', value: 'specificity', sortable: false, width: "210px" },
+            ]
+
         },
     }
 }

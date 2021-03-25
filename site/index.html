@@ -186,6 +186,9 @@
                                 </template>
                               </v-checkbox>
                             </v-col>
+                            <v-col cols="12" sm="4" md="4" no-gutters>
+                              <v-checkbox label="Unabhängige Studien" v-model="testFilterStudies"></v-checkbox>
+                            </v-col>
                           </v-row>
                         </v-container>
 
@@ -500,8 +503,31 @@
                     </v-expansion-panel-header>
                     <v-expansion-panel-content color="blue lighten-5">
 
+                      <v-container fluid>
+                        <v-row no-gutters>
+                          <v-col cols="12" sm="4" md="3" no-gutters>
+                            <v-checkbox label="Nur Selbst-Tests" v-model="compareFilterSelf"></v-checkbox>
+                          </v-col>
+                          <v-col cols="12" sm="8" md="3" no-gutters>
+                            <v-checkbox v-model="compareFilterPei">
+                              <template v-slot:label>
+                                <div>Nur vom <acronym
+                                    title="Paul-Ehrlich-Institut - Bundesinstitut für Impfstoffe und biomedizinische Arzneimittel">PEI</acronym>
+                                  evaluiert</div>
+                              </template>
+                            </v-checkbox>
+                          </v-col>
+                          <v-col cols="12" sm="4" md="3" no-gutters>
+                            <v-checkbox label="Unabhängige Studien" v-model="compareFilterStudies"></v-checkbox>
+                          </v-col>
+                          <v-col cols="12" sm="4" md="3" no-gutters>
+                            <v-checkbox label="Ausgewählte" v-model="compareFilterSelected"></v-checkbox>
+                          </v-col>
+                        </v-row>
+                      </v-container>
+
                       <v-card class="mt-4">
-                        <v-data-table dense v-model="compareTests" :items="tests" :headers="compareHeaders" show-select
+                        <v-data-table dense v-model="compareTests" :items="visibleCompareTests" :headers="compareHeaders" show-select
                           locale="de-DE" mobile-breakpoint="360" :options="{ itemsPerPage: 15 }">
                           <template v-slot:item.sensitivity="{ item }">
                             <svg xmlns="http://www.w3.org/2000/svg" :height="20 * Object.values(item.studies).length"
