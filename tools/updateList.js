@@ -146,7 +146,7 @@ function getSelftestsWithoutId() {
     });
 }
 
-const csvAntigenTests = fs.readFileSync("../data/antigentests.csv", {encoding: "latin1"});
+const csvAntigenTests = fs.readFileSync("../data/antigentests.csv", {encoding: "latin1"}).replace(/\u0099/g,"\u2122").replace(/\u0096/g,"\u002D");
 const jsonSelftests = JSON.parse(fs.readFileSync("../data/selftests.json", {encoding: "utf8"}));
 const csvEvaluation = fs.readFileSync("../data/evaluation.csv", {encoding: "utf8"});
 const jsonEvaluationNameMapping = JSON.parse(fs.readFileSync("../data/evaluation_name_mapping.json", {encoding: "utf8"}));

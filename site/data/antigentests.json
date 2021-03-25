@@ -1,7 +1,7 @@
 [
   {
     "id": "AT005/20",
-    "name": "Panbio COVID-19 Ag Rapid Test Device",
+    "name": "Panbio™ COVID-19 Ag Rapid Test Device",
     "pei": true,
     "manufacturer": "Abbott Rapid Diagnostics Jena GmbH",
     "Hersteller Stadt": "Jena",
@@ -11,7 +11,7 @@
     "EU Bevollmächtigter Land": "",
     "Testort*": "POC (ohne Gerät)",
     "tradename": [
-      "Panbio COVID-19 Ag Rapid Test Device"
+      "Panbio™ COVID-19 Ag Rapid Test Device"
     ],
     "distributors": [
       "Abbott Rapid Diagnostics Germany GmbH"
@@ -1113,7 +1113,7 @@
   },
   {
     "id": "AT200/20",
-    "name": "Veritor System For Rapid Detection of SARS-CoV-2",
+    "name": "Veritor™ System For Rapid Detection of SARS-CoV-2",
     "pei": true,
     "manufacturer": "Becton, Dickinson and Company",
     "Hersteller Stadt": "Sparks, Maryland",
@@ -1123,7 +1123,7 @@
     "EU Bevollmächtigter Land": "IE",
     "Testort*": "POC (mit Gerät)",
     "tradename": [
-      "Veritor System For Rapid Detection of SARS-CoV-2"
+      "Veritor™ System For Rapid Detection of SARS-CoV-2"
     ],
     "distributors": [
       "BD GmbH"
@@ -2086,7 +2086,7 @@
   },
   {
     "id": "AT050/20",
-    "name": "ichroma COVI-19 Ag",
+    "name": "ichroma™ COVI-19 Ag",
     "pei": false,
     "manufacturer": "Boditech Med Inc.",
     "Hersteller Stadt": "Chuncheon-si, Gang-won-do",
@@ -2096,7 +2096,7 @@
     "EU Bevollmächtigter Land": "BE",
     "Testort*": "POC (mit Gerät)",
     "tradename": [
-      "ichroma COVI-19 Ag"
+      "ichroma™ COVI-19 Ag"
     ],
     "distributors": [
       "WS Laborbetriebsgesellschaft mbH"
@@ -2192,7 +2192,7 @@
       "COVID-19 Antigen Rapid Test Device",
       " COVID-19 Antigen Rapid Test Device",
       " Rapid Response COVID-19 Antigen Rapid Test Device",
-      " Rapid ResponseCOVID-19 Antigen Schnelltest"
+      " Rapid Response™COVID-19 Antigen Schnelltest"
     ],
     "distributors": [
       "BIOTREND Chemikalien GmbHDiaSorin Deutschland GmbHHenry Schein Medical GmbHNanoRepro AG"
@@ -2240,12 +2240,12 @@
         "sensitivity": {
           "avg": 0.929,
           "min": 0.76,
-          "max": null
+          "max": 0.99
         },
         "specificity": {
           "avg": 0.996,
           "min": 0.976,
-          "max": null
+          "max": 1
         }
       }
     },
@@ -2276,12 +2276,12 @@
         "sensitivity": {
           "avg": 0.929,
           "min": 0.76,
-          "max": null
+          "max": 0.99
         },
         "specificity": {
           "avg": 0.996,
           "min": 0.976,
-          "max": null
+          "max": 1
         }
       }
     },
@@ -2312,12 +2312,12 @@
         "sensitivity": {
           "avg": 0.929,
           "min": 0.76,
-          "max": null
+          "max": 0.99
         },
         "specificity": {
           "avg": 0.996,
           "min": 0.976,
-          "max": null
+          "max": 1
         }
       }
     },
@@ -7601,12 +7601,12 @@
         "sensitivity": {
           "avg": 0.927,
           "min": 0.88,
-          "max": null
+          "max": 0.95
         },
         "specificity": {
           "avg": 1,
           "min": 0.991,
-          "max": null
+          "max": 1
         }
       }
     },
@@ -7923,7 +7923,7 @@
         "sensitivity": {
           "avg": 0.9652,
           "min": 0.91,
-          "max": null
+          "max": 0.99
         },
         "specificity": {
           "avg": 0.9968,
@@ -8064,12 +8064,12 @@
         "sensitivity": {
           "avg": 0.9712000000000001,
           "min": 0.91,
-          "max": null
+          "max": 0.99
         },
         "specificity": {
           "avg": 1,
           "min": 0.9904999999999999,
-          "max": null
+          "max": 1
         }
       }
     },
@@ -9710,7 +9710,7 @@
   },
   {
     "id": "AT102/20",
-    "name": "reOpenTest COVID-19 Antigen Rapid Test",
+    "name": "reOpenTest™ COVID-19 Antigen Rapid Test",
     "pei": true,
     "manufacturer": "Zhejiang Anji Saianfu Biotech Co., Ltd.",
     "Hersteller Stadt": "HuZhou",
@@ -9721,8 +9721,8 @@
     "Testort*": "POC (ohne Gerät)",
     "tradename": [
       "COVID-19 Antigen Rapid Test",
-      " reOpenTest COVID-19 Antigen Rapid Test",
-      " reOpenTest COVID-19 Antigen Rapid Test"
+      " reOpenTest™ COVID-19 Antigen Rapid Test",
+      " reOpenTest™ COVID-19 Antigen Rapid Test"
     ],
     "distributors": [
       "AlphaScience GmbH"
