@@ -83,7 +83,7 @@
 
       <template v-slot:extension>
         <v-tabs v-model="tab">
-          <v-tabs-slider color="yellow"></v-tabs-slider>
+          <v-tabs-slider color="pink"></v-tabs-slider>
 
           <v-tab v-for="item in tabs" :key="item.id">
             {{ item.title }}
@@ -155,16 +155,18 @@
 
                       <v-btn-toggle v-model="testsKind">
                         <v-btn value="list">
-                          <span class="hidden-xs-only">Aus Liste wählen</span>
+                          <span class="hidden-xs-only mr-4">Aus Liste wählen</span>
+                          <span class="hidden-sm-and-up mr-4">Liste</span>
                           <v-icon>
                             mdi-format-list-checkbox
                           </v-icon>
                         </v-btn>
 
                         <v-btn value="input">
-                          <span class="hidden-xs-only">Eigene Werte eingeben</span>
+                          <span class="hidden-xs-only mr-4">Eigene Werte eingeben</span>
+                          <span class="hidden-sm-and-up mr-4">Eingabe</span>
                           <v-icon>
-                            mdi-numeric
+                            mdi-pencil
                           </v-icon>
                         </v-btn>
                       </v-btn-toggle>
@@ -249,11 +251,11 @@
                           </v-data-table>
                         </v-card>
 
-                        <template v-if="intermediate && this.selectedTest && Object.keys(this.selectedTest.studies).length > 0">
+                        <template
+                          v-if="intermediate && this.selectedTest && Object.keys(this.selectedTest.studies).length > 0">
                           <p v-if="Object.keys(this.selectedTest.studies).length > 1" class="mt-4">
                             Quelle der Angaben zu Sensitivität und Spezifität:
-                            <v-select v-model="studyId" :items="studies" item-text="author" item-value="id"
-                              solo>
+                            <v-select v-model="studyId" :items="studies" item-text="author" item-value="id" solo>
                               <template v-slot:item="{ parent, item, on, attrs}">
                                 {{ studyTitle(item) }}
                               </template>
@@ -264,7 +266,7 @@
                           </p>
 
                           <p>
-                            Werte innerhalb des 95%-Konfidenzinervalls:
+                            Werte innerhalb des 95%-Konfidenzintervalls:
 
                             <v-btn-toggle v-model="confidence" class="mt-2">
                               <v-btn value="min">
@@ -484,12 +486,13 @@
                 <v-expansion-panels multiple class="mb-8" v-model="expandedPanelsInfo">
 
                   <v-expansion-panel>
-                    <v-expansion-panel-header class="font-weight-bold text-uppercase">
+                    <v-expansion-panel-header class="font-weight-bold text-uppercase" color="blue lighten-3">
                       Verwende Quellen und Methoden
                     </v-expansion-panel-header>
-                    <v-expansion-panel-content>
+                    <v-expansion-panel-content color="blue lighten-5">
 
-                      <p class="font-weight-bold">Die Daten über verfügbare Schnelltests kommen aus diesen Quellen:</p>
+                      <p class="font-weight-bold mt-4">Die Daten über verfügbare Schnelltests kommen aus diesen Quellen:
+                      </p>
                       <ul>
                         <li><a href="https://www.bfarm.de/DE/Medizinprodukte/Antigentests/_node.html"
                             rel="nofollow">Liste der Tests zur Eigenanwendung durch Laien</a> des BfArM</li>
@@ -535,12 +538,13 @@
                   </v-expansion-panel>
 
                   <v-expansion-panel>
-                    <v-expansion-panel-header class="font-weight-bold text-uppercase">
+                    <v-expansion-panel-header class="font-weight-bold text-uppercase" color="blue lighten-3">
                       Weitere Informationsquellen
                     </v-expansion-panel-header>
-                    <v-expansion-panel-content>
+                    <v-expansion-panel-content color="blue lighten-5">
 
-                      <p>Diese Seite hat nicht den Anspruch, sämtliche Informationen zu SARS-CoV-2-Tests vollständig und
+                      <p class="mt-4">Diese Seite hat nicht den Anspruch, sämtliche Informationen zu SARS-CoV-2-Tests
+                        vollständig und
                         fehlerfrei anzubieten. Daher empfehlen wir ausdrücklich, auch weitere Informationsquellen zu
                         Rate zu ziehen!</p>
                       <ul>
@@ -552,6 +556,16 @@
                         <li>Sämtliche Informationen des <a
                             href="https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/nCoV.html"
                             target="_">Robert Koch Instituts (RKI)</a></li>
+                        <li>Der <a href="https://rki-wiko.shinyapps.io/test_qual/" target="_"> Schnelltest-Rechner des
+                            Robert Koch Instituts (RKI)</a>. Er ist zwar langsam und weniger mächtig als dieser hier,
+                          bietet aber ein paar andere Darstellungsweisen der Ergebnisse.</li>
+                        <li>Die <a
+                            href="https://www.cochrane.de/de/news/aktualisierter-cochrane-review-bewertet-zuverl%C3%A4ssigkeit-von-schnelltests-zum-nachweis-von-covid"
+                            target="_">Zusammenfassung</a> und die <a
+                            href="https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD013705.pub2/full/de"
+                            target="_">(wirklich lange) Langdassung</a> des Aktualisierten Cochrane Review bewertet
+                          Zuverlässigkeit von Schnelltests zum Nachweis von COVID-19. Die Ergebnisse daraus sind <i>noch
+                            nicht</i> in die Datenbasis dieses Rechners integriert.</li>
                       </ul>
 
                     </v-expansion-panel-content>
