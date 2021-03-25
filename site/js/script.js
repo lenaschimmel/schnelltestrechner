@@ -27,6 +27,7 @@ const RapidTestVueApp = {
 
             // user selections
             selectedTests: [],
+            compareTests: [],
             stateId: null,
             districtId: null,
             incidenceSource: "germany",
@@ -42,6 +43,7 @@ const RapidTestVueApp = {
 
             scrolledToBottom: false,
             expandedPanelsCalc: [0, 1],
+            expandedPanelsCompare: [1],
             expandedPanelsInfo: [0, 1],
             expandedPanelsImprint: [0, 1, 2, 3],
             tab: null,
@@ -180,6 +182,14 @@ const RapidTestVueApp = {
         },
         handleScroll() {
             this.scrolledToBottom = ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 100);
+        },
+        getStudyColor(study) {
+            
+            if(study.author == "manufacturer") return "#1976D2";
+            if(study.quadas == "low concern") return "#388E3C";
+            if(study.quadas == "intermediate concern") return "#FBC02D";
+            if(study.quadas == "high concern") return "#D32F2F";
+            return "black";
         },
         getDataCircles(studiesObject) {
             numMax = function (num) {
@@ -467,12 +477,14 @@ const RapidTestVueApp = {
             if (this.$vuetify.breakpoint.xsOnly)
                 return [
                     { "id": "calc", "title": 'Rechner' },
+                    { "id": "compare", "title": 'Vergleich' },
                     { "id": "info", "title": 'Infos' },
                     { "id": "imprint", "title": 'Impressum' },
                 ];
             else
                 return [
                     { "id": "calc", "title": 'Rechner' },
+                    { "id": "compare", "title": 'Tests vergleichen' },
                     { "id": "info", "title": 'Weitere Infos' },
                     { "id": "imprint", "title": 'Impressum / Datenschutz' },
                 ];
@@ -490,6 +502,14 @@ const RapidTestVueApp = {
                     { text: 'Merkmal', value: 'attrib', sortable: false },
                     { text: 'Daten', value: 'studies', sortable: false },
                 ]
+        },
+        compareHeaders() {
+                return [
+                    { text: 'Hersteller und Name', value: 'manufacturer_name' },
+                    { text: 'Sensitivität', value: 'sensitivity', sortable: false, width: "210px" },
+                    { text: 'Spezifität', value: 'specificity', sortable: false, width: "210px" },
+                ]
+            
         },
     }
 }
