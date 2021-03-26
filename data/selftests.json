@@ -55,14 +55,46 @@
         "manufacturer": "NanoRepro AG",
         "antragsteller": "NanoRepro AG",
         "name": "NanoRepro Antigen Schnelltest (Viromed)/NanoRepro Antigen Rapid Test (Viromed)",
-        "id": null
+        "id": null,
+        "studies": {
+            "manufacturer": {
+              "author": "manufacturer",
+              "source": "https://www.viromed.de/wp-content/uploads/2021/03/NanoRepro_SARS-CoV-2_PB_VIROMED_Rev00_202103_1er_ENDKUNDE.pdf",
+              "sensitivity": {
+                "avg": 0.9733,
+                "min": 0.9331,
+                "max": 0.9927
+              },
+              "specificity": {
+                "avg": 0.993,
+                "min": 0.9634,
+                "max": 0.9998
+              }
+            }
+          }
     },
     {
         "reference": "5640-S-076/21",
         "manufacturer": "MP Biomedicals Germany GmbH",
         "antragsteller": "MP Biomedicals Germany GmbH",
         "name": "Rapid SARS-CoV-2 Antigen Test Card",
-        "id": null
+        "id": null,
+        "studies": {
+            "manufacturer": {
+              "author": "manufacturer",
+              "source": "https://e2t-med.de/wp-content/uploads/2020/12/COVID19_antigen_kit_07AG6020B-008-02-12-DE.pdf",
+              "sensitivity": {
+                "avg": 0.9649,
+                "min": 0.9311,
+                "max": 0.9987
+              },
+              "specificity": {
+                "avg": 0.9907,
+                "min": 0.9826,
+                "max": 0.9998
+              }
+            }
+          }
     },
     {
         "reference": "5640-S-041/21",
@@ -81,7 +113,23 @@
         "manufacturer": "MEDICE Arzneimittel Pütter GmbH & Co. KG",
         "antragsteller": "MEDICE Arzneimittel Pütter GmbH & Co. KG",
         "name": "Medicovid-AG SARS CoV-2 Antigen SELBSTTEST NASE",
-        "id": null
+        "id": null,
+        "studies": {
+            "manufacturer": {
+              "author": "manufacturer",
+              "source": "https://medice.com/api/de-de/produkte/corona-tests/medicovid-ag-r-sars-cov-2-antigen-selbsttest/403000003202-gi-sars-cov2-antigen-selbsttest-nase-1-5-1.pdf",
+              "sensitivity": {
+                "avg": 0.9619,
+                "min": 0.9253,
+                "max": 0.9985
+              },
+              "specificity": {
+                "avg": 0.9920,
+                "min": 0.9764,
+                "max": 0.9999
+              }
+            }
+          }
     },
     {
         "reference": "5640-S-116/21",
@@ -94,7 +142,23 @@
         "reference": "5640-S-147/21",
         "manufacturer": "MR Sanicom GmbH",
         "antragsteller": "MR Sanicom GmbH",
-        "name": "COVID-19 Antigen-Schnelltest (Kolloidales Gold)"
+        "name": "COVID-19 Antigen-Schnelltest (Kolloidales Gold)",
+        "studies": {
+            "manufacturer": {
+              "author": "manufacturer",
+              "source": "https://www.mr-sanicom.de/mr-sanicom/",
+              "sensitivity": {
+                "avg": 0.9910,
+                "min": 0.9026,
+                "max": 0.9892
+              },
+              "specificity": {
+                "avg": 0.9900,
+                "min": 0.9768,
+                "max": 0.9967
+              }
+            }
+          }
     },
     {
         "reference": "5640-S-079/21",
@@ -106,13 +170,45 @@
         "reference": "5460-S-178/21",
         "manufacturer": "Haemato Pharm GmbH",
         "antragsteller": "Haemato Pharm GmbH",
-        "name": "Wondfo 2019-nCoV Antigen Test (Lateral-Flow-Methode) Selbsttest"
+        "name": "Wondfo 2019-nCoV Antigen Test (Lateral-Flow-Methode) Selbsttest",
+        "studies": {
+            "manufacturer": {
+              "author": "manufacturer",
+              "source": "https://www.schnelltest-antigen.de/wp-content/uploads/2021/03/6_Nasal-IFU-HAEMATO.pdf",
+              "sensitivity": {
+                "avg": 0.9783,
+                "min": 0.9378,
+                "max": 0.9955
+              },
+              "specificity": {
+                "avg": 0.9908,
+                "min": 0.9673,
+                "max": 0.9989
+              }
+            }
+          }
     },
     {
         "reference": "5460-S-146/21",
         "manufacturer": "OFM GmbH",
         "antragsteller": "OFM GmbH",
-        "name": "Sensitivo COVID-19 Antigen Test"
+        "name": "Sensitivo COVID-19 Antigen Test",
+        "studies": {
+            "manufacturer": {
+              "author": "manufacturer",
+              "source": "https://www.ofm-medical.de/#antigen-selbsttest",
+              "sensitivity": {
+                "avg": 1.00,
+                "min": null,
+                "max": null
+              },
+              "specificity": {
+                "avg": 0.9686,
+                "min": null,
+                "max": null
+              }
+            }
+          }
     },
     {
         "reference": "5460-S-104/21",

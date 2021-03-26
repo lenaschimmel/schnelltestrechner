@@ -140,7 +140,15 @@ function getSelftestsWithoutId() {
     return jsonSelftests.filter(test => test.id == null).map(test => {
         test.selftest = true;
         test.pei = false;
-        test.studies = {};
+        let newStudies = {};
+        for (const key in test.studies) {
+            if (Object.hasOwnProperty.call(test.studies, key)) {
+                const study = test.studies[key];
+                study.id = currentStudyId++;
+                newStudies[study.id] = study;
+            }
+        }
+        test.studies = newStudies;
         test.id = "NO-AT-" + (currentTestId++);
         return test;
     });
