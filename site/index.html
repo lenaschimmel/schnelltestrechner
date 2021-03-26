@@ -462,6 +462,10 @@
                         </v-row>
                       </v-container>
 
+                      <v-alert icon="mdi-information" dense outlined type="info" v-if="sympChest || sympWheez">
+                        Hinweis: wenn Keuchen oder Engegefühl in der Brust vorliegen, sinkt die Vortestwahrscheinlichkeit scheinbar. Das verwirrt auf den ersten Blick, hat aber einen Grund, der <a href="https://github.com/lenaschimmel/schnelltestrechner/issues/21#issuecomment-808184992" target="_">hier</a> erläutert wird.
+                      </v-alert>
+
                       <template v-if="anySymptoms && intermediate">
                         <p>C19 Rule score: <input disabled v-bind:value="ruleScore" /></p>
                         <p>C19 Rule likelihood ratio: <input disabled v-bind:value="formatNumber(ruleLR)" /></p>
