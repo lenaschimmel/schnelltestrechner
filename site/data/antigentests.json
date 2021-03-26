@@ -11283,9 +11283,42 @@
     "antragsteller": "Hangzhou Clongene Biotech Co., Ltd.",
     "name": "COVID-19 Antigen Rapid Test",
     "id": "NO-AT-3",
+    "studies": {
+      "412": {
+        "author": "manufacturer",
+        "comment": "ct < 33 (hohe Viruslast)",
+        "source": "https://diwamedical.com/wp-content/uploads/2021/03/Clungene-Nasal-Antigentest-Sonderzulassung-zur-Laienanwendung.pdf",
+        "sensitivity": {
+          "avg": 0.971,
+          "min": 0.927,
+          "max": 0.989
+        },
+        "specificity": {
+          "avg": 0.994,
+          "min": 0.981,
+          "max": 0.998
+        },
+        "id": 412
+      },
+      "413": {
+        "author": "manufacturer",
+        "comment": "alle Proband_innen",
+        "source": "https://diwamedical.com/wp-content/uploads/2021/03/Clungene-Nasal-Antigentest-Sonderzulassung-zur-Laienanwendung.pdf",
+        "sensitivity": {
+          "avg": 0.914,
+          "min": 0.859,
+          "max": 0.949
+        },
+        "specificity": {
+          "avg": 0.994,
+          "min": 0.981,
+          "max": 0.998
+        },
+        "id": 413
+      }
+    },
     "selftest": true,
-    "pei": false,
-    "studies": {}
+    "pei": false
   },
   {
     "reference": "5640-S-128/21",
@@ -11294,7 +11327,7 @@
     "name": "Medicovid-AG SARS CoV-2 Antigen SELBSTTEST NASE",
     "id": "NO-AT-4",
     "studies": {
-      "412": {
+      "414": {
         "author": "manufacturer",
         "source": "https://medice.com/api/de-de/produkte/corona-tests/medicovid-ag-r-sars-cov-2-antigen-selbsttest/403000003202-gi-sars-cov2-antigen-selbsttest-nase-1-5-1.pdf",
         "sensitivity": {
@@ -11307,7 +11340,7 @@
           "min": 0.9764,
           "max": 0.9999
         },
-        "id": 412
+        "id": 414
       }
     },
     "selftest": true,
@@ -11319,9 +11352,42 @@
     "antragsteller": "amec GmbH",
     "name": "COVID-19 Antigen Schnelltest (Spucktest)",
     "id": "NO-AT-5",
+    "studies": {
+      "415": {
+        "author": "manufacturer",
+        "comment": "ct < 30 (hohe Viruslast)",
+        "source": "https://www.amec-gmbh.de/wp-content/uploads/amec_Gebrauchsanweisung_Laie_17032021.pdf",
+        "sensitivity": {
+          "avg": 0.968,
+          "min": 0.91,
+          "max": 0.987
+        },
+        "specificity": {
+          "avg": 0.996,
+          "min": 0.985,
+          "max": 0.999
+        },
+        "id": 415
+      },
+      "416": {
+        "author": "manufacturer",
+        "comment": "ct < 37 (alle Proband_innen)",
+        "source": "https://www.amec-gmbh.de/wp-content/uploads/amec_Gebrauchsanweisung_Laie_17032021.pdf",
+        "sensitivity": {
+          "avg": 0.913,
+          "min": 0.859,
+          "max": 0.947
+        },
+        "specificity": {
+          "avg": 0.996,
+          "min": 0.985,
+          "max": 0.999
+        },
+        "id": 416
+      }
+    },
     "selftest": true,
-    "pei": false,
-    "studies": {}
+    "pei": false
   },
   {
     "reference": "5640-S-147/21",
@@ -11329,7 +11395,7 @@
     "antragsteller": "MR Sanicom GmbH",
     "name": "COVID-19 Antigen-Schnelltest (Kolloidales Gold)",
     "studies": {
-      "413": {
+      "417": {
         "author": "manufacturer",
         "source": "https://www.mr-sanicom.de/mr-sanicom/",
         "sensitivity": {
@@ -11342,7 +11408,7 @@
           "min": 0.9768,
           "max": 0.9967
         },
-        "id": 413
+        "id": 417
       }
     },
     "selftest": true,
@@ -11365,7 +11431,7 @@
     "antragsteller": "Haemato Pharm GmbH",
     "name": "Wondfo 2019-nCoV Antigen Test (Lateral-Flow-Methode) Selbsttest",
     "studies": {
-      "414": {
+      "418": {
         "author": "manufacturer",
         "source": "https://www.schnelltest-antigen.de/wp-content/uploads/2021/03/6_Nasal-IFU-HAEMATO.pdf",
         "sensitivity": {
@@ -11378,7 +11444,7 @@
           "min": 0.9673,
           "max": 0.9989
         },
-        "id": 414
+        "id": 418
       }
     },
     "selftest": true,
@@ -11391,7 +11457,7 @@
     "antragsteller": "OFM GmbH",
     "name": "Sensitivo COVID-19 Antigen Test",
     "studies": {
-      "415": {
+      "419": {
         "author": "manufacturer",
         "source": "https://www.ofm-medical.de/#antigen-selbsttest",
         "sensitivity": {
@@ -11404,7 +11470,7 @@
           "min": null,
           "max": null
         },
-        "id": 415
+        "id": 419
       }
     },
     "selftest": true,
@@ -11416,9 +11482,55 @@
     "manufacturer": "Beijing Lepu Medical Technology Co., Ltd.",
     "antragsteller": "Beijing Lepu Medical Technology Co., Ltd.",
     "name": "NASOCHECKcomfort SARS-CoV-2 Antigen-Schnelltest",
+    "studies": {
+      "420": {
+        "author": "Händler 1",
+        "source": "https://www.tima-care.de/de/antigentest-naso.html",
+        "sensitivity": {
+          "avg": 0.92,
+          "min": null,
+          "max": null
+        },
+        "specificity": {
+          "avg": 0.9926,
+          "min": null,
+          "max": null
+        },
+        "id": 420
+      },
+      "421": {
+        "author": "Händler 2",
+        "source": "https://www.avihealth.de/covid-19-schnelltest/42/laientest-lepu-antigen-schnelltest-sars-cov-2?c=9",
+        "sensitivity": {
+          "avg": 0.9606,
+          "min": null,
+          "max": null
+        },
+        "specificity": {
+          "avg": 0.9962,
+          "min": null,
+          "max": null
+        },
+        "id": 421
+      },
+      "422": {
+        "author": "Händler 3",
+        "source": "https://www.roscheba-care.de/tests/at-109?c=124",
+        "sensitivity": {
+          "avg": 0.92,
+          "min": 0.8363,
+          "max": 0.9628
+        },
+        "specificity": {
+          "avg": 0.9926,
+          "min": 0.9592,
+          "max": 0.9987
+        },
+        "id": 422
+      }
+    },
     "selftest": true,
     "pei": false,
-    "studies": {},
     "id": "NO-AT-10"
   },
   {

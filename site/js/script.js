@@ -207,17 +207,19 @@ const RapidTestVueApp = {
 
             let studies = Object.values(studiesObject);
             let count = studies.length;
-            let manCount = studies.filter(study => study.author == "manufacturer").length;
+            let manCount = studies.filter(study => study.author.startsWith("manufacturer")).length;
             let lcCount = studies.filter(study => study.quadas == "low concern").length;
             let icCount = studies.filter(study => study.quadas == "intermediate concern").length;
             let hcCount = studies.filter(study => study.quadas == "high concern").length;
             let nonManCount = count - manCount;
+            let ucCount = nonManCount - (lcCount + icCount + hcCount);
             let array = [];
 
             if (manCount > 0) array.push({ "icon": "mdi-alpha-h-circle", "color": "blue darken-2" });
             if (lcCount > 0) array.push({ "icon": "mdi-numeric-" + numMax(lcCount) + "-circle", "color": "green darken-2" });
             if (icCount > 0) array.push({ "icon": "mdi-numeric-" + numMax(icCount) + "-circle", "color": "yellow darken-2" });
             if (hcCount > 0) array.push({ "icon": "mdi-numeric-" + numMax(hcCount) + "-circle", "color": "red darken-2" });
+            if (ucCount > 0) array.push({ "icon": "mdi-numeric-" + numMax(ucCount) + "-circle", "color": "black" });
 
             if (array.length == 0) array.push({ "icon": "mdi-numeric-0-circle-outline", "color": "grey darken-2" });
 
@@ -226,19 +228,22 @@ const RapidTestVueApp = {
         getDataText(studiesObject) {
             let studies = Object.values(studiesObject);
             let count = studies.length;
-            let manCount = studies.filter(study => study.author == "manufacturer").length;
+            let manCount = studies.filter(study => study.author.startsWith("manufacturer")).length;
             let lcCount = studies.filter(study => study.quadas == "low concern").length;
             let icCount = studies.filter(study => study.quadas == "intermediate concern").length;
             let hcCount = studies.filter(study => study.quadas == "high concern").length;
             let nonManCount = count - manCount;
+            let ucCount = nonManCount - (lcCount + icCount + hcCount);
+            
 
             let text = "";
 
-            if (manCount > 0) text += "Hersteller-Angaben vorhanden. ";
+            if (manCount > 0) text += manCount + " Hersteller-Angabe(n) vorhanden. ";
             if (nonManCount > 0) text += nonManCount + " Studie(n), darunter ";
             if (lcCount > 0) text += lcCount + " mit hoher Qualität, ";
             if (icCount > 0) text += icCount + " mit mittlerer Qualität, ";
             if (hcCount > 0) text += hcCount + " mit geringer Qualität, ";
+            if (ucCount > 0) text += ucCount + " mit unklarer Qualität, ";
             if (nonManCount > 0) text += " vorhanden.";
 
             if (text == "") text = "Keine Daten vorhanden.";
@@ -303,9 +308,15 @@ const RapidTestVueApp = {
         },
         studyTitle(study) {
             if (study.author == "manufacturer") {
-                return "Angaben des Herstellers";
+                if (study.comment && study.comment.length > 0)
+                    return "Angaben des Herstellers (" + study.comment + ")";
+                else
+                    return "Angaben des Herstellers";
             } else {
-                return "Studie von " + study.author + ", (n = " + study.sampleSize + ", " + study.quadas + ")";
+                if (study.comment && study.comment.length > 0)
+                    return "Studie von " + study.author + ", (" + study.comment + ", n = " + study.sampleSize + ", " + study.quadas + ")";
+                else
+                    return "Studie von " + study.author + ", (n = " + study.sampleSize + ", " + study.quadas + ")";
             }
         }
     },
