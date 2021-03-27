@@ -382,7 +382,7 @@
                       </template>
 
                       <template v-if="incidenceSource == 'district'">
-                        <p>Landkreis:
+                        <p>Stadt / Landkreis:
                           <v-autocomplete v-model="districtId" :items="districtsChoices" item-text="displayName" item-value="ags" solo>
                           </v-autocomplete>
                         </p>
@@ -555,6 +555,9 @@
                         </v-row>
                       </v-container>
 
+                      <p>Anzeige-Einstellungen:</p>
+                      <v-checkbox label="Spezifität auf oberste 10% heran zoomen" v-model="zoomSpecificity"></v-checkbox>
+
                       <v-card class="mt-4">
                         <v-data-table dense v-model="compareTests" :items="visibleCompareTests"
                           :headers="compareHeaders" show-select locale="de-DE" mobile-breakpoint="360"
@@ -593,7 +596,7 @@
                               width="201">
                               <rect width="201" :height="20 * Object.values(item.studies).length"
                                 style="fill:rgb(255,255,255);stroke-width:1;stroke:rgb(0,0,0)" />
-                              <line v-for="x in [10,20,30,40,50,60,70,80,90]" :key="x" :x1="x*2" :x2="x*2" y1="0"
+                              <line v-if="!zoomSpecificity" v-for="x in [10,20,30,40,50,60,70,80,90]" :key="x" :x1="x*2" :x2="x*2" y1="0"
                                 :y2="20 * Object.values(item.studies).length" :style="'stroke:grey;stroke-width:1'" />
 
                               <template v-for="(study,i) in Object.values(item.studies)">
@@ -605,11 +608,11 @@
                                       formatPercent(study.specificity.max) + ') - ' + study.author + ', n = ' +
                                       (study.sampleSize || 'unbekannt') }}</title>
                                   </rect>
-                                  <line :key="study.id+'_sp2'" :x1="study.specificity.min*200"
-                                    :x2="study.specificity.max*200" :y1="10 + i * 20" :y2="10 + i * 20"
+                                  <line :key="study.id+'_sp2'" :x1="getSpecificityX(study.specificity.min)"
+                                    :x2="getSpecificityX(study.specificity.max)" :y1="10 + i * 20" :y2="10 + i * 20"
                                     :style="'stroke:' + getStudyColor(study) + ';stroke-width:2'" />
-                                  <line :key="study.id+'_sp3'" :x1="study.specificity.avg*200"
-                                    :x2="study.specificity.avg*200" :y1="5 + i * 20" :y2="15 + i * 20"
+                                  <line :key="study.id+'_sp3'" :x1="getSpecificityX(study.specificity.avg)"
+                                    :x2="getSpecificityX(study.specificity.avg)" :y1="5 + i * 20" :y2="15 + i * 20"
                                     :style="'stroke:' + getStudyColor(study) + ';stroke-width:2'" />
                                 </template>
                               </template>

@@ -42,6 +42,7 @@ const RapidTestVueApp = {
             testFilterSelf: true,
             testFilterPei: false,
             testFilterStudies: false,
+            zoomSpecificity: false,
 
             compareFilterSelf: false,
             compareFilterPei: false,
@@ -334,6 +335,13 @@ const RapidTestVueApp = {
                 else
                     return "Studie von " + study.author + ", (n = " + study.sampleSize + ", " + study.quadas + ")";
             }
+        },
+        getSpecificityX(val) {
+            if (this.zoomSpecificity) {
+                return Math.max(0,(val - 0.9) * 2000);
+            } else {
+                return val * 200;
+            }
         }
     },
     watch: {
@@ -566,8 +574,8 @@ const RapidTestVueApp = {
         compareHeaders() {
             return [
                 { text: 'Hersteller und Name', value: 'manufacturer_name' },
-                { text: 'Sensitivität', value: 'sensitivity', sortable: false, width: "210px" },
-                { text: 'Spezifität', value: 'specificity', sortable: false, width: "210px" },
+                { text: 'Sensitivität (0% bis 100%)', value: 'sensitivity', sortable: false, width: "210px" },
+                { text: 'Spezifität' + (this.zoomSpecificity ? ' (90% bis 100%)' : ' (0% bis 100%)'), value: 'specificity', sortable: false, width: "210px" },
             ]
 
         },
