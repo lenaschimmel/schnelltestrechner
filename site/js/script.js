@@ -8,6 +8,7 @@
 const apiGermany = "/data/germany.json";
 const apiStates = "/data/states.json";
 const apiDistricts = "/data/districts.json";
+const apiDistrictsFull = "/data/districts_full.json";
 const apiTests = "/data/antigentests.json";
 
 
@@ -75,6 +76,7 @@ const RapidTestVueApp = {
             germany: null,
             states: [],
             districts: [],
+            districtsFull: {},
 
             // not actually data
             percentFormatter: null,
@@ -158,12 +160,18 @@ const RapidTestVueApp = {
                     this.states = Object.values(root.data).sort(byName);
                 })
                 .catch(error => console.log(error));
-            fetch(apiDistricts)
+                fetch(apiDistricts)
                 .then(response => response.json())
                 .then(root => {
                     this.districts = Object.values(root.data).sort(byName);
                 })
-                .catch(error => console.log(error));;
+                .catch(error => console.log(error));
+            fetch(apiDistrictsFull)
+                .then(response => response.json())
+                .then(root => {
+                    this.districtsFull = root.data;
+                })
+                .catch(error => console.log(error));
         },
         formatPercent(value) {
             // The percentFormatter will always display four significant digits. For very small values p,
@@ -562,6 +570,13 @@ const RapidTestVueApp = {
                 { text: 'Spezifität', value: 'specificity', sortable: false, width: "210px" },
             ]
 
+        },
+        districtsChoices() {
+            if (this.districts.length == 0 || this.districtsFull == {}) {
+                return [];
+            }
+
+            return this.districts.map(district => { district.displayName = this.districtsFull[district.ags].county; return district;} );
         },
     }
 }

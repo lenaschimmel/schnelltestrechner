@@ -383,8 +383,8 @@
 
                       <template v-if="incidenceSource == 'district'">
                         <p>Landkreis:
-                          <v-select v-model="districtId" :items="districts" item-text="name" item-value="ags" solo>
-                          </v-select>
+                          <v-autocomplete v-model="districtId" :items="districtsChoices" item-text="displayName" item-value="ags" solo>
+                          </v-autocomplete>
                         </p>
                       </template>
 
