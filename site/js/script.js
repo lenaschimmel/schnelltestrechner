@@ -166,7 +166,15 @@ const RapidTestVueApp = {
                 .catch(error => console.log(error));;
         },
         formatPercent(value) {
-            return this.percentFormatter.format(value);
+            // The percentFormatter will always display four significant digits. For very small values p,
+            // percentFormatter.format(1-p) will already round up to "100%" while percentFormatter.format(p)
+            // will still show 0.00000.. with many zeros, followed by four significant digits.
+            // These small numbers are not practically useful, so let's round them down to 0 manually.
+            // See the comment in bayesFactorPos() for a related issue.
+            if (value < 0.0000015)
+                return this.percentFormatter.format(0);
+            else
+                return this.percentFormatter.format(value);
         },
         formatNumber(value) {
             return this.numberFormatter.format(value);
@@ -436,10 +444,16 @@ const RapidTestVueApp = {
             return 1.0 - this.sensitivity;
         },
         bayesFactorPos() {
+            // If the false positive rate is 0, the bayes facotr would be infinity. This will break other computetions later.
+            // Using a hight, finite value kinda fixes it. We used to return 9999 here, which was so far from infinity that
+            // the result was useless. Using 99,999,999 instead reduces the error so much that it disappears from the
+            // result display due to rounding - at least for true-positives which will be 100%.
+            // It would still show 0.0001444 % false-positives, which will not be rounded down to 0 because of the 
+            // way small percentages are formatted (four significant digits).
             if (this.fpr > 0)
-                return this.sensitivity / this.fpr;
+                return Math.min(99999999, this.sensitivity / this.fpr);
             else
-                return 9999;
+                return 99999999;
         },
         bayesFactorNeg() {
             return this.fnr / this.specificity;
