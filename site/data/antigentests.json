@@ -1,5 +1,62 @@
 [
   {
+    "id": "AT116/21",
+    "name": "Panbio (TM) Covid-19 Ag Rapid Test Device (Nasal)",
+    "pei": true,
+    "manufacturer": "Abbott Rapid Diagnostics Jena GmbH",
+    "Hersteller Stadt": "Jena",
+    "Hersteller Land": "DE",
+    "EU Bevollmächtigter Name": "",
+    "EU Bevollmächtigter Stadt": "",
+    "EU Bevollmächtigter Land": "",
+    "Testort*": "POC (ohne Gerät)",
+    "tradename": [
+      "Panbio (TM) Covid-19 Ag Rapid Test Device (Nasal)"
+    ],
+    "distributors": [
+      "Abbott Rapid Diagnostics Germany GmbH"
+    ],
+    "studies": {
+      "39": {
+        "author": "FINDdx",
+        "location": "Germany",
+        "quadas": "low concern",
+        "independent": "yes",
+        "sampleCondition": "fresh",
+        "sampleType": "AN/MT",
+        "sampleSize": "281",
+        "sensitivity": {
+          "avg": 0.8640000000000001,
+          "min": 0.733,
+          "max": 0.9390000000000001
+        },
+        "specificity": {
+          "avg": 0.992,
+          "min": 0.97,
+          "max": 0.998
+        },
+        "testId": "AT116/21",
+        "id": 39
+      },
+      "152": {
+        "author": "manufacturer",
+        "id": 152,
+        "sensitivity": {
+          "avg": 0.981,
+          "min": 0.93,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.998,
+          "min": 0.986,
+          "max": 1
+        }
+      }
+    },
+    "selftest": false,
+    "shops": []
+  },
+  {
     "id": "AT005/20",
     "name": "Panbio™ COVID-19 Ag Rapid Test Device",
     "pei": true,
@@ -679,9 +736,9 @@
         "testId": "AT005/20",
         "id": 38
       },
-      "152": {
+      "153": {
         "author": "manufacturer",
-        "id": 152,
+        "id": 153,
         "sensitivity": {
           "avg": 0.914,
           "min": 0.85,
@@ -690,63 +747,6 @@
         "specificity": {
           "avg": 0.998,
           "min": 0.988,
-          "max": 1
-        }
-      }
-    },
-    "selftest": false,
-    "shops": []
-  },
-  {
-    "id": "AT116/21",
-    "name": "Panbio (TM) Covid-19 Ag Rapid Test Device (Nasal)",
-    "pei": true,
-    "manufacturer": "Abbott Rapid Diagnostics Jena GmbH",
-    "Hersteller Stadt": "Jena",
-    "Hersteller Land": "DE",
-    "EU Bevollmächtigter Name": "",
-    "EU Bevollmächtigter Stadt": "",
-    "EU Bevollmächtigter Land": "",
-    "Testort*": "POC (ohne Gerät)",
-    "tradename": [
-      "Panbio (TM) Covid-19 Ag Rapid Test Device (Nasal)"
-    ],
-    "distributors": [
-      "Abbott Rapid Diagnostics Germany GmbH"
-    ],
-    "studies": {
-      "39": {
-        "author": "FINDdx",
-        "location": "Germany",
-        "quadas": "low concern",
-        "independent": "yes",
-        "sampleCondition": "fresh",
-        "sampleType": "AN/MT",
-        "sampleSize": "281",
-        "sensitivity": {
-          "avg": 0.8640000000000001,
-          "min": 0.733,
-          "max": 0.9390000000000001
-        },
-        "specificity": {
-          "avg": 0.992,
-          "min": 0.97,
-          "max": 0.998
-        },
-        "testId": "AT116/21",
-        "id": 39
-      },
-      "153": {
-        "author": "manufacturer",
-        "id": 153,
-        "sensitivity": {
-          "avg": 0.981,
-          "min": 0.93,
-          "max": 0.99
-        },
-        "specificity": {
-          "avg": 0.998,
-          "min": 0.986,
           "max": 1
         }
       }
@@ -829,7 +829,7 @@
   {
     "id": "AT155/20",
     "name": "SARS-CoV-2-Antigenschnelltest",
-    "pei": false,
+    "pei": true,
     "manufacturer": "ACON Biotech (Hangzhou) Co., Ltd",
     "Hersteller Stadt": "District, Hangzhou",
     "Hersteller Land": "CN",
@@ -900,21 +900,23 @@
     "shops": []
   },
   {
-    "id": "AT283/21",
-    "name": "Ritter® Easy Check SARS-CoV-2 Antigen Rapid Test",
-    "pei": false,
+    "id": "AT261/21",
+    "name": "Flowflex SARS-CoV-2 Antigen Rapid Test",
+    "pei": true,
     "manufacturer": "ACON Laboratories, Inc.",
     "Hersteller Stadt": "San Diego",
     "Hersteller Land": "US",
     "EU Bevollmächtigter Name": "MDSS GmbH",
     "EU Bevollmächtigter Stadt": "Hannover",
     "EU Bevollmächtigter Land": "DE",
-    "Testort*": "POC (mit Gerät)",
+    "Testort*": "POC (ohne Gerät)",
     "tradename": [
-      "Ritter® Easy Check SARS-CoV-2 Antigen Rapid Test"
+      "Flowflex SARS-CoV-2 Antigen Rapid Test",
+      " Flowflex SARS-CoV-2 Antigen Rapid Test",
+      " Flowflex SARS-CoV-2 Antigen Rapid Test"
     ],
     "distributors": [
-      "Gesino GmbH"
+      "MePro GmbHMePro GmbHMePro GmbH"
     ],
     "studies": {
       "158": {
@@ -972,23 +974,21 @@
     "shops": []
   },
   {
-    "id": "AT261/21",
-    "name": "Flowflex SARS-CoV-2 Antigen Rapid Test",
-    "pei": false,
+    "id": "AT283/21",
+    "name": "Ritter® Easy Check SARS-CoV-2 Antigen Rapid Test",
+    "pei": true,
     "manufacturer": "ACON Laboratories, Inc.",
     "Hersteller Stadt": "San Diego",
     "Hersteller Land": "US",
     "EU Bevollmächtigter Name": "MDSS GmbH",
     "EU Bevollmächtigter Stadt": "Hannover",
     "EU Bevollmächtigter Land": "DE",
-    "Testort*": "POC (ohne Gerät)",
+    "Testort*": "POC (mit Gerät)",
     "tradename": [
-      "Flowflex SARS-CoV-2 Antigen Rapid Test",
-      " Flowflex SARS-CoV-2 Antigen Rapid Test",
-      " Flowflex SARS-CoV-2 Antigen Rapid Test"
+      "Ritter® Easy Check SARS-CoV-2 Antigen Rapid Test"
     ],
     "distributors": [
-      "MePro GmbHMePro GmbHMePro GmbH"
+      "Gesino GmbH"
     ],
     "studies": {
       "160": {
@@ -1633,6 +1633,42 @@
     "shops": []
   },
   {
+    "id": "AT080/21",
+    "name": "Asan Easy Test Influenza/COVID-19 Ag Kombi",
+    "pei": false,
+    "manufacturer": "ASAN PHARM. CO., LTD.",
+    "Hersteller Stadt": "Gyeonggi-do",
+    "Hersteller Land": "KR",
+    "EU Bevollmächtigter Name": "MT Promedt / Medical Technology Promedt Consulting GmbH",
+    "EU Bevollmächtigter Stadt": "St. Ingbert",
+    "EU Bevollmächtigter Land": "DE",
+    "Testort*": "POC (ohne Gerät)",
+    "tradename": [
+      "Asan Easy Test Influenza/COVID-19 Ag Kombi"
+    ],
+    "distributors": [
+      "ARIES HEALTH  SOLUTIONS GmbH"
+    ],
+    "studies": {
+      "178": {
+        "author": "manufacturer",
+        "id": 178,
+        "sensitivity": {
+          "avg": 0.9467,
+          "min": 0.89,
+          "max": 0.97
+        },
+        "specificity": {
+          "avg": 0.9856999999999999,
+          "min": 0.9667,
+          "max": 0.9953
+        }
+      }
+    },
+    "selftest": false,
+    "shops": []
+  },
+  {
     "id": "AT286/20",
     "name": "COVID -19 Antigen Rapid test Device",
     "pei": false,
@@ -1650,9 +1686,9 @@
       "O2O EurAsia GmbH"
     ],
     "studies": {
-      "178": {
+      "179": {
         "author": "manufacturer",
-        "id": 178,
+        "id": 179,
         "sensitivity": {
           "avg": 0.802,
           "min": 0.73,
@@ -1686,9 +1722,9 @@
       "Servacon Austria"
     ],
     "studies": {
-      "179": {
+      "180": {
         "author": "manufacturer",
-        "id": 179,
+        "id": 180,
         "sensitivity": {
           "avg": 0.976,
           "min": 0.91,
@@ -1722,9 +1758,9 @@
       "IMACO GmbH"
     ],
     "studies": {
-      "180": {
+      "181": {
         "author": "manufacturer",
-        "id": 180,
+        "id": 181,
         "sensitivity": {
           "avg": 0.9318000000000001,
           "min": 0.89,
@@ -1733,42 +1769,6 @@
         "specificity": {
           "avg": 0.9932,
           "min": 0.9555,
-          "max": 1
-        }
-      }
-    },
-    "selftest": false,
-    "shops": []
-  },
-  {
-    "id": "AT374/20",
-    "name": "COVID-19 Antigen Schnelltest",
-    "pei": true,
-    "manufacturer": "AXIOM Gesellschaft für Diagnostica und Biochemica mbH",
-    "Hersteller Stadt": "Bürstadt",
-    "Hersteller Land": "DE",
-    "EU Bevollmächtigter Name": "",
-    "EU Bevollmächtigter Stadt": "",
-    "EU Bevollmächtigter Land": "",
-    "Testort*": "POC (ohne Gerät)",
-    "tradename": [
-      "COVID-19 Antigen Schnelltest"
-    ],
-    "distributors": [
-      "AXIOM Diagnostics"
-    ],
-    "studies": {
-      "181": {
-        "author": "manufacturer",
-        "id": 181,
-        "sensitivity": {
-          "avg": 0.981,
-          "min": 0.95,
-          "max": 1
-        },
-        "specificity": {
-          "avg": 1,
-          "min": 1,
           "max": 1
         }
       }
@@ -1813,6 +1813,42 @@
     "shops": []
   },
   {
+    "id": "AT374/20",
+    "name": "COVID-19 Antigen Schnelltest",
+    "pei": true,
+    "manufacturer": "AXIOM Gesellschaft für Diagnostica und Biochemica mbH",
+    "Hersteller Stadt": "Bürstadt",
+    "Hersteller Land": "DE",
+    "EU Bevollmächtigter Name": "",
+    "EU Bevollmächtigter Stadt": "",
+    "EU Bevollmächtigter Land": "",
+    "Testort*": "POC (ohne Gerät)",
+    "tradename": [
+      "COVID-19 Antigen Schnelltest"
+    ],
+    "distributors": [
+      "AXIOM Diagnostics"
+    ],
+    "studies": {
+      "183": {
+        "author": "manufacturer",
+        "id": 183,
+        "sensitivity": {
+          "avg": 0.981,
+          "min": 0.95,
+          "max": 1
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 1,
+          "max": 1
+        }
+      }
+    },
+    "selftest": false,
+    "shops": []
+  },
+  {
     "id": "AT061/20",
     "name": "Dia Sure COVID-19 Antigen Rapid Test Device",
     "pei": true,
@@ -1830,9 +1866,9 @@
       "NanoRepro AG"
     ],
     "studies": {
-      "183": {
+      "184": {
         "author": "manufacturer",
-        "id": 183,
+        "id": 184,
         "sensitivity": {
           "avg": 0.943,
           "min": 0.84,
@@ -1963,9 +1999,9 @@
         "testId": "AT200/20",
         "id": 44
       },
-      "184": {
+      "185": {
         "author": "manufacturer",
-        "id": 184,
+        "id": 185,
         "sensitivity": {
           "avg": 0.84,
           "min": 0.67,
@@ -2003,9 +2039,9 @@
       "CHF Export Import GmbHHandelshaus Lerch e.k.High Lux International Trading GmbHPromotion Pets GmbHS2 Health GmbH"
     ],
     "studies": {
-      "185": {
+      "186": {
         "author": "manufacturer",
-        "id": 185,
+        "id": 186,
         "sensitivity": {
           "avg": 0.965,
           "min": 0.93,
@@ -2039,9 +2075,9 @@
       "fameditec GmbH"
     ],
     "studies": {
-      "186": {
+      "187": {
         "author": "manufacturer",
-        "id": 186,
+        "id": 187,
         "sensitivity": {
           "avg": 0.9732999999999999,
           "min": 0.95,
@@ -2073,15 +2109,16 @@
       " Coronavirus (2019-nCoV)-Antigentest - Speichel",
       " Novel Coronavirus (2019-nCoV)-Antigentest   (Kolloidales Gold) - Speichel  Gebrauchsanweisung",
       " Novel Coronavirus 2019-nCoV Antigen Test (Colloidal Gold) - Saliva",
+      " Novel Coronavirus 2019-nCoV Antigen Test (Colloidal Gold) Saliva",
       " Novel Coronavirus 2019-nCoV Antigen-Spucktest"
     ],
     "distributors": [
-      "Der Werbemarkt GmbHDr. Grob Healthcare GmbHFertig! GmbHHager & Werken GmbH & Co KGunizell Medicare GmbH"
+      "Der Werbemarkt GmbHDr. Grob Healthcare GmbHFertig! GmbHHager & Werken GmbH & Co KGPraxisdienst GmbH & Co. KGunizell Medicare GmbH"
     ],
     "studies": {
-      "187": {
+      "188": {
         "author": "manufacturer",
-        "id": 187,
+        "id": 188,
         "sensitivity": {
           "avg": 0.96,
           "min": 0.9,
@@ -2115,9 +2152,9 @@
       "Dr. Grob Healthcare GmbH"
     ],
     "studies": {
-      "188": {
+      "189": {
         "author": "manufacturer",
-        "id": 188,
+        "id": 189,
         "sensitivity": {
           "avg": 0.9537,
           "min": 0.89,
@@ -2169,9 +2206,9 @@
       "ABBCO Schlafsysteme GmbHALSCO Berufskleidungs-Service GmbHCareline GmbH & Co. KGDer Werbemarkt GmbHDetools GmbHDr. Grob HealthcareIgefa Handelsgesellschaft mbH & Co. KGMaiMed GmbHTextil One GmbHVT Medical by Vegan Travel UG (haftungsbeschraenkt)Weforyou GmbhZINNZ GmbHdeucin GmbHmr sanicom GmbHunizell Medicare GmbH"
     ],
     "studies": {
-      "189": {
+      "190": {
         "author": "manufacturer",
-        "id": 189,
+        "id": 190,
         "sensitivity": {
           "avg": 0.971,
           "min": 0.93,
@@ -2206,9 +2243,9 @@
       "KL GmbH"
     ],
     "studies": {
-      "190": {
+      "191": {
         "author": "manufacturer",
-        "id": 190,
+        "id": 191,
         "sensitivity": {
           "avg": 0.9688,
           "min": 0.92,
@@ -2242,9 +2279,9 @@
       "GESINO GmbH"
     ],
     "studies": {
-      "191": {
+      "192": {
         "author": "manufacturer",
-        "id": 191,
+        "id": 192,
         "sensitivity": {
           "avg": 0.9618000000000001,
           "min": 0.91,
@@ -2281,9 +2318,9 @@
       "BIOTREND Chemikalien GmbHBauer -KarlsruheMPV MEDICAL GmbHTemiz AVZ GmbH"
     ],
     "studies": {
-      "192": {
+      "193": {
         "author": "manufacturer",
-        "id": 192,
+        "id": 193,
         "sensitivity": {
           "avg": 0.92,
           "min": 0.83,
@@ -2335,9 +2372,9 @@
       " OKM GmbHROBEX ENERGY SYSTEMS GmbHSaleoMed Medizintechnik GmbH"
     ],
     "studies": {
-      "193": {
+      "194": {
         "author": "manufacturer",
-        "id": 193,
+        "id": 194,
         "sensitivity": {
           "avg": 0.92,
           "min": 0.83,
@@ -2371,9 +2408,9 @@
       "MPV MEDICAL GmbH"
     ],
     "studies": {
-      "194": {
+      "195": {
         "author": "manufacturer",
-        "id": 194,
+        "id": 195,
         "sensitivity": {
           "avg": 0.9048,
           "min": 0.83,
@@ -2407,9 +2444,9 @@
       "SALUBRIS Handelsagentur Dr. Christian Hemerka"
     ],
     "studies": {
-      "195": {
+      "196": {
         "author": "manufacturer",
-        "id": 195,
+        "id": 196,
         "sensitivity": {
           "avg": 0.9375,
           "min": 0.88,
@@ -2444,9 +2481,9 @@
       "Detools GmbHSanbio BV"
     ],
     "studies": {
-      "196": {
+      "197": {
         "author": "manufacturer",
-        "id": 196,
+        "id": 197,
         "sensitivity": {
           "avg": 0.966,
           "min": 0.92,
@@ -2480,9 +2517,9 @@
       "HUMAN Gesellschaft für Biochemica und Diagnostica mbH"
     ],
     "studies": {
-      "197": {
+      "198": {
         "author": "manufacturer",
-        "id": 197,
+        "id": 198,
         "sensitivity": {
           "avg": 0.961,
           "min": 0.92,
@@ -2516,9 +2553,9 @@
       "ScheBo Biotech AG"
     ],
     "studies": {
-      "198": {
+      "199": {
         "author": "manufacturer",
-        "id": 198,
+        "id": 199,
         "sensitivity": {
           "avg": 0.9677,
           "min": 0.88,
@@ -2552,9 +2589,9 @@
       ""
     ],
     "studies": {
-      "199": {
+      "200": {
         "author": "manufacturer",
-        "id": 199,
+        "id": 200,
         "sensitivity": {
           "avg": 0.9570000000000001,
           "min": 0.9,
@@ -2588,9 +2625,9 @@
       "MICRO-MEDICAL Instrumente GmbH"
     ],
     "studies": {
-      "200": {
+      "201": {
         "author": "manufacturer",
-        "id": 200,
+        "id": 201,
         "sensitivity": {
           "avg": 0.9470000000000001,
           "min": 0.89,
@@ -2624,9 +2661,9 @@
       "Concile GmbH"
     ],
     "studies": {
-      "201": {
+      "202": {
         "author": "manufacturer",
-        "id": 201,
+        "id": 202,
         "sensitivity": {
           "avg": 0.892,
           "min": 0.81,
@@ -2660,9 +2697,9 @@
       "concile GmbH"
     ],
     "studies": {
-      "202": {
+      "203": {
         "author": "manufacturer",
-        "id": 202,
+        "id": 203,
         "sensitivity": {
           "avg": 0.892,
           "min": 0.81,
@@ -2697,9 +2734,9 @@
       "Aidian Germany GmbHHirsch Apotheke OHG"
     ],
     "studies": {
-      "203": {
+      "204": {
         "author": "manufacturer",
-        "id": 203,
+        "id": 204,
         "sensitivity": {
           "avg": 0.96,
           "min": 0.93,
@@ -2734,9 +2771,9 @@
       "KNJ-Team-Trading"
     ],
     "studies": {
-      "204": {
+      "205": {
         "author": "manufacturer",
-        "id": 204,
+        "id": 205,
         "sensitivity": {
           "avg": 0.9649,
           "min": 0.91,
@@ -2770,9 +2807,9 @@
       "Medical Care Professional GmbH"
     ],
     "studies": {
-      "205": {
+      "206": {
         "author": "manufacturer",
-        "id": 205,
+        "id": 206,
         "sensitivity": {
           "avg": 0.9333,
           "min": 0.77,
@@ -2806,9 +2843,9 @@
       "gurumB GmbH"
     ],
     "studies": {
-      "206": {
+      "207": {
         "author": "manufacturer",
-        "id": 206,
+        "id": 207,
         "sensitivity": {
           "avg": 0.95,
           "min": 0.91,
@@ -2863,9 +2900,9 @@
         "testId": "AT050/20",
         "id": 71
       },
-      "207": {
+      "208": {
         "author": "manufacturer",
-        "id": 207,
+        "id": 208,
         "sensitivity": {
           "avg": 0.904,
           "min": 0.83,
@@ -2899,9 +2936,9 @@
       "Biozol Diagnostica Vertrieb GmbH"
     ],
     "studies": {
-      "208": {
+      "209": {
         "author": "manufacturer",
-        "id": 208,
+        "id": 209,
         "sensitivity": {
           "avg": 0.9059999999999999,
           "min": 0.84,
@@ -2938,9 +2975,9 @@
       "BIOTREND Chemikalien GmbHDiaSorin Deutschland GmbHHenry Schein Medical GmbHNanoRepro AG"
     ],
     "studies": {
-      "209": {
+      "210": {
         "author": "manufacturer",
-        "id": 209,
+        "id": 210,
         "sensitivity": {
           "avg": 0.9455,
           "min": 0.83,
@@ -2969,42 +3006,6 @@
     "Testort*": "POC (ohne Gerät)",
     "tradename": [
       "SARS-CoV-2 Kassettenschnelltest inkl. pos. Kontrolle"
-    ],
-    "distributors": [
-      "bestbion dx GmbH"
-    ],
-    "studies": {
-      "210": {
-        "author": "manufacturer",
-        "id": 210,
-        "sensitivity": {
-          "avg": 0.929,
-          "min": 0.76,
-          "max": 0.99
-        },
-        "specificity": {
-          "avg": 0.996,
-          "min": 0.976,
-          "max": 1
-        }
-      }
-    },
-    "selftest": false,
-    "shops": []
-  },
-  {
-    "id": "AT289/20",
-    "name": "SARS-CoV-2 + Flu A + B Triple Kassettenschnelltest inkl. Tupfer + pos. Kontrolle",
-    "pei": false,
-    "manufacturer": "CerTest Biotec S.L.",
-    "Hersteller Stadt": "Zaragoza",
-    "Hersteller Land": "ES",
-    "EU Bevollmächtigter Name": "",
-    "EU Bevollmächtigter Stadt": "",
-    "EU Bevollmächtigter Land": "",
-    "Testort*": "POC (ohne Gerät)",
-    "tradename": [
-      "SARS-CoV-2 + Flu A + B Triple Kassettenschnelltest inkl. Tupfer + pos. Kontrolle"
     ],
     "distributors": [
       "bestbion dx GmbH"
@@ -3065,6 +3066,42 @@
     "shops": []
   },
   {
+    "id": "AT289/20",
+    "name": "SARS-CoV-2 + Flu A + B Triple Kassettenschnelltest inkl. Tupfer + pos. Kontrolle",
+    "pei": false,
+    "manufacturer": "CerTest Biotec S.L.",
+    "Hersteller Stadt": "Zaragoza",
+    "Hersteller Land": "ES",
+    "EU Bevollmächtigter Name": "",
+    "EU Bevollmächtigter Stadt": "",
+    "EU Bevollmächtigter Land": "",
+    "Testort*": "POC (ohne Gerät)",
+    "tradename": [
+      "SARS-CoV-2 + Flu A + B Triple Kassettenschnelltest inkl. Tupfer + pos. Kontrolle"
+    ],
+    "distributors": [
+      "bestbion dx GmbH"
+    ],
+    "studies": {
+      "213": {
+        "author": "manufacturer",
+        "id": 213,
+        "sensitivity": {
+          "avg": 0.929,
+          "min": 0.76,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.996,
+          "min": 0.976,
+          "max": 1
+        }
+      }
+    },
+    "selftest": false,
+    "shops": []
+  },
+  {
     "id": "AT337/20",
     "name": "COVID-19 Antigen Rapid Test (Nasopharyngeal / Oropharyngeal Swab-Casette)(POC)",
     "pei": false,
@@ -3082,9 +3119,9 @@
       ""
     ],
     "studies": {
-      "213": {
+      "214": {
         "author": "manufacturer",
-        "id": 213,
+        "id": 214,
         "sensitivity": {
           "avg": 0.9854999999999999,
           "min": 0.96,
@@ -3118,9 +3155,9 @@
       "NIC GmbH"
     ],
     "studies": {
-      "214": {
+      "215": {
         "author": "manufacturer",
-        "id": 214,
+        "id": 215,
         "sensitivity": {
           "avg": 0.9153,
           "min": 0.84,
@@ -3154,9 +3191,9 @@
       "Servacon Austria"
     ],
     "studies": {
-      "215": {
+      "216": {
         "author": "manufacturer",
-        "id": 215,
+        "id": 216,
         "sensitivity": {
           "avg": 0.9831,
           "min": 0.9,
@@ -3190,9 +3227,9 @@
       "Salutis-Deutschland"
     ],
     "studies": {
-      "216": {
+      "217": {
         "author": "manufacturer",
-        "id": 216,
+        "id": 217,
         "sensitivity": {
           "avg": 0.922,
           "min": 0.86,
@@ -3226,9 +3263,9 @@
       "SALUTIS-Deutschland"
     ],
     "studies": {
-      "217": {
+      "218": {
         "author": "manufacturer",
-        "id": 217,
+        "id": 218,
         "sensitivity": {
           "avg": 0.9640000000000001,
           "min": 0.91,
@@ -3262,9 +3299,9 @@
       "Convergent Technologies"
     ],
     "studies": {
-      "218": {
+      "219": {
         "author": "manufacturer",
-        "id": 218,
+        "id": 219,
         "sensitivity": {
           "avg": 0.9503,
           "min": 0.9,
@@ -3299,9 +3336,9 @@
       "AXNAR GmbHRed One Healthcare GmbH + Co. KG"
     ],
     "studies": {
-      "219": {
+      "220": {
         "author": "manufacturer",
-        "id": 219,
+        "id": 220,
         "sensitivity": {
           "avg": 0.981,
           "min": 0.94,
@@ -3336,9 +3373,9 @@
       "Pharma-Peter GmbHPromotion Pets GmbH"
     ],
     "studies": {
-      "220": {
+      "221": {
         "author": "manufacturer",
-        "id": 220,
+        "id": 221,
         "sensitivity": {
           "avg": 0.975,
           "min": 0.91,
@@ -3374,9 +3411,9 @@
       "Canea Pharma Chemisch Pharmazeutische Vertriebsgesellschaft mbHPXG PharmaRed One Healthcare GmbH + Co. KG"
     ],
     "studies": {
-      "221": {
+      "222": {
         "author": "manufacturer",
-        "id": 221,
+        "id": 222,
         "sensitivity": {
           "avg": 0.976,
           "min": 0.93,
@@ -3410,9 +3447,9 @@
       "SSI Diagnostica A/S"
     ],
     "studies": {
-      "222": {
+      "223": {
         "author": "manufacturer",
-        "id": 222,
+        "id": 223,
         "sensitivity": {
           "avg": 0.904,
           "min": 0.83,
@@ -3446,9 +3483,9 @@
       ""
     ],
     "studies": {
-      "223": {
+      "224": {
         "author": "manufacturer",
-        "id": 223,
+        "id": 224,
         "sensitivity": {
           "avg": 0.965,
           "min": 0.92,
@@ -3483,9 +3520,9 @@
       " Labordiagnostik"
     ],
     "studies": {
-      "224": {
+      "225": {
         "author": "manufacturer",
-        "id": 224,
+        "id": 225,
         "sensitivity": {
           "avg": 0.973,
           "min": 0.9,
@@ -3519,9 +3556,9 @@
       "DiaSorin Deutschland GmbH"
     ],
     "studies": {
-      "225": {
+      "226": {
         "author": "manufacturer",
-        "id": 225,
+        "id": 226,
         "sensitivity": {
           "avg": 0.971,
           "min": 0.85,
@@ -3555,9 +3592,9 @@
       "Brunner.ident"
     ],
     "studies": {
-      "226": {
+      "227": {
         "author": "manufacturer",
-        "id": 226,
+        "id": 227,
         "sensitivity": {
           "avg": 0.9375,
           "min": 0.89,
@@ -3591,9 +3628,9 @@
       "TECOmedical GmbH"
     ],
     "studies": {
-      "227": {
+      "228": {
         "author": "manufacturer",
-        "id": 227,
+        "id": 228,
         "sensitivity": {
           "avg": 0.9298000000000001,
           "min": 0.86,
@@ -3627,9 +3664,9 @@
       "TECOmedical GmbH"
     ],
     "studies": {
-      "228": {
+      "229": {
         "author": "manufacturer",
-        "id": 228,
+        "id": 229,
         "sensitivity": {
           "avg": 0.9570000000000001,
           "min": 0.9,
@@ -3663,9 +3700,9 @@
       "Andanza Int."
     ],
     "studies": {
-      "229": {
+      "230": {
         "author": "manufacturer",
-        "id": 229,
+        "id": 230,
         "sensitivity": {
           "avg": 0.9259999999999999,
           "min": 0.83,
@@ -3699,9 +3736,9 @@
       "TECOmedical GmbH"
     ],
     "studies": {
-      "230": {
+      "231": {
         "author": "manufacturer",
-        "id": 230,
+        "id": 231,
         "sensitivity": {
           "avg": 0.9570000000000001,
           "min": 0.9,
@@ -3735,9 +3772,9 @@
       "fameditec GmbH"
     ],
     "studies": {
-      "231": {
+      "232": {
         "author": "manufacturer",
-        "id": 231,
+        "id": 232,
         "sensitivity": {
           "avg": 0.929,
           "min": 0.87,
@@ -3908,9 +3945,9 @@
         "testId": "AT056/20",
         "id": 68
       },
-      "232": {
+      "233": {
         "author": "manufacturer",
-        "id": 232,
+        "id": 233,
         "sensitivity": {
           "avg": 0.917,
           "min": 0.74,
@@ -3997,9 +4034,9 @@
         "testId": "AT029/20",
         "id": 61
       },
-      "233": {
+      "234": {
         "author": "manufacturer",
-        "id": 233,
+        "id": 234,
         "sensitivity": {
           "avg": 0.8059999999999999,
           "min": 0.69,
@@ -4033,9 +4070,9 @@
       "GA Generic Assays GmbH"
     ],
     "studies": {
-      "234": {
+      "235": {
         "author": "manufacturer",
-        "id": 234,
+        "id": 235,
         "sensitivity": {
           "avg": 0.9706,
           "min": 0.91,
@@ -4072,9 +4109,9 @@
       "ASCANUS Pharma GmbHIVC Pragen GmbHMeridian Bioscience Europe SRLPreventor µTBC GmbH"
     ],
     "studies": {
-      "235": {
+      "236": {
         "author": "manufacturer",
-        "id": 235,
+        "id": 236,
         "sensitivity": {
           "avg": 0.9,
           "min": 0.73,
@@ -4110,9 +4147,9 @@
       "ASCANUS Pharma GmbHIVC Pragen GmbHMTG GmbH"
     ],
     "studies": {
-      "236": {
+      "237": {
         "author": "manufacturer",
-        "id": 236,
+        "id": 237,
         "sensitivity": {
           "avg": 0.9682999999999999,
           "min": 0.92,
@@ -4146,9 +4183,9 @@
       "medienkraftwerk GmbH"
     ],
     "studies": {
-      "237": {
+      "238": {
         "author": "manufacturer",
-        "id": 237,
+        "id": 238,
         "sensitivity": {
           "avg": 0.9503,
           "min": 0.9,
@@ -4188,9 +4225,9 @@
       " Ingo GrebeImuGeX GmbHTriPart-Logistic GmbHmedienkraftwerk GmbH"
     ],
     "studies": {
-      "238": {
+      "239": {
         "author": "manufacturer",
-        "id": 238,
+        "id": 239,
         "sensitivity": {
           "avg": 0.9503,
           "min": 0.9,
@@ -4224,9 +4261,9 @@
       "Infarct Protect AG"
     ],
     "studies": {
-      "239": {
+      "240": {
         "author": "manufacturer",
-        "id": 239,
+        "id": 240,
         "sensitivity": {
           "avg": 0.9686,
           "min": 0.93,
@@ -4260,9 +4297,9 @@
       "Diagenics Group SE"
     ],
     "studies": {
-      "240": {
+      "241": {
         "author": "manufacturer",
-        "id": 240,
+        "id": 241,
         "sensitivity": {
           "avg": 0.9673,
           "min": 0.92,
@@ -4298,9 +4335,9 @@
       "Diagenics Group SEDiagenics Group SEVEWA-Handelsgesellschaft m.b.H."
     ],
     "studies": {
-      "241": {
+      "242": {
         "author": "manufacturer",
-        "id": 241,
+        "id": 242,
         "sensitivity": {
           "avg": 0.9686,
           "min": 0.93,
@@ -4334,9 +4371,9 @@
       ""
     ],
     "studies": {
-      "242": {
+      "243": {
         "author": "manufacturer",
-        "id": 242,
+        "id": 243,
         "sensitivity": {
           "avg": 0.9706,
           "min": 0.93,
@@ -4372,9 +4409,9 @@
       "DOCTIME GmbHMediaConcepts GmbH Abteilung AsiaTrading-GroupTrendy Store GmbH"
     ],
     "studies": {
-      "243": {
+      "244": {
         "author": "manufacturer",
-        "id": 243,
+        "id": 244,
         "sensitivity": {
           "avg": 0.9706,
           "min": 0.93,
@@ -4408,9 +4445,9 @@
       ""
     ],
     "studies": {
-      "244": {
+      "245": {
         "author": "manufacturer",
-        "id": 244,
+        "id": 245,
         "sensitivity": {
           "avg": 0.9304000000000001,
           "min": 0.86,
@@ -4444,9 +4481,9 @@
       ""
     ],
     "studies": {
-      "245": {
+      "246": {
         "author": "manufacturer",
-        "id": 245,
+        "id": 246,
         "sensitivity": {
           "avg": 0.9009999999999999,
           "min": 0.85,
@@ -4480,9 +4517,9 @@
       "Stephana GmbH"
     ],
     "studies": {
-      "246": {
+      "247": {
         "author": "manufacturer",
-        "id": 246,
+        "id": 247,
         "sensitivity": {
           "avg": 0.966,
           "min": 0.92,
@@ -4516,9 +4553,9 @@
       ""
     ],
     "studies": {
-      "247": {
+      "248": {
         "author": "manufacturer",
-        "id": 247,
+        "id": 248,
         "sensitivity": {
           "avg": 0.8758,
           "min": 0.81,
@@ -4552,9 +4589,9 @@
       "Bio-Gram Diagnostics GmbH"
     ],
     "studies": {
-      "248": {
+      "249": {
         "author": "manufacturer",
-        "id": 248,
+        "id": 249,
         "sensitivity": {
           "avg": 0.9,
           "min": 0.78,
@@ -4588,9 +4625,9 @@
       "PHARMADOC GmbH"
     ],
     "studies": {
-      "249": {
+      "250": {
         "author": "manufacturer",
-        "id": 249,
+        "id": 250,
         "sensitivity": {
           "avg": 0.9565,
           "min": 0.9,
@@ -4624,9 +4661,9 @@
       "Pharmadoc"
     ],
     "studies": {
-      "250": {
+      "251": {
         "author": "manufacturer",
-        "id": 250,
+        "id": 251,
         "sensitivity": {
           "avg": 0.9667,
           "min": 0.88,
@@ -4636,46 +4673,6 @@
           "avg": 0.995,
           "min": 0.9722,
           "max": 0.9991
-        }
-      }
-    },
-    "selftest": false,
-    "shops": []
-  },
-  {
-    "id": "AT258/21",
-    "name": "2019-nCov-Antigen-Saliva/Sputum-Test",
-    "pei": false,
-    "manufacturer": "Guangzhou Wondfo Biotech Co., Ltd",
-    "Hersteller Stadt": "Guangzhou",
-    "Hersteller Land": "CN",
-    "EU Bevollmächtigter Name": "Qarad BV",
-    "EU Bevollmächtigter Stadt": "Geel",
-    "EU Bevollmächtigter Land": "BE",
-    "Testort*": "",
-    "tradename": [
-      "2019-nCov-Antigen-Saliva/Sputum-Test",
-      " 2019-nCov-Antigen-Saliva/Sputum-Test",
-      " Dr. Starke 2019- nCoV- Antigen- Saliva / Sputum Test",
-      " Lama 2019-nCov-Antigen-Saliva/Sputum-Test",
-      " Lama 2019-nCov-Antigen-Saliva/Sputum-Test"
-    ],
-    "distributors": [
-      "Biamed GmbHComtex GmbHGlobal Human Health&Care AGLama Licensing GmbHLifetec Electronics GmbH"
-    ],
-    "studies": {
-      "251": {
-        "author": "manufacturer",
-        "id": 251,
-        "sensitivity": {
-          "avg": 0.976,
-          "min": 0.93,
-          "max": 0.99
-        },
-        "specificity": {
-          "avg": 0.9909,
-          "min": 0.9675,
-          "max": 0.9989
         }
       }
     },
@@ -4695,10 +4692,11 @@
     "Testort*": "",
     "tradename": [
       "Dr. Starke 2019-nCov-Antigen-Test ( Lateral Flow Method ) Nasal Swab",
+      " Lama 2019-nCov-Antigen-Test ( Lateral Flow Method ) Nasal Swab",
       " Lifetec 2019-nCov-Antigen-Test ( Lateral Flow Method ) Nasal Swab"
     ],
     "distributors": [
-      "KL GmbHLifetec Electronics GmbH"
+      "KL GmbHLama Licensing GmbHLifetec Electronics GmbH"
     ],
     "studies": {
       "252": {
@@ -4787,6 +4785,46 @@
     "shops": []
   },
   {
+    "id": "AT258/21",
+    "name": "2019-nCov-Antigen-Saliva/Sputum-Test",
+    "pei": false,
+    "manufacturer": "Guangzhou Wondfo Biotech Co., Ltd",
+    "Hersteller Stadt": "Guangzhou",
+    "Hersteller Land": "CN",
+    "EU Bevollmächtigter Name": "Qarad BV",
+    "EU Bevollmächtigter Stadt": "Geel",
+    "EU Bevollmächtigter Land": "BE",
+    "Testort*": "",
+    "tradename": [
+      "2019-nCov-Antigen-Saliva/Sputum-Test",
+      " 2019-nCov-Antigen-Saliva/Sputum-Test",
+      " Dr. Starke 2019- nCoV- Antigen- Saliva / Sputum Test",
+      " Lama 2019-nCov-Antigen-Saliva/Sputum-Test",
+      " Lama 2019-nCov-Antigen-Saliva/Sputum-Test"
+    ],
+    "distributors": [
+      "Biamed GmbHComtex GmbHGlobal Human Health&Care AGLama Licensing GmbHLifetec Electronics GmbH"
+    ],
+    "studies": {
+      "254": {
+        "author": "manufacturer",
+        "id": 254,
+        "sensitivity": {
+          "avg": 0.976,
+          "min": 0.93,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.9909,
+          "min": 0.9675,
+          "max": 0.9989
+        }
+      }
+    },
+    "selftest": false,
+    "shops": []
+  },
+  {
     "id": "AT207/20",
     "name": "LUMIRATEK SARS-CoV-2 + Flu A&B Antigen Combo Rapid Test Cassette",
     "pei": false,
@@ -4804,9 +4842,9 @@
       "LumiraDx GmbH"
     ],
     "studies": {
-      "254": {
+      "255": {
         "author": "manufacturer",
-        "id": 254,
+        "id": 255,
         "sensitivity": {
           "avg": 0.95,
           "min": 0.83,
@@ -4840,9 +4878,9 @@
       "LumiraDx GmbH"
     ],
     "studies": {
-      "255": {
+      "256": {
         "author": "manufacturer",
-        "id": 255,
+        "id": 256,
         "sensitivity": {
           "avg": 0.95,
           "min": 0.83,
@@ -4876,9 +4914,9 @@
       "ETH Wertstoffrecycling GmbH"
     ],
     "studies": {
-      "256": {
+      "257": {
         "author": "manufacturer",
-        "id": 256,
+        "id": 257,
         "sensitivity": {
           "avg": 0.899,
           "min": 0.83,
@@ -4912,9 +4950,9 @@
       "Promeditech GmbH"
     ],
     "studies": {
-      "257": {
+      "258": {
         "author": "manufacturer",
-        "id": 257,
+        "id": 258,
         "sensitivity": {
           "avg": 0.932,
           "min": 0.86,
@@ -4924,6 +4962,46 @@
           "avg": 0.992,
           "min": 0.971,
           "max": 0.9990000000000001
+        }
+      }
+    },
+    "selftest": false,
+    "shops": []
+  },
+  {
+    "id": "AT373/21",
+    "name": "COVID-19 Antigen Rapid Test Cassette (Nasal Swab)",
+    "pei": true,
+    "manufacturer": "Hangzhou Clongene Biotech Co., Ltd.",
+    "Hersteller Stadt": "Hangzhou",
+    "Hersteller Land": "CN",
+    "EU Bevollmächtigter Name": "Shanghai International Holding Corp. GmbH (Europe)",
+    "EU Bevollmächtigter Stadt": "Hamburg",
+    "EU Bevollmächtigter Land": "DE",
+    "Testort*": "POC (ohne Gerät)",
+    "tradename": [
+      "COVID-19 Antigen Rapid Test Casette (Nasal Swab)",
+      " COVID-19 Antigen Rapid Test Cassette (Nasal Swab)",
+      " COVID-19 Antigen Rapid Test Cassette (Nasal Swab)",
+      " COVID-19 Antigen Rapid Test Cassette (Nasal Swab)",
+      " COVID-19 Antigen Rapid Test Cassette (Nasal Swab)"
+    ],
+    "distributors": [
+      "Adooha GmbHDeutsche HansaGT GmbHNOC Pharma GmbHWinlong GmbHulti med Products (Deutschland) GmbH"
+    ],
+    "studies": {
+      "259": {
+        "author": "manufacturer",
+        "id": 259,
+        "sensitivity": {
+          "avg": 0.914,
+          "min": 0.85,
+          "max": 0.94
+        },
+        "specificity": {
+          "avg": 0.9940000000000001,
+          "min": 0.981,
+          "max": 0.998
         }
       }
     },
@@ -4977,9 +5055,9 @@
       "Alpha-Medics GmbHAlpha-Medics GmbHBIOTREND Chemikalien GmbHBauer -KarlsruheDH Mobility B.V.Der Werbemarkt GmbHDetools GmbHDeutsche HansaGT GmbHDixion Vertrieb medizinischer Geräte GmbHDunox GmbHEYBEL GmbHEmotive Systems GmbHEnkatex Workwear GmbHErwin Kowsky GmbH & Co. KGGESINO GmbHGesundheit2000 F. Steege e.K.Haemato Pharm GmbHPCR-Lab-Products GbRPraxisdienst GmbH & Co. KGPromo Trading GmbHS2 Health GmbHS2 Health GmbHSchloss Wendischbora GmbHSchreiner Elektronik GmbHSolenal GmbHSwissbrands GmbHWinlong GmbHmedienkraftwerk GmbHulti med Products (Deutschland) GmbH"
     ],
     "studies": {
-      "258": {
+      "260": {
         "author": "manufacturer",
-        "id": 258,
+        "id": 260,
         "sensitivity": {
           "avg": 0.985,
           "min": 0.91,
@@ -5007,15 +5085,16 @@
     "EU Bevollmächtigter Land": "DE",
     "Testort*": "POC (ohne Gerät)",
     "tradename": [
-      "CLUNGENE COVID-19 Antigen Rapid Test Cassette"
+      "CLUNGENE COVID-19 Antigen Rapid Test Cassette",
+      " Clongene COVID-19 Antigen Rapid Test"
     ],
     "distributors": [
-      "HansaComex GmbH"
+      "Balmung Medical Handel Deutschland GmbHHansaComex GmbH"
     ],
     "studies": {
-      "259": {
+      "261": {
         "author": "manufacturer",
-        "id": 259,
+        "id": 261,
         "sensitivity": {
           "avg": 0.98,
           "min": 0.94,
@@ -5052,9 +5131,9 @@
       "AngelaQ GmbHPraxisdienst GmbH & Co. KGSolenal GmbHSundoc EU GmbH"
     ],
     "studies": {
-      "260": {
+      "262": {
         "author": "manufacturer",
-        "id": 260,
+        "id": 262,
         "sensitivity": {
           "avg": 0.977,
           "min": 0.93,
@@ -5093,9 +5172,9 @@
       "Adooha GmbHAngelaQ GmbHBestresources Europe GmbHDetools GmbHDunox GmbHPraxisdienst GmbH & Co. KG"
     ],
     "studies": {
-      "261": {
+      "263": {
         "author": "manufacturer",
-        "id": 261,
+        "id": 263,
         "sensitivity": {
           "avg": 0.968,
           "min": 0.92,
@@ -5105,45 +5184,6 @@
           "avg": 0.996,
           "min": 0.985,
           "max": 0.9990000000000001
-        }
-      }
-    },
-    "selftest": false,
-    "shops": []
-  },
-  {
-    "id": "AT373/21",
-    "name": "COVID-19 Antigen Rapid Test Cassette (Nasal Swab)",
-    "pei": true,
-    "manufacturer": "Hangzhou Clongene Biotech Co., Ltd.",
-    "Hersteller Stadt": "Hangzhou",
-    "Hersteller Land": "CN",
-    "EU Bevollmächtigter Name": "Shanghai International Holding Corp. GmbH (Europe)",
-    "EU Bevollmächtigter Stadt": "Hamburg",
-    "EU Bevollmächtigter Land": "DE",
-    "Testort*": "POC (ohne Gerät)",
-    "tradename": [
-      "COVID-19 Antigen Rapid Test Casette (Nasal Swab)",
-      " COVID-19 Antigen Rapid Test Cassette (Nasal Swab)",
-      " COVID-19 Antigen Rapid Test Cassette (Nasal Swab)",
-      " COVID-19 Antigen Rapid Test Cassette (Nasal Swab)"
-    ],
-    "distributors": [
-      "Adooha GmbHDeutsche HansaGT GmbHWinlong GmbHulti med Products (Deutschland) GmbH"
-    ],
-    "studies": {
-      "262": {
-        "author": "manufacturer",
-        "id": 262,
-        "sensitivity": {
-          "avg": 0.914,
-          "min": 0.85,
-          "max": 0.94
-        },
-        "specificity": {
-          "avg": 0.9940000000000001,
-          "min": 0.981,
-          "max": 0.998
         }
       }
     },
@@ -5168,9 +5208,9 @@
       ""
     ],
     "studies": {
-      "263": {
+      "264": {
         "author": "manufacturer",
-        "id": 263,
+        "id": 264,
         "sensitivity": {
           "avg": 0.973,
           "min": 0.85,
@@ -5179,42 +5219,6 @@
         "specificity": {
           "avg": 1,
           "min": 0.9494,
-          "max": 1
-        }
-      }
-    },
-    "selftest": false,
-    "shops": []
-  },
-  {
-    "id": "AT228/20",
-    "name": "SARS-CoV2 Antigen Rapid Test",
-    "pei": true,
-    "manufacturer": "Hangzhou Immuno Biotech Co.,Ltd",
-    "Hersteller Stadt": "Hangzhou City",
-    "Hersteller Land": "CN",
-    "EU Bevollmächtigter Name": "Lotus NL B.V.",
-    "EU Bevollmächtigter Stadt": "The Hague",
-    "EU Bevollmächtigter Land": "NL",
-    "Testort*": "POC (ohne Gerät)",
-    "tradename": [
-      "SARS-CoV2 Antigen Rapid Test"
-    ],
-    "distributors": [
-      "Spreenic GmbH"
-    ],
-    "studies": {
-      "264": {
-        "author": "manufacturer",
-        "id": 264,
-        "sensitivity": {
-          "avg": 0.956,
-          "min": 0.88,
-          "max": 0.98
-        },
-        "specificity": {
-          "avg": 1,
-          "min": 0.9878,
           "max": 1
         }
       }
@@ -5295,6 +5299,42 @@
     "shops": []
   },
   {
+    "id": "AT228/20",
+    "name": "SARS-CoV2 Antigen Rapid Test",
+    "pei": true,
+    "manufacturer": "Hangzhou Immuno Biotech Co.,Ltd",
+    "Hersteller Stadt": "Hangzhou City",
+    "Hersteller Land": "CN",
+    "EU Bevollmächtigter Name": "Lotus NL B.V.",
+    "EU Bevollmächtigter Stadt": "The Hague",
+    "EU Bevollmächtigter Land": "NL",
+    "Testort*": "POC (ohne Gerät)",
+    "tradename": [
+      "SARS-CoV2 Antigen Rapid Test"
+    ],
+    "distributors": [
+      "Spreenic GmbH"
+    ],
+    "studies": {
+      "267": {
+        "author": "manufacturer",
+        "id": 267,
+        "sensitivity": {
+          "avg": 0.956,
+          "min": 0.88,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.9878,
+          "max": 1
+        }
+      }
+    },
+    "selftest": false,
+    "shops": []
+  },
+  {
     "id": "AT011/20",
     "name": "Novel Coronavirus (COVID-19) Antigen Test Kit (Colloidal Gold)",
     "pei": true,
@@ -5312,9 +5352,9 @@
       "Lissner Qi GmbH"
     ],
     "studies": {
-      "267": {
+      "268": {
         "author": "manufacturer",
-        "id": 267,
+        "id": 268,
         "sensitivity": {
           "avg": 0.9616,
           "min": 0.93,
@@ -5350,9 +5390,9 @@
       "Biorepair GmbHWinlong GmbH"
     ],
     "studies": {
-      "268": {
+      "269": {
         "author": "manufacturer",
-        "id": 268,
+        "id": 269,
         "sensitivity": {
           "avg": 0.9629000000000001,
           "min": 0.92,
@@ -5399,9 +5439,9 @@
       "Deutsche HansaGT GmbHDropshippers GermanyGeSino GmbHIMPORA GLOBAL GmbHInfiniti-Options GmbHKLT Health Trade GmbHKMU Zentrale GmbHMS Print Inh. Michael ScholzPOPLUX GmbHSinoma Europe GmbHSteppensohn Medicals / Pharmadrug International GmbHTREKSTOR GmbHWinlong GmbHZebra Invest Handelshaus UG (haftungsbeschränkt)"
     ],
     "studies": {
-      "269": {
+      "270": {
         "author": "manufacturer",
-        "id": 269,
+        "id": 270,
         "sensitivity": {
           "avg": 0.929,
           "min": 0.87,
@@ -5473,9 +5513,9 @@
       " Ingo GrebeEmanto GmbHFa.CRYOFOS Medical GmbHFortuna GmbHGESINO GmbHGTRD GmbHHATEX AS GmbH & Co. KGHygienevertrieb UllrichIMPORA GLOBAL GmbHIONTO Health & Beauty GmbHInfiniti-Options GmbHKLT Health Trade GmbHKock & Sack GmbHLifetec Electronics GmbHNordic Supplies GmbHPHARMADOC GmbHPOPLUX GmbHPPE Germany GmbHPharmadrug International GmbH (Steppensohn Medicals)S2 Health GmbHSinoma Europe GmbHSwissbrands GmbHTREKSTOR GmbHTextil One GmbHTriPart-Logistic GmbHWiBaMedWinlong GmbHZINNZ GmbHZebra Invest Handelshaus UG (haftungsbeschränkt)fameditec GmbH"
     ],
     "studies": {
-      "270": {
+      "271": {
         "author": "manufacturer",
-        "id": 270,
+        "id": 271,
         "sensitivity": {
           "avg": 0.9617,
           "min": 0.92,
@@ -5485,6 +5525,78 @@
           "avg": 0.9990000000000001,
           "min": 0.9848,
           "max": 1
+        }
+      }
+    },
+    "selftest": false,
+    "shops": []
+  },
+  {
+    "id": "AT653/21",
+    "name": "SARS-CoV-2 Antigen Rapid Test Cassette",
+    "pei": false,
+    "manufacturer": "Hangzhou Sejoy Electronics & Instruments Co., Ltd.",
+    "Hersteller Stadt": "Hangzhou City",
+    "Hersteller Land": "CN",
+    "EU Bevollmächtigter Name": "Shanghai International Holding Corporation GmbH (Europe)",
+    "EU Bevollmächtigter Stadt": "Hamburg",
+    "EU Bevollmächtigter Land": "DE",
+    "Testort*": "POC (ohne Gerät)",
+    "tradename": [
+      "SARS-CoV-2 Antigen Rapid Test Cassette"
+    ],
+    "distributors": [
+      "Dittmann GmbH"
+    ],
+    "studies": {
+      "272": {
+        "author": "manufacturer",
+        "id": 272,
+        "sensitivity": {
+          "avg": 0.9576,
+          "min": 0.9,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 0.9937999999999999,
+          "min": 0.982,
+          "max": 0.9987
+        }
+      }
+    },
+    "selftest": false,
+    "shops": []
+  },
+  {
+    "id": "AT437/21",
+    "name": "COVID-19 Test Kit (Colloidal Gold Method)",
+    "pei": false,
+    "manufacturer": "Hangzhou Singclean Medical Products Co., Ltd.",
+    "Hersteller Stadt": "Hangzhou, Zhejiang",
+    "Hersteller Land": "CN",
+    "EU Bevollmächtigter Name": "SUNGO Europe B.V.",
+    "EU Bevollmächtigter Stadt": "Amsterdam",
+    "EU Bevollmächtigter Land": "NL",
+    "Testort*": "POC (ohne Gerät)",
+    "tradename": [
+      "COVID-19 Test Kit (Colloidal Gold Method)"
+    ],
+    "distributors": [
+      "Schloss Wendischbora GmbH"
+    ],
+    "studies": {
+      "273": {
+        "author": "manufacturer",
+        "id": 273,
+        "sensitivity": {
+          "avg": 0.9856,
+          "min": 0.95,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.9903,
+          "min": 0.9718000000000001,
+          "max": 0.9967
         }
       }
     },
@@ -5511,9 +5623,9 @@
       "KL GmbHMTC GmbHmedienkraftwerk GmbH"
     ],
     "studies": {
-      "271": {
+      "274": {
         "author": "manufacturer",
-        "id": 271,
+        "id": 274,
         "sensitivity": {
           "avg": 0.9209999999999999,
           "min": 0.87,
@@ -5523,6 +5635,42 @@
           "avg": 0.981,
           "min": 0.9514,
           "max": 0.9944
+        }
+      }
+    },
+    "selftest": false,
+    "shops": []
+  },
+  {
+    "id": "AT375/21",
+    "name": "Testsealabs Covid-19 Antigen Schnelltest Kassette (Saliva)",
+    "pei": false,
+    "manufacturer": "Hangzhou Testsea Biotechnology Co. LTD",
+    "Hersteller Stadt": "Juhang District, Hangzhou, China",
+    "Hersteller Land": "CN",
+    "EU Bevollmächtigter Name": "Lotus NL B.V.",
+    "EU Bevollmächtigter Stadt": "Gravenhage",
+    "EU Bevollmächtigter Land": "NL",
+    "Testort*": "POC (ohne Gerät)",
+    "tradename": [
+      "Testsealabs Covid-19 Antigen Schnelltest Kassette (Saliva)"
+    ],
+    "distributors": [
+      "Brawa GmbH"
+    ],
+    "studies": {
+      "275": {
+        "author": "manufacturer",
+        "id": 275,
+        "sensitivity": {
+          "avg": 0.9359999999999999,
+          "min": 0.92,
+          "max": 0.94
+        },
+        "specificity": {
+          "avg": 0.988,
+          "min": 0.985,
+          "max": 0.991
         }
       }
     },
@@ -5548,9 +5696,9 @@
       "Brawa GmbHGTRD GmbH"
     ],
     "studies": {
-      "272": {
+      "276": {
         "author": "manufacturer",
-        "id": 272,
+        "id": 276,
         "sensitivity": {
           "avg": 0.976,
           "min": 0.94,
@@ -5560,100 +5708,6 @@
           "avg": 0.9840000000000001,
           "min": 0.9690000000000001,
           "max": 0.9990000000000001
-        }
-      }
-    },
-    "selftest": false,
-    "shops": []
-  },
-  {
-    "id": "AT375/21",
-    "name": "Testsealabs Covid-19 Antigen Schnelltest Kassette (Saliva)",
-    "pei": false,
-    "manufacturer": "Hangzhou Testsea Biotechnology Co. LTD",
-    "Hersteller Stadt": "Juhang District, Hangzhou, China",
-    "Hersteller Land": "CN",
-    "EU Bevollmächtigter Name": "Lotus NL B.V.",
-    "EU Bevollmächtigter Stadt": "Gravenhage",
-    "EU Bevollmächtigter Land": "NL",
-    "Testort*": "POC (ohne Gerät)",
-    "tradename": [
-      "Testsealabs Covid-19 Antigen Schnelltest Kassette (Saliva)"
-    ],
-    "distributors": [
-      "Brawa GmbH"
-    ],
-    "studies": {
-      "273": {
-        "author": "manufacturer",
-        "id": 273,
-        "sensitivity": {
-          "avg": 0.9359999999999999,
-          "min": 0.92,
-          "max": 0.94
-        },
-        "specificity": {
-          "avg": 0.988,
-          "min": 0.985,
-          "max": 0.991
-        }
-      }
-    },
-    "selftest": false,
-    "shops": []
-  },
-  {
-    "id": "AT079/21",
-    "name": "Coronavirus Ag Rapid Test Cassette (swab)",
-    "pei": false,
-    "manufacturer": "Healgen Scientific Limited Liability Company",
-    "Hersteller Stadt": "Houston",
-    "Hersteller Land": "US",
-    "EU Bevollmächtigter Name": "Shanghai International Holding Corp.",
-    "EU Bevollmächtigter Stadt": "Hamburg",
-    "EU Bevollmächtigter Land": "DE",
-    "Testort*": "POC (ohne Gerät)",
-    "tradename": [
-      "Coronavirus Ag Rapid Test Cassette (Swab)",
-      " Coronavirus Ag Rapid Test Cassette (swab)"
-    ],
-    "distributors": [
-      "Heallab GmbHQuinn Healthcare"
-    ],
-    "studies": {
-      "70": {
-        "author": "Favresse, J., et al.",
-        "location": "Belgium",
-        "quadas": "intermediate concern",
-        "independent": "yes",
-        "sampleCondition": "fresh",
-        "sampleType": "NP",
-        "sampleSize": "188",
-        "sensitivity": {
-          "avg": 0.7709999999999999,
-          "min": 0.674,
-          "max": 0.851
-        },
-        "specificity": {
-          "avg": 0.9670000000000001,
-          "min": 0.9079999999999999,
-          "max": 0.993
-        },
-        "testId": "AT079/21",
-        "id": 70
-      },
-      "274": {
-        "author": "manufacturer",
-        "id": 274,
-        "sensitivity": {
-          "avg": 0.9832,
-          "min": 0.94,
-          "max": 0.99
-        },
-        "specificity": {
-          "avg": 0.996,
-          "min": 0.9883,
-          "max": 0.9992
         }
       }
     },
@@ -5764,9 +5818,9 @@
         "testId": "AT001/20",
         "id": 150
       },
-      "275": {
+      "277": {
         "author": "manufacturer",
-        "id": 275,
+        "id": 277,
         "sensitivity": {
           "avg": 0.9725,
           "min": 0.92,
@@ -5781,6 +5835,64 @@
     },
     "selftest": true,
     "reference": "5640-S-004/21",
+    "shops": []
+  },
+  {
+    "id": "AT079/21",
+    "name": "Coronavirus Ag Rapid Test Cassette (swab)",
+    "pei": false,
+    "manufacturer": "Healgen Scientific Limited Liability Company",
+    "Hersteller Stadt": "Houston",
+    "Hersteller Land": "US",
+    "EU Bevollmächtigter Name": "Shanghai International Holding Corp.",
+    "EU Bevollmächtigter Stadt": "Hamburg",
+    "EU Bevollmächtigter Land": "DE",
+    "Testort*": "POC (ohne Gerät)",
+    "tradename": [
+      "Coronavirus Ag Rapid Test Cassette (Swab)",
+      " Coronavirus Ag Rapid Test Cassette (swab)"
+    ],
+    "distributors": [
+      "Heallab GmbHQuinn Healthcare"
+    ],
+    "studies": {
+      "70": {
+        "author": "Favresse, J., et al.",
+        "location": "Belgium",
+        "quadas": "intermediate concern",
+        "independent": "yes",
+        "sampleCondition": "fresh",
+        "sampleType": "NP",
+        "sampleSize": "188",
+        "sensitivity": {
+          "avg": 0.7709999999999999,
+          "min": 0.674,
+          "max": 0.851
+        },
+        "specificity": {
+          "avg": 0.9670000000000001,
+          "min": 0.9079999999999999,
+          "max": 0.993
+        },
+        "testId": "AT079/21",
+        "id": 70
+      },
+      "278": {
+        "author": "manufacturer",
+        "id": 278,
+        "sensitivity": {
+          "avg": 0.9832,
+          "min": 0.94,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.996,
+          "min": 0.9883,
+          "max": 0.9992
+        }
+      }
+    },
+    "selftest": false,
     "shops": []
   },
   {
@@ -5801,9 +5913,9 @@
       "CJST Med UG"
     ],
     "studies": {
-      "276": {
+      "279": {
         "author": "manufacturer",
-        "id": 276,
+        "id": 279,
         "sensitivity": {
           "avg": 0.9802,
           "min": 0.93,
@@ -5838,9 +5950,9 @@
       "GS Global Europe gmbhgoodscare GmbH"
     ],
     "studies": {
-      "277": {
+      "280": {
         "author": "manufacturer",
-        "id": 277,
+        "id": 280,
         "sensitivity": {
           "avg": 0.955,
           "min": 0.9,
@@ -5874,9 +5986,9 @@
       "SALUTIS-Deutschland"
     ],
     "studies": {
-      "278": {
+      "281": {
         "author": "manufacturer",
-        "id": 278,
+        "id": 281,
         "sensitivity": {
           "avg": 0.9640000000000001,
           "min": 0.91,
@@ -5910,9 +6022,9 @@
       "Preventis GmbH"
     ],
     "studies": {
-      "279": {
+      "282": {
         "author": "manufacturer",
-        "id": 279,
+        "id": 282,
         "sensitivity": {
           "avg": 0.937,
           "min": 0.89,
@@ -5946,9 +6058,9 @@
       "Ysion UG"
     ],
     "studies": {
-      "280": {
+      "283": {
         "author": "manufacturer",
-        "id": 280,
+        "id": 283,
         "sensitivity": {
           "avg": 0.956,
           "min": 0.93,
@@ -5976,15 +6088,16 @@
     "EU Bevollmächtigter Land": "BE",
     "Testort*": "POC (ohne Gerät)",
     "tradename": [
-      "Rapid SARS-CoV-2 Antigen Test"
+      "Rapid SARS-CoV-2 Antigen Test",
+      " Rapid SARS-CoV-2 Antigen Test"
     ],
     "distributors": [
-      "ProDiag B.V."
+      "ProDiag B.V.Yücel Trading GmbH"
     ],
     "studies": {
-      "281": {
+      "284": {
         "author": "manufacturer",
-        "id": 281,
+        "id": 284,
         "sensitivity": {
           "avg": 0.9309999999999999,
           "min": 0.86,
@@ -5994,42 +6107,6 @@
           "avg": 1,
           "min": 0.987,
           "max": 1
-        }
-      }
-    },
-    "selftest": false,
-    "shops": []
-  },
-  {
-    "id": "AT231/20",
-    "name": "COVID-19 Antigen Rapid Test Kit (Colloidal Gold)",
-    "pei": false,
-    "manufacturer": "Jiangsu Konsung Bio-Medical Science And Technology Co., Ltd.",
-    "Hersteller Stadt": "Danyang , Jiangsu Province",
-    "Hersteller Land": "CN",
-    "EU Bevollmächtigter Name": "Shanghai International Holding Corporation GmbH (Europe)",
-    "EU Bevollmächtigter Stadt": "Hamburg",
-    "EU Bevollmächtigter Land": "DE",
-    "Testort*": "POC (ohne Gerät)",
-    "tradename": [
-      "COVID-19 Antigen Rapid Test Kit (Colloidal Gold)"
-    ],
-    "distributors": [
-      "NYKS Company"
-    ],
-    "studies": {
-      "282": {
-        "author": "manufacturer",
-        "id": 282,
-        "sensitivity": {
-          "avg": 0.963,
-          "min": 0.91,
-          "max": 0.98
-        },
-        "specificity": {
-          "avg": 0.9934000000000001,
-          "min": 0.987,
-          "max": 0.9971
         }
       }
     },
@@ -6055,9 +6132,45 @@
       "Swissbrands GmbH"
     ],
     "studies": {
-      "283": {
+      "285": {
         "author": "manufacturer",
-        "id": 283,
+        "id": 285,
+        "sensitivity": {
+          "avg": 0.963,
+          "min": 0.91,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 0.9934000000000001,
+          "min": 0.987,
+          "max": 0.9971
+        }
+      }
+    },
+    "selftest": false,
+    "shops": []
+  },
+  {
+    "id": "AT231/20",
+    "name": "COVID-19 Antigen Rapid Test Kit (Colloidal Gold)",
+    "pei": false,
+    "manufacturer": "Jiangsu Konsung Bio-Medical Science And Technology Co., Ltd.",
+    "Hersteller Stadt": "Danyang , Jiangsu Province",
+    "Hersteller Land": "CN",
+    "EU Bevollmächtigter Name": "Shanghai International Holding Corporation GmbH (Europe)",
+    "EU Bevollmächtigter Stadt": "Hamburg",
+    "EU Bevollmächtigter Land": "DE",
+    "Testort*": "POC (ohne Gerät)",
+    "tradename": [
+      "COVID-19 Antigen Rapid Test Kit (Colloidal Gold)"
+    ],
+    "distributors": [
+      "NYKS Company"
+    ],
+    "studies": {
+      "286": {
+        "author": "manufacturer",
+        "id": 286,
         "sensitivity": {
           "avg": 0.963,
           "min": 0.91,
@@ -6091,9 +6204,9 @@
       "Detools GmbH"
     ],
     "studies": {
-      "284": {
+      "287": {
         "author": "manufacturer",
-        "id": 284,
+        "id": 287,
         "sensitivity": {
           "avg": 0.963,
           "min": 0.91,
@@ -6127,9 +6240,9 @@
       "Yiwu Commodity City GmbH"
     ],
     "studies": {
-      "285": {
+      "288": {
         "author": "manufacturer",
-        "id": 285,
+        "id": 288,
         "sensitivity": {
           "avg": 0.9664,
           "min": 0.91,
@@ -6163,9 +6276,9 @@
       "ALIC Deutschland GmbH"
     ],
     "studies": {
-      "286": {
+      "289": {
         "author": "manufacturer",
-        "id": 286,
+        "id": 289,
         "sensitivity": {
           "avg": 0.9873999999999999,
           "min": 0.96,
@@ -6174,6 +6287,42 @@
         "specificity": {
           "avg": 1,
           "min": 0.9913,
+          "max": 1
+        }
+      }
+    },
+    "selftest": false,
+    "shops": []
+  },
+  {
+    "id": "AT305/21",
+    "name": "COVID-19 / Influenza A + B Antigen Combo Schnelltestkassette  (Speichel)Kolloidales Gold",
+    "pei": false,
+    "manufacturer": "JiangsuDiagnosticsBiotechnologyCo.,Ltd.",
+    "Hersteller Stadt": "Taizhou",
+    "Hersteller Land": "CN",
+    "EU Bevollmächtigter Name": "CMC Medical Devices&Drugs S.L.",
+    "EU Bevollmächtigter Stadt": "málaga",
+    "EU Bevollmächtigter Land": "ES",
+    "Testort*": "POC (ohne Gerät)",
+    "tradename": [
+      "COVID-19 / Influenza A + B Antigen Combo Schnelltestkassette  (Speichel)Kolloidales Gold"
+    ],
+    "distributors": [
+      "ALIC Deutschland GmbH"
+    ],
+    "studies": {
+      "290": {
+        "author": "manufacturer",
+        "id": 290,
+        "sensitivity": {
+          "avg": 0.9745,
+          "min": 0.93,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.9640000000000001,
           "max": 1
         }
       }
@@ -6199,9 +6348,9 @@
       "ALIC Deutschland GmbH"
     ],
     "studies": {
-      "287": {
+      "291": {
         "author": "manufacturer",
-        "id": 287,
+        "id": 291,
         "sensitivity": {
           "avg": 0.9758,
           "min": 0.95,
@@ -6235,9 +6384,9 @@
       "ALIC Deutschland GmbH"
     ],
     "studies": {
-      "288": {
+      "292": {
         "author": "manufacturer",
-        "id": 288,
+        "id": 292,
         "sensitivity": {
           "avg": 0.9726,
           "min": 0.93,
@@ -6246,42 +6395,6 @@
         "specificity": {
           "avg": 1,
           "min": 0.9721,
-          "max": 1
-        }
-      }
-    },
-    "selftest": false,
-    "shops": []
-  },
-  {
-    "id": "AT305/21",
-    "name": "COVID-19 / Influenza A + B Antigen Combo Schnelltestkassette  (Speichel)Kolloidales Gold",
-    "pei": false,
-    "manufacturer": "JiangsuDiagnosticsBiotechnologyCo.,Ltd.",
-    "Hersteller Stadt": "Taizhou",
-    "Hersteller Land": "CN",
-    "EU Bevollmächtigter Name": "CMC Medical Devices&Drugs S.L.",
-    "EU Bevollmächtigter Stadt": "málaga",
-    "EU Bevollmächtigter Land": "ES",
-    "Testort*": "POC (ohne Gerät)",
-    "tradename": [
-      "COVID-19 / Influenza A + B Antigen Combo Schnelltestkassette  (Speichel)Kolloidales Gold"
-    ],
-    "distributors": [
-      "ALIC Deutschland GmbH"
-    ],
-    "studies": {
-      "289": {
-        "author": "manufacturer",
-        "id": 289,
-        "sensitivity": {
-          "avg": 0.9745,
-          "min": 0.93,
-          "max": 0.99
-        },
-        "specificity": {
-          "avg": 1,
-          "min": 0.9640000000000001,
           "max": 1
         }
       }
@@ -6308,9 +6421,9 @@
       "Praxisdienst GmbH & Co. KGcare impuls Vertriebs GmbH"
     ],
     "studies": {
-      "290": {
+      "293": {
         "author": "manufacturer",
-        "id": 290,
+        "id": 293,
         "sensitivity": {
           "avg": 0.95,
           "min": 0.86,
@@ -6338,15 +6451,16 @@
     "EU Bevollmächtigter Land": "NL",
     "Testort*": "POC (ohne Gerät)",
     "tradename": [
-      "Covid-19 Antigen Schnelltest (Colloidales Gold)"
+      "COVID-19-Antigen-Schnelltest (kollodiales Gold)",
+      " Covid-19 Antigen Schnelltest (Colloidales Gold)"
     ],
     "distributors": [
-      "care impuls Vertriebs GmbH"
+      "Alpstar Beteiligungs GmbHcare impuls Vertriebs GmbH"
     ],
     "studies": {
-      "291": {
+      "294": {
         "author": "manufacturer",
-        "id": 291,
+        "id": 294,
         "sensitivity": {
           "avg": 0.961,
           "min": 0.88,
@@ -6388,9 +6502,9 @@
       "Alpha-Medics GmbHDeutsche HansaGT GmbHDr. Grob Healthcare GmbHEmotive Systems GmbHEybel GmbHGESINO GmbHKFMS GmbHMP Med GmbHMediMode GmbH"
     ],
     "studies": {
-      "292": {
+      "295": {
         "author": "manufacturer",
-        "id": 292,
+        "id": 295,
         "sensitivity": {
           "avg": 0.951,
           "min": 0.88,
@@ -6424,9 +6538,9 @@
       "enverque GmbH"
     ],
     "studies": {
-      "293": {
+      "296": {
         "author": "manufacturer",
-        "id": 293,
+        "id": 296,
         "sensitivity": {
           "avg": 0.985,
           "min": 0.97,
@@ -6460,9 +6574,9 @@
       "NanoRepro AG"
     ],
     "studies": {
-      "294": {
+      "297": {
         "author": "manufacturer",
-        "id": 294,
+        "id": 297,
         "sensitivity": {
           "avg": 0.963,
           "min": 0.89,
@@ -6496,9 +6610,9 @@
       ""
     ],
     "studies": {
-      "295": {
+      "298": {
         "author": "manufacturer",
-        "id": 295,
+        "id": 298,
         "sensitivity": {
           "avg": 0.9444,
           "min": 0.88,
@@ -6532,9 +6646,9 @@
       "Siegmund Care GmbH"
     ],
     "studies": {
-      "296": {
+      "299": {
         "author": "manufacturer",
-        "id": 296,
+        "id": 299,
         "sensitivity": {
           "avg": 0.9333,
           "min": 0.86,
@@ -6563,15 +6677,16 @@
     "Testort*": "POC (ohne Gerät)",
     "tradename": [
       "QuickProfile COVID-19 Antigen Test Card",
+      " QuickProfile COVID-19 Antigen Test Card",
       " QuickProfile Covid-19 Antigen Test"
     ],
     "distributors": [
-      "Catus Biotech GmbHMedipro medizinische diagnostische produkte gmbh"
+      "Catus Biotech GmbHHölzel Diagnostika Handels GmbHMedipro medizinische diagnostische produkte gmbh"
     ],
     "studies": {
-      "297": {
+      "300": {
         "author": "manufacturer",
-        "id": 297,
+        "id": 300,
         "sensitivity": {
           "avg": 0.937,
           "min": 0.89,
@@ -6668,9 +6783,9 @@
         "testId": "AT075/20",
         "id": 83
       },
-      "298": {
+      "301": {
         "author": "manufacturer",
-        "id": 298,
+        "id": 301,
         "sensitivity": {
           "avg": 0.938,
           "min": 0.89,
@@ -6704,9 +6819,9 @@
       "MED TRUST GmbH."
     ],
     "studies": {
-      "299": {
+      "302": {
         "author": "manufacturer",
-        "id": 299,
+        "id": 302,
         "sensitivity": {
           "avg": 0.9565,
           "min": 0.9,
@@ -6740,9 +6855,9 @@
       "GOSC GmbH"
     ],
     "studies": {
-      "300": {
+      "303": {
         "author": "manufacturer",
-        "id": 300,
+        "id": 303,
         "sensitivity": {
           "avg": 0.956,
           "min": 0.94,
@@ -6776,9 +6891,9 @@
       "meVita-Berlin GmbH"
     ],
     "studies": {
-      "301": {
+      "304": {
         "author": "manufacturer",
-        "id": 301,
+        "id": 304,
         "sensitivity": {
           "avg": 0.9652,
           "min": 0.91,
@@ -6812,9 +6927,9 @@
       ""
     ],
     "studies": {
-      "302": {
+      "305": {
         "author": "manufacturer",
-        "id": 302,
+        "id": 305,
         "sensitivity": {
           "avg": 0.9670000000000001,
           "min": 0.91,
@@ -6823,6 +6938,42 @@
         "specificity": {
           "avg": 1,
           "min": 0.992,
+          "max": 1
+        }
+      }
+    },
+    "selftest": false,
+    "shops": []
+  },
+  {
+    "id": "AT028/20",
+    "name": "MEDsan® Multiplex (SC2 & Flu A/B) Rapid Test",
+    "pei": true,
+    "manufacturer": "MEDsan GmbH",
+    "Hersteller Stadt": "Hamburg",
+    "Hersteller Land": "DE",
+    "EU Bevollmächtigter Name": "",
+    "EU Bevollmächtigter Stadt": "",
+    "EU Bevollmächtigter Land": "",
+    "Testort*": "POC (ohne Gerät)",
+    "tradename": [
+      "MEDsan® Multiplex (SC2 & Flu A/B) Rapid Test"
+    ],
+    "distributors": [
+      ""
+    ],
+    "studies": {
+      "306": {
+        "author": "manufacturer",
+        "id": 306,
+        "sensitivity": {
+          "avg": 0.925,
+          "min": 0.86,
+          "max": 0.96
+        },
+        "specificity": {
+          "avg": 0.998,
+          "min": 0.9890000000000001,
           "max": 1
         }
       }
@@ -6869,45 +7020,9 @@
         "testId": "AT012/20",
         "id": 84
       },
-      "303": {
+      "307": {
         "author": "manufacturer",
-        "id": 303,
-        "sensitivity": {
-          "avg": 0.925,
-          "min": 0.86,
-          "max": 0.96
-        },
-        "specificity": {
-          "avg": 0.998,
-          "min": 0.9890000000000001,
-          "max": 1
-        }
-      }
-    },
-    "selftest": false,
-    "shops": []
-  },
-  {
-    "id": "AT028/20",
-    "name": "MEDsan® Multiplex (SC2 & Flu A/B) Rapid Test",
-    "pei": true,
-    "manufacturer": "MEDsan GmbH",
-    "Hersteller Stadt": "Hamburg",
-    "Hersteller Land": "DE",
-    "EU Bevollmächtigter Name": "",
-    "EU Bevollmächtigter Stadt": "",
-    "EU Bevollmächtigter Land": "",
-    "Testort*": "POC (ohne Gerät)",
-    "tradename": [
-      "MEDsan® Multiplex (SC2 & Flu A/B) Rapid Test"
-    ],
-    "distributors": [
-      ""
-    ],
-    "studies": {
-      "304": {
-        "author": "manufacturer",
-        "id": 304,
+        "id": 307,
         "sensitivity": {
           "avg": 0.925,
           "min": 0.86,
@@ -6941,9 +7056,9 @@
       "EightPlus Kft"
     ],
     "studies": {
-      "305": {
+      "308": {
         "author": "manufacturer",
-        "id": 305,
+        "id": 308,
         "sensitivity": {
           "avg": 0.9505,
           "min": 0.88,
@@ -6953,43 +7068,6 @@
           "avg": 0.9899,
           "min": 0.945,
           "max": 0.9982
-        }
-      }
-    },
-    "selftest": false,
-    "shops": []
-  },
-  {
-    "id": "AT009/20",
-    "name": "COVID-19 & Influenza A+B Antigen Combo Schnelltest",
-    "pei": false,
-    "manufacturer": "MEXACARE GmbH",
-    "Hersteller Stadt": "Heidelberg",
-    "Hersteller Land": "DE",
-    "EU Bevollmächtigter Name": "",
-    "EU Bevollmächtigter Stadt": "",
-    "EU Bevollmächtigter Land": "",
-    "Testort*": "POC (ohne Gerät)",
-    "tradename": [
-      "COVID-19 & Influenza A+B Antigen Combo Schnelltest",
-      " YESorNO COVID-19 & Influenza A+B Antigen Schnelltest"
-    ],
-    "distributors": [
-      "MEXACARE GmbHMedVec"
-    ],
-    "studies": {
-      "306": {
-        "author": "manufacturer",
-        "id": 306,
-        "sensitivity": {
-          "avg": 0.9375,
-          "min": 0.86,
-          "max": 0.97
-        },
-        "specificity": {
-          "avg": 0.983,
-          "min": 0.9109999999999999,
-          "max": 0.9990000000000001
         }
       }
     },
@@ -7014,9 +7092,9 @@
       ""
     ],
     "studies": {
-      "307": {
+      "309": {
         "author": "manufacturer",
-        "id": 307,
+        "id": 309,
         "sensitivity": {
           "avg": 0.961,
           "min": 0.95,
@@ -7025,43 +7103,6 @@
         "specificity": {
           "avg": 0.991,
           "min": 0.9840000000000001,
-          "max": 0.9990000000000001
-        }
-      }
-    },
-    "selftest": false,
-    "shops": []
-  },
-  {
-    "id": "AT007/20",
-    "name": "COVID-19 Antigen (Nasen- Rachenabstrich)",
-    "pei": false,
-    "manufacturer": "MEXACARE GmbH",
-    "Hersteller Stadt": "Heidelberg",
-    "Hersteller Land": "DE",
-    "EU Bevollmächtigter Name": "",
-    "EU Bevollmächtigter Stadt": "",
-    "EU Bevollmächtigter Land": "",
-    "Testort*": "POC (ohne Gerät)",
-    "tradename": [
-      "COVID-19 Antigen (Nasen- Rachenabstrich)",
-      " YESorNO COVID-19 Antigen (Nasen- Rachenabstrich)"
-    ],
-    "distributors": [
-      "MEXACARE GmbHMedVec"
-    ],
-    "studies": {
-      "308": {
-        "author": "manufacturer",
-        "id": 308,
-        "sensitivity": {
-          "avg": 0.9565,
-          "min": 0.91,
-          "max": 0.99
-        },
-        "specificity": {
-          "avg": 0.9937999999999999,
-          "min": 0.985,
           "max": 0.9990000000000001
         }
       }
@@ -7089,9 +7130,9 @@
       "Axon Lab AGCare 1 Solution GmbH & Co. KG"
     ],
     "studies": {
-      "309": {
+      "310": {
         "author": "manufacturer",
-        "id": 309,
+        "id": 310,
         "sensitivity": {
           "avg": 0.9725,
           "min": 0.92,
@@ -7125,9 +7166,9 @@
       ""
     ],
     "studies": {
-      "310": {
+      "311": {
         "author": "manufacturer",
-        "id": 310,
+        "id": 311,
         "sensitivity": {
           "avg": 0.9639,
           "min": 0.92,
@@ -7161,9 +7202,9 @@
       "MSP bodmann GmbH"
     ],
     "studies": {
-      "311": {
+      "312": {
         "author": "manufacturer",
-        "id": 311,
+        "id": 312,
         "sensitivity": {
           "avg": 0.9612,
           "min": 0.9,
@@ -7172,42 +7213,6 @@
         "specificity": {
           "avg": 0.9998999999999999,
           "min": 0.9863,
-          "max": 1
-        }
-      }
-    },
-    "selftest": false,
-    "shops": []
-  },
-  {
-    "id": "AT470/20",
-    "name": "dedicio COVID-19 Ag plus Test",
-    "pei": false,
-    "manufacturer": "nal von minden GmbH",
-    "Hersteller Stadt": "Moers",
-    "Hersteller Land": "DE",
-    "EU Bevollmächtigter Name": "",
-    "EU Bevollmächtigter Stadt": "",
-    "EU Bevollmächtigter Land": "",
-    "Testort*": "POC (ohne Gerät)",
-    "tradename": [
-      "dedicio COVID-19 Ag plus Test"
-    ],
-    "distributors": [
-      ""
-    ],
-    "studies": {
-      "312": {
-        "author": "manufacturer",
-        "id": 312,
-        "sensitivity": {
-          "avg": 0.971,
-          "min": 0.93,
-          "max": 0.98
-        },
-        "specificity": {
-          "avg": 0.9990000000000001,
-          "min": 0.991,
           "max": 1
         }
       }
@@ -7288,6 +7293,42 @@
     "shops": []
   },
   {
+    "id": "AT470/20",
+    "name": "dedicio COVID-19 Ag plus Test",
+    "pei": false,
+    "manufacturer": "nal von minden GmbH",
+    "Hersteller Stadt": "Moers",
+    "Hersteller Land": "DE",
+    "EU Bevollmächtigter Name": "",
+    "EU Bevollmächtigter Stadt": "",
+    "EU Bevollmächtigter Land": "",
+    "Testort*": "POC (ohne Gerät)",
+    "tradename": [
+      "dedicio COVID-19 Ag plus Test"
+    ],
+    "distributors": [
+      ""
+    ],
+    "studies": {
+      "314": {
+        "author": "manufacturer",
+        "id": 314,
+        "sensitivity": {
+          "avg": 0.971,
+          "min": 0.93,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 0.9990000000000001,
+          "min": 0.991,
+          "max": 1
+        }
+      }
+    },
+    "selftest": false,
+    "shops": []
+  },
+  {
     "id": "AT068/20",
     "name": "NADAL COVID-19 Ag+Influenza A/B Test",
     "pei": true,
@@ -7305,9 +7346,9 @@
       ""
     ],
     "studies": {
-      "314": {
+      "315": {
         "author": "manufacturer",
-        "id": 314,
+        "id": 315,
         "sensitivity": {
           "avg": 0.976,
           "min": 0.93,
@@ -7342,9 +7383,9 @@
       " Dr. W. Gottstein"
     ],
     "studies": {
-      "315": {
+      "316": {
         "author": "manufacturer",
-        "id": 315,
+        "id": 316,
         "sensitivity": {
           "avg": 0.9231,
           "min": 0.79,
@@ -7378,9 +7419,9 @@
       ""
     ],
     "studies": {
-      "316": {
+      "317": {
         "author": "manufacturer",
-        "id": 316,
+        "id": 317,
         "sensitivity": {
           "avg": 0.9320999999999999,
           "min": 0.88,
@@ -7414,9 +7455,9 @@
       "KL GmbH"
     ],
     "studies": {
-      "317": {
+      "318": {
         "author": "manufacturer",
-        "id": 317,
+        "id": 318,
         "sensitivity": {
           "avg": 0.9194,
           "min": 0.82,
@@ -7450,9 +7491,9 @@
       "MS Med-Tech Supplies GmbH"
     ],
     "studies": {
-      "318": {
+      "319": {
         "author": "manufacturer",
-        "id": 318,
+        "id": 319,
         "sensitivity": {
           "avg": 0.9412,
           "min": 0.78,
@@ -7487,9 +7528,9 @@
       "Vice Vertriebs GmbH"
     ],
     "studies": {
-      "319": {
+      "320": {
         "author": "manufacturer",
-        "id": 319,
+        "id": 320,
         "sensitivity": {
           "avg": 0.97,
           "min": 0.91,
@@ -7523,9 +7564,9 @@
       "NanoRepro AG"
     ],
     "studies": {
-      "320": {
+      "321": {
         "author": "manufacturer",
-        "id": 320,
+        "id": 321,
         "sensitivity": {
           "avg": 0.981,
           "min": 0.95,
@@ -7559,9 +7600,9 @@
       "Erwin Kowsky GmbH & Co. KG"
     ],
     "studies": {
-      "321": {
+      "322": {
         "author": "manufacturer",
-        "id": 321,
+        "id": 322,
         "sensitivity": {
           "avg": 0.981,
           "min": 0.95,
@@ -7570,43 +7611,6 @@
         "specificity": {
           "avg": 0.9933,
           "min": 0.9802,
-          "max": 1
-        }
-      }
-    },
-    "selftest": false,
-    "shops": []
-  },
-  {
-    "id": "AT331/21",
-    "name": "COVID-19 Antigen Detection Kit NG08NS",
-    "pei": false,
-    "manufacturer": "New Gene (Hangzhou) Bioengineering Co., Ltd.",
-    "Hersteller Stadt": "Hangzhou",
-    "Hersteller Land": "CN",
-    "EU Bevollmächtigter Name": "SUNGO Europe B.V.",
-    "EU Bevollmächtigter Stadt": "Amsterdam",
-    "EU Bevollmächtigter Land": "NL",
-    "Testort*": "POC (ohne Gerät)",
-    "tradename": [
-      "COVID-19 Antigen Detection Kit",
-      " COVID-19 Antigen Detection Kit NG08NS"
-    ],
-    "distributors": [
-      "NIC GmbHROBEX ENERGY SYSTEMS GmbH"
-    ],
-    "studies": {
-      "322": {
-        "author": "manufacturer",
-        "id": 322,
-        "sensitivity": {
-          "avg": 0.98,
-          "min": 0.9,
-          "max": 0.99
-        },
-        "specificity": {
-          "avg": 0.991,
-          "min": 0.9520000000000001,
           "max": 1
         }
       }
@@ -7651,6 +7655,43 @@
     "shops": []
   },
   {
+    "id": "AT331/21",
+    "name": "COVID-19 Antigen Detection Kit NG08NS",
+    "pei": true,
+    "manufacturer": "New Gene (Hangzhou) Bioengineering Co., Ltd.",
+    "Hersteller Stadt": "Hangzhou",
+    "Hersteller Land": "CN",
+    "EU Bevollmächtigter Name": "SUNGO Europe B.V.",
+    "EU Bevollmächtigter Stadt": "Amsterdam",
+    "EU Bevollmächtigter Land": "NL",
+    "Testort*": "POC (ohne Gerät)",
+    "tradename": [
+      "COVID-19 Antigen Detection Kit",
+      " COVID-19 Antigen Detection Kit NG08NS"
+    ],
+    "distributors": [
+      "NIC GmbHROBEX ENERGY SYSTEMS GmbH"
+    ],
+    "studies": {
+      "324": {
+        "author": "manufacturer",
+        "id": 324,
+        "sensitivity": {
+          "avg": 0.98,
+          "min": 0.9,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.991,
+          "min": 0.9520000000000001,
+          "max": 1
+        }
+      }
+    },
+    "selftest": false,
+    "shops": []
+  },
+  {
     "id": "AT489/20",
     "name": "NG-Test SARS-CoV-2-AG",
     "pei": false,
@@ -7668,9 +7709,9 @@
       "Futuring Sales S.A.R.L."
     ],
     "studies": {
-      "324": {
+      "325": {
         "author": "manufacturer",
-        "id": 324,
+        "id": 325,
         "sensitivity": {
           "avg": 0.83,
           "min": 0.74,
@@ -7704,9 +7745,9 @@
       "LINUS Handelshaus GmbH"
     ],
     "studies": {
-      "325": {
+      "326": {
         "author": "manufacturer",
-        "id": 325,
+        "id": 326,
         "sensitivity": {
           "avg": 0.892,
           "min": 0.82,
@@ -7740,9 +7781,9 @@
       ""
     ],
     "studies": {
-      "326": {
+      "327": {
         "author": "manufacturer",
-        "id": 326,
+        "id": 327,
         "sensitivity": {
           "avg": 0.9754,
           "min": 0.93,
@@ -7776,9 +7817,9 @@
       "Casada International GmbH"
     ],
     "studies": {
-      "327": {
+      "328": {
         "author": "manufacturer",
-        "id": 327,
+        "id": 328,
         "sensitivity": {
           "avg": 0.9636,
           "min": 0.91,
@@ -7812,9 +7853,9 @@
       ""
     ],
     "studies": {
-      "328": {
+      "329": {
         "author": "manufacturer",
-        "id": 328,
+        "id": 329,
         "sensitivity": {
           "avg": 0.978,
           "min": 0.88,
@@ -7851,9 +7892,9 @@
       " Entwicklung  und Distribution von Diagnostika  im Blutspendewesen mbHHGHSerumwerk Bernburg AG"
     ],
     "studies": {
-      "329": {
+      "330": {
         "author": "manufacturer",
-        "id": 329,
+        "id": 330,
         "sensitivity": {
           "avg": 0.9492,
           "min": 0.8,
@@ -7887,9 +7928,9 @@
       "JingCheng Asia Group Limited"
     ],
     "studies": {
-      "330": {
+      "331": {
         "author": "manufacturer",
-        "id": 330,
+        "id": 331,
         "sensitivity": {
           "avg": 0.9428,
           "min": 0.92,
@@ -7940,9 +7981,9 @@
         "testId": "AT078/20",
         "id": 88
       },
-      "331": {
+      "332": {
         "author": "manufacturer",
-        "id": 331,
+        "id": 332,
         "sensitivity": {
           "avg": 0.9388,
           "min": 0.83,
@@ -7976,9 +8017,9 @@
       "LMS Consult GmbH &Co. KG"
     ],
     "studies": {
-      "332": {
+      "333": {
         "author": "manufacturer",
-        "id": 332,
+        "id": 333,
         "sensitivity": {
           "avg": 0.9556,
           "min": 0.9,
@@ -8012,9 +8053,9 @@
       ""
     ],
     "studies": {
-      "333": {
+      "334": {
         "author": "manufacturer",
-        "id": 333,
+        "id": 334,
         "sensitivity": {
           "avg": 0.95,
           "min": 0.88,
@@ -8049,9 +8090,9 @@
       "MIKKA GmbH"
     ],
     "studies": {
-      "334": {
+      "335": {
         "author": "manufacturer",
-        "id": 334,
+        "id": 335,
         "sensitivity": {
           "avg": 0.95,
           "min": 0.88,
@@ -8184,9 +8225,9 @@
         "testId": "AT006/20",
         "id": 93
       },
-      "335": {
+      "336": {
         "author": "manufacturer",
-        "id": 335,
+        "id": 336,
         "sensitivity": {
           "avg": 0.9670000000000001,
           "min": 0.83,
@@ -8283,9 +8324,9 @@
         "testId": "AT008/20",
         "id": 100
       },
-      "336": {
+      "337": {
         "author": "manufacturer",
-        "id": 336,
+        "id": 337,
         "sensitivity": {
           "avg": 0.804,
           "min": 0.71,
@@ -8319,9 +8360,9 @@
       "ONYXO"
     ],
     "studies": {
-      "337": {
+      "338": {
         "author": "manufacturer",
-        "id": 337,
+        "id": 338,
         "sensitivity": {
           "avg": 0.9508,
           "min": 0.89,
@@ -8355,9 +8396,9 @@
       "ROXALL Medizin GmbH"
     ],
     "studies": {
-      "338": {
+      "339": {
         "author": "manufacturer",
-        "id": 338,
+        "id": 339,
         "sensitivity": {
           "avg": 0.9697,
           "min": 0.84,
@@ -8367,6 +8408,42 @@
           "avg": 1,
           "min": 0.9565,
           "max": 1
+        }
+      }
+    },
+    "selftest": false,
+    "shops": []
+  },
+  {
+    "id": "AT483/20",
+    "name": "Multi-Respiratory Virus Antigen Test Kit(Swab) (Influenza A+B/ COVID-19)",
+    "pei": true,
+    "manufacturer": "Safecare Biotech (Hangzhou) Co., Ltd.",
+    "Hersteller Stadt": "Hangzhou",
+    "Hersteller Land": "CN",
+    "EU Bevollmächtigter Name": "NIC GmbH",
+    "EU Bevollmächtigter Stadt": "Osnabrück",
+    "EU Bevollmächtigter Land": "DE",
+    "Testort*": "POC (ohne Gerät)",
+    "tradename": [
+      "Multi-Respiratory Virus Antigen Test Kit(Swab) (Influenza A+B/ COVID-19)"
+    ],
+    "distributors": [
+      "Figura Pharma GmbH & Co. KG"
+    ],
+    "studies": {
+      "340": {
+        "author": "manufacturer",
+        "id": 340,
+        "sensitivity": {
+          "avg": 0.9704,
+          "min": 0.92,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.9944,
+          "min": 0.9693999999999999,
+          "max": 0.9998999999999999
         }
       }
     },
@@ -8393,9 +8470,9 @@
       " Ingo GrebeFigura Pharma GmbH & Co. KG"
     ],
     "studies": {
-      "339": {
+      "341": {
         "author": "manufacturer",
-        "id": 339,
+        "id": 341,
         "sensitivity": {
           "avg": 0.9727,
           "min": 0.94,
@@ -8405,78 +8482,6 @@
           "avg": 0.9942,
           "min": 0.9793000000000001,
           "max": 0.9993000000000001
-        }
-      }
-    },
-    "selftest": false,
-    "shops": []
-  },
-  {
-    "id": "AT319/21",
-    "name": "COVID-19 Antigen Rapid Test Kit (Saliva)",
-    "pei": false,
-    "manufacturer": "Safecare Biotech (Hangzhou) Co., Ltd.",
-    "Hersteller Stadt": "Hangzhou",
-    "Hersteller Land": "China",
-    "EU Bevollmächtigter Name": "NIC GmbH",
-    "EU Bevollmächtigter Stadt": "Osnabrück",
-    "EU Bevollmächtigter Land": "DE",
-    "Testort*": "POC (ohne Gerät)",
-    "tradename": [
-      "COVID-19 Antigen Rapid Test Kit (Saliva)"
-    ],
-    "distributors": [
-      "Figura Pharma GmbH & Co. KG"
-    ],
-    "studies": {
-      "340": {
-        "author": "manufacturer",
-        "id": 340,
-        "sensitivity": {
-          "avg": 0.985,
-          "min": 0.94,
-          "max": 0.99
-        },
-        "specificity": {
-          "avg": 0.9945,
-          "min": 0.9699,
-          "max": 0.9998999999999999
-        }
-      }
-    },
-    "selftest": false,
-    "shops": []
-  },
-  {
-    "id": "AT346/21",
-    "name": "COVID-19 Antigen Rapid Test Kit (Saliva)",
-    "pei": true,
-    "manufacturer": "Safecare Biotech (Hangzhou) Co., Ltd.",
-    "Hersteller Stadt": "Hangzhou",
-    "Hersteller Land": "CN",
-    "EU Bevollmächtigter Name": "NIC GmbH",
-    "EU Bevollmächtigter Stadt": "Osnabrück",
-    "EU Bevollmächtigter Land": "DE",
-    "Testort*": "POC (ohne Gerät)",
-    "tradename": [
-      "COVID-19 Antigen Rapid Test Kit (Saliva)"
-    ],
-    "distributors": [
-      "Detools GmbH"
-    ],
-    "studies": {
-      "341": {
-        "author": "manufacturer",
-        "id": 341,
-        "sensitivity": {
-          "avg": 0.985,
-          "min": 0.94,
-          "max": 0.99
-        },
-        "specificity": {
-          "avg": 0.9945,
-          "min": 0.9699,
-          "max": 0.9998999999999999
         }
       }
     },
@@ -8557,8 +8562,8 @@
     "shops": []
   },
   {
-    "id": "AT483/20",
-    "name": "Multi-Respiratory Virus Antigen Test Kit(Swab) (Influenza A+B/ COVID-19)",
+    "id": "AT346/21",
+    "name": "COVID-19 Antigen Rapid Test Kit (Saliva)",
     "pei": true,
     "manufacturer": "Safecare Biotech (Hangzhou) Co., Ltd.",
     "Hersteller Stadt": "Hangzhou",
@@ -8568,24 +8573,134 @@
     "EU Bevollmächtigter Land": "DE",
     "Testort*": "POC (ohne Gerät)",
     "tradename": [
-      "Multi-Respiratory Virus Antigen Test Kit(Swab) (Influenza A+B/ COVID-19)"
+      "COVID-19 Antigen Rapid Test Kit (Saliva)",
+      " COVID-19 Antigen Rapid Test Kit (Saliva)"
     ],
     "distributors": [
-      "Figura Pharma GmbH & Co. KG"
+      "Detools GmbHFigura Pharma GmbH & Co. KG"
     ],
     "studies": {
       "344": {
         "author": "manufacturer",
         "id": 344,
         "sensitivity": {
-          "avg": 0.9704,
-          "min": 0.92,
+          "avg": 0.985,
+          "min": 0.94,
           "max": 0.99
         },
         "specificity": {
-          "avg": 0.9944,
-          "min": 0.9693999999999999,
+          "avg": 0.9945,
+          "min": 0.9699,
           "max": 0.9998999999999999
+        }
+      }
+    },
+    "selftest": false,
+    "shops": []
+  },
+  {
+    "id": "AT176/21",
+    "name": "SIENNA COVID-19 Antigen Rapid Test Cassette",
+    "pei": false,
+    "manufacturer": "Salofa Oy",
+    "Hersteller Stadt": "Salo",
+    "Hersteller Land": "FI",
+    "EU Bevollmächtigter Name": "",
+    "EU Bevollmächtigter Stadt": "",
+    "EU Bevollmächtigter Land": "",
+    "Testort*": "POC (ohne Gerät)",
+    "tradename": [
+      "SIENNA COVID-19 Antigen Rapid Test Cassette"
+    ],
+    "distributors": [
+      "Promeditech GmbH"
+    ],
+    "studies": {
+      "345": {
+        "author": "manufacturer",
+        "id": 345,
+        "sensitivity": {
+          "avg": 0.927,
+          "min": 0.88,
+          "max": 0.95
+        },
+        "specificity": {
+          "avg": 0.9990000000000001,
+          "min": 0.991,
+          "max": 1
+        }
+      }
+    },
+    "selftest": false,
+    "shops": []
+  },
+  {
+    "id": "AT322/21",
+    "name": "SIENNA COVID-19 Antigen Rapid Test Cassette",
+    "pei": false,
+    "manufacturer": "Salofa Oy",
+    "Hersteller Stadt": "Salo",
+    "Hersteller Land": "FI",
+    "EU Bevollmächtigter Name": "",
+    "EU Bevollmächtigter Stadt": "",
+    "EU Bevollmächtigter Land": "",
+    "Testort*": "POC (ohne Gerät)",
+    "tradename": [
+      "SIENNA COVID-19 Antigen Rapid Test Cassette"
+    ],
+    "distributors": [
+      "Promeditech GmbH"
+    ],
+    "studies": {
+      "346": {
+        "author": "manufacturer",
+        "id": 346,
+        "sensitivity": {
+          "avg": 0.899,
+          "min": 0.83,
+          "max": 0.94
+        },
+        "specificity": {
+          "avg": 0.9990000000000001,
+          "min": 0.982,
+          "max": 1
+        }
+      }
+    },
+    "selftest": false,
+    "shops": []
+  },
+  {
+    "id": "AT063/20",
+    "name": "SIENNA COVID-19 Antigen Rapid Test Cassette",
+    "pei": true,
+    "manufacturer": "Salofa Oy",
+    "Hersteller Stadt": "Salo",
+    "Hersteller Land": "FI",
+    "EU Bevollmächtigter Name": "",
+    "EU Bevollmächtigter Stadt": "",
+    "EU Bevollmächtigter Land": "",
+    "Testort*": "POC (ohne Gerät)",
+    "tradename": [
+      "SIENNA COVID-19 Antigen Rapid Test Cassette",
+      " Salocor SARS-CoV-2 Antigen Rapid Test Cassette"
+    ],
+    "distributors": [
+      "HWV R. Blome GmbHPromeditech GmbH"
+    ],
+    "studies": {
+      "347": {
+        "author": "manufacturer",
+        "id": 347,
+        "sensitivity": {
+          "avg": 0.9590000000000001,
+          "min": 0.91,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 0.9890000000000001,
+          "min": 0.9740000000000001,
+          "max": 0.995
         }
       }
     },
@@ -8631,9 +8746,9 @@
         "testId": "AT093/21",
         "id": 101
       },
-      "345": {
+      "348": {
         "author": "manufacturer",
-        "id": 345,
+        "id": 348,
         "sensitivity": {
           "avg": 0.927,
           "min": 0.88,
@@ -8643,115 +8758,6 @@
           "avg": 1,
           "min": 0.991,
           "max": 1
-        }
-      }
-    },
-    "selftest": false,
-    "shops": []
-  },
-  {
-    "id": "AT176/21",
-    "name": "SIENNA COVID-19 Antigen Rapid Test Cassette",
-    "pei": false,
-    "manufacturer": "Salofa Oy",
-    "Hersteller Stadt": "Salo",
-    "Hersteller Land": "FI",
-    "EU Bevollmächtigter Name": "",
-    "EU Bevollmächtigter Stadt": "",
-    "EU Bevollmächtigter Land": "",
-    "Testort*": "POC (ohne Gerät)",
-    "tradename": [
-      "SIENNA COVID-19 Antigen Rapid Test Cassette"
-    ],
-    "distributors": [
-      "Promeditech GmbH"
-    ],
-    "studies": {
-      "346": {
-        "author": "manufacturer",
-        "id": 346,
-        "sensitivity": {
-          "avg": 0.927,
-          "min": 0.88,
-          "max": 0.95
-        },
-        "specificity": {
-          "avg": 0.9990000000000001,
-          "min": 0.991,
-          "max": 1
-        }
-      }
-    },
-    "selftest": false,
-    "shops": []
-  },
-  {
-    "id": "AT322/21",
-    "name": "SIENNA COVID-19 Antigen Rapid Test Cassette",
-    "pei": false,
-    "manufacturer": "Salofa Oy",
-    "Hersteller Stadt": "Salo",
-    "Hersteller Land": "FI",
-    "EU Bevollmächtigter Name": "",
-    "EU Bevollmächtigter Stadt": "",
-    "EU Bevollmächtigter Land": "",
-    "Testort*": "POC (ohne Gerät)",
-    "tradename": [
-      "SIENNA COVID-19 Antigen Rapid Test Cassette"
-    ],
-    "distributors": [
-      "Promeditech GmbH"
-    ],
-    "studies": {
-      "347": {
-        "author": "manufacturer",
-        "id": 347,
-        "sensitivity": {
-          "avg": 0.899,
-          "min": 0.83,
-          "max": 0.94
-        },
-        "specificity": {
-          "avg": 0.9990000000000001,
-          "min": 0.982,
-          "max": 1
-        }
-      }
-    },
-    "selftest": false,
-    "shops": []
-  },
-  {
-    "id": "AT063/20",
-    "name": "SIENNA COVID-19 Antigen Rapid Test Cassette",
-    "pei": true,
-    "manufacturer": "Salofa Oy",
-    "Hersteller Stadt": "Salo",
-    "Hersteller Land": "FI",
-    "EU Bevollmächtigter Name": "",
-    "EU Bevollmächtigter Stadt": "",
-    "EU Bevollmächtigter Land": "",
-    "Testort*": "POC (ohne Gerät)",
-    "tradename": [
-      "SIENNA COVID-19 Antigen Rapid Test Cassette",
-      " Salocor SARS-CoV-2 Antigen Rapid Test Cassette"
-    ],
-    "distributors": [
-      "HWV R. Blome GmbHPromeditech GmbH"
-    ],
-    "studies": {
-      "348": {
-        "author": "manufacturer",
-        "id": 348,
-        "sensitivity": {
-          "avg": 0.9590000000000001,
-          "min": 0.91,
-          "max": 0.98
-        },
-        "specificity": {
-          "avg": 0.9890000000000001,
-          "min": 0.9740000000000001,
-          "max": 0.995
         }
       }
     },
@@ -10042,42 +10048,6 @@
     "shops": []
   },
   {
-    "id": "AT419/21",
-    "name": "2019- nCoV and Flu A/B Antigen Combo Rapid Test Kit (Colloid Gold Immunoassay)",
-    "pei": false,
-    "manufacturer": "Ustar Biotechnologies (Hangzhou) Ltd.",
-    "Hersteller Stadt": "Hangzhou",
-    "Hersteller Land": "CN",
-    "EU Bevollmächtigter Name": "Lotus NL B.V.",
-    "EU Bevollmächtigter Stadt": "Hague",
-    "EU Bevollmächtigter Land": "NL",
-    "Testort*": "POC (ohne Gerät)",
-    "tradename": [
-      "2019- nCoV and Flu A/B Antigen Combo Rapid Test Kit (Colloid Gold Immunoassay)"
-    ],
-    "distributors": [
-      "Fairpreis GMBH"
-    ],
-    "studies": {
-      "378": {
-        "author": "manufacturer",
-        "id": 378,
-        "sensitivity": {
-          "avg": 0.9565,
-          "min": 0.91,
-          "max": 0.98
-        },
-        "specificity": {
-          "avg": 0.9926999999999999,
-          "min": 0.9740000000000001,
-          "max": 0.9991
-        }
-      }
-    },
-    "selftest": false,
-    "shops": []
-  },
-  {
     "id": "AT418/21",
     "name": "2019-nCoV Antigen Rapid Test",
     "pei": false,
@@ -10095,9 +10065,9 @@
       "Fairpreis GMBH"
     ],
     "studies": {
-      "379": {
+      "378": {
         "author": "manufacturer",
-        "id": 379,
+        "id": 378,
         "sensitivity": {
           "avg": 0.9534,
           "min": 0.91,
@@ -10106,6 +10076,43 @@
         "specificity": {
           "avg": 0.993,
           "min": 0.975,
+          "max": 0.9991
+        }
+      }
+    },
+    "selftest": false,
+    "shops": []
+  },
+  {
+    "id": "AT419/21",
+    "name": "2019- nCoV and Flu A/B Antigen Combo Rapid Test Kit (Colloid Gold Immunoassay)",
+    "pei": false,
+    "manufacturer": "Ustar Biotechnologies (Hangzhou) Ltd.",
+    "Hersteller Stadt": "Hangzhou",
+    "Hersteller Land": "CN",
+    "EU Bevollmächtigter Name": "Lotus NL B.V.",
+    "EU Bevollmächtigter Stadt": "Hague",
+    "EU Bevollmächtigter Land": "NL",
+    "Testort*": "POC (ohne Gerät)",
+    "tradename": [
+      "2019- nCoV and Flu A/B Antigen Combo Rapid Test Kit (Colloid Gold Immunoassay)",
+      " 2019- nCoV and Flu A/B Antigen Combo Rapid Test Kit (Colloid Gold Immunoassay)"
+    ],
+    "distributors": [
+      "Fairpreis GMBHPro-ASM GmbH"
+    ],
+    "studies": {
+      "379": {
+        "author": "manufacturer",
+        "id": 379,
+        "sensitivity": {
+          "avg": 0.9565,
+          "min": 0.91,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 0.9926999999999999,
+          "min": 0.9740000000000001,
           "max": 0.9991
         }
       }
@@ -10151,42 +10158,6 @@
     "shops": []
   },
   {
-    "id": "AT069/21",
-    "name": "RapidFor SARS-CoV-2 Saliva Antigen Test",
-    "pei": true,
-    "manufacturer": "Vitrosens Biyoteknoloji Ltd. Sti.",
-    "Hersteller Stadt": "Ümraniye/Istanbul",
-    "Hersteller Land": "TR",
-    "EU Bevollmächtigter Name": "",
-    "EU Bevollmächtigter Stadt": "",
-    "EU Bevollmächtigter Land": "",
-    "Testort*": "POC (ohne Gerät)",
-    "tradename": [
-      "RapidFor SARS-CoV-2 Saliva Antigen Test"
-    ],
-    "distributors": [
-      "HOLZHÄUSER Ihr starker Partner für Betriebshygiene HOLZHÄUSER Fachhandel e.K."
-    ],
-    "studies": {
-      "381": {
-        "author": "manufacturer",
-        "id": 381,
-        "sensitivity": {
-          "avg": 0.953,
-          "min": 0.92,
-          "max": 0.97
-        },
-        "specificity": {
-          "avg": 0.991,
-          "min": 0.9356,
-          "max": 0.9893000000000001
-        }
-      }
-    },
-    "selftest": false,
-    "shops": []
-  },
-  {
     "id": "AT292/21",
     "name": "RapidFor SARS-CoV-2 Duo Antigen Test",
     "pei": false,
@@ -10204,9 +10175,9 @@
       "Imex-Co GmbH"
     ],
     "studies": {
-      "382": {
+      "381": {
         "author": "manufacturer",
-        "id": 382,
+        "id": 381,
         "sensitivity": {
           "avg": 0.9676,
           "min": 0.93,
@@ -10216,6 +10187,42 @@
           "avg": 0.9929000000000001,
           "min": 0.9745,
           "max": 0.9991
+        }
+      }
+    },
+    "selftest": false,
+    "shops": []
+  },
+  {
+    "id": "AT069/21",
+    "name": "RapidFor SARS-CoV-2 Saliva Antigen Test",
+    "pei": true,
+    "manufacturer": "Vitrosens Biyoteknoloji Ltd. Sti.",
+    "Hersteller Stadt": "Ümraniye/Istanbul",
+    "Hersteller Land": "TR",
+    "EU Bevollmächtigter Name": "",
+    "EU Bevollmächtigter Stadt": "",
+    "EU Bevollmächtigter Land": "",
+    "Testort*": "POC (ohne Gerät)",
+    "tradename": [
+      "RapidFor SARS-CoV-2 Saliva Antigen Test"
+    ],
+    "distributors": [
+      "HOLZHÄUSER Ihr starker Partner für Betriebshygiene HOLZHÄUSER Fachhandel e.K."
+    ],
+    "studies": {
+      "382": {
+        "author": "manufacturer",
+        "id": 382,
+        "sensitivity": {
+          "avg": 0.953,
+          "min": 0.92,
+          "max": 0.97
+        },
+        "specificity": {
+          "avg": 0.991,
+          "min": 0.9356,
+          "max": 0.9893000000000001
         }
       }
     },
@@ -10634,6 +10641,42 @@
     "shops": []
   },
   {
+    "id": "AT277/21",
+    "name": "GRUENBANKA SARS-CoV-2 Antigen Detection Kit (Collodial Gold Method)",
+    "pei": false,
+    "manufacturer": "Xiamen Jiqing Biomedical Technology Co. Ltd",
+    "Hersteller Stadt": "Xiamen",
+    "Hersteller Land": "CN",
+    "EU Bevollmächtigter Name": "Lotus NL B.V.",
+    "EU Bevollmächtigter Stadt": "The Hague",
+    "EU Bevollmächtigter Land": "NL",
+    "Testort*": "POC (ohne Gerät)",
+    "tradename": [
+      "GRUENBANKA SARS-CoV-2 Antigen Detection Kit (Collodial Gold Method)"
+    ],
+    "distributors": [
+      "MTC GmbH"
+    ],
+    "studies": {
+      "394": {
+        "author": "manufacturer",
+        "id": 394,
+        "sensitivity": {
+          "avg": 0.9439,
+          "min": 0.9,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 1,
+          "min": 0.9691,
+          "max": 1
+        }
+      }
+    },
+    "selftest": false,
+    "shops": []
+  },
+  {
     "id": "AT109/20",
     "name": "SARS-CoV-2 Antigen Rapid Test",
     "pei": true,
@@ -10652,9 +10695,9 @@
       "Dunox GmbHH.M.S Handel-Marketing-Service GmbH"
     ],
     "studies": {
-      "394": {
+      "395": {
         "author": "manufacturer",
-        "id": 394,
+        "id": 395,
         "sensitivity": {
           "avg": 0.963,
           "min": 0.89,
@@ -10689,9 +10732,9 @@
       "Crenano GmbHEJOY GmbH"
     ],
     "studies": {
-      "395": {
+      "396": {
         "author": "manufacturer",
-        "id": 395,
+        "id": 396,
         "sensitivity": {
           "avg": 0.9667,
           "min": 0.94,
@@ -10725,9 +10768,9 @@
       "Crenano GmbH"
     ],
     "studies": {
-      "396": {
+      "397": {
         "author": "manufacturer",
-        "id": 396,
+        "id": 397,
         "sensitivity": {
           "avg": 0.9591,
           "min": 0.93,
@@ -10762,9 +10805,9 @@
       "Crenano GmbHEJOY GmbH"
     ],
     "studies": {
-      "397": {
+      "398": {
         "author": "manufacturer",
-        "id": 397,
+        "id": 398,
         "sensitivity": {
           "avg": 0.9534999999999999,
           "min": 0.92,
@@ -10798,9 +10841,9 @@
       "Dixion Vertrieb medizinischer Geräte GmbH"
     ],
     "studies": {
-      "398": {
+      "399": {
         "author": "manufacturer",
-        "id": 398,
+        "id": 399,
         "sensitivity": {
           "avg": 0.917,
           "min": 0.82,
@@ -10835,9 +10878,9 @@
       "MEDBest GmbHMEDICE Arzneimittel Pütter GmbH & Co. KG"
     ],
     "studies": {
-      "399": {
+      "400": {
         "author": "manufacturer",
-        "id": 399,
+        "id": 400,
         "sensitivity": {
           "avg": 0.917,
           "min": 0.82,
@@ -10871,9 +10914,9 @@
       ""
     ],
     "studies": {
-      "400": {
+      "401": {
         "author": "manufacturer",
-        "id": 400,
+        "id": 401,
         "sensitivity": {
           "avg": 0.9852,
           "min": 0.95,
@@ -10907,9 +10950,9 @@
       "Rogers GmbH ( Care4u Medical Supplies )"
     ],
     "studies": {
-      "401": {
+      "402": {
         "author": "manufacturer",
-        "id": 401,
+        "id": 402,
         "sensitivity": {
           "avg": 0.968,
           "min": 0.92,
@@ -10943,9 +10986,9 @@
       "Bereket Megamarkt"
     ],
     "studies": {
-      "402": {
+      "403": {
         "author": "manufacturer",
-        "id": 402,
+        "id": 403,
         "sensitivity": {
           "avg": 0.8438,
           "min": 0.72,
@@ -10955,6 +10998,78 @@
           "avg": 1,
           "min": 0.9712999999999999,
           "max": 1
+        }
+      }
+    },
+    "selftest": false,
+    "shops": []
+  },
+  {
+    "id": "AT268/21",
+    "name": "AndLucky SARS-CoV-2 Antigen SPUTUM Rapid Test Kit (non-invasive)",
+    "pei": true,
+    "manufacturer": "Zhejiang Anji Saianfu Biotech Co., Ltd.",
+    "Hersteller Stadt": "HuZhou City",
+    "Hersteller Land": "CN",
+    "EU Bevollmächtigter Name": "Brand-New Trading GmbH",
+    "EU Bevollmächtigter Stadt": "Tiefgraben",
+    "EU Bevollmächtigter Land": "AT",
+    "Testort*": "POC (ohne Gerät)",
+    "tradename": [
+      "AndLucky SARS-CoV-2 Antigen SPUTUM Rapid Test Kit (non-invasive)"
+    ],
+    "distributors": [
+      "Brand-New Trading GmbH"
+    ],
+    "studies": {
+      "404": {
+        "author": "manufacturer",
+        "id": 404,
+        "sensitivity": {
+          "avg": 0.935,
+          "min": 0.9,
+          "max": 0.95
+        },
+        "specificity": {
+          "avg": 0.9940000000000001,
+          "min": 0.9118999999999999,
+          "max": 0.9756
+        }
+      }
+    },
+    "selftest": false,
+    "shops": []
+  },
+  {
+    "id": "AT269/21",
+    "name": "AndLucky SARS-CoV-2 Antigen Anterior Nasal Rapid Test",
+    "pei": true,
+    "manufacturer": "Zhejiang Anji Saianfu Biotech Co., Ltd.",
+    "Hersteller Stadt": "HuZhou City",
+    "Hersteller Land": "CN",
+    "EU Bevollmächtigter Name": "Brand-New Trading GmbH",
+    "EU Bevollmächtigter Stadt": "Tiefgraben",
+    "EU Bevollmächtigter Land": "AT",
+    "Testort*": "POC (ohne Gerät)",
+    "tradename": [
+      "AndLucky SARS-CoV-2 Antigen Anterior Nasal Rapid Test"
+    ],
+    "distributors": [
+      "Brand-New Trading GmbH"
+    ],
+    "studies": {
+      "405": {
+        "author": "manufacturer",
+        "id": 405,
+        "sensitivity": {
+          "avg": 0.975,
+          "min": 0.89,
+          "max": 0.94
+        },
+        "specificity": {
+          "avg": 0.991,
+          "min": 0.9120999999999999,
+          "max": 0.9768000000000001
         }
       }
     },
@@ -10981,9 +11096,9 @@
       "AlphaScience GmbH"
     ],
     "studies": {
-      "403": {
+      "406": {
         "author": "manufacturer",
-        "id": 403,
+        "id": 406,
         "sensitivity": {
           "avg": 0.958,
           "min": 0.89,
@@ -10993,78 +11108,6 @@
           "avg": 0.99,
           "min": 0.9120999999999999,
           "max": 0.9768000000000001
-        }
-      }
-    },
-    "selftest": false,
-    "shops": []
-  },
-  {
-    "id": "AT269/21",
-    "name": "AndLucky SARS-CoV-2 Antigen Anterior Nasal Rapid Test",
-    "pei": true,
-    "manufacturer": "Zhejiang Anji Saianfu Biotech Co., Ltd.",
-    "Hersteller Stadt": "HuZhou City",
-    "Hersteller Land": "CN",
-    "EU Bevollmächtigter Name": "Brand-New Trading GmbH",
-    "EU Bevollmächtigter Stadt": "Tiefgraben",
-    "EU Bevollmächtigter Land": "AT",
-    "Testort*": "POC (ohne Gerät)",
-    "tradename": [
-      "AndLucky SARS-CoV-2 Antigen Anterior Nasal Rapid Test"
-    ],
-    "distributors": [
-      "Brand-New Trading GmbH"
-    ],
-    "studies": {
-      "404": {
-        "author": "manufacturer",
-        "id": 404,
-        "sensitivity": {
-          "avg": 0.975,
-          "min": 0.89,
-          "max": 0.94
-        },
-        "specificity": {
-          "avg": 0.991,
-          "min": 0.9120999999999999,
-          "max": 0.9768000000000001
-        }
-      }
-    },
-    "selftest": false,
-    "shops": []
-  },
-  {
-    "id": "AT268/21",
-    "name": "AndLucky SARS-CoV-2 Antigen SPUTUM Rapid Test Kit (non-invasive)",
-    "pei": true,
-    "manufacturer": "Zhejiang Anji Saianfu Biotech Co., Ltd.",
-    "Hersteller Stadt": "HuZhou City",
-    "Hersteller Land": "CN",
-    "EU Bevollmächtigter Name": "Brand-New Trading GmbH",
-    "EU Bevollmächtigter Stadt": "Tiefgraben",
-    "EU Bevollmächtigter Land": "AT",
-    "Testort*": "POC (ohne Gerät)",
-    "tradename": [
-      "AndLucky SARS-CoV-2 Antigen SPUTUM Rapid Test Kit (non-invasive)"
-    ],
-    "distributors": [
-      "Brand-New Trading GmbH"
-    ],
-    "studies": {
-      "405": {
-        "author": "manufacturer",
-        "id": 405,
-        "sensitivity": {
-          "avg": 0.935,
-          "min": 0.9,
-          "max": 0.95
-        },
-        "specificity": {
-          "avg": 0.9940000000000001,
-          "min": 0.9118999999999999,
-          "max": 0.9756
         }
       }
     },
@@ -11099,9 +11142,9 @@
       "A. Menarini DiagnsoticsAlphaScience GmbHAlphascience GmbHAspilos GmbHBio-RadDetools GmbHHäffner GmbH & Co KGImmunodiagnostic Systems Deutschland GmbHLumiraDx GmbHPraxisdienst GmbH & Co. KGisopharm GmbH"
     ],
     "studies": {
-      "406": {
+      "407": {
         "author": "manufacturer",
-        "id": 406,
+        "id": 407,
         "sensitivity": {
           "avg": 0.9672,
           "min": 0.88,
@@ -11135,9 +11178,9 @@
       "Careshield GmbH"
     ],
     "studies": {
-      "407": {
+      "408": {
         "author": "manufacturer",
-        "id": 407,
+        "id": 408,
         "sensitivity": {
           "avg": 0.9059999999999999,
           "min": 0.83,
@@ -11171,9 +11214,9 @@
       "deucin GmbH"
     ],
     "studies": {
-      "408": {
+      "409": {
         "author": "manufacturer",
-        "id": 408,
+        "id": 409,
         "sensitivity": {
           "avg": 0.9327,
           "min": 0.9,
@@ -11207,9 +11250,9 @@
       "deucin GmbH"
     ],
     "studies": {
-      "409": {
+      "410": {
         "author": "manufacturer",
-        "id": 409,
+        "id": 410,
         "sensitivity": {
           "avg": 0.9595999999999999,
           "min": 0.93,
@@ -11232,7 +11275,7 @@
     "name": "NanoRepro Antigen Schnelltest (Viromed)/NanoRepro Antigen Rapid Test (Viromed)",
     "id": "NO-AT-1",
     "studies": {
-      "410": {
+      "411": {
         "author": "manufacturer",
         "source": "https://www.viromed.de/wp-content/uploads/2021/03/NanoRepro_SARS-CoV-2_PB_VIROMED_Rev00_202103_1er_ENDKUNDE.pdf",
         "sensitivity": {
@@ -11245,7 +11288,7 @@
           "min": 0.9634,
           "max": 0.9998
         },
-        "id": 410
+        "id": 411
       }
     },
     "selftest": true,
@@ -11258,7 +11301,7 @@
     "name": "Rapid SARS-CoV-2 Antigen Test Card",
     "id": "NO-AT-2",
     "studies": {
-      "411": {
+      "412": {
         "author": "manufacturer",
         "source": "https://e2t-med.de/wp-content/uploads/2020/12/COVID19_antigen_kit_07AG6020B-008-02-12-DE.pdf",
         "sensitivity": {
@@ -11271,7 +11314,7 @@
           "min": 0.9826,
           "max": 0.9998
         },
-        "id": 411
+        "id": 412
       }
     },
     "selftest": true,
@@ -11284,7 +11327,7 @@
     "name": "COVID-19 Antigen Rapid Test",
     "id": "NO-AT-3",
     "studies": {
-      "412": {
+      "413": {
         "author": "manufacturer",
         "comment": "ct < 33 (hohe Viruslast)",
         "source": "https://diwamedical.com/wp-content/uploads/2021/03/Clungene-Nasal-Antigentest-Sonderzulassung-zur-Laienanwendung.pdf",
@@ -11298,9 +11341,9 @@
           "min": 0.981,
           "max": 0.998
         },
-        "id": 412
+        "id": 413
       },
-      "413": {
+      "414": {
         "author": "manufacturer",
         "comment": "alle Proband_innen",
         "source": "https://diwamedical.com/wp-content/uploads/2021/03/Clungene-Nasal-Antigentest-Sonderzulassung-zur-Laienanwendung.pdf",
@@ -11314,7 +11357,7 @@
           "min": 0.981,
           "max": 0.998
         },
-        "id": 413
+        "id": 414
       }
     },
     "selftest": true,
@@ -11327,7 +11370,7 @@
     "name": "Medicovid-AG SARS CoV-2 Antigen SELBSTTEST NASE",
     "id": "NO-AT-4",
     "studies": {
-      "414": {
+      "415": {
         "author": "manufacturer",
         "source": "https://medice.com/api/de-de/produkte/corona-tests/medicovid-ag-r-sars-cov-2-antigen-selbsttest/403000003202-gi-sars-cov2-antigen-selbsttest-nase-1-5-1.pdf",
         "sensitivity": {
@@ -11340,7 +11383,7 @@
           "min": 0.9764,
           "max": 0.9999
         },
-        "id": 414
+        "id": 415
       }
     },
     "selftest": true,
@@ -11353,7 +11396,7 @@
     "name": "COVID-19 Antigen Schnelltest (Spucktest)",
     "id": "NO-AT-5",
     "studies": {
-      "415": {
+      "416": {
         "author": "manufacturer",
         "comment": "ct < 30 (hohe Viruslast)",
         "source": "https://www.amec-gmbh.de/wp-content/uploads/amec_Gebrauchsanweisung_Laie_17032021.pdf",
@@ -11367,9 +11410,9 @@
           "min": 0.985,
           "max": 0.999
         },
-        "id": 415
+        "id": 416
       },
-      "416": {
+      "417": {
         "author": "manufacturer",
         "comment": "ct < 37 (alle Proband_innen)",
         "source": "https://www.amec-gmbh.de/wp-content/uploads/amec_Gebrauchsanweisung_Laie_17032021.pdf",
@@ -11383,7 +11426,7 @@
           "min": 0.985,
           "max": 0.999
         },
-        "id": 416
+        "id": 417
       }
     },
     "selftest": true,
@@ -11395,7 +11438,7 @@
     "antragsteller": "MR Sanicom GmbH",
     "name": "COVID-19 Antigen-Schnelltest (Kolloidales Gold)",
     "studies": {
-      "417": {
+      "418": {
         "author": "manufacturer",
         "source": "https://www.mr-sanicom.de/mr-sanicom/",
         "sensitivity": {
@@ -11408,7 +11451,7 @@
           "min": 0.9768,
           "max": 0.9967
         },
-        "id": 417
+        "id": 418
       }
     },
     "selftest": true,
@@ -11431,7 +11474,7 @@
     "antragsteller": "Haemato Pharm GmbH",
     "name": "Wondfo 2019-nCoV Antigen Test (Lateral-Flow-Methode) Selbsttest",
     "studies": {
-      "418": {
+      "419": {
         "author": "manufacturer",
         "source": "https://www.schnelltest-antigen.de/wp-content/uploads/2021/03/6_Nasal-IFU-HAEMATO.pdf",
         "sensitivity": {
@@ -11444,7 +11487,7 @@
           "min": 0.9673,
           "max": 0.9989
         },
-        "id": 418
+        "id": 419
       }
     },
     "selftest": true,
@@ -11457,7 +11500,7 @@
     "antragsteller": "OFM GmbH",
     "name": "Sensitivo COVID-19 Antigen Test",
     "studies": {
-      "419": {
+      "420": {
         "author": "manufacturer",
         "source": "https://www.ofm-medical.de/#antigen-selbsttest",
         "sensitivity": {
@@ -11470,7 +11513,7 @@
           "min": null,
           "max": null
         },
-        "id": 419
+        "id": 420
       }
     },
     "selftest": true,
@@ -11483,7 +11526,7 @@
     "antragsteller": "Beijing Lepu Medical Technology Co., Ltd.",
     "name": "NASOCHECKcomfort SARS-CoV-2 Antigen-Schnelltest",
     "studies": {
-      "420": {
+      "421": {
         "author": "Händler 1",
         "source": "https://www.tima-care.de/de/antigentest-naso.html",
         "sensitivity": {
@@ -11496,9 +11539,9 @@
           "min": null,
           "max": null
         },
-        "id": 420
+        "id": 421
       },
-      "421": {
+      "422": {
         "author": "Händler 2",
         "source": "https://www.avihealth.de/covid-19-schnelltest/42/laientest-lepu-antigen-schnelltest-sars-cov-2?c=9",
         "sensitivity": {
@@ -11511,9 +11554,9 @@
           "min": null,
           "max": null
         },
-        "id": 421
+        "id": 422
       },
-      "422": {
+      "423": {
         "author": "Händler 3",
         "source": "https://www.roscheba-care.de/tests/at-109?c=124",
         "sensitivity": {
@@ -11526,7 +11569,7 @@
           "min": 0.9592,
           "max": 0.9987
         },
-        "id": 422
+        "id": 423
       }
     },
     "selftest": true,
@@ -11552,5 +11595,25 @@
     "pei": false,
     "studies": {},
     "id": "NO-AT-12"
+  },
+  {
+    "reference": "5640-S-036/21",
+    "manufacturer": "Acura Kliniken Baden-Baden GmbH",
+    "antragsteller": "Acura Kliniken Baden-Baden GmbH",
+    "name": "Acura Speichel-Test Diagnos COVID-19 Antigen Saliva Test Kit",
+    "selftest": true,
+    "pei": false,
+    "studies": {},
+    "id": "NO-AT-13"
+  },
+  {
+    "reference": "5640-S-049/21",
+    "manufacturer": "Mexacare GmbH",
+    "antragsteller": "Mexacare GmbH",
+    "name": "MEXACARE Corona Home-Test Antigen",
+    "selftest": true,
+    "pei": false,
+    "studies": {},
+    "id": "NO-AT-14"
   }
 ]

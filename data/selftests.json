@@ -335,5 +335,24 @@
         "manufacturer": "OFM GmbH",
         "antragsteller": "OFM GmbH",
         "name": "Deni COVID-19 Antigen Test"
+    },
+    {
+        "reference": "5640-S-036/21",
+        "manufacturer": "Acura Kliniken Baden-Baden GmbH",
+        "antragsteller": "Acura Kliniken Baden-Baden GmbH",
+        "name": "Acura Speichel-Test Diagnos COVID-19 Antigen Saliva Test Kit"
+    },
+    {
+        "reference": "5640-S-032/21",
+        "manufacturer": "Shenzhen Watmind Medical Co., Ltd.",
+        "antragsteller": "Shenzhen Watmind Medical Co., Ltd.",
+        "name": "SARS-CoV-2 Ag Diagnostic Test Kit (Colloidal Gold)",
+        "id": "AT-108/21"
+    },
+    {
+        "reference": "5640-S-049/21",
+        "manufacturer": "Mexacare GmbH",
+        "antragsteller": "Mexacare GmbH",
+        "name": "MEXACARE Corona Home-Test Antigen"
     }
 ]
