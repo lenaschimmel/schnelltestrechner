@@ -11607,6 +11607,17 @@
     "id": "NO-AT-13"
   },
   {
+    "reference": "5640-S-032/21",
+    "manufacturer": "Shenzhen Watmind Medical Co., Ltd.",
+    "antragsteller": "Shenzhen Watmind Medical Co., Ltd.",
+    "name": "SARS-CoV-2 Ag Diagnostic Test Kit (Colloidal Gold)",
+    "internal_comment": "Hat AT-108/21 aber die Nummer kommt in der großen Tabelle nicht vor.",
+    "selftest": true,
+    "pei": false,
+    "studies": {},
+    "id": "NO-AT-14"
+  },
+  {
     "reference": "5640-S-049/21",
     "manufacturer": "Mexacare GmbH",
     "antragsteller": "Mexacare GmbH",
@@ -11614,6 +11625,6 @@
     "selftest": true,
     "pei": false,
     "studies": {},
-    "id": "NO-AT-14"
+    "id": "NO-AT-15"
   }
 ]

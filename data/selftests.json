@@ -347,7 +347,7 @@
         "manufacturer": "Shenzhen Watmind Medical Co., Ltd.",
         "antragsteller": "Shenzhen Watmind Medical Co., Ltd.",
         "name": "SARS-CoV-2 Ag Diagnostic Test Kit (Colloidal Gold)",
-        "id": "AT-108/21"
+        "internal_comment": "Hat AT-108/21 aber die Nummer kommt in der großen Tabelle nicht vor."
     },
     {
         "reference": "5640-S-049/21",
