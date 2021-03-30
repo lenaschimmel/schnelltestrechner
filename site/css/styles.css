@@ -13,3 +13,9 @@
 .v-data-table td {
     padding: 0 8px !important;
 }
+
+.v-list-item__subtitle, .v-list-item__title {
+    overflow: auto !important;
+    text-overflow: unset !important;
+    white-space: normal !important;
+}
