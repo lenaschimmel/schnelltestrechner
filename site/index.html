@@ -383,7 +383,8 @@
 
                       <template v-if="incidenceSource == 'district'">
                         <p>Stadt / Landkreis:
-                          <v-autocomplete v-model="districtId" :items="districtsChoices" item-text="displayName" item-value="ags" solo>
+                          <v-autocomplete v-model="districtId" :items="districtsChoices" item-text="displayName"
+                            item-value="ags" solo>
                           </v-autocomplete>
                         </p>
                       </template>
@@ -463,7 +464,11 @@
                       </v-container>
 
                       <v-alert icon="mdi-information" dense outlined type="info" v-if="sympChest || sympWheez">
-                        Hinweis: wenn <i>Keuchen</i> oder <i>Engegefühl in der Brust</i> vorliegen, sinkt die Vortestwahrscheinlichkeit scheinbar. Das verwirrt auf den ersten Blick, hat aber einen Grund, der <a href="https://github.com/lenaschimmel/schnelltestrechner/issues/21#issuecomment-808184992" target="_">hier</a> erläutert wird.
+                        Hinweis: wenn <i>Keuchen</i> oder <i>Engegefühl in der Brust</i> vorliegen, sinkt die
+                        Vortestwahrscheinlichkeit scheinbar. Das verwirrt auf den ersten Blick, hat aber einen Grund,
+                        der <a
+                          href="https://github.com/lenaschimmel/schnelltestrechner/issues/21#issuecomment-808184992"
+                          target="_">hier</a> erläutert wird.
                       </v-alert>
 
                       <template v-if="anySymptoms && intermediate">
@@ -556,7 +561,8 @@
                       </v-container>
 
                       <p>Anzeige-Einstellungen:</p>
-                      <v-checkbox label="Spezifität auf oberste 10% heran zoomen" v-model="zoomSpecificity"></v-checkbox>
+                      <v-checkbox label="Spezifität auf oberste 10% heran zoomen" v-model="zoomSpecificity">
+                      </v-checkbox>
 
                       <v-card class="mt-4">
                         <v-data-table dense v-model="compareTests" :items="visibleCompareTests"
@@ -596,8 +602,9 @@
                               width="201">
                               <rect width="201" :height="20 * Object.values(item.studies).length"
                                 style="fill:rgb(255,255,255);stroke-width:1;stroke:rgb(0,0,0)" />
-                              <line v-if="!zoomSpecificity" v-for="x in [10,20,30,40,50,60,70,80,90]" :key="x" :x1="x*2" :x2="x*2" y1="0"
-                                :y2="20 * Object.values(item.studies).length" :style="'stroke:grey;stroke-width:1'" />
+                              <line v-if="!zoomSpecificity" v-for="x in [10,20,30,40,50,60,70,80,90]" :key="x" :x1="x*2"
+                                :x2="x*2" y1="0" :y2="20 * Object.values(item.studies).length"
+                                :style="'stroke:grey;stroke-width:1'" />
 
                               <template v-for="(study,i) in Object.values(item.studies)">
                                 <template v-if="study && study.specificity">
@@ -717,7 +724,8 @@
                       <p>Für die erfolgreiche Evaluierung ist ebenfalls eine Laboruntersuchung durch <i>"verschiedene
                           Institutionen in Deutschland (u.a. Robert-Koch-Institut; Paul-Ehrlich-Institut; Konsiliarlabor
                           für Coronaviren; Institut für Mikrobiologie der Bundeswehr)"</i> nötig. In einem
-                        einheitlichen, analytischen (praxis-fernen, aber sinnvollem) Verfahren wird die Sensitivität des Tests geprüft. <b>Der
+                        einheitlichen, analytischen (praxis-fernen, aber sinnvollem) Verfahren wird die Sensitivität des
+                        Tests geprüft. <b>Der
                           Labortest im Rahmen der PEI-Evaluation testet <i>nicht</i> die Spezifität.</b></p>
                       <p>Der durchgeführte Test ist zwar geeignet, eine vage Aussage zur Sensititvität zu machen, jedoch
                         wird dabei kein Wert Ermittelt, der direkt mit den Ergebnissen der Hersteller oder anderer
@@ -760,6 +768,17 @@
                         <li>Der <a href="https://rki-wiko.shinyapps.io/test_qual/" target="_"> Schnelltest-Rechner des
                             Robert Koch Instituts (RKI)</a>. Er ist zwar langsam und weniger mächtig als dieser hier,
                           bietet aber ein paar andere Darstellungsweisen der Ergebnisse.</li>
+                        <li>Im <a
+                            href="https://www.ndr.de/nachrichten/info/Das-Glossar-zum-Corona-Podcast,podcastcoronavirus146.html#SARS"
+                            target="_">Corona-Glossar</a> des <a
+                            href="https://www.ndr.de/nachrichten/info/podcast4684.html">Coronavirus-Update von NDR
+                            Info</a> werden alle wichtigen Fachbegriffe erläutert. Generell ist der Podcast sehr
+                          empfehlenswert und es gibt ein <a
+                            href="https://www.ndr.de/nachrichten/info/coronaskript174.pdf" target="_">durchsuchbares
+                            Transkript aller Folgen als PDF</a>.</li>
+                        <li>Die Initiative <a href="https://rapidtests.de/" target="_">RapidTests.de</a> erläutert
+                          wichtige Konzepte, auch in ihren umfangreichen <a href="https://rapidtests.de/faq"
+                            target="_">FAQ</a>.</li>
                         <li>Die <a
                             href="https://www.cochrane.de/de/news/aktualisierter-cochrane-review-bewertet-zuverl%C3%A4ssigkeit-von-schnelltests-zum-nachweis-von-covid"
                             target="_">Zusammenfassung</a> und die <a
