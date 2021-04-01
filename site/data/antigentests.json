@@ -19,7 +19,7 @@
       "A. Menarini DiagnosticsSiemens Healthcare GmbHTriPart Logistic GmbH"
     ],
     "studies": {
-      "147": {
+      "150": {
         "author": "Torres, I. et al.",
         "location": "Spain",
         "quadas": "low concern",
@@ -38,9 +38,9 @@
           "max": 1
         },
         "testId": "AT001/20",
-        "id": 147
+        "id": 150
       },
-      "148": {
+      "151": {
         "author": "Torres, I. et al.",
         "location": "Spain",
         "quadas": "low concern",
@@ -59,9 +59,9 @@
           "max": 1
         },
         "testId": "AT001/20",
-        "id": 148
+        "id": 151
       },
-      "149": {
+      "152": {
         "author": "Olearo, F., et al.",
         "location": "Germany",
         "quadas": "intermediate concern",
@@ -80,9 +80,9 @@
           "max": 1
         },
         "testId": "AT001/20",
-        "id": 149
+        "id": 152
       },
-      "150": {
+      "153": {
         "author": "Baro, B., et al.",
         "location": "Spain",
         "quadas": "intermediate concern",
@@ -101,11 +101,11 @@
           "max": 0.996
         },
         "testId": "AT001/20",
-        "id": 150
+        "id": 153
       },
-      "274": {
+      "278": {
         "author": "manufacturer",
-        "id": 274,
+        "id": 278,
         "sensitivity": {
           "avg": 0.9725,
           "min": 0.92,
@@ -141,9 +141,9 @@
       "MTC GmbHMTC GmbH"
     ],
     "studies": {
-      "386": {
+      "390": {
         "author": "manufacturer",
-        "id": 386,
+        "id": 390,
         "sensitivity": {
           "avg": 0.9439,
           "min": 0.9,
@@ -177,9 +177,9 @@
       "Science&Care Vertriebs GmbH"
     ],
     "studies": {
-      "370": {
+      "374": {
         "author": "manufacturer",
-        "id": 370,
+        "id": 374,
         "sensitivity": {
           "avg": 0.9743999999999999,
           "min": 0.95,
@@ -252,9 +252,9 @@
       "Roche Diagnostics GmbH"
     ],
     "studies": {
-      "350": {
+      "352": {
         "author": "manufacturer",
-        "id": 350,
+        "id": 352,
         "sensitivity": {
           "avg": 0.9652,
           "min": 0.91,
@@ -903,7 +903,7 @@
           "avg": 0.41200000000000003
         },
         "specificity": {
-          "avg": 9.95
+          "avg": 0.995
         },
         "testId": "AT005/20",
         "id": 36
@@ -950,9 +950,9 @@
         "testId": "AT005/20",
         "id": 38
       },
-      "153": {
+      "156": {
         "author": "manufacturer",
-        "id": 153,
+        "id": 156,
         "sensitivity": {
           "avg": 0.914,
           "min": 0.85,
@@ -986,7 +986,7 @@
       "Quidel Germany GmbH"
     ],
     "studies": {
-      "89": {
+      "92": {
         "author": "Porte, L., et al.",
         "location": "Chile",
         "quadas": "high concern",
@@ -1005,9 +1005,9 @@
           "max": 0.9940000000000001
         },
         "testId": "AT006/20",
-        "id": 89
+        "id": 92
       },
-      "90": {
+      "93": {
         "author": "Jääskeläinen, A.E., et al.",
         "location": "Finland",
         "quadas": "high concern",
@@ -1024,9 +1024,9 @@
           "avg": 1
         },
         "testId": "AT006/20",
-        "id": 90
+        "id": 93
       },
-      "91": {
+      "94": {
         "author": "Beck, E.T., et al.",
         "location": "USA",
         "quadas": "intermediate concern",
@@ -1045,9 +1045,9 @@
           "max": 1
         },
         "testId": "AT006/20",
-        "id": 91
+        "id": 94
       },
-      "92": {
+      "95": {
         "author": "Herrera, V., et al.",
         "location": "USA",
         "quadas": "unclear",
@@ -1066,9 +1066,9 @@
           "max": 0.997
         },
         "testId": "AT006/20",
-        "id": 92
+        "id": 95
       },
-      "93": {
+      "96": {
         "author": "Marti, J.L.G., et al.",
         "location": "USA",
         "quadas": "unclear",
@@ -1083,11 +1083,11 @@
           "avg": 0.99
         },
         "testId": "AT006/20",
-        "id": 93
+        "id": 96
       },
-      "331": {
+      "334": {
         "author": "manufacturer",
-        "id": 331,
+        "id": 334,
         "sensitivity": {
           "avg": 0.9670000000000001,
           "min": 0.83,
@@ -1106,7 +1106,7 @@
   {
     "id": "AT007/21",
     "name": "BIOMERICA COVID-19 Antigen-Schnelltest / Nasopharyngeal-Abstrich",
-    "pei": false,
+    "pei": true,
     "manufacturer": "BIOMERICA Inc.",
     "Hersteller Stadt": "Irvine, California",
     "Hersteller Land": "US",
@@ -1121,9 +1121,9 @@
       "MICRO-MEDICAL Instrumente GmbH"
     ],
     "studies": {
-      "201": {
+      "205": {
         "author": "manufacturer",
-        "id": 201,
+        "id": 205,
         "sensitivity": {
           "avg": 0.9470000000000001,
           "min": 0.89,
@@ -1157,7 +1157,7 @@
       ""
     ],
     "studies": {
-      "98": {
+      "101": {
         "author": "Toptan, T., et al.",
         "location": "Germany",
         "quadas": "intermediate concern",
@@ -1176,9 +1176,9 @@
           "max": 1
         },
         "testId": "AT008/20",
-        "id": 98
+        "id": 101
       },
-      "99": {
+      "102": {
         "author": "Toptan, T., et al.",
         "location": "Germany",
         "quadas": "unclear",
@@ -1197,9 +1197,9 @@
           "max": 1
         },
         "testId": "AT008/20",
-        "id": 99
+        "id": 102
       },
-      "100": {
+      "103": {
         "author": "Kohmer, N., et al.",
         "location": "Germany",
         "quadas": "intermediate concern",
@@ -1218,11 +1218,11 @@
           "max": 0.9990000000000001
         },
         "testId": "AT008/20",
-        "id": 100
+        "id": 103
       },
-      "332": {
+      "335": {
         "author": "manufacturer",
-        "id": 332,
+        "id": 335,
         "sensitivity": {
           "avg": 0.804,
           "min": 0.71,
@@ -1258,9 +1258,9 @@
       "DiaSys Deutschland Vertriebs-GmbHMTG GmbHProtoPharma Engineering GmbH"
     ],
     "studies": {
-      "364": {
+      "368": {
         "author": "manufacturer",
-        "id": 364,
+        "id": 368,
         "sensitivity": {
           "avg": 0.951,
           "min": 0.9,
@@ -1294,9 +1294,9 @@
       "Lissner Qi GmbH"
     ],
     "studies": {
-      "264": {
+      "268": {
         "author": "manufacturer",
-        "id": 264,
+        "id": 268,
         "sensitivity": {
           "avg": 0.9616,
           "min": 0.93,
@@ -1331,7 +1331,7 @@
       ""
     ],
     "studies": {
-      "84": {
+      "87": {
         "author": "Olearo, F., et al.",
         "location": "Germany",
         "quadas": "intermediate concern",
@@ -1350,11 +1350,11 @@
           "max": 0.9890000000000001
         },
         "testId": "AT012/20",
-        "id": 84
+        "id": 87
       },
-      "303": {
+      "306": {
         "author": "manufacturer",
-        "id": 303,
+        "id": 306,
         "sensitivity": {
           "avg": 0.925,
           "min": 0.86,
@@ -1388,9 +1388,9 @@
       "Dixion Vertrieb medizinischer Geräte GmbH"
     ],
     "studies": {
-      "392": {
+      "396": {
         "author": "manufacturer",
-        "id": 392,
+        "id": 396,
         "sensitivity": {
           "avg": 0.917,
           "min": 0.82,
@@ -1424,9 +1424,9 @@
       "Concile GmbH"
     ],
     "studies": {
-      "202": {
+      "206": {
         "author": "manufacturer",
-        "id": 202,
+        "id": 206,
         "sensitivity": {
           "avg": 0.892,
           "min": 0.81,
@@ -1436,80 +1436,6 @@
           "avg": 0.976,
           "min": 0.951,
           "max": 0.988
-        }
-      }
-    },
-    "selftest": false,
-    "shops": []
-  },
-  {
-    "id": "AT015/20",
-    "name": "blnk Novel Coronavirus (SARS-CoV-2) Antigen Rapid Test Cassette (Swab)",
-    "pei": false,
-    "manufacturer": "Hangzhou Realy Tech Co.,ltd",
-    "Hersteller Stadt": "Hangzhou",
-    "Hersteller Land": "CN",
-    "EU Bevollmächtigter Name": "Luxus Lebenswelt GmbH",
-    "EU Bevollmächtigter Stadt": "Willich",
-    "EU Bevollmächtigter Land": "DE",
-    "Testort*": "POC (ohne Gerät)",
-    "tradename": [
-      "CORA CHECK-19",
-      " Novel Coronavirus (SARS-COV-2) Antigen Rapid Test Cassette (Swab)",
-      " Novel Coronavirus (SARS-CoV-2) Antigen Rapid Test Cassette (Swab)",
-      " Novel Coronavirus (SARS-CoV-2) Antigen Rapid Test Cassette (Swab)",
-      " Novel Coronavirus (SARS-CoV-2) Antigen Rapid Test Cassette (Swab)",
-      " Novel Coronavirus (SARS-CoV-2) Antigen Rapid Test Cassette (swab)",
-      " Novel Coronavirus (SARS-Cov-2) Anti Gen Rapid Test cassette",
-      " Novel Coronavirus (SARS-Cov-2) Antigen Rapid Test",
-      " Novel Coronavirus (SARS-Cov-2) Antigen Rapid Test  Cassette (swab)",
-      " Novel Coronavirus (SARS-Cov-2) Antigen Rapid Test Casette (Swab)",
-      " Novel Coronavirus (SARS-Cov-2) Antigen Rapid Test Casette (Swab)",
-      " Novel Coronavirus (SARS-Cov-2) Antigen Rapid Test Cassette",
-      " Novel Coronavirus (SARS-Cov-2) Antigen Rapid Test Cassette (Swab)",
-      " Novel Coronavirus (SARS-Cov-2) Antigen Rapid Test Cassette (Swab)",
-      " Novel Coronavirus (SARS-Cov-2) Antigen Rapid Test Cassette (Swab)",
-      " Novel Coronavirus (SARS-Cov-2) Antigen Rapid Test Cassette (swab)",
-      " Novel Coronavirus (SARS-Cov-2) Antigen Rapid Test Cassette (swab)",
-      " Novel Coronavirus (SARS-Cov-2) Antigen Rapid Test Cassette (swab)",
-      " Novel Coronavirus (SARS-Cov-2) Antigen Rapid Test Cassette (swab)",
-      " Novel Coronavirus (SARS-Cov-2) Antigen Rapid Test Cassette (swab)",
-      " Novel Coronavirus (SARS-Cov-2) Antigen Rapid Test Cassette (swab)",
-      " Novel Coronavirus (SARS-Cov-2) Antigen Rapid Test Cassette (swab)",
-      " Novel Coronavirus (SARS-Cov-2) Antigen Rapid Test Cassette (swab)",
-      " Novel Coronavirus (SARS-Cov-2) Antigen Rapid Test Cassette (swab)",
-      " Novel Coronavirus (SARS-Cov-2) Antigen Rapid Test Cassette (swab)",
-      " Novel Coronavirus (SARS-Cov-2) Antigen Rapid Test Cassette (swab)",
-      " Novel Coronavirus (SARS-Cov-2) Antigen Rapid Test Cassette (swab)rus (SARS-Cov-2)",
-      " Novel Coronavirus (SARS-Cov-2) Antigen Rapid Test Cassette ?",
-      " Novel Coronavirus (SARS_Cov-2) Antigen Rapid Test Cassette (swab)",
-      " Novel Coronavirus (Sars-CoV-2) Antigen Rapid Test Cassette (swab)",
-      " Novel Coronavirus(SARS-Cov-2) Antigen Rapid Test Casette(Swab)",
-      " REALY Novel Coronavirus (SARS-Cov-2) Antigen Rapid Test Cassette (swab)",
-      " Realy Novel Coronavirus (SARS-Cov-2) Antigen Rapid Test Kit",
-      " Realy SARS-CoV-2 Antigen Schnelltest",
-      " SARS-CoV-2 Antigen Schnelltest Kassette (Abstrich)",
-      " SARS-CoV-2 Antigen Schnelltest Kassette (Abstrich)",
-      " blnk Novel Coronavirus (SARS-CoV-2) Antigen Rapid Test Cassette (Swab)"
-    ],
-    "distributors": [
-      "ADVENT GROUP SARLAbakus & Culinaria Ltd.",
-      " NL GermanyAzure Trading GmbHBrawa GmbHDetools GmbHDeutsche HansaGT GmbHDr. Grob Healthcare GmbHDropshippers Germany",
-      " Ingo GrebeEmanto GmbHFa.CRYOFOS Medical GmbHFortuna GmbHGESINO GmbHGTRD GmbHHATEX AS GmbH & Co. KGHygienevertrieb UllrichIMPORA GLOBAL GmbHIONTO Health & Beauty GmbHInfiniti-Options GmbHKLT Health Trade GmbHKock & Sack GmbHLifetec Electronics GmbHNordic Supplies GmbHPHARMADOC GmbHPOPLUX GmbHPPE Germany GmbHPharmadrug International GmbH (Steppensohn Medicals)S2 Health GmbHSinoma Europe GmbHSwissbrands GmbHTREKSTOR GmbHTextil One GmbHTriPart-Logistic GmbHWiBaMedWinlong GmbHZINNZ GmbHZebra Invest Handelshaus UG (haftungsbeschränkt)fameditec GmbH"
-    ],
-    "studies": {
-      "267": {
-        "author": "manufacturer",
-        "id": 267,
-        "sensitivity": {
-          "avg": 0.9617,
-          "min": 0.92,
-          "max": 0.98
-        },
-        "specificity": {
-          "avg": 0.9990000000000001,
-          "min": 0.9848,
-          "max": 1
         }
       }
     },
@@ -1534,9 +1460,9 @@
       "PHARMADOC GmbH"
     ],
     "studies": {
-      "249": {
+      "253": {
         "author": "manufacturer",
-        "id": 249,
+        "id": 253,
         "sensitivity": {
           "avg": 0.9565,
           "min": 0.9,
@@ -1570,9 +1496,9 @@
       ""
     ],
     "studies": {
-      "245": {
+      "249": {
         "author": "manufacturer",
-        "id": 245,
+        "id": 249,
         "sensitivity": {
           "avg": 0.9009999999999999,
           "min": 0.85,
@@ -1606,9 +1532,9 @@
       "Abioteq"
     ],
     "studies": {
-      "154": {
+      "157": {
         "author": "manufacturer",
-        "id": 154,
+        "id": 157,
         "sensitivity": {
           "avg": 0.987,
           "min": 0.96,
@@ -1645,9 +1571,9 @@
       "ASCANUS Pharma GmbHIVC Pragen GmbHMeridian Bioscience Europe SRLPreventor µTBC GmbH"
     ],
     "studies": {
-      "235": {
+      "239": {
         "author": "manufacturer",
-        "id": 235,
+        "id": 239,
         "sensitivity": {
           "avg": 0.9,
           "min": 0.73,
@@ -1684,9 +1610,9 @@
       "BIOTREND Chemikalien GmbHDiaSorin Deutschland GmbHHenry Schein Medical GmbHNanoRepro AG"
     ],
     "studies": {
-      "209": {
+      "213": {
         "author": "manufacturer",
-        "id": 209,
+        "id": 213,
         "sensitivity": {
           "avg": 0.9455,
           "min": 0.83,
@@ -1721,7 +1647,7 @@
       "Axon Lab AG"
     ],
     "studies": {
-      "85": {
+      "88": {
         "author": "Strömer, A., et al.",
         "location": "Germany",
         "quadas": "high concern",
@@ -1733,9 +1659,9 @@
           "avg": 0.731
         },
         "testId": "AT021/20",
-        "id": 85
+        "id": 88
       },
-      "86": {
+      "89": {
         "author": "Kohmer, N., et al.",
         "location": "Germany",
         "quadas": "intermediate concern",
@@ -1754,11 +1680,11 @@
           "max": 1
         },
         "testId": "AT021/20",
-        "id": 86
+        "id": 89
       },
-      "310": {
+      "313": {
         "author": "manufacturer",
-        "id": 310,
+        "id": 313,
         "sensitivity": {
           "avg": 0.976,
           "min": 0.93,
@@ -1771,8 +1697,8 @@
         }
       }
     },
-    "selftest": false,
-    "shops": []
+    "selftest": true,
+    "reference": "5640-S-045/21"
   },
   {
     "id": "AT022/20",
@@ -1792,7 +1718,7 @@
       "bestbion dx GmbH"
     ],
     "studies": {
-      "102": {
+      "105": {
         "author": "Porte, L., et al.",
         "location": "Chile",
         "quadas": "high concern",
@@ -1811,9 +1737,9 @@
           "max": 0.9940000000000001
         },
         "testId": "AT022/20",
-        "id": 102
+        "id": 105
       },
-      "103": {
+      "106": {
         "author": "FINDdx",
         "location": "Brazil",
         "quadas": "low concern",
@@ -1832,9 +1758,9 @@
           "max": 0.99
         },
         "testId": "AT022/20",
-        "id": 103
+        "id": 106
       },
-      "104": {
+      "107": {
         "author": "Drevinek, P., et al.",
         "location": "Czech Republic",
         "quadas": "low concern",
@@ -1853,9 +1779,9 @@
           "max": 0.9990000000000001
         },
         "testId": "AT022/20",
-        "id": 104
+        "id": 107
       },
-      "105": {
+      "108": {
         "author": "Osterman, A., et al.",
         "location": "Germany",
         "quadas": "high concern",
@@ -1874,9 +1800,9 @@
           "max": 0.9890000000000001
         },
         "testId": "AT022/20",
-        "id": 105
+        "id": 108
       },
-      "106": {
+      "109": {
         "author": "Liotti, F.M., et al.",
         "location": "Italy",
         "quadas": "intermediate concern",
@@ -1895,11 +1821,11 @@
           "max": 0.996
         },
         "testId": "AT022/20",
-        "id": 106
+        "id": 109
       },
-      "346": {
+      "349": {
         "author": "manufacturer",
-        "id": 346,
+        "id": 349,
         "sensitivity": {
           "avg": 0.94,
           "min": 0.8,
@@ -1934,9 +1860,9 @@
       "Detools GmbHSanbio BV"
     ],
     "studies": {
-      "197": {
+      "201": {
         "author": "manufacturer",
-        "id": 197,
+        "id": 201,
         "sensitivity": {
           "avg": 0.966,
           "min": 0.92,
@@ -1970,9 +1896,9 @@
       "bestbion dx GmbH"
     ],
     "studies": {
-      "348": {
+      "351": {
         "author": "manufacturer",
-        "id": 348,
+        "id": 351,
         "sensitivity": {
           "avg": 0.9652,
           "min": 0.91,
@@ -2007,9 +1933,9 @@
       "Aidian Germany GmbHHirsch Apotheke OHG"
     ],
     "studies": {
-      "204": {
+      "208": {
         "author": "manufacturer",
-        "id": 204,
+        "id": 208,
         "sensitivity": {
           "avg": 0.96,
           "min": 0.93,
@@ -2038,15 +1964,16 @@
     "EU Bevollmächtigter Land": "DE",
     "Testort*": "POC (ohne Gerät)",
     "tradename": [
-      "Multi-Respiratory Virus Antigen Test Kit(Swab) (Influenza A+B/ COVID-19)"
+      "Multi-Respiratory Virus Antigen Test Kit (Tupfer)(Influenza A + B / COVID-19)",
+      " Multi-Respiratory Virus Antigen Test Kit(Swab) (Influenza A+B/ COVID-19)"
     ],
     "distributors": [
-      "Figura Pharma GmbH & Co. KG"
+      "AngelaQ GmbHFigura Pharma GmbH & Co. KG"
     ],
     "studies": {
-      "338": {
+      "342": {
         "author": "manufacturer",
-        "id": 338,
+        "id": 342,
         "sensitivity": {
           "avg": 0.9704,
           "min": 0.92,
@@ -2080,9 +2007,9 @@
       ""
     ],
     "studies": {
-      "302": {
+      "305": {
         "author": "manufacturer",
-        "id": 302,
+        "id": 305,
         "sensitivity": {
           "avg": 0.925,
           "min": 0.86,
@@ -2116,7 +2043,7 @@
       "Mast Diagnostica GmbH"
     ],
     "studies": {
-      "59": {
+      "61": {
         "author": "Takeda, Y., et al.",
         "location": "Japan",
         "quadas": "high concern",
@@ -2135,9 +2062,9 @@
           "max": 1
         },
         "testId": "AT029/20",
-        "id": 59
+        "id": 61
       },
-      "60": {
+      "62": {
         "author": "Yokota, I., et al.",
         "location": "Japan",
         "quadas": "high concern",
@@ -2151,9 +2078,9 @@
           "max": 0.816
         },
         "testId": "AT029/20",
-        "id": 60
+        "id": 62
       },
-      "61": {
+      "63": {
         "author": "Yokota, I., et al.",
         "location": "Japan",
         "quadas": "high concern",
@@ -2167,11 +2094,11 @@
           "max": 0.499
         },
         "testId": "AT029/20",
-        "id": 61
+        "id": 63
       },
-      "233": {
+      "237": {
         "author": "manufacturer",
-        "id": 233,
+        "id": 237,
         "sensitivity": {
           "avg": 0.8059999999999999,
           "min": 0.69,
@@ -2205,9 +2132,9 @@
       "fameditec GmbH"
     ],
     "studies": {
-      "187": {
+      "191": {
         "author": "manufacturer",
-        "id": 187,
+        "id": 191,
         "sensitivity": {
           "avg": 0.9732999999999999,
           "min": 0.95,
@@ -2244,9 +2171,9 @@
       "Dr. Grob Healthcar GmbHFa. CRYOFOS Medical GmbHKUM Consulting & Trading GmbHQuinn Healthcare"
     ],
     "studies": {
-      "172": {
+      "176": {
         "author": "manufacturer",
-        "id": 172,
+        "id": 176,
         "sensitivity": {
           "avg": 0.9570000000000001,
           "min": 0.91,
@@ -2280,9 +2207,9 @@
       "Andanza Int."
     ],
     "studies": {
-      "229": {
+      "233": {
         "author": "manufacturer",
-        "id": 229,
+        "id": 233,
         "sensitivity": {
           "avg": 0.9259999999999999,
           "min": 0.83,
@@ -2316,9 +2243,9 @@
       "Dr. Lonsdorfer GmbH & Co. KG"
     ],
     "studies": {
-      "167": {
+      "171": {
         "author": "manufacturer",
-        "id": 167,
+        "id": 171,
         "sensitivity": {
           "avg": 0.973,
           "min": 0.9,
@@ -2352,9 +2279,9 @@
       ""
     ],
     "studies": {
-      "322": {
+      "325": {
         "author": "manufacturer",
-        "id": 322,
+        "id": 325,
         "sensitivity": {
           "avg": 0.9754,
           "min": 0.93,
@@ -2388,9 +2315,9 @@
       ""
     ],
     "studies": {
-      "384": {
+      "388": {
         "author": "manufacturer",
-        "id": 384,
+        "id": 388,
         "sensitivity": {
           "avg": 0.96,
           "min": 0.88,
@@ -2424,9 +2351,9 @@
       "ScheBo Biotech AG"
     ],
     "studies": {
-      "199": {
+      "203": {
         "author": "manufacturer",
-        "id": 199,
+        "id": 203,
         "sensitivity": {
           "avg": 0.9677,
           "min": 0.88,
@@ -2470,9 +2397,9 @@
       "A. Menarini DiagnsoticsAlphaScience GmbHAlphascience GmbHAspilos GmbHBio-RadDetools GmbHHäffner GmbH & Co KGImmunodiagnostic Systems Deutschland GmbHLumiraDx GmbHPraxisdienst GmbH & Co. KGisopharm GmbH"
     ],
     "studies": {
-      "400": {
+      "404": {
         "author": "manufacturer",
-        "id": 400,
+        "id": 404,
         "sensitivity": {
           "avg": 0.9672,
           "min": 0.88,
@@ -2506,9 +2433,9 @@
       "S.C.O.T.T. Science Center of Technology Transfer B.V."
     ],
     "studies": {
-      "368": {
+      "372": {
         "author": "manufacturer",
-        "id": 368,
+        "id": 372,
         "sensitivity": {
           "avg": 1,
           "min": 0.95,
@@ -2536,15 +2463,16 @@
     "EU Bevollmächtigter Land": "DE",
     "Testort*": "POC (ohne Gerät)",
     "tradename": [
-      "GenSure COVID-19 Antigen-Schnelltestkit"
+      "GenSure COVID-19 Antigen-Schnelltestkit",
+      " GenSureTM COVID-19 Antigen-Schnelltestkit [Nasal/Saliva]"
     ],
     "distributors": [
-      "Infarct Protect AG"
+      "Aidian Germany GmbHInfarct Protect AG"
     ],
     "studies": {
-      "239": {
+      "243": {
         "author": "manufacturer",
-        "id": 239,
+        "id": 243,
         "sensitivity": {
           "avg": 0.9686,
           "min": 0.93,
@@ -2580,9 +2508,9 @@
       "Axon Lab AGCare 1 Solution GmbH & Co. KG"
     ],
     "studies": {
-      "306": {
+      "309": {
         "author": "manufacturer",
-        "id": 306,
+        "id": 309,
         "sensitivity": {
           "avg": 0.9725,
           "min": 0.92,
@@ -2616,7 +2544,7 @@
       "WS Laborbetriebsgesellschaft mbH"
     ],
     "studies": {
-      "71": {
+      "73": {
         "author": "FINDdx",
         "location": "Switzerland",
         "quadas": "low concern",
@@ -2635,11 +2563,11 @@
           "max": 1
         },
         "testId": "AT050/20",
-        "id": 71
+        "id": 73
       },
-      "207": {
+      "211": {
         "author": "manufacturer",
-        "id": 207,
+        "id": 211,
         "sensitivity": {
           "avg": 0.904,
           "min": 0.83,
@@ -2673,9 +2601,9 @@
       "bestbion dx GmbH"
     ],
     "studies": {
-      "210": {
+      "214": {
         "author": "manufacturer",
-        "id": 210,
+        "id": 214,
         "sensitivity": {
           "avg": 0.929,
           "min": 0.76,
@@ -2712,9 +2640,9 @@
       "BIOTREND Chemikalien GmbHBauer -KarlsruheMPV MEDICAL GmbHTemiz AVZ GmbH"
     ],
     "studies": {
-      "193": {
+      "197": {
         "author": "manufacturer",
-        "id": 193,
+        "id": 197,
         "sensitivity": {
           "avg": 0.92,
           "min": 0.83,
@@ -2748,9 +2676,9 @@
       "AlphaMetrix Biotech GmbH"
     ],
     "studies": {
-      "161": {
+      "165": {
         "author": "manufacturer",
-        "id": 161,
+        "id": 165,
         "sensitivity": {
           "avg": 0.9712000000000001,
           "min": 0.92,
@@ -2798,9 +2726,9 @@
       "ABBCO Schlafsysteme GmbHALSCO Berufskleidungs-Service GmbHCareline GmbH & Co. KGDer Werbemarkt GmbHDetools GmbHDr. Grob HealthcareIgefa Handelsgesellschaft mbH & Co. KGMaiMed GmbHTextil One GmbHVT Medical by Vegan Travel UG (haftungsbeschraenkt)Weforyou GmbhZINNZ GmbHdeucin GmbHmr sanicom GmbHunizell Medicare GmbH"
     ],
     "studies": {
-      "190": {
+      "194": {
         "author": "manufacturer",
-        "id": 190,
+        "id": 194,
         "sensitivity": {
           "avg": 0.971,
           "min": 0.93,
@@ -2834,7 +2762,7 @@
       "Fujirebio Germany GmbH"
     ],
     "studies": {
-      "62": {
+      "64": {
         "author": "Gili, A., et al.",
         "location": "Italy",
         "quadas": "intermediate concern",
@@ -2853,9 +2781,9 @@
           "max": 0.958
         },
         "testId": "AT056/20",
-        "id": 62
+        "id": 64
       },
-      "63": {
+      "65": {
         "author": "Yokota, I., et al.",
         "location": "Japan",
         "quadas": "high concern",
@@ -2869,9 +2797,9 @@
           "max": 1
         },
         "testId": "AT056/20",
-        "id": 63
+        "id": 65
       },
-      "64": {
+      "66": {
         "author": "Gili, A., et al.",
         "location": "Italy",
         "quadas": "intermediate concern",
@@ -2890,9 +2818,9 @@
           "max": 0.9520000000000001
         },
         "testId": "AT056/20",
-        "id": 64
+        "id": 66
       },
-      "65": {
+      "67": {
         "author": "Yokota, I., et al.",
         "location": "Japan",
         "quadas": "high concern",
@@ -2906,9 +2834,9 @@
           "max": 0.9620000000000001
         },
         "testId": "AT056/20",
-        "id": 65
+        "id": 67
       },
-      "66": {
+      "68": {
         "author": "Basso, D., et al.",
         "location": "Italy",
         "quadas": "low concern",
@@ -2927,9 +2855,9 @@
           "max": 0.98
         },
         "testId": "AT056/20",
-        "id": 66
+        "id": 68
       },
-      "67": {
+      "69": {
         "author": "Menchinelli, G., et al.",
         "location": "Italy",
         "quadas": "intermediate concern",
@@ -2948,9 +2876,9 @@
           "max": 0.998
         },
         "testId": "AT056/20",
-        "id": 67
+        "id": 69
       },
-      "68": {
+      "70": {
         "author": "Basso, D., et al.",
         "location": "Italy",
         "quadas": "low concern",
@@ -2969,11 +2897,11 @@
           "max": 0.998
         },
         "testId": "AT056/20",
-        "id": 68
+        "id": 70
       },
-      "232": {
+      "236": {
         "author": "manufacturer",
-        "id": 232,
+        "id": 236,
         "sensitivity": {
           "avg": 0.917,
           "min": 0.74,
@@ -3008,9 +2936,9 @@
       " Labordiagnostik"
     ],
     "studies": {
-      "224": {
+      "228": {
         "author": "manufacturer",
-        "id": 224,
+        "id": 228,
         "sensitivity": {
           "avg": 0.973,
           "min": 0.9,
@@ -3046,9 +2974,9 @@
       "ASCANUS Pharma GmbHIVC Pragen GmbHMTG GmbH"
     ],
     "studies": {
-      "236": {
+      "240": {
         "author": "manufacturer",
-        "id": 236,
+        "id": 240,
         "sensitivity": {
           "avg": 0.9682999999999999,
           "min": 0.92,
@@ -3083,9 +3011,9 @@
       "Biorepair GmbHWinlong GmbH"
     ],
     "studies": {
-      "265": {
+      "269": {
         "author": "manufacturer",
-        "id": 265,
+        "id": 269,
         "sensitivity": {
           "avg": 0.9629000000000001,
           "min": 0.92,
@@ -3119,9 +3047,9 @@
       "NanoRepro AG"
     ],
     "studies": {
-      "184": {
+      "188": {
         "author": "manufacturer",
-        "id": 184,
+        "id": 188,
         "sensitivity": {
           "avg": 0.943,
           "min": 0.84,
@@ -3156,9 +3084,9 @@
       "HWV R. Blome GmbHPromeditech GmbH"
     ],
     "studies": {
-      "342": {
+      "345": {
         "author": "manufacturer",
-        "id": 342,
+        "id": 345,
         "sensitivity": {
           "avg": 0.9590000000000001,
           "min": 0.91,
@@ -3210,9 +3138,9 @@
       " OKM GmbHROBEX ENERGY SYSTEMS GmbHSaleoMed Medizintechnik GmbH"
     ],
     "studies": {
-      "194": {
+      "198": {
         "author": "manufacturer",
-        "id": 194,
+        "id": 198,
         "sensitivity": {
           "avg": 0.92,
           "min": 0.83,
@@ -3246,9 +3174,9 @@
       ""
     ],
     "studies": {
-      "309": {
+      "312": {
         "author": "manufacturer",
-        "id": 309,
+        "id": 312,
         "sensitivity": {
           "avg": 0.976,
           "min": 0.93,
@@ -3282,9 +3210,9 @@
       "ScheBo Biotech AG"
     ],
     "studies": {
-      "344": {
+      "348": {
         "author": "manufacturer",
-        "id": 344,
+        "id": 348,
         "sensitivity": {
           "avg": 0.9677,
           "min": 0.88,
@@ -3318,9 +3246,9 @@
       "HOLZHÄUSER Ihr starker Partner für Betriebshygiene HOLZHÄUSER Fachhandel e.K."
     ],
     "studies": {
-      "374": {
+      "379": {
         "author": "manufacturer",
-        "id": 374,
+        "id": 379,
         "sensitivity": {
           "avg": 0.953,
           "min": 0.92,
@@ -3355,9 +3283,9 @@
       "MediHands AGSVAN International Import & Export Co. Ltd."
     ],
     "studies": {
-      "358": {
+      "361": {
         "author": "manufacturer",
-        "id": 358,
+        "id": 361,
         "sensitivity": {
           "avg": 0.8968,
           "min": 0.89,
@@ -3392,9 +3320,9 @@
       "MediHands AGSVAN International Import & Export Co. Ltd."
     ],
     "studies": {
-      "357": {
+      "360": {
         "author": "manufacturer",
-        "id": 357,
+        "id": 360,
         "sensitivity": {
           "avg": 0.9127,
           "min": 0.91,
@@ -3429,9 +3357,9 @@
       "CARDIMAC"
     ],
     "studies": {
-      "366": {
+      "370": {
         "author": "manufacturer",
-        "id": 366,
+        "id": 370,
         "sensitivity": {
           "avg": 0.9129999999999999,
           "min": 0.73,
@@ -3469,9 +3397,9 @@
       "CHF Export Import GmbHHandelshaus Lerch e.k.High Lux International Trading GmbHPromotion Pets GmbHS2 Health GmbH"
     ],
     "studies": {
-      "186": {
+      "190": {
         "author": "manufacturer",
-        "id": 186,
+        "id": 190,
         "sensitivity": {
           "avg": 0.965,
           "min": 0.93,
@@ -3505,7 +3433,7 @@
       "Lumiradx GmbH"
     ],
     "studies": {
-      "81": {
+      "83": {
         "author": "Drain, P.K., et al.",
         "location": "UK/US",
         "quadas": "low concern",
@@ -3524,9 +3452,9 @@
           "max": 0.9840000000000001
         },
         "testId": "AT075/20",
-        "id": 81
+        "id": 83
       },
-      "82": {
+      "84": {
         "author": "Drain, P.K., et al.",
         "location": "UK/US",
         "quadas": "low concern",
@@ -3545,9 +3473,30 @@
           "max": 0.99
         },
         "testId": "AT075/20",
-        "id": 82
+        "id": 84
       },
-      "83": {
+      "85": {
+        "author": "Krüger, L.J., et al.",
+        "location": "Germany",
+        "quadas": "low concern",
+        "independent": "yes",
+        "sampleCondition": "fresh",
+        "sampleType": "MT",
+        "sampleSize": "761",
+        "sensitivity": {
+          "avg": 0.8220000000000001,
+          "min": 0.752,
+          "max": 0.875
+        },
+        "specificity": {
+          "avg": 0.993,
+          "min": 0.983,
+          "max": 0.997
+        },
+        "testId": "AT075/20",
+        "id": 85
+      },
+      "86": {
         "author": "Kohmer, N., et al.",
         "location": "Germany",
         "quadas": "intermediate concern",
@@ -3566,11 +3515,11 @@
           "max": 1
         },
         "testId": "AT075/20",
-        "id": 83
+        "id": 86
       },
-      "297": {
+      "300": {
         "author": "manufacturer",
-        "id": 297,
+        "id": 300,
         "sensitivity": {
           "avg": 0.938,
           "min": 0.89,
@@ -3604,9 +3553,9 @@
       ""
     ],
     "studies": {
-      "369": {
+      "373": {
         "author": "manufacturer",
-        "id": 369,
+        "id": 373,
         "sensitivity": {
           "avg": 0.9565,
           "min": 0.9,
@@ -3640,9 +3589,9 @@
       "GA Generic Assays GmbH"
     ],
     "studies": {
-      "234": {
+      "238": {
         "author": "manufacturer",
-        "id": 234,
+        "id": 238,
         "sensitivity": {
           "avg": 0.9706,
           "min": 0.91,
@@ -3676,7 +3625,7 @@
       "Axon Lab AG"
     ],
     "studies": {
-      "88": {
+      "91": {
         "author": "Caruana, G., et al.",
         "location": "Switzerland",
         "quadas": "intermediate concern",
@@ -3691,11 +3640,11 @@
           "avg": 0.995
         },
         "testId": "AT078/20",
-        "id": 88
+        "id": 91
       },
-      "327": {
+      "330": {
         "author": "manufacturer",
-        "id": 327,
+        "id": 330,
         "sensitivity": {
           "avg": 0.9388,
           "min": 0.83,
@@ -3748,19 +3697,18 @@
       " COVID-19 Antigen Rapid Test Cassette",
       " COVID-19 Antigen Rapid Test Cassette",
       " COVID-19 Antigen Rapid Test Cassette",
-      " COVID-19 Antigen Rapid Test Cassette (Nasal Swab)",
       " Clungene COVID-19 Antigen Rapid Test",
       " Clungene Rapid Test",
       " Clungene® COVID-19 Antigen Rapid Test",
       " Clungene® Covid-19 Antigen Rapid Test"
     ],
     "distributors": [
-      "Alpha-Medics GmbHAlpha-Medics GmbHBIOTREND Chemikalien GmbHBauer -KarlsruheDH Mobility B.V.Der Werbemarkt GmbHDetools GmbHDeutsche HansaGT GmbHDixion Vertrieb medizinischer Geräte GmbHDunox GmbHEYBEL GmbHEmotive Systems GmbHEnkatex Workwear GmbHErwin Kowsky GmbH & Co. KGGESINO GmbHGesundheit2000 F. Steege e.K.Haemato Pharm GmbHPCR-Lab-Products GbRPraxisdienst GmbH & Co. KGPromo Trading GmbHS2 Health GmbHS2 Health GmbHSchloss Wendischbora GmbHSchreiner Elektronik GmbHSolenal GmbHSwissbrands GmbHWinlong GmbHmedienkraftwerk GmbHulti med Products (Deutschland) GmbH"
+      "Alpha-Medics GmbHBIOTREND Chemikalien GmbHBauer -KarlsruheDH Mobility B.V.Der Werbemarkt GmbHDetools GmbHDeutsche HansaGT GmbHDixion Vertrieb medizinischer Geräte GmbHDunox GmbHEYBEL GmbHEmotive Systems GmbHEnkatex Workwear GmbHErwin Kowsky GmbH & Co. KGGESINO GmbHGesundheit2000 F. Steege e.K.Haemato Pharm GmbHPCR-Lab-Products GbRPraxisdienst GmbH & Co. KGPromo Trading GmbHS2 Health GmbHS2 Health GmbHSchloss Wendischbora GmbHSchreiner Elektronik GmbHSolenal GmbHSwissbrands GmbHWinlong GmbHmedienkraftwerk GmbHulti med Products (Deutschland) GmbH"
     ],
     "studies": {
-      "256": {
+      "262": {
         "author": "manufacturer",
-        "id": 256,
+        "id": 262,
         "sensitivity": {
           "avg": 0.985,
           "min": 0.91,
@@ -3795,7 +3743,7 @@
       "Heallab GmbHQuinn Healthcare"
     ],
     "studies": {
-      "70": {
+      "72": {
         "author": "Favresse, J., et al.",
         "location": "Belgium",
         "quadas": "intermediate concern",
@@ -3814,11 +3762,11 @@
           "max": 0.993
         },
         "testId": "AT079/21",
-        "id": 70
+        "id": 72
       },
-      "273": {
+      "277": {
         "author": "manufacturer",
-        "id": 273,
+        "id": 277,
         "sensitivity": {
           "avg": 0.9832,
           "min": 0.94,
@@ -3852,9 +3800,9 @@
       "ARIES HEALTH  SOLUTIONS GmbH"
     ],
     "studies": {
-      "178": {
+      "182": {
         "author": "manufacturer",
-        "id": 178,
+        "id": 182,
         "sensitivity": {
           "avg": 0.9467,
           "min": 0.89,
@@ -3888,9 +3836,9 @@
       ""
     ],
     "studies": {
-      "324": {
+      "327": {
         "author": "manufacturer",
-        "id": 324,
+        "id": 327,
         "sensitivity": {
           "avg": 0.978,
           "min": 0.88,
@@ -3925,9 +3873,9 @@
       "Brawa GmbHGTRD GmbH"
     ],
     "studies": {
-      "272": {
+      "276": {
         "author": "manufacturer",
-        "id": 272,
+        "id": 276,
         "sensitivity": {
           "avg": 0.976,
           "min": 0.94,
@@ -3961,9 +3909,9 @@
       ""
     ],
     "studies": {
-      "301": {
+      "304": {
         "author": "manufacturer",
-        "id": 301,
+        "id": 304,
         "sensitivity": {
           "avg": 0.9670000000000001,
           "min": 0.91,
@@ -3998,9 +3946,9 @@
       "GS Global Europe gmbhgoodscare GmbH"
     ],
     "studies": {
-      "276": {
+      "280": {
         "author": "manufacturer",
-        "id": 276,
+        "id": 280,
         "sensitivity": {
           "avg": 0.955,
           "min": 0.9,
@@ -4034,9 +3982,9 @@
       "Praxisdienst GmbH & Co. KG"
     ],
     "studies": {
-      "155": {
+      "158": {
         "author": "manufacturer",
-        "id": 155,
+        "id": 158,
         "sensitivity": {
           "avg": 0.9570000000000001,
           "min": 0.9,
@@ -4070,9 +4018,9 @@
       "Brunner.ident"
     ],
     "studies": {
-      "226": {
+      "230": {
         "author": "manufacturer",
-        "id": 226,
+        "id": 230,
         "sensitivity": {
           "avg": 0.9375,
           "min": 0.89,
@@ -4106,9 +4054,9 @@
       "Bio-Gram Diagnostics GmbH"
     ],
     "studies": {
-      "248": {
+      "252": {
         "author": "manufacturer",
-        "id": 248,
+        "id": 252,
         "sensitivity": {
           "avg": 0.9,
           "min": 0.78,
@@ -4142,9 +4090,9 @@
       "ETH Wertstoffrecycling GmbH"
     ],
     "studies": {
-      "254": {
+      "259": {
         "author": "manufacturer",
-        "id": 254,
+        "id": 259,
         "sensitivity": {
           "avg": 0.899,
           "min": 0.83,
@@ -4178,9 +4126,9 @@
       "bestbion dx GmbH"
     ],
     "studies": {
-      "212": {
+      "216": {
         "author": "manufacturer",
-        "id": 212,
+        "id": 216,
         "sensitivity": {
           "avg": 0.929,
           "min": 0.76,
@@ -4227,9 +4175,9 @@
       "Deutsche HansaGT GmbHDropshippers GermanyGeSino GmbHIMPORA GLOBAL GmbHInfiniti-Options GmbHKLT Health Trade GmbHKMU Zentrale GmbHMS Print Inh. Michael ScholzPOPLUX GmbHSinoma Europe GmbHSteppensohn Medicals / Pharmadrug International GmbHTREKSTOR GmbHWinlong GmbHZebra Invest Handelshaus UG (haftungsbeschränkt)"
     ],
     "studies": {
-      "266": {
+      "270": {
         "author": "manufacturer",
-        "id": 266,
+        "id": 270,
         "sensitivity": {
           "avg": 0.929,
           "min": 0.87,
@@ -4263,9 +4211,9 @@
       "MS Med-Tech Supplies GmbH"
     ],
     "studies": {
-      "314": {
+      "317": {
         "author": "manufacturer",
-        "id": 314,
+        "id": 317,
         "sensitivity": {
           "avg": 0.9412,
           "min": 0.78,
@@ -4299,7 +4247,7 @@
       "HWV R. Blome GmbH"
     ],
     "studies": {
-      "101": {
+      "104": {
         "author": "Ahava, M.J., et al.",
         "location": "Finland",
         "quadas": "high concern",
@@ -4318,11 +4266,11 @@
           "max": 0.996
         },
         "testId": "AT093/21",
-        "id": 101
+        "id": 104
       },
-      "341": {
+      "344": {
         "author": "manufacturer",
-        "id": 341,
+        "id": 344,
         "sensitivity": {
           "avg": 0.927,
           "min": 0.88,
@@ -4354,16 +4302,17 @@
       " Coronavirus (2019-nCoV)-Antigentest - Speichel",
       " Novel Coronavirus (2019-nCoV)-Antigentest   (Kolloidales Gold) - Speichel  Gebrauchsanweisung",
       " Novel Coronavirus 2019-nCoV Antigen Test (Colloidal Gold) - Saliva",
+      " Novel Coronavirus 2019-nCoV Antigen Test (Colloidal Gold) - Saliva",
       " Novel Coronavirus 2019-nCoV Antigen Test (Colloidal Gold) Saliva",
       " Novel Coronavirus 2019-nCoV Antigen-Spucktest"
     ],
     "distributors": [
-      "Der Werbemarkt GmbHDr. Grob Healthcare GmbHFertig! GmbHHager & Werken GmbH & Co KGPraxisdienst GmbH & Co. KGunizell Medicare GmbH"
+      "Der Werbemarkt GmbHDr. Grob Healthcare GmbHFertig! GmbHHager & Werken GmbH & Co KGMaiMed GmbHPraxisdienst GmbH & Co. KGunizell Medicare GmbH"
     ],
     "studies": {
-      "188": {
+      "192": {
         "author": "manufacturer",
-        "id": 188,
+        "id": 192,
         "sensitivity": {
           "avg": 0.96,
           "min": 0.9,
@@ -4397,9 +4346,9 @@
       ""
     ],
     "studies": {
-      "223": {
+      "227": {
         "author": "manufacturer",
-        "id": 223,
+        "id": 227,
         "sensitivity": {
           "avg": 0.965,
           "min": 0.92,
@@ -4433,9 +4382,9 @@
       "enverque GmbH"
     ],
     "studies": {
-      "292": {
+      "295": {
         "author": "manufacturer",
-        "id": 292,
+        "id": 295,
         "sensitivity": {
           "avg": 0.985,
           "min": 0.97,
@@ -4469,9 +4418,9 @@
       "DiaSorin Deutschland GmbH"
     ],
     "studies": {
-      "225": {
+      "229": {
         "author": "manufacturer",
-        "id": 225,
+        "id": 229,
         "sensitivity": {
           "avg": 0.971,
           "min": 0.85,
@@ -4507,9 +4456,9 @@
       "AlphaScience GmbH"
     ],
     "studies": {
-      "397": {
+      "401": {
         "author": "manufacturer",
-        "id": 397,
+        "id": 401,
         "sensitivity": {
           "avg": 0.958,
           "min": 0.89,
@@ -4543,9 +4492,9 @@
       "Biozol Diagnostica Vertrieb GmbH"
     ],
     "studies": {
-      "208": {
+      "212": {
         "author": "manufacturer",
-        "id": 208,
+        "id": 212,
         "sensitivity": {
           "avg": 0.9059999999999999,
           "min": 0.84,
@@ -4579,9 +4528,9 @@
       "Careshield GmbH"
     ],
     "studies": {
-      "401": {
+      "406": {
         "author": "manufacturer",
-        "id": 401,
+        "id": 406,
         "sensitivity": {
           "avg": 0.9059999999999999,
           "min": 0.83,
@@ -4616,9 +4565,9 @@
       " Turgut Sertoglu"
     ],
     "studies": {
-      "175": {
+      "179": {
         "author": "manufacturer",
-        "id": 175,
+        "id": 179,
         "sensitivity": {
           "avg": 0.9773999999999999,
           "min": 0.97,
@@ -4653,9 +4602,9 @@
       " Dr. W. Gottstein"
     ],
     "studies": {
-      "311": {
+      "314": {
         "author": "manufacturer",
-        "id": 311,
+        "id": 314,
         "sensitivity": {
           "avg": 0.9231,
           "min": 0.79,
@@ -4690,9 +4639,9 @@
       "HUMAN Gesellschaft für Biochemica und Diagnostica mbHSysmex Europe GmbH"
     ],
     "studies": {
-      "361": {
+      "364": {
         "author": "manufacturer",
-        "id": 361,
+        "id": 364,
         "sensitivity": {
           "avg": 0.9515,
           "min": 0.89,
@@ -4727,9 +4676,9 @@
       "Dunox GmbHH.M.S Handel-Marketing-Service GmbH"
     ],
     "studies": {
-      "388": {
+      "392": {
         "author": "manufacturer",
-        "id": 388,
+        "id": 392,
         "sensitivity": {
           "avg": 0.963,
           "min": 0.89,
@@ -4763,9 +4712,9 @@
       "Roger´s GmbH (Care4u medical Suppleis)"
     ],
     "studies": {
-      "351": {
+      "354": {
         "author": "manufacturer",
-        "id": 351,
+        "id": 354,
         "sensitivity": {
           "avg": 0.966,
           "min": 0.94,
@@ -4805,9 +4754,9 @@
       " Ingo GrebeImuGeX GmbHTriPart-Logistic GmbHmedienkraftwerk GmbH"
     ],
     "studies": {
-      "238": {
+      "242": {
         "author": "manufacturer",
-        "id": 238,
+        "id": 242,
         "sensitivity": {
           "avg": 0.9503,
           "min": 0.9,
@@ -4846,9 +4795,9 @@
       "Adooha GmbHAngelaQ GmbHBestresources Europe GmbHDetools GmbHDunox GmbHPraxisdienst GmbH & Co. KG"
     ],
     "studies": {
-      "259": {
+      "264": {
         "author": "manufacturer",
-        "id": 259,
+        "id": 264,
         "sensitivity": {
           "avg": 0.968,
           "min": 0.92,
@@ -4886,9 +4835,9 @@
       "Löwe MedizintechnikMEDICE Arzneimittel Pütter GmbH & Co. KGMedipro medizinische diagnostische Produkte GmbHTREKSTOR GmbHTechnomed Service GmbH"
     ],
     "studies": {
-      "385": {
+      "389": {
         "author": "manufacturer",
-        "id": 385,
+        "id": 389,
         "sensitivity": {
           "avg": 0.9649,
           "min": 0.91,
@@ -4950,9 +4899,9 @@
         "testId": "AT116/21",
         "id": 39
       },
-      "152": {
+      "155": {
         "author": "manufacturer",
-        "id": 152,
+        "id": 155,
         "sensitivity": {
           "avg": 0.981,
           "min": 0.93,
@@ -4965,8 +4914,8 @@
         }
       }
     },
-    "selftest": false,
-    "shops": []
+    "selftest": true,
+    "reference": "5640-S-216/21"
   },
   {
     "id": "AT117/20",
@@ -4986,9 +4935,9 @@
       "Casada International GmbH"
     ],
     "studies": {
-      "323": {
+      "326": {
         "author": "manufacturer",
-        "id": 323,
+        "id": 326,
         "sensitivity": {
           "avg": 0.9636,
           "min": 0.91,
@@ -5023,9 +4972,9 @@
       "MEDBest GmbHMEDICE Arzneimittel Pütter GmbH & Co. KG"
     ],
     "studies": {
-      "393": {
+      "397": {
         "author": "manufacturer",
-        "id": 393,
+        "id": 397,
         "sensitivity": {
           "avg": 0.917,
           "min": 0.82,
@@ -5059,9 +5008,9 @@
       "SALUBRIS Handelsagentur Dr. Christian Hemerka"
     ],
     "studies": {
-      "196": {
+      "200": {
         "author": "manufacturer",
-        "id": 196,
+        "id": 200,
         "sensitivity": {
           "avg": 0.9375,
           "min": 0.88,
@@ -5105,7 +5054,7 @@
       "D&W The Motion Corporation GmbH & Co. KGHaemato Pharm GmbHKL GmbHKLT Health Trade GmbHLifetec Electronics GmbHLinus Handelshaus GmbHNeucomed Deutschland GmbHTRADEPAS GmbHmedienkraftwerk GmbHulti med Products (Deutschland) GmbH"
     ],
     "studies": {
-      "69": {
+      "71": {
         "author": "FINDdx",
         "location": "Switzerland",
         "quadas": "low concern",
@@ -5124,11 +5073,11 @@
           "max": 1
         },
         "testId": "AT125/20",
-        "id": 69
+        "id": 71
       },
-      "252": {
+      "256": {
         "author": "manufacturer",
-        "id": 252,
+        "id": 256,
         "sensitivity": {
           "avg": 0.9618000000000001,
           "min": 0.94,
@@ -5162,9 +5111,9 @@
       "NanoRepro AG"
     ],
     "studies": {
-      "293": {
+      "297": {
         "author": "manufacturer",
-        "id": 293,
+        "id": 297,
         "sensitivity": {
           "avg": 0.963,
           "min": 0.89,
@@ -5198,9 +5147,9 @@
       "Smart OTC GmbH"
     ],
     "studies": {
-      "365": {
+      "369": {
         "author": "manufacturer",
-        "id": 365,
+        "id": 369,
         "sensitivity": {
           "avg": 0.958,
           "min": 0.86,
@@ -5234,9 +5183,9 @@
       "Servacon Austria"
     ],
     "studies": {
-      "180": {
+      "184": {
         "author": "manufacturer",
-        "id": 180,
+        "id": 184,
         "sensitivity": {
           "avg": 0.976,
           "min": 0.91,
@@ -5271,9 +5220,9 @@
       "MSP bodmann GmbHNeucomed Deutschland GmbH"
     ],
     "studies": {
-      "377": {
+      "382": {
         "author": "manufacturer",
-        "id": 377,
+        "id": 382,
         "sensitivity": {
           "avg": 0.9612,
           "min": 0.9,
@@ -5307,9 +5256,9 @@
       "Servacon Austria"
     ],
     "studies": {
-      "215": {
+      "219": {
         "author": "manufacturer",
-        "id": 215,
+        "id": 219,
         "sensitivity": {
           "avg": 0.9831,
           "min": 0.9,
@@ -5343,9 +5292,9 @@
       "Bold Sales GmbH"
     ],
     "studies": {
-      "170": {
+      "174": {
         "author": "manufacturer",
-        "id": 170,
+        "id": 174,
         "sensitivity": {
           "avg": 0.9636,
           "min": 0.87,
@@ -5379,9 +5328,9 @@
       "Brand-New Trading GmbH"
     ],
     "studies": {
-      "261": {
+      "266": {
         "author": "manufacturer",
-        "id": 261,
+        "id": 266,
         "sensitivity": {
           "avg": 0.9106000000000001,
           "min": 0.84,
@@ -5415,9 +5364,9 @@
       ""
     ],
     "studies": {
-      "345": {
+      "347": {
         "author": "manufacturer",
-        "id": 345,
+        "id": 347,
         "sensitivity": {
           "avg": 0.9505,
           "min": 0.88,
@@ -5451,9 +5400,9 @@
       "Brand-New Trading GmbH"
     ],
     "studies": {
-      "262": {
+      "265": {
         "author": "manufacturer",
-        "id": 262,
+        "id": 265,
         "sensitivity": {
           "avg": 0.9439,
           "min": 0.88,
@@ -5489,9 +5438,9 @@
       "Catus Biotech GmbHHölzel Diagnostika Handels GmbHMedipro medizinische diagnostische produkte gmbh"
     ],
     "studies": {
-      "296": {
+      "299": {
         "author": "manufacturer",
-        "id": 296,
+        "id": 299,
         "sensitivity": {
           "avg": 0.937,
           "min": 0.89,
@@ -5525,9 +5474,9 @@
       "LINUS Handelshaus GmbH"
     ],
     "studies": {
-      "321": {
+      "324": {
         "author": "manufacturer",
-        "id": 321,
+        "id": 324,
         "sensitivity": {
           "avg": 0.892,
           "min": 0.82,
@@ -5562,9 +5511,9 @@
       "Gesundheit2000 F. Steege e.K.MePro GmbH"
     ],
     "studies": {
-      "156": {
+      "159": {
         "author": "manufacturer",
-        "id": 156,
+        "id": 159,
         "sensitivity": {
           "avg": 0.9690000000000001,
           "min": 0.92,
@@ -5600,9 +5549,9 @@
       "Diagenics Group SEDiagenics Group SEVEWA-Handelsgesellschaft m.b.H."
     ],
     "studies": {
-      "241": {
+      "245": {
         "author": "manufacturer",
-        "id": 241,
+        "id": 245,
         "sensitivity": {
           "avg": 0.9686,
           "min": 0.93,
@@ -5636,9 +5585,9 @@
       "gurumB GmbH"
     ],
     "studies": {
-      "206": {
+      "210": {
         "author": "manufacturer",
-        "id": 206,
+        "id": 210,
         "sensitivity": {
           "avg": 0.95,
           "min": 0.91,
@@ -5673,9 +5622,9 @@
       "Crenano GmbHEJOY GmbH"
     ],
     "studies": {
-      "389": {
+      "393": {
         "author": "manufacturer",
-        "id": 389,
+        "id": 393,
         "sensitivity": {
           "avg": 0.9667,
           "min": 0.94,
@@ -5709,9 +5658,9 @@
       "MPV MEDICAL GmbH"
     ],
     "studies": {
-      "195": {
+      "199": {
         "author": "manufacturer",
-        "id": 195,
+        "id": 199,
         "sensitivity": {
           "avg": 0.9048,
           "min": 0.83,
@@ -5747,9 +5696,9 @@
       "DOCTIME GmbHMediaConcepts GmbH Abteilung AsiaTrading-GroupTrendy Store GmbH"
     ],
     "studies": {
-      "243": {
+      "247": {
         "author": "manufacturer",
-        "id": 243,
+        "id": 247,
         "sensitivity": {
           "avg": 0.9706,
           "min": 0.93,
@@ -5783,9 +5732,9 @@
       "Bereket Megamarkt"
     ],
     "studies": {
-      "396": {
+      "400": {
         "author": "manufacturer",
-        "id": 396,
+        "id": 400,
         "sensitivity": {
           "avg": 0.8438,
           "min": 0.72,
@@ -5819,9 +5768,9 @@
       ""
     ],
     "studies": {
-      "382": {
+      "386": {
         "author": "manufacturer",
-        "id": 382,
+        "id": 386,
         "sensitivity": {
           "avg": 0.9267,
           "min": 0.87,
@@ -5855,9 +5804,9 @@
       ""
     ],
     "studies": {
-      "200": {
+      "204": {
         "author": "manufacturer",
-        "id": 200,
+        "id": 204,
         "sensitivity": {
           "avg": 0.9570000000000001,
           "min": 0.9,
@@ -5891,9 +5840,9 @@
       "fameditec GmbH"
     ],
     "studies": {
-      "231": {
+      "235": {
         "author": "manufacturer",
-        "id": 231,
+        "id": 235,
         "sensitivity": {
           "avg": 0.929,
           "min": 0.87,
@@ -5927,9 +5876,9 @@
       "Promeditech GmbH"
     ],
     "studies": {
-      "340": {
+      "343": {
         "author": "manufacturer",
-        "id": 340,
+        "id": 343,
         "sensitivity": {
           "avg": 0.927,
           "min": 0.88,
@@ -5938,43 +5887,6 @@
         "specificity": {
           "avg": 0.9990000000000001,
           "min": 0.991,
-          "max": 1
-        }
-      }
-    },
-    "selftest": false,
-    "shops": []
-  },
-  {
-    "id": "AT178/20",
-    "name": "Joinstar Covid-19 Antigen-Rapid Test",
-    "pei": false,
-    "manufacturer": "Joinstar Biomedical Technology, Co., Ltd",
-    "Hersteller Stadt": "Hangzhou",
-    "Hersteller Land": "CN",
-    "EU Bevollmächtigter Name": "LOTUS NL BV",
-    "EU Bevollmächtigter Stadt": "'s-Gravenhage",
-    "EU Bevollmächtigter Land": "NL",
-    "Testort*": "POC (ohne Gerät)",
-    "tradename": [
-      "Covid-19 Antigen Schnelltest (Latex)",
-      " Joinstar Covid-19 Antigen-Rapid Test"
-    ],
-    "distributors": [
-      "Praxisdienst GmbH & Co. KGcare impuls Vertriebs GmbH"
-    ],
-    "studies": {
-      "289": {
-        "author": "manufacturer",
-        "id": 289,
-        "sensitivity": {
-          "avg": 0.95,
-          "min": 0.86,
-          "max": 0.98
-        },
-        "specificity": {
-          "avg": 1,
-          "min": 0.8843000000000001,
           "max": 1
         }
       }
@@ -6000,9 +5912,9 @@
       "MSP bodmann GmbH"
     ],
     "studies": {
-      "308": {
+      "311": {
         "author": "manufacturer",
-        "id": 308,
+        "id": 311,
         "sensitivity": {
           "avg": 0.9612,
           "min": 0.9,
@@ -6036,9 +5948,9 @@
       "adico Joachim Hevler"
     ],
     "studies": {
-      "163": {
+      "167": {
         "author": "manufacturer",
-        "id": 163,
+        "id": 167,
         "sensitivity": {
           "avg": 0.937,
           "min": 0.89,
@@ -6072,9 +5984,9 @@
       "Rogers GmbH ( Care4u Medical Supplies )"
     ],
     "studies": {
-      "395": {
+      "399": {
         "author": "manufacturer",
-        "id": 395,
+        "id": 399,
         "sensitivity": {
           "avg": 0.968,
           "min": 0.92,
@@ -6108,9 +6020,9 @@
       "Salutis-Deutschland"
     ],
     "studies": {
-      "216": {
+      "220": {
         "author": "manufacturer",
-        "id": 216,
+        "id": 220,
         "sensitivity": {
           "avg": 0.922,
           "min": 0.86,
@@ -6144,9 +6056,9 @@
       "NanoRepro AG"
     ],
     "studies": {
-      "316": {
+      "319": {
         "author": "manufacturer",
-        "id": 316,
+        "id": 319,
         "sensitivity": {
           "avg": 0.981,
           "min": 0.95,
@@ -6180,9 +6092,9 @@
       "AXIOM Diagnostics"
     ],
     "studies": {
-      "182": {
+      "186": {
         "author": "manufacturer",
-        "id": 182,
+        "id": 186,
         "sensitivity": {
           "avg": 0.981,
           "min": 0.95,
@@ -6217,9 +6129,9 @@
       "AMEYA GmbHInfiniti-Options GmbH"
     ],
     "studies": {
-      "171": {
+      "175": {
         "author": "manufacturer",
-        "id": 171,
+        "id": 175,
         "sensitivity": {
           "avg": 0.9926999999999999,
           "min": 0.98,
@@ -6232,8 +6144,8 @@
         }
       }
     },
-    "selftest": false,
-    "shops": []
+    "selftest": true,
+    "reference": "5640-S-058/21"
   },
   {
     "id": "AT198/20",
@@ -6253,9 +6165,9 @@
       ""
     ],
     "studies": {
-      "307": {
+      "310": {
         "author": "manufacturer",
-        "id": 307,
+        "id": 310,
         "sensitivity": {
           "avg": 0.9639,
           "min": 0.92,
@@ -6291,9 +6203,9 @@
       " Ingo GrebeFigura Pharma GmbH & Co. KG"
     ],
     "studies": {
-      "336": {
+      "339": {
         "author": "manufacturer",
-        "id": 336,
+        "id": 339,
         "sensitivity": {
           "avg": 0.9727,
           "min": 0.94,
@@ -6327,7 +6239,7 @@
       "BD GmbH"
     ],
     "studies": {
-      "40": {
+      "41": {
         "author": "Pekosz, A., et al.",
         "location": "USA",
         "quadas": "high concern",
@@ -6346,9 +6258,9 @@
           "max": 0.997
         },
         "testId": "AT200/20",
-        "id": 40
+        "id": 41
       },
-      "41": {
+      "42": {
         "author": "Van der Moeren, N., et al.",
         "location": "Netherlands",
         "quadas": "intermediate concern",
@@ -6367,9 +6279,9 @@
           "max": 1
         },
         "testId": "AT200/20",
-        "id": 41
+        "id": 42
       },
-      "42": {
+      "43": {
         "author": "Marti, J.L.G., et al.",
         "location": "USA",
         "quadas": "unclear",
@@ -6384,9 +6296,9 @@
           "avg": 1
         },
         "testId": "AT200/20",
-        "id": 42
+        "id": 43
       },
-      "43": {
+      "44": {
         "author": "Young, S., et al.",
         "location": "USA",
         "quadas": "intermediate concern",
@@ -6405,9 +6317,9 @@
           "max": 0.9990000000000001
         },
         "testId": "AT200/20",
-        "id": 43
+        "id": 44
       },
-      "44": {
+      "45": {
         "author": "Caruana, G., et al.",
         "location": "Switzerland",
         "quadas": "intermediate concern",
@@ -6422,11 +6334,11 @@
           "avg": 0.997
         },
         "testId": "AT200/20",
-        "id": 44
+        "id": 45
       },
-      "185": {
+      "189": {
         "author": "manufacturer",
-        "id": 185,
+        "id": 189,
         "sensitivity": {
           "avg": 0.84,
           "min": 0.67,
@@ -6461,9 +6373,9 @@
       "KL GmbH"
     ],
     "studies": {
-      "191": {
+      "195": {
         "author": "manufacturer",
-        "id": 191,
+        "id": 195,
         "sensitivity": {
           "avg": 0.9688,
           "min": 0.92,
@@ -6497,9 +6409,9 @@
       "JingCheng Asia Group Limited"
     ],
     "studies": {
-      "326": {
+      "329": {
         "author": "manufacturer",
-        "id": 326,
+        "id": 329,
         "sensitivity": {
           "avg": 0.9428,
           "min": 0.92,
@@ -6534,9 +6446,9 @@
       "Motokay GmbHspreenic GmbH"
     ],
     "studies": {
-      "362": {
+      "366": {
         "author": "manufacturer",
-        "id": 362,
+        "id": 366,
         "sensitivity": {
           "avg": 0.96,
           "min": 0.92,
@@ -6570,9 +6482,9 @@
       "EightPlus Kft"
     ],
     "studies": {
-      "304": {
+      "307": {
         "author": "manufacturer",
-        "id": 304,
+        "id": 307,
         "sensitivity": {
           "avg": 0.9505,
           "min": 0.88,
@@ -6606,9 +6518,9 @@
       ""
     ],
     "studies": {
-      "247": {
+      "251": {
         "author": "manufacturer",
-        "id": 247,
+        "id": 251,
         "sensitivity": {
           "avg": 0.8758,
           "min": 0.81,
@@ -6625,35 +6537,35 @@
     "shops": []
   },
   {
-    "id": "AT218/20",
-    "name": "First Sign® SARS-CoV-2 Antigen Test",
+    "id": "AT222/20",
+    "name": "Novel Coronavirus (SARS-Cov-2) Antigen Rapid Test Cassette (swab)",
     "pei": false,
-    "manufacturer": "WHPM Inc.",
-    "Hersteller Stadt": "Irwindale",
-    "Hersteller Land": "US",
-    "EU Bevollmächtigter Name": "Lotus NL B.V.",
-    "EU Bevollmächtigter Stadt": "The Hague",
-    "EU Bevollmächtigter Land": "NL",
+    "manufacturer": "Hangzhou Realy Tech Co.,ltd",
+    "Hersteller Stadt": "Hangzhou",
+    "Hersteller Land": "CN",
+    "EU Bevollmächtigter Name": "Luxus Lebenswelt GmbH",
+    "EU Bevollmächtigter Stadt": "Willich",
+    "EU Bevollmächtigter Land": "DE",
     "Testort*": "POC (ohne Gerät)",
     "tradename": [
-      "First Sign® SARS-CoV-2 Antigen Test"
+      "Novel Coronavirus (SARS-Cov-2) Antigen Rapid Test Cassette (swab)"
     ],
     "distributors": [
-      "CARE diagnostica PuV Gmbh"
+      "Zebra Invest Handelshaus UG (haftungsbeschränkt)"
     ],
     "studies": {
-      "380": {
+      "271": {
         "author": "manufacturer",
-        "id": 380,
+        "id": 271,
         "sensitivity": {
-          "avg": 0.941,
-          "min": 0.78,
+          "avg": 0.9617,
+          "min": 0.92,
           "max": 0.98
         },
         "specificity": {
-          "avg": 0.985,
-          "min": 0.9420000000000001,
-          "max": 0.997
+          "avg": 0.99,
+          "min": 0.9898,
+          "max": 1
         }
       }
     },
@@ -6678,9 +6590,9 @@
       "Spreenic GmbH"
     ],
     "studies": {
-      "263": {
+      "267": {
         "author": "manufacturer",
-        "id": 263,
+        "id": 267,
         "sensitivity": {
           "avg": 0.956,
           "min": 0.88,
@@ -6714,9 +6626,9 @@
       "NYKS Company"
     ],
     "studies": {
-      "281": {
+      "285": {
         "author": "manufacturer",
-        "id": 281,
+        "id": 285,
         "sensitivity": {
           "avg": 0.963,
           "min": 0.91,
@@ -6750,9 +6662,9 @@
       "Pharmadoc"
     ],
     "studies": {
-      "250": {
+      "254": {
         "author": "manufacturer",
-        "id": 250,
+        "id": 254,
         "sensitivity": {
           "avg": 0.9667,
           "min": 0.88,
@@ -6788,9 +6700,9 @@
       "KL GmbHMTC GmbHmedienkraftwerk GmbH"
     ],
     "studies": {
-      "270": {
+      "274": {
         "author": "manufacturer",
-        "id": 270,
+        "id": 274,
         "sensitivity": {
           "avg": 0.9209999999999999,
           "min": 0.87,
@@ -6825,9 +6737,9 @@
       "Alpstar Beteiligungs GmbHcare impuls Vertriebs GmbH"
     ],
     "studies": {
-      "290": {
+      "293": {
         "author": "manufacturer",
-        "id": 290,
+        "id": 293,
         "sensitivity": {
           "avg": 0.961,
           "min": 0.88,
@@ -6863,9 +6775,9 @@
       "KUM Consulting & Trading GmbHSt JakobsapothekeSupero GmbH"
     ],
     "studies": {
-      "173": {
+      "177": {
         "author": "manufacturer",
-        "id": 173,
+        "id": 177,
         "sensitivity": {
           "avg": 0.971,
           "min": 0.9,
@@ -6900,9 +6812,9 @@
       "Crenano GmbHEJOY GmbH"
     ],
     "studies": {
-      "391": {
+      "395": {
         "author": "manufacturer",
-        "id": 391,
+        "id": 395,
         "sensitivity": {
           "avg": 0.9534999999999999,
           "min": 0.92,
@@ -6936,9 +6848,9 @@
       "Yiwu Commodity City GmbH"
     ],
     "studies": {
-      "284": {
+      "288": {
         "author": "manufacturer",
-        "id": 284,
+        "id": 288,
         "sensitivity": {
           "avg": 0.9664,
           "min": 0.91,
@@ -6972,9 +6884,9 @@
       "Bold Sales GmbH"
     ],
     "studies": {
-      "168": {
+      "172": {
         "author": "manufacturer",
-        "id": 168,
+        "id": 172,
         "sensitivity": {
           "avg": 0.9802,
           "min": 0.93,
@@ -7008,9 +6920,9 @@
       "Ysion UG"
     ],
     "studies": {
-      "279": {
+      "283": {
         "author": "manufacturer",
-        "id": 279,
+        "id": 283,
         "sensitivity": {
           "avg": 0.956,
           "min": 0.93,
@@ -7044,9 +6956,9 @@
       "KL GmbH"
     ],
     "studies": {
-      "313": {
+      "316": {
         "author": "manufacturer",
-        "id": 313,
+        "id": 316,
         "sensitivity": {
           "avg": 0.9194,
           "min": 0.82,
@@ -7084,9 +6996,9 @@
       "Biamed GmbHComtex GmbHGlobal Human Health&Care AGLama Licensing GmbHLifetec Electronics GmbH"
     ],
     "studies": {
-      "253": {
+      "257": {
         "author": "manufacturer",
-        "id": 253,
+        "id": 257,
         "sensitivity": {
           "avg": 0.976,
           "min": 0.93,
@@ -7120,9 +7032,9 @@
       "Dixion Vertrieb Medizinischer Geräte GmbH"
     ],
     "studies": {
-      "353": {
+      "356": {
         "author": "manufacturer",
-        "id": 353,
+        "id": 356,
         "sensitivity": {
           "avg": 0.9534999999999999,
           "min": 0.9,
@@ -7158,9 +7070,9 @@
       "MePro GmbHMePro GmbHMePro GmbH"
     ],
     "studies": {
-      "159": {
+      "162": {
         "author": "manufacturer",
-        "id": 159,
+        "id": 162,
         "sensitivity": {
           "avg": 0.971,
           "min": 0.93,
@@ -7195,9 +7107,9 @@
       "Pharma-Peter GmbHPromotion Pets GmbH"
     ],
     "studies": {
-      "220": {
+      "224": {
         "author": "manufacturer",
-        "id": 220,
+        "id": 224,
         "sensitivity": {
           "avg": 0.975,
           "min": 0.91,
@@ -7232,9 +7144,9 @@
       "Swissbrands GmbH"
     ],
     "studies": {
-      "282": {
+      "286": {
         "author": "manufacturer",
-        "id": 282,
+        "id": 286,
         "sensitivity": {
           "avg": 0.963,
           "min": 0.91,
@@ -7268,9 +7180,9 @@
       "Brand-New Trading GmbH"
     ],
     "studies": {
-      "399": {
+      "403": {
         "author": "manufacturer",
-        "id": 399,
+        "id": 403,
         "sensitivity": {
           "avg": 0.935,
           "min": 0.9,
@@ -7304,9 +7216,9 @@
       "Brand-New Trading GmbH"
     ],
     "studies": {
-      "398": {
+      "402": {
         "author": "manufacturer",
-        "id": 398,
+        "id": 402,
         "sensitivity": {
           "avg": 0.975,
           "min": 0.89,
@@ -7340,9 +7252,9 @@
       "RONO GmbH"
     ],
     "studies": {
-      "165": {
+      "169": {
         "author": "manufacturer",
-        "id": 165,
+        "id": 169,
         "sensitivity": {
           "avg": 0.9009999999999999,
           "min": 0.82,
@@ -7376,9 +7288,9 @@
       "MTC GmbH"
     ],
     "studies": {
-      "387": {
+      "391": {
         "author": "manufacturer",
-        "id": 387,
+        "id": 391,
         "sensitivity": {
           "avg": 0.9439,
           "min": 0.9,
@@ -7412,9 +7324,9 @@
       "Dr. Grob Healthcare GmbH"
     ],
     "studies": {
-      "189": {
+      "193": {
         "author": "manufacturer",
-        "id": 189,
+        "id": 193,
         "sensitivity": {
           "avg": 0.9537,
           "min": 0.89,
@@ -7452,9 +7364,9 @@
       "Gesino GmbH"
     ],
     "studies": {
-      "160": {
+      "164": {
         "author": "manufacturer",
-        "id": 160,
+        "id": 164,
         "sensitivity": {
           "avg": 0.971,
           "min": 0.93,
@@ -7488,9 +7400,9 @@
       "MED TRUST GmbH."
     ],
     "studies": {
-      "298": {
+      "301": {
         "author": "manufacturer",
-        "id": 298,
+        "id": 301,
         "sensitivity": {
           "avg": 0.9565,
           "min": 0.9,
@@ -7524,9 +7436,9 @@
       "O2O EurAsia GmbH"
     ],
     "studies": {
-      "179": {
+      "183": {
         "author": "manufacturer",
-        "id": 179,
+        "id": 183,
         "sensitivity": {
           "avg": 0.802,
           "min": 0.73,
@@ -7560,9 +7472,9 @@
       "bestbion dx GmbH"
     ],
     "studies": {
-      "211": {
+      "215": {
         "author": "manufacturer",
-        "id": 211,
+        "id": 215,
         "sensitivity": {
           "avg": 0.929,
           "min": 0.76,
@@ -7596,9 +7508,9 @@
       "Imex-Co GmbH"
     ],
     "studies": {
-      "375": {
+      "380": {
         "author": "manufacturer",
-        "id": 375,
+        "id": 380,
         "sensitivity": {
           "avg": 0.9676,
           "min": 0.93,
@@ -7632,9 +7544,9 @@
       ""
     ],
     "studies": {
-      "379": {
+      "384": {
         "author": "manufacturer",
-        "id": 379,
+        "id": 384,
         "sensitivity": {
           "avg": 0.9706,
           "min": 0.91,
@@ -7668,9 +7580,9 @@
       "CJST Med UG"
     ],
     "studies": {
-      "275": {
+      "279": {
         "author": "manufacturer",
-        "id": 275,
+        "id": 279,
         "sensitivity": {
           "avg": 0.9802,
           "min": 0.93,
@@ -7704,9 +7616,9 @@
       "Crenano GmbH"
     ],
     "studies": {
-      "390": {
+      "394": {
         "author": "manufacturer",
-        "id": 390,
+        "id": 394,
         "sensitivity": {
           "avg": 0.9591,
           "min": 0.93,
@@ -7740,9 +7652,9 @@
       "ONYXO"
     ],
     "studies": {
-      "333": {
+      "336": {
         "author": "manufacturer",
-        "id": 333,
+        "id": 336,
         "sensitivity": {
           "avg": 0.9508,
           "min": 0.89,
@@ -7776,9 +7688,9 @@
       "Globi-Pharm GmbH & Co KG"
     ],
     "studies": {
-      "166": {
+      "170": {
         "author": "manufacturer",
-        "id": 166,
+        "id": 170,
         "sensitivity": {
           "avg": 0.8278,
           "min": 0.74,
@@ -7812,9 +7724,9 @@
       "ALIC Deutschland GmbH"
     ],
     "studies": {
-      "288": {
+      "292": {
         "author": "manufacturer",
-        "id": 288,
+        "id": 292,
         "sensitivity": {
           "avg": 0.9726,
           "min": 0.93,
@@ -7848,9 +7760,9 @@
       "ALIC Deutschland GmbH"
     ],
     "studies": {
-      "286": {
+      "290": {
         "author": "manufacturer",
-        "id": 286,
+        "id": 290,
         "sensitivity": {
           "avg": 0.9745,
           "min": 0.93,
@@ -7884,9 +7796,9 @@
       "Roche Diagnostics GmbH"
     ],
     "studies": {
-      "349": {
+      "353": {
         "author": "manufacturer",
-        "id": 349,
+        "id": 353,
         "sensitivity": {
           "avg": 0.8270000000000001,
           "min": 0.75,
@@ -7921,9 +7833,9 @@
       ""
     ],
     "studies": {
-      "394": {
+      "398": {
         "author": "manufacturer",
-        "id": 394,
+        "id": 398,
         "sensitivity": {
           "avg": 0.9852,
           "min": 0.95,
@@ -7957,9 +7869,9 @@
       "GESINO GmbH"
     ],
     "studies": {
-      "192": {
+      "196": {
         "author": "manufacturer",
-        "id": 192,
+        "id": 196,
         "sensitivity": {
           "avg": 0.9618000000000001,
           "min": 0.91,
@@ -7969,6 +7881,42 @@
           "avg": 1,
           "min": 0.9854,
           "max": 1
+        }
+      }
+    },
+    "selftest": false,
+    "shops": []
+  },
+  {
+    "id": "AT315/21",
+    "name": "VISION COVID-19 Antigen Schnelltest",
+    "pei": false,
+    "manufacturer": "Vision Biyoteknoloji Arastirma Gelistirme Labt. Sist. San ve Tic LTD STI.",
+    "Hersteller Stadt": "Kadiköy/Istanbul",
+    "Hersteller Land": "TR",
+    "EU Bevollmächtigter Name": "Pro-Aster GmbH",
+    "EU Bevollmächtigter Stadt": "Verl",
+    "EU Bevollmächtigter Land": "DE",
+    "Testort*": "POC (ohne Gerät)",
+    "tradename": [
+      "VISION COVID-19 Antigen Schnelltest"
+    ],
+    "distributors": [
+      "BKD Fashion GmbH"
+    ],
+    "studies": {
+      "378": {
+        "author": "manufacturer",
+        "id": 378,
+        "sensitivity": {
+          "avg": 0.9756999999999999,
+          "min": 0.95,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 0.996,
+          "min": 0.9781,
+          "max": null
         }
       }
     },
@@ -7994,9 +7942,9 @@
       "Vice Vertriebs GmbH"
     ],
     "studies": {
-      "315": {
+      "318": {
         "author": "manufacturer",
-        "id": 315,
+        "id": 318,
         "sensitivity": {
           "avg": 0.97,
           "min": 0.91,
@@ -8030,9 +7978,9 @@
       "ROXALL Medizin GmbH"
     ],
     "studies": {
-      "334": {
+      "337": {
         "author": "manufacturer",
-        "id": 334,
+        "id": 337,
         "sensitivity": {
           "avg": 0.9697,
           "min": 0.84,
@@ -8067,9 +8015,9 @@
       "MIKKA GmbH"
     ],
     "studies": {
-      "330": {
+      "333": {
         "author": "manufacturer",
-        "id": 330,
+        "id": 333,
         "sensitivity": {
           "avg": 0.95,
           "min": 0.88,
@@ -8104,9 +8052,9 @@
       "AXNAR GmbHRed One Healthcare GmbH + Co. KG"
     ],
     "studies": {
-      "219": {
+      "223": {
         "author": "manufacturer",
-        "id": 219,
+        "id": 223,
         "sensitivity": {
           "avg": 0.981,
           "min": 0.94,
@@ -8140,9 +8088,9 @@
       "Promeditech GmbH"
     ],
     "studies": {
-      "343": {
+      "346": {
         "author": "manufacturer",
-        "id": 343,
+        "id": 346,
         "sensitivity": {
           "avg": 0.899,
           "min": 0.83,
@@ -8178,9 +8126,9 @@
       "Canea Pharma Chemisch Pharmazeutische Vertriebsgesellschaft mbHPXG PharmaRed One Healthcare GmbH + Co. KG"
     ],
     "studies": {
-      "221": {
+      "225": {
         "author": "manufacturer",
-        "id": 221,
+        "id": 225,
         "sensitivity": {
           "avg": 0.976,
           "min": 0.93,
@@ -8214,9 +8162,9 @@
       ""
     ],
     "studies": {
-      "242": {
+      "246": {
         "author": "manufacturer",
-        "id": 242,
+        "id": 246,
         "sensitivity": {
           "avg": 0.9706,
           "min": 0.93,
@@ -8250,9 +8198,9 @@
       "Detools GmbH"
     ],
     "studies": {
-      "283": {
+      "287": {
         "author": "manufacturer",
-        "id": 283,
+        "id": 287,
         "sensitivity": {
           "avg": 0.963,
           "min": 0.91,
@@ -8287,9 +8235,9 @@
       "NIC GmbHROBEX ENERGY SYSTEMS GmbH"
     ],
     "studies": {
-      "318": {
+      "321": {
         "author": "manufacturer",
-        "id": 318,
+        "id": 321,
         "sensitivity": {
           "avg": 0.98,
           "min": 0.9,
@@ -8323,9 +8271,9 @@
       ""
     ],
     "studies": {
-      "213": {
+      "217": {
         "author": "manufacturer",
-        "id": 213,
+        "id": 217,
         "sensitivity": {
           "avg": 0.9854999999999999,
           "min": 0.96,
@@ -8359,9 +8307,9 @@
       ""
     ],
     "studies": {
-      "329": {
+      "332": {
         "author": "manufacturer",
-        "id": 329,
+        "id": 332,
         "sensitivity": {
           "avg": 0.95,
           "min": 0.88,
@@ -8395,9 +8343,9 @@
       "TECOmedical GmbH"
     ],
     "studies": {
-      "228": {
+      "232": {
         "author": "manufacturer",
-        "id": 228,
+        "id": 232,
         "sensitivity": {
           "avg": 0.9570000000000001,
           "min": 0.9,
@@ -8432,9 +8380,9 @@
       "Abacus Medicine GmbH"
     ],
     "studies": {
-      "373": {
+      "377": {
         "author": "manufacturer",
-        "id": 373,
+        "id": 377,
         "sensitivity": {
           "avg": 0.9672,
           "min": 0.88,
@@ -8463,15 +8411,16 @@
     "Testort*": "POC (ohne Gerät)",
     "tradename": [
       "COVID-19 Antigen Rapid Test Kit (Saliva)",
-      " COVID-19 Antigen Rapid Test Kit (Saliva)"
+      " COVID-19 Antigen Rapid Test Kit (Saliva)",
+      " COVID-19-Antigen-Schnelltestkit (Speichel)"
     ],
     "distributors": [
-      "Detools GmbHFigura Pharma GmbH & Co. KG"
+      "AngelaQ GmbHDetools GmbHFigura Pharma GmbH & Co. KG"
     ],
     "studies": {
-      "339": {
+      "341": {
         "author": "manufacturer",
-        "id": 339,
+        "id": 341,
         "sensitivity": {
           "avg": 0.985,
           "min": 0.94,
@@ -8505,9 +8454,9 @@
       "KNJ-Team-Trading"
     ],
     "studies": {
-      "205": {
+      "209": {
         "author": "manufacturer",
-        "id": 205,
+        "id": 209,
         "sensitivity": {
           "avg": 0.9649,
           "min": 0.91,
@@ -8541,9 +8490,9 @@
       "deucin GmbH"
     ],
     "studies": {
-      "402": {
+      "407": {
         "author": "manufacturer",
-        "id": 402,
+        "id": 407,
         "sensitivity": {
           "avg": 0.9327,
           "min": 0.9,
@@ -8580,9 +8529,9 @@
       " Entwicklung  und Distribution von Diagnostika  im Blutspendewesen mbHHGHSerumwerk Bernburg AG"
     ],
     "studies": {
-      "325": {
+      "328": {
         "author": "manufacturer",
-        "id": 325,
+        "id": 328,
         "sensitivity": {
           "avg": 0.9492,
           "min": 0.8,
@@ -8616,9 +8565,9 @@
       "Cerascreen GmbH"
     ],
     "studies": {
-      "162": {
+      "166": {
         "author": "manufacturer",
-        "id": 162,
+        "id": 166,
         "sensitivity": {
           "avg": 0.96,
           "min": 0.91,
@@ -8655,9 +8604,9 @@
       "Diagenics Group SE"
     ],
     "studies": {
-      "240": {
+      "244": {
         "author": "manufacturer",
-        "id": 240,
+        "id": 244,
         "sensitivity": {
           "avg": 0.9673,
           "min": 0.92,
@@ -8690,15 +8639,16 @@
       " COVID-19 Antigen Rapid Test Cassette (Nasal Swab)",
       " COVID-19 Antigen Rapid Test Cassette (Nasal Swab)",
       " COVID-19 Antigen Rapid Test Cassette (Nasal Swab)",
+      " COVID-19 Antigen Rapid Test Cassette (Nasal Swab)",
       " COVID-19 Antigen Rapid Test Cassette (Nasal Swab)"
     ],
     "distributors": [
-      "Adooha GmbHDIWAMEDICAL H.M.S Handel-Marketing-Service GmbHDeutsche HansaGT GmbHNOC Pharma GmbHWinlong GmbHulti med Products (Deutschland) GmbH"
+      "Adooha GmbHAlpha-Medics GmbHDIWAMEDICAL H.M.S Handel-Marketing-Service GmbHDeutsche HansaGT GmbHNOC Pharma GmbHWinlong GmbHulti med Products (Deutschland) GmbH"
     ],
     "studies": {
-      "257": {
+      "263": {
         "author": "manufacturer",
-        "id": 257,
+        "id": 263,
         "sensitivity": {
           "avg": 0.914,
           "min": 0.85,
@@ -8732,9 +8682,9 @@
       "AXIOM Diagnostics"
     ],
     "studies": {
-      "183": {
+      "187": {
         "author": "manufacturer",
-        "id": 183,
+        "id": 187,
         "sensitivity": {
           "avg": 0.981,
           "min": 0.95,
@@ -8768,9 +8718,9 @@
       "Brawa GmbH"
     ],
     "studies": {
-      "271": {
+      "275": {
         "author": "manufacturer",
-        "id": 271,
+        "id": 275,
         "sensitivity": {
           "avg": 0.9359999999999999,
           "min": 0.92,
@@ -8804,9 +8754,9 @@
       "LMS Consult GmbH &Co. KG"
     ],
     "studies": {
-      "328": {
+      "331": {
         "author": "manufacturer",
-        "id": 328,
+        "id": 331,
         "sensitivity": {
           "avg": 0.9556,
           "min": 0.9,
@@ -8841,9 +8791,9 @@
       "AngelaQ GmbHDetools GmbH"
     ],
     "studies": {
-      "337": {
+      "340": {
         "author": "manufacturer",
-        "id": 337,
+        "id": 340,
         "sensitivity": {
           "avg": 0.9704,
           "min": 0.92,
@@ -8877,9 +8827,9 @@
       "Rensolc GmbH"
     ],
     "studies": {
-      "367": {
+      "371": {
         "author": "manufacturer",
-        "id": 367,
+        "id": 371,
         "sensitivity": {
           "avg": 0.966,
           "min": 0.91,
@@ -8913,9 +8863,9 @@
       "Ellecom GmbH"
     ],
     "studies": {
-      "174": {
+      "178": {
         "author": "manufacturer",
-        "id": 174,
+        "id": 178,
         "sensitivity": {
           "avg": 0.9640000000000001,
           "min": 0.9,
@@ -8951,9 +8901,9 @@
       "KL GmbHLama Licensing GmbHLifetec Electronics GmbH"
     ],
     "studies": {
-      "251": {
+      "255": {
         "author": "manufacturer",
-        "id": 251,
+        "id": 255,
         "sensitivity": {
           "avg": 0.9783,
           "min": 0.93,
@@ -8987,9 +8937,9 @@
       ""
     ],
     "studies": {
-      "363": {
+      "367": {
         "author": "manufacturer",
-        "id": 363,
+        "id": 367,
         "sensitivity": {
           "avg": 0.9813,
           "min": 0.93,
@@ -9023,9 +8973,9 @@
       "Sysmex Europe GmbH"
     ],
     "studies": {
-      "360": {
+      "363": {
         "author": "manufacturer",
-        "id": 360,
+        "id": 363,
         "sensitivity": {
           "avg": 0.9083,
           "min": 0.84,
@@ -9059,9 +9009,9 @@
       "Detools GmbH"
     ],
     "studies": {
-      "352": {
+      "355": {
         "author": "manufacturer",
-        "id": 352,
+        "id": 355,
         "sensitivity": {
           "avg": 0.9084,
           "min": 0.84,
@@ -9095,9 +9045,9 @@
       "SSI Diagnostica A/S"
     ],
     "studies": {
-      "222": {
+      "226": {
         "author": "manufacturer",
-        "id": 222,
+        "id": 226,
         "sensitivity": {
           "avg": 0.904,
           "min": 0.83,
@@ -9131,7 +9081,7 @@
       "bestbion dx GmbH"
     ],
     "studies": {
-      "138": {
+      "141": {
         "author": "Nikolai, O., et al.",
         "location": "Germany",
         "quadas": "low concern",
@@ -9150,9 +9100,9 @@
           "max": 1
         },
         "testId": "AT394/21",
-        "id": 138
+        "id": 141
       },
-      "139": {
+      "142": {
         "author": "Nikolai, O., et al.",
         "location": "Germany",
         "quadas": "low concern",
@@ -9171,9 +9121,9 @@
           "max": 1
         },
         "testId": "AT394/21",
-        "id": 139
+        "id": 142
       },
-      "140": {
+      "143": {
         "author": "Nikolai, O., et al.",
         "location": "Germany",
         "quadas": "low concern",
@@ -9192,9 +9142,9 @@
           "max": 1
         },
         "testId": "AT394/21",
-        "id": 140
+        "id": 143
       },
-      "141": {
+      "144": {
         "author": "Linder, A.K., et al.",
         "location": "Germany",
         "quadas": "low concern",
@@ -9213,9 +9163,9 @@
           "max": 0.996
         },
         "testId": "AT394/21",
-        "id": 141
+        "id": 144
       },
-      "142": {
+      "145": {
         "author": "Stohr, J.J.J.M., et al.",
         "location": "Netherlands",
         "quadas": "low concern",
@@ -9234,11 +9184,11 @@
           "max": 0.9990000000000001
         },
         "testId": "AT394/21",
-        "id": 142
+        "id": 145
       },
-      "347": {
+      "350": {
         "author": "manufacturer",
-        "id": 347,
+        "id": 350,
         "sensitivity": {
           "avg": 0.9712000000000001,
           "min": 0.91,
@@ -9248,42 +9198,6 @@
           "avg": 1,
           "min": 0.9904999999999999,
           "max": 1
-        }
-      }
-    },
-    "selftest": false,
-    "shops": []
-  },
-  {
-    "id": "AT400/20",
-    "name": "COVID-19 Ag Schnelltest",
-    "pei": false,
-    "manufacturer": "Lionex GmbH",
-    "Hersteller Stadt": "Braunschweig",
-    "Hersteller Land": "DE",
-    "EU Bevollmächtigter Name": "",
-    "EU Bevollmächtigter Stadt": "",
-    "EU Bevollmächtigter Land": "",
-    "Testort*": "POC (ohne Gerät)",
-    "tradename": [
-      "COVID-19 Ag Schnelltest"
-    ],
-    "distributors": [
-      ""
-    ],
-    "studies": {
-      "294": {
-        "author": "manufacturer",
-        "id": 294,
-        "sensitivity": {
-          "avg": 0.9444,
-          "min": 0.88,
-          "max": 0.97
-        },
-        "specificity": {
-          "avg": 0.9828,
-          "min": 0.9390999999999999,
-          "max": 0.9979
         }
       }
     },
@@ -9308,9 +9222,9 @@
       "SALUTIS-Deutschland"
     ],
     "studies": {
-      "217": {
+      "221": {
         "author": "manufacturer",
-        "id": 217,
+        "id": 221,
         "sensitivity": {
           "avg": 0.9640000000000001,
           "min": 0.91,
@@ -9320,6 +9234,42 @@
           "avg": 0.992,
           "min": 0.978,
           "max": 0.997
+        }
+      }
+    },
+    "selftest": false,
+    "shops": []
+  },
+  {
+    "id": "AT409/21",
+    "name": "GLINE-2019-nCoVAg",
+    "pei": false,
+    "manufacturer": "Shenzhen YHLO Biotech Co., Ltd.",
+    "Hersteller Stadt": "Shenzhen",
+    "Hersteller Land": "CN",
+    "EU Bevollmächtigter Name": "Lotus NL B.V.",
+    "EU Bevollmächtigter Stadt": "The Hague",
+    "EU Bevollmächtigter Land": "NL",
+    "Testort*": "POC (ohne Gerät)",
+    "tradename": [
+      "GLINE-2019-nCoVAg"
+    ],
+    "distributors": [
+      "ASBACH MEDICAL PRODUCTS GMBH"
+    ],
+    "studies": {
+      "365": {
+        "author": "manufacturer",
+        "id": 365,
+        "sensitivity": {
+          "avg": 0.9649,
+          "min": 0.91,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.9925,
+          "min": 0.9782,
+          "max": 0.9984999999999999
         }
       }
     },
@@ -9344,9 +9294,9 @@
       "SALUTIS-Deutschland"
     ],
     "studies": {
-      "277": {
+      "281": {
         "author": "manufacturer",
-        "id": 277,
+        "id": 281,
         "sensitivity": {
           "avg": 0.9640000000000001,
           "min": 0.91,
@@ -9380,9 +9330,9 @@
       "ROBEX ENERGY SYSTEMS GmbH"
     ],
     "studies": {
-      "319": {
+      "322": {
         "author": "manufacturer",
-        "id": 319,
+        "id": 322,
         "sensitivity": {
           "avg": 0.973,
           "min": 0.92,
@@ -9416,9 +9366,9 @@
       "audasia Handelsgesellschaft UG"
     ],
     "studies": {
-      "356": {
+      "359": {
         "author": "manufacturer",
-        "id": 356,
+        "id": 359,
         "sensitivity": {
           "avg": 0.98,
           "min": 0.97,
@@ -9452,9 +9402,9 @@
       "ALIC Deutschland GmbH"
     ],
     "studies": {
-      "287": {
+      "291": {
         "author": "manufacturer",
-        "id": 287,
+        "id": 291,
         "sensitivity": {
           "avg": 0.9758,
           "min": 0.95,
@@ -9488,9 +9438,9 @@
       "Fairpreis GMBH"
     ],
     "studies": {
-      "371": {
+      "375": {
         "author": "manufacturer",
-        "id": 371,
+        "id": 375,
         "sensitivity": {
           "avg": 0.9534,
           "min": 0.91,
@@ -9525,9 +9475,9 @@
       "Fairpreis GMBHPro-ASM GmbH"
     ],
     "studies": {
-      "372": {
+      "376": {
         "author": "manufacturer",
-        "id": 372,
+        "id": 376,
         "sensitivity": {
           "avg": 0.9565,
           "min": 0.91,
@@ -9561,9 +9511,9 @@
       ""
     ],
     "studies": {
-      "355": {
+      "358": {
         "author": "manufacturer",
-        "id": 355,
+        "id": 358,
         "sensitivity": {
           "avg": 0.98,
           "min": 0.97,
@@ -9598,9 +9548,9 @@
       "Biozol Diagnostica Vertrieb GmbHDialab GmbH"
     ],
     "studies": {
-      "383": {
+      "387": {
         "author": "manufacturer",
-        "id": 383,
+        "id": 387,
         "sensitivity": {
           "avg": 0.9632999999999999,
           "min": 0.9,
@@ -9635,9 +9585,9 @@
       "Detools GmbHDetools GmbH"
     ],
     "studies": {
-      "381": {
+      "385": {
         "author": "manufacturer",
-        "id": 381,
+        "id": 385,
         "sensitivity": {
           "avg": 0.9615,
           "min": 0.91,
@@ -9671,9 +9621,9 @@
       "ARIES HEALTH  SOLUTIONS GmbH"
     ],
     "studies": {
-      "177": {
+      "181": {
         "author": "manufacturer",
-        "id": 177,
+        "id": 181,
         "sensitivity": {
           "avg": 0.9467,
           "min": 0.89,
@@ -9707,9 +9657,9 @@
       "concile GmbH"
     ],
     "studies": {
-      "203": {
+      "207": {
         "author": "manufacturer",
-        "id": 203,
+        "id": 207,
         "sensitivity": {
           "avg": 0.892,
           "min": 0.81,
@@ -9743,9 +9693,9 @@
       "Schloss Wendischbora GmbH"
     ],
     "studies": {
-      "269": {
+      "273": {
         "author": "manufacturer",
-        "id": 269,
+        "id": 273,
         "sensitivity": {
           "avg": 0.9856,
           "min": 0.95,
@@ -9779,9 +9729,9 @@
       "IMACO GmbH"
     ],
     "studies": {
-      "181": {
+      "185": {
         "author": "manufacturer",
-        "id": 181,
+        "id": 185,
         "sensitivity": {
           "avg": 0.9318000000000001,
           "min": 0.89,
@@ -9815,9 +9765,9 @@
       "PARI GmbH"
     ],
     "studies": {
-      "169": {
+      "173": {
         "author": "manufacturer",
-        "id": 169,
+        "id": 173,
         "sensitivity": {
           "avg": 0.9926999999999999,
           "min": 0.98,
@@ -9851,9 +9801,9 @@
       "Siegmund Care GmbH"
     ],
     "studies": {
-      "295": {
+      "298": {
         "author": "manufacturer",
-        "id": 295,
+        "id": 298,
         "sensitivity": {
           "avg": 0.9333,
           "min": 0.86,
@@ -9887,9 +9837,9 @@
       ""
     ],
     "studies": {
-      "354": {
+      "357": {
         "author": "manufacturer",
-        "id": 354,
+        "id": 357,
         "sensitivity": {
           "avg": 0.9764,
           "min": 0.93,
@@ -9923,9 +9873,9 @@
       ""
     ],
     "studies": {
-      "312": {
+      "315": {
         "author": "manufacturer",
-        "id": 312,
+        "id": 315,
         "sensitivity": {
           "avg": 0.9320999999999999,
           "min": 0.88,
@@ -9959,9 +9909,9 @@
       ""
     ],
     "studies": {
-      "164": {
+      "168": {
         "author": "manufacturer",
-        "id": 164,
+        "id": 168,
         "sensitivity": {
           "avg": 0.9731000000000001,
           "min": 0.93,
@@ -9995,9 +9945,9 @@
       "meVita-Berlin GmbH"
     ],
     "studies": {
-      "300": {
+      "303": {
         "author": "manufacturer",
-        "id": 300,
+        "id": 303,
         "sensitivity": {
           "avg": 0.9652,
           "min": 0.91,
@@ -10031,9 +9981,9 @@
       "Figura Pharma GmbH & Co. KG"
     ],
     "studies": {
-      "335": {
+      "338": {
         "author": "manufacturer",
-        "id": 335,
+        "id": 338,
         "sensitivity": {
           "avg": 0.9704,
           "min": 0.92,
@@ -10043,6 +9993,78 @@
           "avg": 0.9944,
           "min": 0.9693999999999999,
           "max": 0.9998999999999999
+        }
+      }
+    },
+    "selftest": false,
+    "shops": []
+  },
+  {
+    "id": "AT487/21",
+    "name": "KOCH Biotechnology Covid-19 Antigen Schnelltest Kit",
+    "pei": false,
+    "manufacturer": "KOCH Biotechnology (Beijing) Co., Ltd.",
+    "Hersteller Stadt": "Beijing",
+    "Hersteller Land": "CN",
+    "EU Bevollmächtigter Name": "CARETECHION GmbH",
+    "EU Bevollmächtigter Stadt": "Düsseldorf",
+    "EU Bevollmächtigter Land": "DE",
+    "Testort*": "POC (ohne Gerät)",
+    "tradename": [
+      "KOCH Biotechnology Covid-19 Antigen Schnelltest Kit"
+    ],
+    "distributors": [
+      "enverque GmbH"
+    ],
+    "studies": {
+      "296": {
+        "author": "manufacturer",
+        "id": 296,
+        "sensitivity": {
+          "avg": 0.985,
+          "min": 0.97,
+          "max": 0.99
+        },
+        "specificity": {
+          "avg": 0.993,
+          "min": 0.985,
+          "max": 1
+        }
+      }
+    },
+    "selftest": false,
+    "shops": []
+  },
+  {
+    "id": "AT488/20",
+    "name": "Novel Coronavirus Ag Rapid Test Device",
+    "pei": false,
+    "manufacturer": "Zhejiang Quark Biotechnology Co., Ltd",
+    "Hersteller Stadt": "Shaoxing, Zheijang",
+    "Hersteller Land": "CN",
+    "EU Bevollmächtigter Name": "Wellkang Ltd.",
+    "EU Bevollmächtigter Stadt": "Derry",
+    "EU Bevollmächtigter Land": "IR",
+    "Testort*": "POC (ohne Gerät)",
+    "tradename": [
+      "Novel Coronavirus Ag Rapid Test Device"
+    ],
+    "distributors": [
+      "Bothmann + Vogler Solutions GmbH"
+    ],
+    "studies": {
+      "405": {
+        "author": "manufacturer",
+        "id": 405,
+        "sensitivity": {
+          "avg": 0.9487000000000001,
+          "min": 0.89,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 0.9934000000000001,
+          "min": 0.9765,
+          "max": 0.9992
         }
       }
     },
@@ -10067,9 +10089,9 @@
       "Futuring Sales S.A.R.L."
     ],
     "studies": {
-      "320": {
+      "323": {
         "author": "manufacturer",
-        "id": 320,
+        "id": 323,
         "sensitivity": {
           "avg": 0.83,
           "min": 0.74,
@@ -10103,9 +10125,9 @@
       "TECOmedical GmbH"
     ],
     "studies": {
-      "230": {
+      "234": {
         "author": "manufacturer",
-        "id": 230,
+        "id": 234,
         "sensitivity": {
           "avg": 0.9570000000000001,
           "min": 0.9,
@@ -10139,9 +10161,9 @@
       "medienkraftwerk GmbH"
     ],
     "studies": {
-      "237": {
+      "241": {
         "author": "manufacturer",
-        "id": 237,
+        "id": 241,
         "sensitivity": {
           "avg": 0.9503,
           "min": 0.9,
@@ -10151,6 +10173,42 @@
           "avg": 0.9902,
           "min": 0.9652,
           "max": 0.9987999999999999
+        }
+      }
+    },
+    "selftest": false,
+    "shops": []
+  },
+  {
+    "id": "AT495/20",
+    "name": "Swiss Point of Care SARS-CoV-2 Antigen Rapid Test",
+    "pei": false,
+    "manufacturer": "ACON Biotech (Hangzhou) Co., Ltd.",
+    "Hersteller Stadt": "Hangzhou",
+    "Hersteller Land": "CN",
+    "EU Bevollmächtigter Name": "MedNet GmbH",
+    "EU Bevollmächtigter Stadt": "Münster",
+    "EU Bevollmächtigter Land": "DE",
+    "Testort*": "POC (ohne Gerät)",
+    "tradename": [
+      "Swiss Point of Care SARS-CoV-2 Antigen Rapid Test"
+    ],
+    "distributors": [
+      "Swiss Point of Care"
+    ],
+    "studies": {
+      "160": {
+        "author": "manufacturer",
+        "id": 160,
+        "sensitivity": {
+          "avg": 0.9690000000000001,
+          "min": 0.92,
+          "max": 0.98
+        },
+        "specificity": {
+          "avg": 0.995,
+          "min": 0.981,
+          "max": 0.9990000000000001
         }
       }
     },
@@ -10175,9 +10233,9 @@
       "HUMAN Gesellschaft für Biochemica und Diagnostica mbH"
     ],
     "studies": {
-      "198": {
+      "202": {
         "author": "manufacturer",
-        "id": 198,
+        "id": 202,
         "sensitivity": {
           "avg": 0.961,
           "min": 0.92,
@@ -10211,9 +10269,9 @@
       "Convergent Technologies"
     ],
     "studies": {
-      "218": {
+      "222": {
         "author": "manufacturer",
-        "id": 218,
+        "id": 222,
         "sensitivity": {
           "avg": 0.9503,
           "min": 0.9,
@@ -10247,9 +10305,9 @@
       ""
     ],
     "studies": {
-      "305": {
+      "308": {
         "author": "manufacturer",
-        "id": 305,
+        "id": 308,
         "sensitivity": {
           "avg": 0.961,
           "min": 0.95,
@@ -10283,9 +10341,9 @@
       "MePro GmbH"
     ],
     "studies": {
-      "157": {
+      "161": {
         "author": "manufacturer",
-        "id": 157,
+        "id": 161,
         "sensitivity": {
           "avg": 0.9690000000000001,
           "min": 0.92,
@@ -10319,9 +10377,9 @@
       "Imex-Co GmbH"
     ],
     "studies": {
-      "376": {
+      "381": {
         "author": "manufacturer",
-        "id": 376,
+        "id": 381,
         "sensitivity": {
           "avg": 0.973,
           "min": 0.95,
@@ -10355,9 +10413,9 @@
       "ALIC Deutschland GmbH"
     ],
     "studies": {
-      "285": {
+      "289": {
         "author": "manufacturer",
-        "id": 285,
+        "id": 289,
         "sensitivity": {
           "avg": 0.9873999999999999,
           "min": 0.96,
@@ -10391,9 +10449,9 @@
       "Erwin Kowsky GmbH & Co. KG"
     ],
     "studies": {
-      "317": {
+      "320": {
         "author": "manufacturer",
-        "id": 317,
+        "id": 320,
         "sensitivity": {
           "avg": 0.981,
           "min": 0.95,
@@ -10428,9 +10486,9 @@
       "AT Technologies GmbHTUTMONDA UG (HB)"
     ],
     "studies": {
-      "176": {
+      "180": {
         "author": "manufacturer",
-        "id": 176,
+        "id": 180,
         "sensitivity": {
           "avg": 0.9127,
           "min": 0.84,
@@ -10464,9 +10522,9 @@
       "IME-DC GmbH International Medical Equipment - Diabetes Care"
     ],
     "studies": {
-      "378": {
+      "383": {
         "author": "manufacturer",
-        "id": 378,
+        "id": 383,
         "sensitivity": {
           "avg": 0.9826,
           "min": 0.95,
@@ -10495,15 +10553,16 @@
     "Testort*": "POC (ohne Gerät)",
     "tradename": [
       "CLUNGENE COVID-19 Antigen Rapid Test Cassette",
+      " Clongene COVID-19 Antigen Rapid Test",
       " Clongene COVID-19 Antigen Rapid Test"
     ],
     "distributors": [
-      "Balmung Medical Handel Deutschland GmbHHansaComex GmbH"
+      "AAA Medical Services UGBalmung Medical Handel Deutschland GmbHHansaComex GmbH"
     ],
     "studies": {
-      "258": {
+      "261": {
         "author": "manufacturer",
-        "id": 258,
+        "id": 261,
         "sensitivity": {
           "avg": 0.98,
           "min": 0.94,
@@ -10545,9 +10604,9 @@
       "Alpha-Medics GmbHDeutsche HansaGT GmbHDr. Grob Healthcare GmbHEmotive Systems GmbHEybel GmbHGESINO GmbHKFMS GmbHMP Med GmbHMediMode GmbH"
     ],
     "studies": {
-      "291": {
+      "294": {
         "author": "manufacturer",
-        "id": 291,
+        "id": 294,
         "sensitivity": {
           "avg": 0.951,
           "min": 0.88,
@@ -10581,9 +10640,9 @@
       "Preventis GmbH"
     ],
     "studies": {
-      "278": {
+      "282": {
         "author": "manufacturer",
-        "id": 278,
+        "id": 282,
         "sensitivity": {
           "avg": 0.937,
           "min": 0.89,
@@ -10617,9 +10676,9 @@
       ""
     ],
     "studies": {
-      "244": {
+      "248": {
         "author": "manufacturer",
-        "id": 244,
+        "id": 248,
         "sensitivity": {
           "avg": 0.9304000000000001,
           "min": 0.86,
@@ -10653,9 +10712,9 @@
       "GOSC GmbH"
     ],
     "studies": {
-      "299": {
+      "302": {
         "author": "manufacturer",
-        "id": 299,
+        "id": 302,
         "sensitivity": {
           "avg": 0.956,
           "min": 0.94,
@@ -10689,9 +10748,9 @@
       "Stephana GmbH"
     ],
     "studies": {
-      "246": {
+      "250": {
         "author": "manufacturer",
-        "id": 246,
+        "id": 250,
         "sensitivity": {
           "avg": 0.966,
           "min": 0.92,
@@ -10725,9 +10784,9 @@
       "deucin GmbH"
     ],
     "studies": {
-      "403": {
+      "408": {
         "author": "manufacturer",
-        "id": 403,
+        "id": 408,
         "sensitivity": {
           "avg": 0.9595999999999999,
           "min": 0.93,
@@ -10761,9 +10820,9 @@
       "MediHands AG"
     ],
     "studies": {
-      "359": {
+      "362": {
         "author": "manufacturer",
-        "id": 359,
+        "id": 362,
         "sensitivity": {
           "avg": 0.9434999999999999,
           "min": 0.88,
@@ -10797,9 +10856,9 @@
       "Promeditech GmbH"
     ],
     "studies": {
-      "255": {
+      "258": {
         "author": "manufacturer",
-        "id": 255,
+        "id": 258,
         "sensitivity": {
           "avg": 0.932,
           "min": 0.86,
@@ -10834,9 +10893,9 @@
       "ProDiag B.V.Yücel Trading GmbH"
     ],
     "studies": {
-      "280": {
+      "284": {
         "author": "manufacturer",
-        "id": 280,
+        "id": 284,
         "sensitivity": {
           "avg": 0.9309999999999999,
           "min": 0.86,
@@ -10870,9 +10929,9 @@
       "MePro GmbH"
     ],
     "studies": {
-      "158": {
+      "163": {
         "author": "manufacturer",
-        "id": 158,
+        "id": 163,
         "sensitivity": {
           "avg": 0.975,
           "min": 0.93,
@@ -10906,9 +10965,9 @@
       "NIC GmbH"
     ],
     "studies": {
-      "214": {
+      "218": {
         "author": "manufacturer",
-        "id": 214,
+        "id": 218,
         "sensitivity": {
           "avg": 0.9153,
           "min": 0.84,
@@ -10942,9 +11001,9 @@
       "TECOmedical GmbH"
     ],
     "studies": {
-      "227": {
+      "231": {
         "author": "manufacturer",
-        "id": 227,
+        "id": 231,
         "sensitivity": {
           "avg": 0.9298000000000001,
           "min": 0.86,
@@ -10972,15 +11031,16 @@
     "EU Bevollmächtigter Land": "DE",
     "Testort*": "POC (ohne Gerät)",
     "tradename": [
-      "SARS-CoV-2 Antigen Rapid Test Cassette"
+      "SARS-CoV-2 Antigen Rapid Test Cassette",
+      " SARS-CoV-2 Antigen Rapid Test Cassette"
     ],
     "distributors": [
-      "Dittmann GmbH"
+      "Dittmann GmbHELOTEC Medizinprodukte"
     ],
     "studies": {
-      "268": {
+      "272": {
         "author": "manufacturer",
-        "id": 268,
+        "id": 272,
         "sensitivity": {
           "avg": 0.9576,
           "min": 0.9,
@@ -11002,7 +11062,7 @@
     "antragsteller": "Beijing Lepu Medical Technology Co., Ltd.",
     "name": "NASOCHECKcomfort SARS-CoV-2 Antigen-Schnelltest",
     "studies": {
-      "404": {
+      "409": {
         "author": "Händler 1",
         "source": "https://www.tima-care.de/de/antigentest-naso.html",
         "sensitivity": {
@@ -11015,9 +11075,9 @@
           "min": null,
           "max": null
         },
-        "id": 404
+        "id": 409
       },
-      "405": {
+      "410": {
         "author": "Händler 2",
         "source": "https://www.avihealth.de/covid-19-schnelltest/42/laientest-lepu-antigen-schnelltest-sars-cov-2?c=9",
         "sensitivity": {
@@ -11030,9 +11090,9 @@
           "min": null,
           "max": null
         },
-        "id": 405
+        "id": 410
       },
-      "406": {
+      "411": {
         "author": "Händler 3",
         "source": "https://www.roscheba-care.de/tests/at-109?c=124",
         "sensitivity": {
@@ -11045,7 +11105,7 @@
           "min": 0.9592,
           "max": 0.9987
         },
-        "id": 406
+        "id": 411
       }
     },
     "selftest": true,
@@ -11058,7 +11118,7 @@
     "antragsteller": "OFM GmbH",
     "name": "Sensitivo COVID-19 Antigen Test",
     "studies": {
-      "407": {
+      "412": {
         "author": "manufacturer",
         "source": "https://www.ofm-medical.de/#antigen-selbsttest",
         "sensitivity": {
@@ -11071,7 +11131,7 @@
           "min": null,
           "max": null
         },
-        "id": 407
+        "id": 412
       }
     },
     "selftest": true,
@@ -11084,7 +11144,7 @@
     "antragsteller": "Haemato Pharm GmbH",
     "name": "Wondfo 2019-nCoV Antigen Test (Lateral-Flow-Methode) Selbsttest",
     "studies": {
-      "408": {
+      "413": {
         "author": "manufacturer",
         "source": "https://www.schnelltest-antigen.de/wp-content/uploads/2021/03/6_Nasal-IFU-HAEMATO.pdf",
         "sensitivity": {
@@ -11097,7 +11157,7 @@
           "min": 0.9673,
           "max": 0.9989
         },
-        "id": 408
+        "id": 413
       }
     },
     "selftest": true,
@@ -11142,7 +11202,7 @@
     "name": "Rapid SARS-CoV-2 Antigen Test Card",
     "id": "NO-AT-7",
     "studies": {
-      "409": {
+      "414": {
         "author": "manufacturer",
         "source": "https://e2t-med.de/wp-content/uploads/2020/12/COVID19_antigen_kit_07AG6020B-008-02-12-DE.pdf",
         "sensitivity": {
@@ -11155,7 +11215,7 @@
           "min": 0.9826,
           "max": 0.9998
         },
-        "id": 409
+        "id": 414
       }
     },
     "selftest": true,
@@ -11178,7 +11238,7 @@
     "name": "NanoRepro Antigen Schnelltest (Viromed)/NanoRepro Antigen Rapid Test (Viromed)",
     "id": "NO-AT-9",
     "studies": {
-      "410": {
+      "415": {
         "author": "manufacturer",
         "source": "https://www.viromed.de/wp-content/uploads/2021/03/NanoRepro_SARS-CoV-2_PB_VIROMED_Rev00_202103_1er_ENDKUNDE.pdf",
         "sensitivity": {
@@ -11191,7 +11251,7 @@
           "min": 0.9634,
           "max": 0.9998
         },
-        "id": 410
+        "id": 415
       }
     },
     "selftest": true,
@@ -11214,7 +11274,7 @@
     "name": "COVID-19 Antigen Schnelltest (Spucktest)",
     "id": "NO-AT-11",
     "studies": {
-      "411": {
+      "416": {
         "author": "manufacturer",
         "comment": "ct < 30 (hohe Viruslast)",
         "source": "https://www.amec-gmbh.de/wp-content/uploads/amec_Gebrauchsanweisung_Laie_17032021.pdf",
@@ -11228,9 +11288,9 @@
           "min": 0.985,
           "max": 0.999
         },
-        "id": 411
+        "id": 416
       },
-      "412": {
+      "417": {
         "author": "manufacturer",
         "comment": "ct < 37 (alle Proband_innen)",
         "source": "https://www.amec-gmbh.de/wp-content/uploads/amec_Gebrauchsanweisung_Laie_17032021.pdf",
@@ -11244,7 +11304,7 @@
           "min": 0.985,
           "max": 0.999
         },
-        "id": 412
+        "id": 417
       }
     },
     "selftest": true,
@@ -11267,7 +11327,7 @@
     "name": "Medicovid-AG SARS CoV-2 Antigen SELBSTTEST NASE",
     "id": "NO-AT-13",
     "studies": {
-      "413": {
+      "418": {
         "author": "manufacturer",
         "source": "https://medice.com/api/de-de/produkte/corona-tests/medicovid-ag-r-sars-cov-2-antigen-selbsttest/403000003202-gi-sars-cov2-antigen-selbsttest-nase-1-5-1.pdf",
         "sensitivity": {
@@ -11280,7 +11340,7 @@
           "min": 0.9764,
           "max": 0.9999
         },
-        "id": 413
+        "id": 418
       }
     },
     "selftest": true,
@@ -11302,7 +11362,7 @@
     "antragsteller": "MR Sanicom GmbH",
     "name": "COVID-19 Antigen-Schnelltest (Kolloidales Gold)",
     "studies": {
-      "414": {
+      "419": {
         "author": "manufacturer",
         "source": "https://www.mr-sanicom.de/mr-sanicom/",
         "sensitivity": {
@@ -11315,7 +11375,7 @@
           "min": 0.9768,
           "max": 0.9967
         },
-        "id": 414
+        "id": 419
       }
     },
     "selftest": true,
@@ -11329,7 +11389,7 @@
     "name": "COVID-19 Antigen Rapid Test",
     "id": "NO-AT-16",
     "studies": {
-      "415": {
+      "420": {
         "author": "manufacturer",
         "comment": "ct < 33 (hohe Viruslast)",
         "source": "https://diwamedical.com/wp-content/uploads/2021/03/Clungene-Nasal-Antigentest-Sonderzulassung-zur-Laienanwendung.pdf",
@@ -11343,9 +11403,9 @@
           "min": 0.981,
           "max": 0.998
         },
-        "id": 415
+        "id": 420
       },
-      "416": {
+      "421": {
         "author": "manufacturer",
         "comment": "alle Proband_innen",
         "source": "https://diwamedical.com/wp-content/uploads/2021/03/Clungene-Nasal-Antigentest-Sonderzulassung-zur-Laienanwendung.pdf",
@@ -11359,7 +11419,7 @@
           "min": 0.981,
           "max": 0.998
         },
-        "id": 416
+        "id": 421
       }
     },
     "selftest": true,

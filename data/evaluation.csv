@@ -39,12 +39,15 @@ Torres, I., et al.;Spain;low concern;no;fresh;NP;634;48.1% (95% CI 37.4-58.9);10
 Villaverde, S., et al.;Spain;intermediate concern;yes;fresh;NP;1620;45.4% (95% CI 34.1-57.2);99.8% (95% CI 99.4-99.9)
 Agullo, V., et al.;Spain;intermediate concern;yes;fresh;AN;659;44.7% (95% CI 36.1-53.6);100% (95% CI 99.1-100)
 Olearo, F., et al.;Germany;intermediate concern;yes;unclear;OP;184;44.6% (95% CI 34.3-55.3);100% (95% CI 96.3-100)
-Caruana, G., et al.;Switzerland;intermediate concern;yes;fresh;NP;532;41.2% (not provided);995% (not provided)
+Caruana, G., et al.;Switzerland;intermediate concern;yes;fresh;NP;532;41.2% (not provided);99.5% (not provided)
 Baro, B., et al.;Spain;intermediate concern;yes;banked;NP;286;38.6% (95% CI 29.1-48.8);99.5% (95% CI 97-100)
 Agullo, V., et al.;Spain;intermediate concern;yes;fresh;saliva;610;23.1% (95% CI 16.2-31.9);100% (95% CI 99.0-100)
 ;;;;;;;;
 Abbott, Panbio™ (nasal sampling);;;;;;;;
 FINDdx;Germany;low concern;yes;fresh;AN/MT;281;86.4% (95% CI 73.3-93.9);99.2% (95% CI 97-99.8)
+;;;;;;;;
+Access Bio, CareStart™ COVID-19 Antigen Test;;;;;;;;
+Pollock, N.R., et al.;USA;low concern;yes;fresh;AN;1498;57.7% (95% CI 51.1-64.1);98.3% (95% CI 97.5-99.0)
 ;;;;;;;;
 Becton, Dickinson and Company, BD Veritor™;;;;;;;;
 Pekosz, A., et al.;USA;high concern;no;fresh;NP;251;96.4% (95% CI 82.3-99.4);98.7% (95% CI 96.1-99.7)
@@ -79,6 +82,7 @@ Veyrenche, N., et al.;France;high concern;yes;fresh;NP;65;29.0% (95% CI 15.7-42.
 ;;;;;;;;
 Denka, Quick Navi;;;;;;;;
 Takeuchi, Y., et al.;Japan;low concern;no;fresh;NP;1186;86.7% (95% CI 78.6-92.5);100% (95% CI 99.7-100)
+Takeuchi, Y., et al.;Japan;unclear;no;fresh;AN;862;71.5% (95% CI 58.3-84.1);100% (95% CI 99.3-100)
 ;;;;;;;;
 EcoDiagnostica, COVID-19 Ag;;;;;;;;
 Filgueiras, P.S., et al.;Brazil;unclear;no;fresh;NP;150;69.0% (95% CI 55.0-81.0);98.0% (95% CI 94.0-100)
@@ -126,6 +130,7 @@ Weitzel, T., et al.;Chile;high concern;no;banked;NP/OP;19;0.0% (95% CI 0.0-29.9)
 LumiraDx, COVID-19 SARS-CoV-2 Antigen Test;;;;;;;;
 Drain, P.K., et al.;UK/US;low concern;no;fresh;AN;257;97.6% (95% CI 91.6-99.3);96.6% (95% CI 92.7-98.4)
 Drain, P.K., et al.;UK/US;low concern;no;fresh;NP;255;97.5% (95% CI 87.1-99.0);97.7% (95% CI 94.7-99.0)
+Krüger, L.J., et al.;Germany;low concern;yes;fresh;MT;761;82.2% (95% CI 75.2-87.5);99.3% (95% CI 98.3-99.7)
 Kohmer, N., et al.;Germany;intermediate concern;yes;fresh;NP;100;50.0% (95% CI 38.1-61.9);100% (95% CI 86.8-100)
 ;;;;;;;;
 MEDsan®, SARS-CoV-2 Antigen Rapid Test;;;;;;;;

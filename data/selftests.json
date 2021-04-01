@@ -374,5 +374,26 @@
         "antragsteller": "Vitrosens Biyoteknoloji Ltd. Sti.",
         "name": "RapidFor SARS-CoV-2 Rapid Antigen Test",
         "id": "AT507/20"
+    },
+    {
+        "reference": "5640-S-045/21",
+        "manufacturer": "nal von minden GmbH",
+        "antragsteller": "nal von minden GmbH",
+        "name": "NADAL® COVID-19 Ag Test",
+        "id": "AT021/20"
+    },
+    {
+        "reference": "5640-S-216/21",
+        "manufacturer": "Abbott Rapid Diagnostics Jena GmbH",
+        "antragsteller": "Abbott Rapid Diagnostics Jena GmbH",
+        "name": "Panbio™ COVID-19 Antigen Self-Test",
+        "id": "AT116/21"
+    },
+    {
+        "reference": "5640-S-058/21",
+        "manufacturer": "Anbio (Xiamen) Biotechnology Co., Ltd.",
+        "antragsteller": "Anbio (Xiamen) Biotechnology Co., Ltd.",
+        "name": "COVID-19 Antigen Schnelltest (Kolloidales Gold)",
+        "id": "AT195/21"
     }
 ]
