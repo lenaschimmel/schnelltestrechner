@@ -1,4 +1,4 @@
-const util = require ('util');
+const util = require('util');
 const fs = require('fs');
 const parse = require('csv-parse/lib/sync');
 var latestEvaluationName = "";
@@ -11,7 +11,7 @@ function getAntigenTestColumnNames(firstLine) {
 }
 
 function convertAntigenTestColumnName(origName) {
-    switch(origName) {
+    switch (origName) {
         case "Test-ID": return "id";
         case "Handelsname des Herstellers / Europ. Bevollmächtigten": return "name";
         case "Evaluierung PEI": return "pei";
@@ -26,12 +26,12 @@ function convertAntigenTestColumnName(origName) {
     return origName;
 }
 
-bools = {"Ja": true, "Nein":false,"":undefined};
+bools = { "Ja": true, "Nein": false, "": undefined };
 
 function onAntigenTestRecord(record, context) {
     record.pei = bools[record.pei];
     let manufacturerStudyId = currentStudyId++;
-    record.studies = { [manufacturerStudyId]: { "author": "manufacturer", "id": manufacturerStudyId }};
+    record.studies = { [manufacturerStudyId]: { "author": "manufacturer", "id": manufacturerStudyId } };
     record.studies[manufacturerStudyId].sensitivity = {
         avg: parseFloat((record.sensitivityAvg + "").replace(",", ".")) / 100.0,
         min: parseFloat(record.sensitivityRange.split("-")[0]) / 100.0,
@@ -72,7 +72,7 @@ function getEvaluationColumnNames(firstLine) {
 }
 
 function convertEvaluationColumnName(origName) {
-    switch(origName) {
+    switch (origName) {
         case "Author": return "author";
         case "Study location": return "location";
         case "QUADAS": return "quadas";
@@ -154,10 +154,24 @@ function getSelftestsWithoutId() {
     });
 }
 
-const csvAntigenTests = fs.readFileSync("../data/antigentests.csv", {encoding: "latin1"}).replace(/\u0099/g,"\u2122").replace(/\u0096/g,"\u002D");
-const jsonSelftests = JSON.parse(fs.readFileSync("../data/selftests.json", {encoding: "utf8"}));
-const csvEvaluation = fs.readFileSync("../data/evaluation.csv", {encoding: "utf8"});
-const jsonEvaluationNameMapping = JSON.parse(fs.readFileSync("../data/evaluation_name_mapping.json", {encoding: "utf8"}));
+function compareStrings(a, b) {
+    if (a < b) {
+        return -1;
+    }
+    if (a > b) {
+        return 1;
+    }
+
+    return 0;
+}
+
+const csvAntigenTests = fs.readFileSync("../data/antigentests.csv", { encoding: "latin1" }).replace(/\u0099/g, "\u2122").replace(/\u0096/g, "\u002D");
+const jsonSelftests = JSON.parse(fs.readFileSync("../data/selftests.json", { encoding: "utf8" }));
+jsonSelftests.sort((a,b) => compareStrings(a.reference, b.reference));
+jsonSelftests.sort((a,b) => compareStrings(a.id, b.id));
+// selfttest sorted by id, a.k.a. AT-Number, and if there is none, sorted by reference, a.k.a. Aktenzeichen der Sonderzulassung des BfArM
+const csvEvaluation = fs.readFileSync("../data/evaluation.csv", { encoding: "utf8" });
+const jsonEvaluationNameMapping = JSON.parse(fs.readFileSync("../data/evaluation_name_mapping.json", { encoding: "utf8" }));
 
 const jsonEvaluation = parse(csvEvaluation, {
     on_record: onEvaluationRecord,
@@ -166,12 +180,14 @@ const jsonEvaluation = parse(csvEvaluation, {
 });
 
 const jsonAntigenTests = parse(csvAntigenTests, {
-  columns: getAntigenTestColumnNames,
-  on_record: onAntigenTestRecord,
-  skip_empty_lines: true,
-  delimiter: ";",
+    columns: getAntigenTestColumnNames,
+    on_record: onAntigenTestRecord,
+    skip_empty_lines: true,
+    delimiter: ";",
 });
+jsonAntigenTests.sort((a,b) => compareStrings(a.id, b.id));
 
-jsonAntigenTests.push(... getSelftestsWithoutId());
+
+jsonAntigenTests.push(...getSelftestsWithoutId());
 
 fs.writeFileSync("../site/data/antigentests.json", JSON.stringify(jsonAntigenTests, null, 2));

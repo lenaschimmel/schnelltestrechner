@@ -354,5 +354,25 @@
         "manufacturer": "Mexacare GmbH",
         "antragsteller": "Mexacare GmbH",
         "name": "MEXACARE Corona Home-Test Antigen"
+    },
+    {
+        "reference": "5640-S-123/21",
+        "manufacturer": "Safecare Biotech (Hangzhou) Co., Ltd.",
+        "antragsteller": "NIC GmbH",
+        "name": "COVID-19 Antigen Rapid Test kit(Swab) (self-testing)"
+    },
+    {
+        "reference": "5640-S-015/21",
+        "manufacturer": "Qingdao Hightop Biotech Co., Ltd.",
+        "antragsteller": "Qingdao Hightop Biotech Co., Ltd.",
+        "name": "HIGHTOP SARS-CoV-2 (COVID-19) Antigen Rapid Test",
+        "id": "AT301/20"
+    },
+    {
+        "reference": "5640-S-053/21",
+        "manufacturer": "Vitrosens Biyoteknoloji Ltd. Sti.",
+        "antragsteller": "Vitrosens Biyoteknoloji Ltd. Sti.",
+        "name": "RapidFor SARS-CoV-2 Rapid Antigen Test",
+        "id": "AT507/20"
     }
 ]
