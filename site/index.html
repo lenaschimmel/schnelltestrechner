@@ -174,10 +174,10 @@
                       <template v-if="testsKind == 'list'">
                         <v-container fluid>
                           <v-row no-gutters>
-                            <v-col cols="12" sm="4" md="4" no-gutters>
+                            <v-col cols="12" sm="6" md="4" no-gutters>
                               <v-checkbox label="Nur Selbst-Tests" v-model="testFilterSelf"></v-checkbox>
                             </v-col>
-                            <v-col cols="12" sm="8" md="8" no-gutters>
+                            <v-col cols="12" sm="6" md="4" no-gutters>
                               <v-checkbox v-model="testFilterPei">
                                 <template v-slot:label>
                                   <div>Nur vom <acronym
@@ -186,7 +186,7 @@
                                 </template>
                               </v-checkbox>
                             </v-col>
-                            <v-col cols="12" sm="4" md="4" no-gutters>
+                            <v-col cols="12" sm="6" md="4" no-gutters>
                               <v-checkbox label="Wissenschaftliche Studien" v-model="testFilterStudies"></v-checkbox>
                             </v-col>
                           </v-row>
@@ -514,7 +514,8 @@
                         100% (rechts) ab.
                         Jede Zeile steht für eine Datenquelle, also die Herstellerangaben oder eine Studie aus der <a
                           href="https://www.klinikum.uni-heidelberg.de/diagnostics-global-health" target="_">Liste
-                          wissenschaftlicher Studien</a> der Uni Heidelberg. Kurze, vertikale Linie gibt den Mittelwert an,
+                          wissenschaftlicher Studien</a> der Uni Heidelberg. Kurze, vertikale Linie gibt den Mittelwert
+                        an,
                         die längere, horizontale Linie das 95%-Konfidenzintervall.
                       </p>
                       <p>Die Farben der Linien haben folgende Bedeutung:</p>
@@ -659,13 +660,14 @@
                       <p class="font-weight-bold mt-4">Die Daten über verfügbare Schnelltests kommen aus diesen Quellen:
                       </p>
                       <ul>
-                        <li><a href="https://www.bfarm.de/DE/Medizinprodukte/Antigentests/_node.html"
-                            target="_">Liste der Tests zur Eigenanwendung durch Laien</a> des BfArM</li>
-                        <li><a href="https://antigentest.bfarm.de/ords/f?p=ANTIGENTESTS-AUF-SARS-COV-2"
-                            target="_">Liste der Antigen-Tests zum direkten Erregernachweis des Coronavirus
+                        <li><a href="https://www.bfarm.de/DE/Medizinprodukte/Antigentests/_node.html" target="_">Liste
+                            der Tests zur Eigenanwendung durch Laien</a> des BfArM</li>
+                        <li><a href="https://antigentest.bfarm.de/ords/f?p=ANTIGENTESTS-AUF-SARS-COV-2" target="_">Liste
+                            der Antigen-Tests zum direkten Erregernachweis des Coronavirus
                             SARS-CoV-2</a> des BfArM</li>
                         <li><a href="https://www.klinikum.uni-heidelberg.de/diagnostics-global-health"
-                            target="_">Ergebnisse wissenschaftlicher Studien</a>, zusammen getragen von der Uni Heidelberg
+                            target="_">Ergebnisse wissenschaftlicher Studien</a>, zusammen getragen von der Uni
+                          Heidelberg
                         </li>
                       </ul>
                       <p class="font-weight-bold mt-4">Die Einschätzung der a-priori Wahrscheinlichkeit basiert auf:</p>
@@ -723,8 +725,9 @@
                             target="_">Robert Koch Instituts (RKI)</a></li>
 
                         <li>Der <a href="https://diagnostics-global-health.github.io/rechner/" target="_">
-                            Schnelltest-Rechner der Uni-Heidelberg</a>, von der auch die Studiendaten kommen. Schnell und
-                            einfach, aber ohne individuelle Vortest-Wahrscheinlichkeit.</li>
+                            Schnelltest-Rechner der Uni-Heidelberg</a>, von der auch die Studiendaten kommen. Schnell
+                          und
+                          einfach, aber ohne individuelle Vortest-Wahrscheinlichkeit.</li>
                         <li>Der <a href="https://rki-wiko.shinyapps.io/test_qual/" target="_"> Schnelltest-Rechner des
                             Robert Koch Instituts (RKI)</a>. Er ist zwar langsam und weniger mächtig als dieser hier,
                           bietet aber ein paar andere Darstellungsweisen der Ergebnisse.</li>
@@ -889,104 +892,104 @@
       <v-card-text>Ergebnis kann nicht ermittelt werden, bevor die Eingaben vollständig sind.</v-card-text>
     </v-footer>
 
-    <v-footer height="200" v-if="tab == 0 && resultValid" :app="fixedFooter" :fixed="fixedFooter"
+    <v-footer :height="$vuetify.breakpoint.xsOnly ? 250 : 200" v-if="tab == 0 && resultValid" :app="fixedFooter" :fixed="fixedFooter"
       color="light-blue lighten-3" id="footer">
       <v-container fluid>
-        <v-row v-if="$vuetify.breakpoint.smAndUp">
-          <v-col class="font-weight-bold text-center" cols="4">Vortestwahrscheinlichkeit
-          </v-col>
-          <v-col class="font-weight-bold text-center" cols="8">Aussagekraft des Tests
-          </v-col>
-        </v-row>
         <v-row v-if="$vuetify.breakpoint.xsOnly">
           <v-col class="font-weight-bold text-center" cols="12">Vortestwahrscheinlichkeit {{
             formatPercent(priorProbSymptoms) }}
           </v-col>
         </v-row>
         <v-row>
-          <v-col cols="12" sm="4" class="text-h4" v-if="$vuetify.breakpoint.smAndUp">
-            <v-card class="pt-7 pb-7 text-center">
+          <v-col cols="12" sm="4" class="font-weight-bold mt-3" v-if="$vuetify.breakpoint.smAndUp">
+            Vortestwahrscheinlichkeit:
+            <v-card class="mt-2 pt-7 pb-7 text-center text-h4">
               {{ formatPercent(priorProbSymptoms) }}
             </v-card>
           </v-col>
           <v-col cols="12" sm="8">
-            <v-simple-table color="light-blue lighten-5" dense>
-              <template v-slot:default>
-                <tbody>
-                  <tr>
-                    <td class="text-left font-weight-bold">
+            <v-container fluid>
+              <v-row>
+                <v-col cols="4">
+                </v-col>
+                <v-col cols="4">
+                  Infiziert
+                </v-col>
+                <v-col cols="4">
+                  Nicht infiziert
+                </v-col>
+              </v-row>
+            </v-container>
 
-                    </td>
-                    <td class="text-left font-weight-bold">
-                      Infiziert
-                    </td>
-                    <td class="text-left font-weight-bold">
-                      Nicht infiziert
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-left font-weight-bold">Test positiv</td>
-                    <td class="text-left">
-                      {{ formatPercent(updatedProbPos) }} <template
-                        v-if="$vuetify.breakpoint.mdAndUp">echt-positiv</template>
-                      <v-tooltip top>
-                        <template v-slot:activator="{ on, attrs }">
-                          <v-icon color="primary" small v-bind="attrs" v-on="on">
-                            mdi-help-circle
-                          </v-icon>
-                        </template>
-                        <span>Bei einem positiven Testergebnis liegt zu {{ formatPercent(updatedProbPos) }} wirklich
-                          eine
-                          Infektion vor (echt-positiv).</span>
-                      </v-tooltip>
-                    </td>
-                    <td class="text-left">
-                      {{ formatPercent(1-updatedProbPos) }} <template
-                        v-if="$vuetify.breakpoint.mdAndUp">falsch-positiv</template>
-                      <v-tooltip top>
-                        <template v-slot:activator="{ on, attrs }">
-                          <v-icon color="primary" small v-bind="attrs" v-on="on">
-                            mdi-help-circle
-                          </v-icon>
-                        </template>
-                        <span>Bei einem positives Testergebnis liegt zu {{ formatPercent(1-updatedProbPos) }} keine
-                          Infektion vor (falsch-positiv).</span>
-                      </v-tooltip>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="text-left font-weight-bold">Test negativ</td>
-                    <td class="text-left">
-                      {{ formatPercent(updatedProbNeg) }} <template
-                        v-if="$vuetify.breakpoint.mdAndUp">falsch-negativ</template>
-                      <v-tooltip top>
-                        <template v-slot:activator="{ on, attrs }">
-                          <v-icon color="primary" small v-bind="attrs" v-on="on">
-                            mdi-help-circle
-                          </v-icon>
-                        </template>
-                        <span>Bei einem negativen Testergebnis liegt zu {{ formatPercent(updatedProbNeg) }} trotzdem
-                          eine Infektion vor (falsch-negativ).</span>
+            <v-card color="#FFDDDD">
+              <v-container>
+                <v-row>
+                  <v-col cols="4" class="text-left font-weight-bold">
+                    Test positiv:
+                  </v-col>
+                  <v-col cols="4">
+                    <v-tooltip top>
+                      <template v-slot:activator="{ on, attrs }">
+                        <span v-bind="attrs" v-on="on">{{ formatPercent(updatedProbPos) }}</span>
+                        <v-icon color="primary" small v-bind="attrs" v-on="on">
+                          mdi-help-circle
+                        </v-icon>
+                      </template>
+                      <span>Bei einem positiven Testergebnis liegt zu {{ formatPercent(updatedProbPos) }} wirklich
+                        eine
+                        Infektion vor (echt-positiv).</span>
+                    </v-tooltip>
+                  </v-col>
+                  <v-col cols="4">
+                    <v-tooltip top>
+                      <template v-slot:activator="{ on, attrs }">
+                        <span v-bind="attrs" v-on="on">{{ formatPercent(1-updatedProbPos) }}</span>
+                        <v-icon color="primary" small v-bind="attrs" v-on="on">
+                          mdi-help-circle
+                        </v-icon>
+                      </template>
+                      <span>Bei einem positives Testergebnis liegt zu {{ formatPercent(1-updatedProbPos) }} keine
+                        Infektion vor (falsch-positiv).</span>
+                    </v-tooltip>
+                  </v-col>
+                </v-row>
+              </v-container>
+            </v-card>
 
-                      </v-tooltip>
-                    </td>
-                    <td class="text-left">
-                      {{ formatPercent(1-updatedProbNeg) }} <template
-                        v-if="$vuetify.breakpoint.mdAndUp">echt-negativ</template>
-                      <v-tooltip top>
-                        <template v-slot:activator="{ on, attrs }">
-                          <v-icon color="primary" small v-bind="attrs" v-on="on">
-                            mdi-help-circle
-                          </v-icon>
-                        </template>
-                        <span>Bei einem negativen Testergebnis liegt zu {{ formatPercent(1-updatedProbNeg) }}
-                          keine Infektion vor (echt-negativ).</span>
-                      </v-tooltip>
-                    </td>
-                  </tr>
-                </tbody>
-              </template>
-            </v-simple-table>
+            <v-card class="mt-2">
+              <v-container>
+                <v-row>
+                  <v-col cols="4" class="text-left font-weight-bold">
+                    Test negativ:
+                  </v-col>
+                  <v-col cols="4">
+                    <v-tooltip top>
+                      <template v-slot:activator="{ on, attrs }">
+                        <span v-bind="attrs" v-on="on">{{ formatPercent(updatedProbNeg) }}</span>
+                        <v-icon color="primary" small v-bind="attrs" v-on="on">
+                          mdi-help-circle
+                        </v-icon>
+                      </template>
+                      <span>Bei einem negativen Testergebnis liegt zu {{ formatPercent(updatedProbNeg) }} trotzdem
+                        eine Infektion vor (falsch-negativ).</span>
+
+                    </v-tooltip>
+                  </v-col>
+                  <v-col cols="4">
+                    <v-tooltip top>
+                      <template v-slot:activator="{ on, attrs }">
+                        <span v-bind="attrs" v-on="on">{{ formatPercent(1-updatedProbNeg) }}</span>
+                        <v-icon color="primary" small v-bind="attrs" v-on="on">
+                          mdi-help-circle
+                        </v-icon>
+                      </template>
+                      <span>Bei einem negativen Testergebnis liegt zu {{ formatPercent(1-updatedProbNeg) }}
+                        keine Infektion vor (echt-negativ).</span>
+                    </v-tooltip>
+                  </v-col>
+                </v-row>
+              </v-container>
+            </v-card>
           </v-col>
         </v-row>
       </v-container>
