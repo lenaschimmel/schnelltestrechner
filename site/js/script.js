@@ -286,11 +286,14 @@ const RapidTestVueApp = {
 
             return text;
         },
-        testMatchesFiler(test) {
+        testMatchesFilter(test) {
             if (this.testFilterSelf && !test.selftest)
                 return false;
 
             if (this.testFilterPei && !test.pei)
+                return false;
+
+            if (this.testFilterStudies && ! Object.values(test.studies).some(study => study.author != "manufacturer"))
                 return false;
 
             let textMatch = false;
@@ -308,7 +311,7 @@ const RapidTestVueApp = {
 
             return textMatch;
         },
-        testMatchesCompareFiler(test) {
+        testMatchesCompareFilter(test) {
             if (this.compareFilterSelf && !test.selftest)
                 return false;
 
@@ -368,13 +371,13 @@ const RapidTestVueApp = {
             if (!this.tests)
                 return [];
 
-            return this.tests.filter(test => this.testMatchesFiler(test));
+            return this.tests.filter(test => this.testMatchesFilter(test));
         },
         visibleCompareTests() {
             if (!this.tests)
                 return [];
 
-            return this.tests.filter(test => this.testMatchesCompareFiler(test));
+            return this.tests.filter(test => this.testMatchesCompareFilter(test));
         },
         studies() {
             if (this.selectedTest) {
