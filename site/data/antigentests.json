@@ -11109,7 +11109,7 @@
       }
     },
     "selftest": true,
-    "pei": false,
+    "pei": true,
     "id": "NO-AT-1"
   },
   {
@@ -11135,7 +11135,7 @@
       }
     },
     "selftest": true,
-    "pei": false,
+    "pei": true,
     "id": "NO-AT-2"
   },
   {
@@ -11161,7 +11161,7 @@
       }
     },
     "selftest": true,
-    "pei": false,
+    "pei": true,
     "id": "NO-AT-3"
   },
   {
@@ -11171,7 +11171,7 @@
     "name": "SARS-CoV-2 Ag Diagnostic Test Kit (Colloidal Gold)",
     "internal_comment": "Hat AT-108/21 aber die Nummer kommt in der großen Tabelle nicht vor.",
     "selftest": true,
-    "pei": false,
+    "pei": true,
     "studies": {},
     "id": "NO-AT-4"
   },
@@ -11181,7 +11181,7 @@
     "antragsteller": "Acura Kliniken Baden-Baden GmbH",
     "name": "Acura Speichel-Test Diagnos COVID-19 Antigen Saliva Test Kit",
     "selftest": true,
-    "pei": false,
+    "pei": true,
     "studies": {},
     "id": "NO-AT-5"
   },
@@ -11191,7 +11191,7 @@
     "antragsteller": "Mexacare GmbH",
     "name": "MEXACARE Corona Home-Test Antigen",
     "selftest": true,
-    "pei": false,
+    "pei": true,
     "studies": {},
     "id": "NO-AT-6"
   },
@@ -11219,7 +11219,7 @@
       }
     },
     "selftest": true,
-    "pei": false
+    "pei": true
   },
   {
     "reference": "5640-S-079/21",
@@ -11227,7 +11227,7 @@
     "antragsteller": "Teda Laukoetter Technologie GmbH",
     "name": "ANBIO Corona Antigen Nasentupfer",
     "selftest": true,
-    "pei": false,
+    "pei": true,
     "studies": {},
     "id": "NO-AT-8"
   },
@@ -11255,7 +11255,7 @@
       }
     },
     "selftest": true,
-    "pei": false
+    "pei": true
   },
   {
     "reference": "5640-S-100/21",
@@ -11263,7 +11263,7 @@
     "antragsteller": "Aripa Biotec GmbH",
     "name": "COVID-19-N-Antigen Schnelltest SARS-CoV-2 (vorderer Nasenabstrich)",
     "selftest": true,
-    "pei": false,
+    "pei": true,
     "studies": {},
     "id": "NO-AT-10"
   },
@@ -11308,7 +11308,7 @@
       }
     },
     "selftest": true,
-    "pei": false
+    "pei": true
   },
   {
     "reference": "5640-S-123/21",
@@ -11316,7 +11316,7 @@
     "antragsteller": "NIC GmbH",
     "name": "COVID-19 Antigen Rapid Test kit(Swab) (self-testing)",
     "selftest": true,
-    "pei": false,
+    "pei": true,
     "studies": {},
     "id": "NO-AT-12"
   },
@@ -11344,7 +11344,7 @@
       }
     },
     "selftest": true,
-    "pei": false
+    "pei": true
   },
   {
     "reference": "5640-S-140/21",
@@ -11352,7 +11352,7 @@
     "antragsteller": "OFM GmbH",
     "name": "Deni COVID-19 Antigen Test",
     "selftest": true,
-    "pei": false,
+    "pei": true,
     "studies": {},
     "id": "NO-AT-14"
   },
@@ -11379,7 +11379,7 @@
       }
     },
     "selftest": true,
-    "pei": false,
+    "pei": true,
     "id": "NO-AT-15"
   },
   {
@@ -11423,6 +11423,6 @@
       }
     },
     "selftest": true,
-    "pei": false
+    "pei": true
   }
 ]

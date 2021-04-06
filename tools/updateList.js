@@ -55,6 +55,7 @@ function onAntigenTestRecord(record, context) {
     if (record.selftest) {
         record.reference = matchingSelftests[0].reference;
         record.shops = matchingSelftests[0].available;
+        record.pei = true;
     } else {
         record.shops = [];
     }
@@ -149,6 +150,7 @@ function getSelftestsWithoutId() {
             }
         }
         test.studies = newStudies;
+        test.pei = true;
         test.id = "NO-AT-" + (currentTestId++);
         return test;
     });
