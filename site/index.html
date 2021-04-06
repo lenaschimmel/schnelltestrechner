@@ -901,21 +901,21 @@
           </v-col>
         </v-row>
         <v-row>
-          <v-col cols="12" sm="4" class="font-weight-bold mt-3" v-if="$vuetify.breakpoint.smAndUp">
+          <v-col cols="12" sm="4" md="3" class="font-weight-bold mt-3" v-if="$vuetify.breakpoint.smAndUp">
             Vortestwahrscheinlichkeit:
             <v-card class="mt-2 pt-7 pb-7 text-center text-h4">
               {{ formatPercent(priorProbSymptoms) }}
             </v-card>
           </v-col>
-          <v-col cols="12" sm="8">
+          <v-col cols="12" sm="8" md="9">
             <v-container fluid>
               <v-row>
-                <v-col cols="4">
+                <v-col cols="4" md="2">
                 </v-col>
-                <v-col cols="4">
+                <v-col cols="4" md="5">
                   Infiziert
                 </v-col>
-                <v-col cols="4">
+                <v-col cols="4" md="5">
                   Nicht infiziert
                 </v-col>
               </v-row>
@@ -924,13 +924,13 @@
             <v-card color="#FFDDDD">
               <v-container>
                 <v-row>
-                  <v-col cols="4" class="text-left font-weight-bold">
+                  <v-col cols="4" md="2" class="text-left font-weight-bold">
                     Test positiv:
                   </v-col>
-                  <v-col cols="4">
+                  <v-col cols="4" md="5">
                     <v-tooltip top>
                       <template v-slot:activator="{ on, attrs }">
-                        <span v-bind="attrs" v-on="on">{{ formatPercent(updatedProbPos) }}</span>
+                        <span v-bind="attrs" v-on="on">{{ formatPercent(updatedProbPos) }}<template v-if="$vuetify.breakpoint.mdAndUp"> echt-positiv</template></span>
                         <v-icon color="primary" small v-bind="attrs" v-on="on">
                           mdi-help-circle
                         </v-icon>
@@ -940,10 +940,10 @@
                         Infektion vor (echt-positiv).</span>
                     </v-tooltip>
                   </v-col>
-                  <v-col cols="4">
+                  <v-col cols="4" md="5">
                     <v-tooltip top>
                       <template v-slot:activator="{ on, attrs }">
-                        <span v-bind="attrs" v-on="on">{{ formatPercent(1-updatedProbPos) }}</span>
+                        <span v-bind="attrs" v-on="on">{{ formatPercent(1-updatedProbPos) }}<template v-if="$vuetify.breakpoint.mdAndUp"> falsch-positiv</template></span>
                         <v-icon color="primary" small v-bind="attrs" v-on="on">
                           mdi-help-circle
                         </v-icon>
@@ -959,13 +959,13 @@
             <v-card class="mt-2">
               <v-container>
                 <v-row>
-                  <v-col cols="4" class="text-left font-weight-bold">
+                  <v-col cols="4" md="2" class="text-left font-weight-bold">
                     Test negativ:
                   </v-col>
-                  <v-col cols="4">
+                  <v-col cols="4" md="5">
                     <v-tooltip top>
                       <template v-slot:activator="{ on, attrs }">
-                        <span v-bind="attrs" v-on="on">{{ formatPercent(updatedProbNeg) }}</span>
+                        <span v-bind="attrs" v-on="on">{{ formatPercent(updatedProbNeg) }}<template v-if="$vuetify.breakpoint.mdAndUp"> falsch-negativ</template></span>
                         <v-icon color="primary" small v-bind="attrs" v-on="on">
                           mdi-help-circle
                         </v-icon>
@@ -975,10 +975,10 @@
 
                     </v-tooltip>
                   </v-col>
-                  <v-col cols="4">
+                  <v-col cols="4" md="5">
                     <v-tooltip top>
                       <template v-slot:activator="{ on, attrs }">
-                        <span v-bind="attrs" v-on="on">{{ formatPercent(1-updatedProbNeg) }}</span>
+                        <span v-bind="attrs" v-on="on">{{ formatPercent(1-updatedProbNeg) }}<template v-if="$vuetify.breakpoint.mdAndUp"> echt-negativ</template></span>
                         <v-icon color="primary" small v-bind="attrs" v-on="on">
                           mdi-help-circle
                         </v-icon>
