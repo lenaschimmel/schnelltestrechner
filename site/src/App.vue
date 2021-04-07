@@ -1,5 +1,5 @@
 <template>
-<v-app id="rapidtest" class="hidden">
+<v-app id="rapidtest"> <!-- class="hidden"> -->
     <v-app-bar app dark color="light-blue darken-2" flat clipped-right>
       <v-img max-height="46" max-width="46" src="/icons/android-chrome-192x192.png"></v-img>
       <v-toolbar-title>SchnellTestRechner.de</v-toolbar-title>
@@ -1058,8 +1058,8 @@ export default {
         this.numberFormatter = new Intl.NumberFormat('de-DE', { style: 'decimal', minimumFractionDigits: 1, maximumFractionDigits: 1 });
         window.addEventListener('scroll', this.handleScroll);
         this.fetchData();
-        //document.getElementById("rapidtest").classList.remove("hidden");
-        //document.getElementById("loading").classList.add("hidden");
+        document.getElementById("rapidtest").classList.remove("hidden");
+        document.getElementById("loading").classList.add("hidden");
     },
     destroyed() {
         window.removeEventListener('scroll', this.handleScroll);
@@ -1543,12 +1543,25 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.v-messages {
+    font-size: 16px !important;
+}
+
+.v-messages__message {
+    line-height: 19px !important;
+}
+
+.hidden {
+    display: none;
+}
+
+.v-data-table td {
+    padding: 0 8px !important;
+}
+
+.v-list-item__subtitle, .v-list-item__title {
+    overflow: auto !important;
+    text-overflow: unset !important;
+    white-space: normal !important;
 }
 </style>
