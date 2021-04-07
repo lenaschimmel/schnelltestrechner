@@ -192,4 +192,4 @@ jsonAntigenTests.sort((a,b) => compareStrings(a.id, b.id));
 
 jsonAntigenTests.push(...getSelftestsWithoutId());
 
-fs.writeFileSync("../site/data/antigentests.json", JSON.stringify(jsonAntigenTests, null, 2));
+fs.writeFileSync("../site/public/data/antigentests.json", JSON.stringify(jsonAntigenTests, null, 2));
