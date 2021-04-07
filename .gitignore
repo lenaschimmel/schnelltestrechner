@@ -1,11 +1,2 @@
 node_modules
-site/data/states.json
-site/data/germany.json
-site/data/districts.json
-site/data/districts_full.json
 images/logo.afdesign
-site/public/data/antigentests.json
-site/public/data/districts_full.json
-site/public/data/districts.json
-site/public/data/germany.json
-site/public/data/states.json
