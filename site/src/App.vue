@@ -870,29 +870,12 @@
                     Test positiv:
                   </v-col>
                   <v-col cols="4" md="5">
-                    <v-tooltip top>
-                      <template v-slot:activator="{ on, attrs }">
-                        <span v-bind="attrs" v-on="on">{{ formatPercent(updatedProbPos) }}<template v-if="$vuetify.breakpoint.mdAndUp"> echt-positiv</template></span>
-                        <v-icon color="primary" small v-bind="attrs" v-on="on">
-                          mdi-help-circle
-                        </v-icon>
-                      </template>
-                      <span>Bei einem positiven Testergebnis liegt zu {{ formatPercent(updatedProbPos) }} wirklich
-                        eine
-                        Infektion vor (echt-positiv).</span>
-                    </v-tooltip>
+                    <Info :text="formatPercent(updatedProbPos) + ($vuetify.breakpoint.mdAndUp ? ' echt-positiv' : '')" 
+                      :content="'Bei einem positiven Testergebnis liegt zu ' + formatPercent(updatedProbPos) + ' wirklich eine Infektion vor (echt-positiv).'" />
                   </v-col>
                   <v-col cols="4" md="5">
-                    <v-tooltip top>
-                      <template v-slot:activator="{ on, attrs }">
-                        <span v-bind="attrs" v-on="on">{{ formatPercent(1-updatedProbPos) }}<template v-if="$vuetify.breakpoint.mdAndUp"> falsch-positiv</template></span>
-                        <v-icon color="primary" small v-bind="attrs" v-on="on">
-                          mdi-help-circle
-                        </v-icon>
-                      </template>
-                      <span>Bei einem positives Testergebnis liegt zu {{ formatPercent(1-updatedProbPos) }} keine
-                        Infektion vor (falsch-positiv).</span>
-                    </v-tooltip>
+                    <Info :text="formatPercent(1-updatedProbPos) + ($vuetify.breakpoint.mdAndUp ? ' falsch-positiv' : '')" 
+                      :content="'Bei einem positiven Testergebnis liegt zu ' + formatPercent(1-updatedProbPos) + ' keine Infektion vor (falsch-positiv).'" />
                   </v-col>
                 </v-row>
               </v-container>
@@ -905,29 +888,12 @@
                     Test negativ:
                   </v-col>
                   <v-col cols="4" md="5">
-                    <v-tooltip top>
-                      <template v-slot:activator="{ on, attrs }">
-                        <span v-bind="attrs" v-on="on">{{ formatPercent(updatedProbNeg) }}<template v-if="$vuetify.breakpoint.mdAndUp"> falsch-negativ</template></span>
-                        <v-icon color="primary" small v-bind="attrs" v-on="on">
-                          mdi-help-circle
-                        </v-icon>
-                      </template>
-                      <span>Bei einem negativen Testergebnis liegt zu {{ formatPercent(updatedProbNeg) }} trotzdem
-                        eine Infektion vor (falsch-negativ).</span>
-
-                    </v-tooltip>
+                    <Info :text="formatPercent(updatedProbNeg) + ($vuetify.breakpoint.mdAndUp ? ' falsch-negativ' : '')" 
+                      :content="'Bei einem negativen Testergebnis liegt zu ' + formatPercent(updatedProbNeg) + ' trotzdem eine Infektion vor (falsch-negativ).'" />
                   </v-col>
                   <v-col cols="4" md="5">
-                    <v-tooltip top>
-                      <template v-slot:activator="{ on, attrs }">
-                        <span v-bind="attrs" v-on="on">{{ formatPercent(1-updatedProbNeg) }}<template v-if="$vuetify.breakpoint.mdAndUp"> echt-negativ</template></span>
-                        <v-icon color="primary" small v-bind="attrs" v-on="on">
-                          mdi-help-circle
-                        </v-icon>
-                      </template>
-                      <span>Bei einem negativen Testergebnis liegt zu {{ formatPercent(1-updatedProbNeg) }}
-                        keine Infektion vor (echt-negativ).</span>
-                    </v-tooltip>
+                    <Info :text="formatPercent(1-updatedProbNeg) + ($vuetify.breakpoint.mdAndUp ? ' echt-negativ' : '')" 
+                      :content="'Bei einem negativen Testergebnis liegt zu ' + formatPercent(1-updatedProbNeg) + ' wirklich keine Infektion vor (echt-negativ).'" />
                   </v-col>
                 </v-row>
               </v-container>
@@ -948,7 +914,7 @@
 </template>
 
 <script>
-//import HelloWorld from './components/HelloWorld.vue'
+import Info from './components/Info.vue'
 
 // 7 days should be enough, but sometimes the API returns fewer entries then requested
 // also, there seems to be about 15% underreporting for the latest day, which we bypass by using 
@@ -966,7 +932,7 @@ const apiTests = "/data/antigentests.json";
 export default {
   name: 'App',
   components: {
-  //  HelloWorld
+    Info
   },
   data() {
         return {
@@ -1058,8 +1024,8 @@ export default {
         this.numberFormatter = new Intl.NumberFormat('de-DE', { style: 'decimal', minimumFractionDigits: 1, maximumFractionDigits: 1 });
         window.addEventListener('scroll', this.handleScroll);
         this.fetchData();
-        document.getElementById("rapidtest").classList.remove("hidden");
-        document.getElementById("loading").classList.add("hidden");
+        //document.getElementById("rapidtest").classList.remove("hidden");
+        //document.getElementById("loading").classList.add("hidden");
     },
     destroyed() {
         window.removeEventListener('scroll', this.handleScroll);
