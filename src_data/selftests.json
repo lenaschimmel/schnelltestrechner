@@ -395,5 +395,33 @@
         "antragsteller": "Anbio (Xiamen) Biotechnology Co., Ltd.",
         "name": "COVID-19 Antigen Schnelltest (Kolloidales Gold)",
         "id": "AT195/21"
+    },
+    {
+        "reference": "5640-S-156/21",
+        "manufacturer": "WQS Management Consultants GmbH",
+        "antragsteller": "WQS Management Consultants GmbH",
+        "name": "SARS-CoV-2 Antigen Rapid Test Kit (Colloidal Gold Immunochromatography)",
+        "id": null
+    },
+    {
+        "reference": "5640-S-171/21",
+        "manufacturer": "ACON Biotech(Hangzhou) Co., Ltd",
+        "antragsteller": "ACON Biotech(Hangzhou) Co., Ltd",
+        "name": "SARS-CoV-2-Antigenschnelltest (Selbsttest)",
+        "id": null
+    },
+    {
+        "reference": "5640-S-179/21",
+        "manufacturer": "Guangzhou Wondfo Biotech Co., Ltd.",
+        "antragsteller": "Guangzhou Wondfo Biotech Co., Ltd.",
+        "name": "2019-nCoV Antigen Test (Lateral Flow Method)",
+        "id": "AT614/21"
+    },
+    {
+        "reference": "5640-S-031/21 ",
+        "manufacturer": "PerGrande BioTech Development Co., Ltd.",
+        "antragsteller": "JingCheng Asia Group Limited",
+        "name": "SARS-CoV-2 Antigen Detection Kit (Colloidal Gold Immunochromatographic assay)",
+        "id": null
     }
 ]
