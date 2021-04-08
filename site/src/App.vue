@@ -103,13 +103,26 @@
                         Wie zuverlässig eigentlich ein Schnell- oder Selbst-Test auf
                         Sars-CoV-2 ist,
                         <b>lässt sich unmöglich allgemein beantworten.</b> Neben den
-                        Eigenschaften des eigentlichen Tests (<i>Sensitivität</i> und
-                        <i>Spezifität</i>) spielt auch die sogenannte
-                        <i>Vortestwahrscheinlichkeit</i> eine enorm große Rolle. Und die
-                        hängt grundsätzlich von der <i>Inzidenz</i>, sowie dem privatem
-                        und beruflichem <i>Risiko-Profil</i> ab. Wer außerdem
-                        <i>Symptome</i> hat, hat eine zusätzlich stark erhöhte
-                        Vortestwahrscheinlichkeit.
+                        Eigenschaften des eigentlichen Tests (<Info
+                          icon="none"
+                          text="Sensitivität"
+                          content="Wahrscheinlichkeit, dass eine infizierte Person ein positives Ergbenis bekommt"
+                        />
+                        und
+                        <Info
+                          icon="none"
+                          text="Spezifität"
+                          content="Wahrscheinlichkeit, dass eine gesunde Person ein negtives Ergbenis bekommt"
+                        />) spielt auch die sogenannte
+                        <Info
+                          icon="none"
+                          text="Vortestwahrscheinlichkeit"
+                          content="Wahrscheinlichkeit, dass die Person infiziert ist, unabhänging vom Test"
+                        />
+                        eine enorm große Rolle. Und die hängt grundsätzlich von der
+                        <i>Inzidenz</i>, sowie dem privatem und beruflichem
+                        <i>Risiko-Profil</i> ab. Wer außerdem <i>Symptome</i> hat, hat
+                        eine zusätzlich stark erhöhte Vortestwahrscheinlichkeit.
                       </p>
 
                       <p>
@@ -151,6 +164,12 @@
                       Test-Auswahl
                     </v-expansion-panel-header>
                     <v-expansion-panel-content color="blue lighten-5" class="pt-4">
+                      <p>
+                        Für die Berechnung der Test-Zuverlässigkeit müssen dessen
+                        Sensititvität und Spezifität bekannt sein. Für die allermeisten
+                        Tests liegen die Daten bereits vor, so dass nur der Test
+                        ausgewählt werden muss.
+                      </p>
                       <v-btn-toggle v-model="testsKind">
                         <v-btn value="list">
                           <span class="hidden-xs-only mr-4">Aus Liste wählen</span>
@@ -169,9 +188,11 @@
                         <v-container fluid>
                           <v-row no-gutters>
                             <v-col cols="12" sm="6" md="4" no-gutters>
-                              <v-checkbox
-                                label="Nur Selbst-Tests"
-                                v-model="testFilterSelf"
+                              <v-checkbox v-model="testFilterSelf">
+                                <template v-slot:label>
+                                  Nur Selbst-Tests<Info
+                                    content="Zeigt nur Schnelltests an, die eine Sonderzulassung zur Verwendung von Laien an sich selbst haben."
+                                  /> </template
                               ></v-checkbox>
                             </v-col>
                             <v-col cols="12" sm="6" md="4" no-gutters>
@@ -179,19 +200,25 @@
                                 <template v-slot:label>
                                   <div>
                                     Nur vom
-                                    <acronym
-                                      title="Paul-Ehrlich-Institut - Bundesinstitut für Impfstoffe und biomedizinische Arzneimittel"
-                                      >PEI</acronym
-                                    >
+                                    <Info
+                                      text="PEI"
+                                      icon="none"
+                                      content="Paul-Ehrlich-Institut - Bundesinstitut für Impfstoffe und biomedizinische Arzneimittel"
+                                    />
                                     evaluiert
+                                    <Info
+                                      content="Das Paul-Ehrlich-Institut prüft einige Schnelltests, ob diese Mindeskriterien erfüllen. Im Tab 'Weitere Infos' gibt es einen ganzen Textabschnitt zur Bedeutung dieser Evaluation."
+                                    />
                                   </div>
                                 </template>
                               </v-checkbox>
                             </v-col>
                             <v-col cols="12" sm="6" md="4" no-gutters>
-                              <v-checkbox
-                                label="Wissenschaftliche Studien"
-                                v-model="testFilterStudies"
+                              <v-checkbox v-model="testFilterStudies">
+                                <template v-slot:label>
+                                  Wissenschaftliche Studien<Info
+                                    content="Zeigt nur Schnelltests an, zu denen Studien vorliegen, die ihre Wirksamkeit untersucht haben. Die 'Erweiterte Ansicht' muss aktiviert werden, um diese Studiendaten zu nutzen."
+                                  /> </template
                               ></v-checkbox>
                             </v-col>
                           </v-row>
@@ -443,12 +470,44 @@
                     >
                       Inzidenz und Prävalenz
                     </v-expansion-panel-header>
-                    <v-expansion-panel-content color="blue lighten-5">
+                    <v-expansion-panel-content color="blue lighten-5" class="pt-4">
+                      <p>
+                        Wähle aus, ob die Inzidenz einer Region oder ein eigenener Wert
+                        genutzt werden soll.
+                        <Info type="dialog">
+                          Die Aussagekraft eines Tests ergibt sich nicht nur aus dessen
+                          Sensititvität und Spezifität, sondern hängt von der
+                          Vortestwahrscheinlichkeit ab, also der Wahrscheinlichkeit, dass
+                          die zu testende Person infiziert ist. Diese wird zunächst aus
+                          der Inzidenz der Bevölkerung einer Region abgeschätzt. Je
+                          genauer die Region eingegrenzt wird, desto aussagekräftiger ist
+                          der Wert.
+                        </Info>
+                      </p>
                       <v-radio-group v-model="incidenceSource" mandatory>
                         <v-radio value="germany" label="Ganz Deutschland"></v-radio>
                         <v-radio value="state" label="Nach Bundesland"></v-radio>
                         <v-radio value="district" label="Nach Landkreis"></v-radio>
-                        <v-radio value="input" label="Eigenen Wert eingeben"></v-radio>
+                        <v-radio value="input">
+                          <template v-slot:label>
+                            <div>
+                              Eigenen Inzidenz eingeben
+                              <Info
+                                content="Die Inzidenz beschreibt die Zahl der offiziell gemeldeten, bestätigten Neuinfektionen innerhalb einer Woche in den letzten 7 Tage, normiert auf 100.000 Einwohner."
+                              />
+                            </div>
+                          </template>
+                        </v-radio>
+                        <v-radio value="inputPrevalence">
+                          <template v-slot:label>
+                            <div>
+                              Eigenen Prävalenz eingeben
+                              <Info
+                                content="Die Prävalenz beschreibt die Zahl der infizierten Personen, normiert auf 100.000 Einwohner. Sie liegt deutlich über der Inzidenz, da längst nicht jede Infektion erkannt und erfasst wird."
+                              />
+                            </div>
+                          </template>
+                        </v-radio>
                       </v-radio-group>
 
                       <template v-if="incidenceSource == 'state'">
@@ -467,7 +526,7 @@
 
                       <template v-if="incidenceSource == 'district'">
                         <p>
-                          Stadt / Landkreis:
+                          Stadt (SK) oder Landkreis (LK):
                           <v-autocomplete
                             v-model="districtId"
                             :items="districtsChoices"
@@ -481,12 +540,24 @@
 
                       <template v-if="incidenceSource == 'input'">
                         <p>
-                          7-Tage Prävalenz je 100.000:
+                          7-Tage Inzidenz je 100.000:
                           <v-text-field v-model="incidenceString" solo />
                         </p>
                       </template>
+
+                      <template v-if="incidenceSource == 'inputPrevalence'">
+                        <p>
+                          Prävalenz je 100.000:
+                          <v-text-field v-model="prevalenceString" solo />
+                        </p>
+                      </template>
                       <template v-if="intermediate">
-                        <template v-if="incidenceSource != 'input'">
+                        <template
+                          v-if="
+                            incidenceSource != 'input' &&
+                            incidenceSource != 'inputPrevalence'
+                          "
+                        >
                           <p>
                             <i
                               >Quelle der Inzidenzdaten:
@@ -504,11 +575,58 @@
                             <input disabled :value="formatNumber(incidencePrev)" />
                           </p>
                         </template>
-                        <p>
-                          Geschätzte Prävalenz:
-                          <input disabled :value="formatNumber(incidenceAdjusted)" />
-                        </p>
                       </template>
+
+                      <p v-if="!Number.isNaN(prevalence)">
+                        Geschätzte Prävalenz: {{ formatNumber(prevalence) }}
+                        <Info type="Dialog" v-if="incidenceSource != 'inputPrevalence'">
+                          <p>
+                            Die Region hat eine gemeldete 7-Tage-Inzidenz von
+                            {{ formatNumber(incidence) }}, d.h. so viele Infektionen je
+                            100.000 Einwohner wurden gemeldet.
+                          </p>
+                          <p v-if="incidenceSource != 'input'">
+                            Bis eine tatsächliche Infektion in den offiziellen Meldedaten
+                            und somit der Inzidenz erscheit, vergeht i.d.R. etwa eine
+                            Woche. Daher wird, basierend auf der Inzidenz der Vorwoche ({{
+                              formatNumber(incidencePrev)
+                            }}), die Inzidenz eine Woche in die Zukunft projiziert. Es
+                            wird der Faktor {{ formatNumber(delayFactor) }} multipliziert,
+                            und ergibt dann eine angepasst Inzidenz von
+                            {{ formatNumber(incidenceAdjusted) }}.
+                          </p>
+                          <p v-else>
+                            Bei einer selbst eingegebenen Inzident wird kein Ausgleich des
+                            Meldeverzugs vorgenommen, sondern der Wert dirket übernommen.
+                          </p>
+                          <p>
+                            Aus dieser Inzident wird eine Prävalenz von
+                            {{ formatNumber(prevalence) }} geschätzt, also, dass so viele
+                            von 100.000 Einwohnern aktuell infiziert sind.
+                          </p>
+                          <p>
+                            Dies basiert auf der Annahme, dass nur ein Bruchteil aller
+                            Infektionen erkannt und erfasst werden, so dass ein Faktor von
+                            {{ underReportingFactor }} für die Dunkelzimmer hinzu
+                            gerechnet wird. Außerdem wird angenommen, dass eine Person im
+                            Schnitt für 7 Tage infiziert ist, so dass die 7-Tage-Inzidenz
+                            als Grundlage der Prävalenz gültig ist.
+                          </p>
+                        </Info>
+                      </p>
+                      <v-alert
+                        icon="mdi-alert"
+                        dense
+                        outlined
+                        type="warning"
+                        text
+                        class="mt-4"
+                        v-if="Number.isNaN(this.prevalence)"
+                      >
+                        Die Angaben zu Inzidenz bzw. Prävalenz sind nicht vollständig.
+                        Bitte nachbessern, da sonst keine Vortestwahrscheinlichkeit
+                        ermittelt werden kann.
+                      </v-alert>
                     </v-expansion-panel-content>
                   </v-expansion-panel>
 
@@ -527,6 +645,7 @@
                         item-text="name"
                         item-value="val"
                         solo
+                        class="mt-2"
                       >
                       </v-select>
 
@@ -537,17 +656,47 @@
                         item-text="name"
                         item-value="val"
                         solo
+                        class="mt-2"
                       >
                       </v-select>
 
-                      Zusätzliche Risiken in den letzten 10 Tagen laut
-                      <a href="https://www.microcovid.org" target="_">microCOVID.org</a>:
+                      Optional: Zusätzliche Risiken in den letzten 10 Tagen laut
+                      <a href="https://www.microcovid.org/?lng=de" target="_"
+                        >microCOVID.org</a
+                      ><Info type="Dialog">
+                          <p>
+                            Auf der Website des microCOVID Project kann das ungefähre
+                            COVID-Risiko einer Aktivität oder Beziehung berechnet werden.
+                            Auf Wunsch kann diees Risiko hier eingetragen werden. <b>Dies ist jedeoch relativ aufwändig und kann entfallen, wenn in letzter Zeit keine Begegnungen mit hohem Risiko stattfanden.</b>
+                          </p>
+                          <p>
+                            Ähnlich wie auf dieser Seite werden durch microCOVID diverse
+                            Rahmenbedinungen abgefragt und auf Basis wissenschaftlicher
+                            Erkenntnisse und gewissenhaft abgeschätzter Berechnungsformlen
+                            ein ungefährer Wert ermittelt.
+                          </p>
+                          <p>
+                            Dabei bezeichnet 1 Microcovid bzw. 1 µCoV als Einheit das
+                            Risiko von eins zu einner Million, sich mit SARS-CoV-2
+                            infiziert zu haben.
+                          </p>
+                          <p>
+                            Mit den vorherigen Auswahlfeldern wurde versucht, das
+                            Alltagsrisiko durch privates Zusammenleben und berufliche
+                            Kontakte abzuschätzen. Hier geht es darum, zusätzliche,
+                            einmalige Risiken hinzu zu rechnen. Es können natürlich auch
+                            mehrere Risiko-Begegnungen ermittelt und zusammen addiert
+                            werden.
+                          </p>
+                        </Info>:
                       <v-text-field
                         v-model="additionalRiskString"
                         background-color="white"
                         suffix="µCoV"
                         solo
+                        class="mt-2"
                       >
+                        
                       </v-text-field>
 
                       <p v-if="intermediate">
@@ -934,7 +1083,7 @@
                       class="font-weight-bold text-uppercase"
                       color="blue lighten-3"
                     >
-                      Verwendete Quellen und Methoden+
+                      Verwendete Quellen und Methoden
                     </v-expansion-panel-header>
                     <v-expansion-panel-content color="blue lighten-5">
                       <p class="font-weight-bold mt-4">
@@ -1545,6 +1694,7 @@ export default {
 
       // user inputs
       incidenceString: "100",
+      prevalenceString: "500",
       sensitivityString: "80,0 %",
       specificityString: "80,0 %",
       testFilter: "",
@@ -1980,14 +2130,25 @@ export default {
         return 0.0;
       }
     },
-    incidenceAdjusted() {
+    underReportingFactor() {
+      // estimated to be between 4 and 6 by rki, see
+      // https://www.rki.de/DE/Content/Infekt/EpidBull/Archiv/2020/Ausgaben/50_20.pdf?__blob=publicationFile
+      // on page 3
+      return 5.0;
+    },
+    delayFactor() {
       // see https://www.microcovid.org/paper/7-basic-method step 3
       let delayFactor = this.incidence / this.incidencePrev;
       if (delayFactor > 2.0) delayFactor = 2.0;
-      let underReportingFacotr = 5.0; // estimated to be between 4 and 6 by rki, see
-      // https://www.rki.de/DE/Content/Infekt/EpidBull/Archiv/2020/Ausgaben/50_20.pdf?__blob=publicationFile
-      // on page 3
-      return this.incidence * underReportingFacotr * delayFactor;
+      return delayFactor;
+    },
+    incidenceAdjusted() {
+      return this.incidence * this.delayFactor;
+    },
+    prevalence() {
+      if (this.incidenceSource == "inputPrevalence")
+        return parseFloat(this.prevalenceString.replace(",", "."));
+      else return this.incidenceAdjusted * this.underReportingFactor;
     },
     fpr() {
       return 1.0 - this.specificity;
