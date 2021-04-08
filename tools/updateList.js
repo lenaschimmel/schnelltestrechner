@@ -167,13 +167,13 @@ function compareStrings(a, b) {
     return 0;
 }
 
-const csvAntigenTests = fs.readFileSync("../data/antigentests.csv", { encoding: "latin1" }).replace(/\u0099/g, "\u2122").replace(/\u0096/g, "\u002D");
-const jsonSelftests = JSON.parse(fs.readFileSync("../data/selftests.json", { encoding: "utf8" }));
+const csvAntigenTests = fs.readFileSync("../src_data/antigentests.csv", { encoding: "latin1" }).replace(/\u0099/g, "\u2122").replace(/\u0096/g, "\u002D");
+const jsonSelftests = JSON.parse(fs.readFileSync("../src_data/selftests.json", { encoding: "utf8" }));
 jsonSelftests.sort((a,b) => compareStrings(a.reference, b.reference));
 jsonSelftests.sort((a,b) => compareStrings(a.id, b.id));
 // selfttest sorted by id, a.k.a. AT-Number, and if there is none, sorted by reference, a.k.a. Aktenzeichen der Sonderzulassung des BfArM
-const csvEvaluation = fs.readFileSync("../data/evaluation.csv", { encoding: "utf8" });
-const jsonEvaluationNameMapping = JSON.parse(fs.readFileSync("../data/evaluation_name_mapping.json", { encoding: "utf8" }));
+const csvEvaluation = fs.readFileSync("../src_data/evaluation.csv", { encoding: "utf8" });
+const jsonEvaluationNameMapping = JSON.parse(fs.readFileSync("../src_data/evaluation_name_mapping.json", { encoding: "utf8" }));
 
 const jsonEvaluation = parse(csvEvaluation, {
     on_record: onEvaluationRecord,
@@ -192,4 +192,4 @@ jsonAntigenTests.sort((a,b) => compareStrings(a.id, b.id));
 
 jsonAntigenTests.push(...getSelftestsWithoutId());
 
-fs.writeFileSync("../site/data/antigentests.json", JSON.stringify(jsonAntigenTests, null, 2));
+fs.writeFileSync("../site/public/data/antigentests.json", JSON.stringify(jsonAntigenTests, null, 2));
