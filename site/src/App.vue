@@ -595,7 +595,7 @@
 
                   <v-expansion-panel>
                     <v-expansion-panel-header class="font-weight-bold text-uppercase" color="blue lighten-3">
-                      Verwendete Quellen und Methoden
+                      Verwendete Quellen und Methoden+
                     </v-expansion-panel-header>
                     <v-expansion-panel-content color="blue lighten-5">
 
