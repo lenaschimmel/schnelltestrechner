@@ -18,5 +18,6 @@ if [ -z "$TARGET" ]; then
     echo "Did not deploy. Set TARGET var to deploy."; 
 else 
     cp -rf dist/* $TARGET/; 
+    echo "Deployed web page to $TARGET"
 fi
 
