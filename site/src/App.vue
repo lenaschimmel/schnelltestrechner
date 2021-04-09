@@ -782,11 +782,23 @@
                             <v-checkbox
                               v-model="sympOther"
                               label="Sonstige verdächtige Symptome"
-                              hint="z.B. Schnupfen, Bronchitis, Pneumonie, Atemnot, Halsschmerzen, Kopf-
-                        und Gliederschmerzen, Appetitlosigkeit, Gewichtsverlust, Übelkeit, Bauchschmerzen, Erbrechen,
-                        Durchfall, Konjunktivitis, Hautausschlag, Lymphknotenschwellung, Apathie, Somnolenz"
-                              persistent-hint
                             ></v-checkbox>
+                            <p>
+                              z.B. Schnupfen,
+                              <Info
+                                text="Bronchitis"
+                                content="Entzündung der Bronchien"
+                              />, <Info text="Pneumonie" content="Lungenentzündung" />,
+                              Atemnot, Halsschmerzen, Kopf- und Gliederschmerzen,
+                              Appetitlosigkeit, Gewichtsverlust, Übelkeit, Bauchschmerzen,
+                              Erbrechen, Durchfall,
+                              <Info
+                                text="Konjunktivitis"
+                                content="Bindehautentzündung (Auge)"
+                              />, Hautausschlag, Lymphknotenschwellung,
+                              <Info text="Apathie" content="Teilnahmslosigkeit" />,
+                              <Info text="Somnolenz" content="Benommenheit" />
+                            </p>
                           </v-col>
                         </v-row>
                       </v-container>
