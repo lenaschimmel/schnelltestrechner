@@ -17,7 +17,7 @@
             v-bind="attrs"
             v-on="on"
             href="https://twitter.com/Testrechner"
-            target="_"
+            target="_blank"
           >
             <v-icon>mdi-twitter</v-icon>
           </v-btn>
@@ -31,7 +31,7 @@
             v-bind="attrs"
             v-on="on"
             href="https://github.com/lenaschimmel/schnelltestrechner"
-            target="_"
+            target="_blank"
           >
             <v-icon>mdi-github</v-icon>
           </v-btn>
@@ -67,7 +67,7 @@
                     Bekannte Fehler, Probleme und Ungenauigkeiten sind in den
                     <a
                       href="https://github.com/lenaschimmel/schnelltestrechner/issues"
-                      target="_"
+                      target="_blank"
                       class="white--text"
                       >GitHub Issues</a
                     >
@@ -75,14 +75,14 @@
                     sein. Bitte richte weitere Anmerkungen dorthin, oder an die verlinkten
                     <a
                       href="https://twitter.com/Testrechner"
-                      target="_"
+                      target="_blank"
                       class="white--text"
                       >Twitter-</a
                     >
                     und
                     <a
                       href="mailto:mail@schnelltestrechner.de"
-                      target="_"
+                      target="_blank"
                       class="white--text"
                       >Mail</a
                     >-Accounts.
@@ -131,7 +131,7 @@
                           scheinbare paradoxe Phänomen des
                           <a
                             href="https://de.wikipedia.org/wiki/Pr%C3%A4valenzfehler"
-                            target="_"
+                            target="_blank"
                             >Prävalenzfehlers</a
                           >
                         </li>
@@ -566,7 +566,7 @@
                           <p>
                             <i
                               >Quelle der Inzidenzdaten:
-                              <a href="https://api.corona-zahlen.org" target="_"
+                              <a href="https://api.corona-zahlen.org" target="_blank"
                                 >api.corona-zahlen.org</a
                               ></i
                             >
@@ -678,7 +678,7 @@
                       </v-select>
 
                       Optional: Zusätzliche Risiken in den letzten 10 Tagen laut
-                      <a href="https://www.microcovid.org/?lng=de" target="_"
+                      <a href="https://www.microcovid.org/?lng=de" target="_blank"
                         >microCOVID.org</a
                       ><Info type="Dialog">
                         <p>
@@ -816,7 +816,7 @@
                         Blick, hat aber einen Grund, der
                         <a
                           href="https://github.com/lenaschimmel/schnelltestrechner/issues/21#issuecomment-808184992"
-                          target="_"
+                          target="_blank"
                           >hier</a
                         >
                         erläutert wird.
@@ -839,7 +839,7 @@
                             In der Studie
                             <a
                               href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7584484/"
-                              target="_"
+                              target="_blank"
                               >A Symptom-Based Rule for Diagnosis of COVID-19</a
                             >
                             von Smith, Richey und Brunetto wurde relativ genau
@@ -863,7 +863,7 @@
                             Die Schätzung dieses Faktors basiert auf einigen
                             <a
                               href="https://github.com/lenaschimmel/schnelltestrechner/issues/9#issuecomment-805657593"
-                              target="_"
+                              target="_blank"
                               >sehr gewagten Annahmen</a
                             >. Wir sind davon überzeugt, dass es besser ist, die Symptome
                             mit diesem ungefähren Wert einzuberechnen, als sie komplett zu
@@ -938,7 +938,7 @@
                         der
                         <a
                           href="https://www.klinikum.uni-heidelberg.de/diagnostics-global-health"
-                          target="_"
+                          target="_blank"
                           >Liste wissenschaftlicher Studien</a
                         >
                         der Uni Heidelberg. Kurze, vertikale Linie gibt den Mittelwert an,
@@ -1201,7 +1201,7 @@
                         <li>
                           <a
                             href="https://www.bfarm.de/DE/Medizinprodukte/Antigentests/_node.html"
-                            target="_"
+                            target="_blank"
                             >Liste der Tests zur Eigenanwendung durch Laien</a
                           >
                           des BfArM
@@ -1209,7 +1209,7 @@
                         <li>
                           <a
                             href="https://antigentest.bfarm.de/ords/f?p=ANTIGENTESTS-AUF-SARS-COV-2"
-                            target="_"
+                            target="_blank"
                             >Liste der Antigen-Tests zum direkten Erregernachweis des
                             Coronavirus SARS-CoV-2</a
                           >
@@ -1218,7 +1218,7 @@
                         <li>
                           <a
                             href="https://www.klinikum.uni-heidelberg.de/diagnostics-global-health"
-                            target="_"
+                            target="_blank"
                             >Ergebnisse wissenschaftlicher Studien</a
                           >, zusammen getragen von der Uni Heidelberg
                         </li>
@@ -1229,7 +1229,7 @@
                       <ul>
                         <li>
                           den Inzidenzen gemäß
-                          <a href="https://api.corona-zahlen.org/docs/" target="_"
+                          <a href="https://api.corona-zahlen.org/docs/" target="_blank"
                             >corona-zahlen.org</a
                           >
                         </li>
@@ -1241,13 +1241,15 @@
                           einer Abschätzung des Underreporting-Faktors von 4-6 durch das
                           <a
                             href="https://www.rki.de/DE/Content/Infekt/EpidBull/Archiv/2020/Ausgaben/50_20.pdf?__blob=publicationFile"
-                            target="_"
+                            target="_blank"
                             >RKI</a
                           >
                         </li>
                         <li>
                           Faktoren für das private Infektionsrisiko, die an
-                          <a href="https://www.microcovid.org" target="_">Microcovid</a>
+                          <a href="https://www.microcovid.org" target="_blank"
+                            >Microcovid</a
+                          >
                           angelehnt sind
                         </li>
                         <li>
@@ -1255,7 +1257,7 @@
                           Grafiken von
                           <a
                             href="https://www.addendum.org/coronavirus/berufe-ansteckungsrisiko/"
-                            target="_"
+                            target="_blank"
                             >www.addendum.org</a
                           >
                           entnommen wurden
@@ -1264,7 +1266,9 @@
                       <p class="mt-4">
                         Die Berechnung der Bayes-Faktoren und der
                         A-Posteriori-Wahrscheinlichkeiten folgt der Berechnung des Videos
-                        <a href="https://www.youtube.com/watch?v=lG4VkPoG3ko" target="_"
+                        <a
+                          href="https://www.youtube.com/watch?v=lG4VkPoG3ko"
+                          target="_blank"
                           >The medical test paradox: Can redesigning Bayes rule help?</a
                         >
                         von 3Blue1Brown.
@@ -1274,7 +1278,7 @@
                         einer Infektion wurde nach der
                         <a
                           href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7584484/"
-                          target="_"
+                          target="_blank"
                           >Punkteregel nach Smith, Richey und Brunetto</a
                         >
                         implementiert. Die Punkteregel ist darauf ausgelegt, die a-priori
@@ -1311,7 +1315,7 @@
                         <li>
                           <a
                             href="https://www.zusammengegencorona.de/informieren/testen/"
-                            target="_"
+                            target="_blank"
                             >Informationen zum Testen</a
                           >
                           vom Bundesministerium für Gesundheit
@@ -1319,7 +1323,7 @@
                         <li>
                           <a
                             href="https://www.infektionsschutz.de/coronavirus/tests-auf-sars-cov-2.html"
-                            target="_"
+                            target="_blank"
                             >Tests auf das Coronavirus SARS-CoV-2</a
                           >
                           von der Bundeszentrale für gesundheitliche Aufklärung (BZgA)
@@ -1328,7 +1332,7 @@
                           Sämtliche Informationen des
                           <a
                             href="https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/nCoV.html"
-                            target="_"
+                            target="_blank"
                             >Robert Koch Instituts (RKI)</a
                           >
                         </li>
@@ -1337,7 +1341,7 @@
                           Der
                           <a
                             href="https://diagnostics-global-health.github.io/rechner/"
-                            target="_"
+                            target="_blank"
                           >
                             Schnelltest-Rechner der Uni-Heidelberg</a
                           >, von der auch die Studiendaten kommen. Schnell und einfach,
@@ -1345,7 +1349,10 @@
                         </li>
                         <li>
                           Der
-                          <a href="https://rki-wiko.shinyapps.io/test_qual/" target="_">
+                          <a
+                            href="https://rki-wiko.shinyapps.io/test_qual/"
+                            target="_blank"
+                          >
                             Schnelltest-Rechner des Robert Koch Instituts (RKI)</a
                           >. Er ist zwar langsam und weniger mächtig als dieser hier,
                           bietet aber ein paar andere Darstellungsweisen der Ergebnisse.
@@ -1354,7 +1361,7 @@
                           Im
                           <a
                             href="https://www.ndr.de/nachrichten/info/Das-Glossar-zum-Corona-Podcast,podcastcoronavirus146.html#SARS"
-                            target="_"
+                            target="_blank"
                             >Corona-Glossar</a
                           >
                           des
@@ -1365,27 +1372,29 @@
                           Podcast sehr empfehlenswert und es gibt ein
                           <a
                             href="https://www.ndr.de/nachrichten/info/coronaskript174.pdf"
-                            target="_"
+                            target="_blank"
                             >durchsuchbares Transkript aller Folgen als PDF</a
                           >.
                         </li>
                         <li>
                           Die Initiative
-                          <a href="https://rapidtests.de/" target="_">RapidTests.de</a>
+                          <a href="https://rapidtests.de/" target="_blank"
+                            >RapidTests.de</a
+                          >
                           erläutert wichtige Konzepte, auch in ihren umfangreichen
-                          <a href="https://rapidtests.de/faq" target="_">FAQ</a>.
+                          <a href="https://rapidtests.de/faq" target="_blank">FAQ</a>.
                         </li>
                         <li>
                           Die
                           <a
                             href="https://www.cochrane.de/de/news/aktualisierter-cochrane-review-bewertet-zuverl%C3%A4ssigkeit-von-schnelltests-zum-nachweis-von-covid"
-                            target="_"
+                            target="_blank"
                             >Zusammenfassung</a
                           >
                           und die
                           <a
                             href="https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD013705.pub2/full/de"
-                            target="_"
+                            target="_blank"
                             >(wirklich lange) Langfassung</a
                           >
                           des Aktualisierten Cochrane Review bewertet Zuverlässigkeit von
@@ -1463,7 +1472,7 @@
                         <li>
                           <a
                             href="https://www.pei.de/SharedDocs/Downloads/DE/newsroom/dossiers/mindestkriterien-sars-cov-2-antigentests-01-12-2020.pdf?__blob=publicationFile&v=6"
-                            target="_"
+                            target="_blank"
                             >Mindestkriterien für SARS-CoV-2 Antigentests im Sinne von § 1
                             Abs. 1 Satz 1 TestVO: Antigenschnelltests</a
                           >
@@ -1471,7 +1480,7 @@
                         <li>
                           <a
                             href="https://www.pei.de/SharedDocs/Downloads/DE/newsroom/dossiers/evaluierung-sensitivitaet-sars-cov-2-antigentests-04-12-2020.pdf?__blob=publicationFile&v=36"
-                            target="_"
+                            target="_blank"
                             >Vergleichende Evaluierung der Sensitivität von SARS-CoV-2
                             Antigenschnelltests
                           </a>
