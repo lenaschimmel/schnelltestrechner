@@ -57,12 +57,11 @@
           <v-container class="fill-height">
             <v-row class="fill-height">
               <v-col cols="12" class="fill-height">
-                <v-alert color="red" type="warning" icon="mdi-alert">
+                <v-alert color="orange" type="warning" icon="mdi-alert">
                   <p>
-                    Dies ist eine sehr frühe Vorschau-Version dieser Seite. Sie wurde
-                    bisher nicht von unabhängigen, fachkundigen Menschen auf Plausibilität
-                    und Fehlerfreiheit geprüft. Bitte verwende die Ergebnisse mit Vorsicht
-                    und Skepsis!
+                    Diese Seite und die ihr zugrunde liegenden Berechnungen wurden nach
+                    bestem Wissen und Gewissen erstellt. Sie wurde und wird nach Beratung
+                    mit externen Fachkundigen fortlaufend weiter verbessert.
                   </p>
                   <p>
                     Bekannte Fehler, Probleme und Ungenauigkeiten sind in den
@@ -72,8 +71,8 @@
                       class="white--text"
                       >GitHub Issues</a
                     >
-                    erfasst. Bitte richte weitere Anmerkungen dorthin, oder an die
-                    verlinkten
+                    erfasst. Trotzdem können noch weitere, unentdeckte Fehler enthalten
+                    sein. Bitte richte weitere Anmerkungen dorthin, oder an die verlinkten
                     <a
                       href="https://twitter.com/Testrechner"
                       target="_"
@@ -104,23 +103,20 @@
                         Sars-CoV-2 ist,
                         <b>lässt sich unmöglich allgemein beantworten.</b> Neben den
                         Eigenschaften des eigentlichen Tests (<Info
-                          icon="none"
                           text="Sensitivität"
-                          content="Wahrscheinlichkeit, dass eine infizierte Person ein positives Ergbenis bekommt"
+                          content="Wahrscheinlichkeit, dass eine infizierte Person ein positives Ergebnis bekommt"
                         />
                         und
                         <Info
-                          icon="none"
                           text="Spezifität"
-                          content="Wahrscheinlichkeit, dass eine gesunde Person ein negtives Ergbenis bekommt"
+                          content="Wahrscheinlichkeit, dass eine gesunde Person ein negatives Ergebnis bekommt"
                         />) spielt auch die sogenannte
                         <Info
-                          icon="none"
                           text="Vortestwahrscheinlichkeit"
                           content="Wahrscheinlichkeit, dass die Person infiziert ist, unabhänging vom Test"
                         />
                         eine enorm große Rolle. Und die hängt grundsätzlich von der
-                        <i>Inzidenz</i>, sowie dem privatem und beruflichem
+                        <i>Inzidenz</i>, sowie dem privaten und beruflichen
                         <i>Risiko-Profil</i> ab. Wer außerdem <i>Symptome</i> hat, hat
                         eine zusätzlich stark erhöhte Vortestwahrscheinlichkeit.
                       </p>
@@ -146,12 +142,18 @@
                       </ul>
 
                       <p>
-                        Diese Seite möchte bei all diesen Schritten helfen. Der Fokus
-                        liegt auf einem Test für eine bestimmte Person zu einem bestimmten
-                        Zeitpunkt, also nicht auf Abschätzungen für die Gesamtbevölkerung.
+                        <b>
+                          Diese Seite möchte bei all diesen Schritten helfen. Der Fokus
+                          liegt auf einem Test für eine bestimmte Person zu einem
+                          bestimmten Zeitpunkt, also nicht auf Abschätzungen für die
+                          Gesamtbevölkerung.
+                        </b>
                       </p>
                       <p>
-                        Details zur Funktionsweise finden sich im Tab "Weitere Infos".
+                        Details zur Funktionsweise finden sich im Tab "Weitere Infos"
+                        sowie an den entsprechenden Stellen dieser Seite hinter den
+                        <Info type="Dialog">Dieser Info-Button ist nur ein Beispiel</Info
+                        >-Buttons.
                       </p>
                     </v-expansion-panel-content>
                   </v-expansion-panel>
@@ -191,6 +193,7 @@
                               <v-checkbox v-model="testFilterSelf">
                                 <template v-slot:label>
                                   Nur Selbst-Tests<Info
+                                    type="Dialog"
                                     content="Zeigt nur Schnelltests an, die eine Sonderzulassung zur Verwendung von Laien an sich selbst haben."
                                   /> </template
                               ></v-checkbox>
@@ -207,6 +210,7 @@
                                     />
                                     evaluiert
                                     <Info
+                                      type="Dialog"
                                       content="Das Paul-Ehrlich-Institut prüft einige Schnelltests, ob diese Mindeskriterien erfüllen. Im Tab 'Weitere Infos' gibt es einen ganzen Textabschnitt zur Bedeutung dieser Evaluation."
                                     />
                                   </div>
@@ -217,6 +221,7 @@
                               <v-checkbox v-model="testFilterStudies">
                                 <template v-slot:label>
                                   Wissenschaftliche Studien<Info
+                                    type="Dialog"
                                     content="Zeigt nur Schnelltests an, zu denen Studien vorliegen, die ihre Wirksamkeit untersucht haben. Die 'Erweiterte Ansicht' muss aktiviert werden, um diese Studiendaten zu nutzen."
                                   /> </template
                               ></v-checkbox>
@@ -472,7 +477,7 @@
                     </v-expansion-panel-header>
                     <v-expansion-panel-content color="blue lighten-5" class="pt-4">
                       <p>
-                        Wähle aus, ob die Inzidenz einer Region oder ein eigenener Wert
+                        Wähle aus, ob die Inzidenz einer Region oder ein eigener Wert
                         genutzt werden soll.
                         <Info type="dialog">
                           Die Aussagekraft eines Tests ergibt sich nicht nur aus dessen
@@ -491,7 +496,7 @@
                         <v-radio value="input">
                           <template v-slot:label>
                             <div>
-                              Eigenen Inzidenz eingeben
+                              Eigene Inzidenz eingeben
                               <Info
                                 content="Die Inzidenz beschreibt die Zahl der offiziell gemeldeten, bestätigten Neuinfektionen innerhalb einer Woche in den letzten 7 Tage, normiert auf 100.000 Einwohner."
                               />
@@ -501,7 +506,7 @@
                         <v-radio value="inputPrevalence">
                           <template v-slot:label>
                             <div>
-                              Eigenen Prävalenz eingeben
+                              Eigene Prävalenz eingeben
                               <Info
                                 content="Die Prävalenz beschreibt die Zahl der infizierten Personen, normiert auf 100.000 Einwohner. Sie liegt deutlich über der Inzidenz, da längst nicht jede Infektion erkannt und erfasst wird."
                               />
@@ -585,29 +590,41 @@
                             {{ formatNumber(incidence) }}, d.h. so viele Infektionen je
                             100.000 Einwohner wurden gemeldet.
                           </p>
-                          <p v-if="incidenceSource != 'input'">
-                            Bis eine tatsächliche Infektion in den offiziellen Meldedaten
-                            und somit der Inzidenz erscheit, vergeht i.d.R. etwa eine
-                            Woche. Daher wird, basierend auf der Inzidenz der Vorwoche ({{
-                              formatNumber(incidencePrev)
-                            }}), die Inzidenz eine Woche in die Zukunft projiziert. Es
-                            wird der Faktor {{ formatNumber(delayFactor) }} multipliziert,
-                            und ergibt dann eine angepasst Inzidenz von
-                            {{ formatNumber(incidenceAdjusted) }}.
-                          </p>
+                          <template v-if="incidenceSource != 'input'">
+                            <p>
+                              Bis eine tatsächliche Infektion in den offiziellen
+                              Meldedaten und somit der Inzidenz erscheint, vergeht i.d.R.
+                              etwa eine Woche.
+                            </p>
+                            <p>
+                              Von der letzten Woche (Inzidenz
+                              {{ formatNumber(incidencePrev) }}) zu dieser Woche (Inzidenz
+                              {{ formatNumber(incidence) }}) hat sich die Inzidenz um den
+                              Faktor {{ formatNumber(delayFactor) }} geändert.
+                            </p>
+
+                            <p>
+                              Die aktuell gemeldete Inzidenz wird mit diesem Faktor
+                              multipliziert, um die Inzidenz eine Woche in die Zukunft zu
+                              projizieren. Dies ergibt eine angepasste Inzidenz von
+                              {{ formatNumber(incidenceAdjusted) }}, welche die aktuellen
+                              Infektionen besser wiedergibt als die offizielle Zahl.
+                            </p>
+                          </template>
                           <p v-else>
-                            Bei einer selbst eingegebenen Inzident wird kein Ausgleich des
-                            Meldeverzugs vorgenommen, sondern der Wert dirket übernommen.
+                            Bei einer selbst eingegebenen Inzidenz wird kein Ausgleich des
+                            Meldeverzugs vorgenommen, sondern der Wert direkt übernommen.
                           </p>
                           <p>
-                            Aus dieser Inzident wird eine Prävalenz von
-                            {{ formatNumber(prevalence) }} geschätzt, also, dass so viele
+                            Aus dieser Inzidenz wird eine Prävalenz von
+                            {{ formatNumber(prevalence) }} geschätzt. Das heißt, dass
+                            {{ formatNumber(prevalence) }}
                             von 100.000 Einwohnern aktuell infiziert sind.
                           </p>
                           <p>
                             Dies basiert auf der Annahme, dass nur ein Bruchteil aller
                             Infektionen erkannt und erfasst werden, so dass ein Faktor von
-                            {{ underReportingFactor }} für die Dunkelzimmer hinzu
+                            {{ underReportingFactor }} für die Dunkelziffer hinzu
                             gerechnet wird. Außerdem wird angenommen, dass eine Person im
                             Schnitt für 7 Tage infiziert ist, so dass die 7-Tage-Inzidenz
                             als Grundlage der Prävalenz gültig ist.
@@ -664,31 +681,36 @@
                       <a href="https://www.microcovid.org/?lng=de" target="_"
                         >microCOVID.org</a
                       ><Info type="Dialog">
-                          <p>
-                            Auf der Website des microCOVID Project kann das ungefähre
-                            COVID-Risiko einer Aktivität oder Beziehung berechnet werden.
-                            Auf Wunsch kann diees Risiko hier eingetragen werden. <b>Dies ist jedeoch relativ aufwändig und kann entfallen, wenn in letzter Zeit keine Begegnungen mit hohem Risiko stattfanden.</b>
-                          </p>
-                          <p>
-                            Ähnlich wie auf dieser Seite werden durch microCOVID diverse
-                            Rahmenbedinungen abgefragt und auf Basis wissenschaftlicher
-                            Erkenntnisse und gewissenhaft abgeschätzter Berechnungsformlen
-                            ein ungefährer Wert ermittelt.
-                          </p>
-                          <p>
-                            Dabei bezeichnet 1 Microcovid bzw. 1 µCoV als Einheit das
-                            Risiko von eins zu einner Million, sich mit SARS-CoV-2
-                            infiziert zu haben.
-                          </p>
-                          <p>
-                            Mit den vorherigen Auswahlfeldern wurde versucht, das
-                            Alltagsrisiko durch privates Zusammenleben und berufliche
-                            Kontakte abzuschätzen. Hier geht es darum, zusätzliche,
-                            einmalige Risiken hinzu zu rechnen. Es können natürlich auch
-                            mehrere Risiko-Begegnungen ermittelt und zusammen addiert
-                            werden.
-                          </p>
-                        </Info>:
+                        <p>
+                          Auf der Website des microCOVID Project kann das ungefähre
+                          COVID-Risiko einer Aktivität oder Beziehung berechnet werden.
+                          Auf Wunsch kann dieses Risiko hier eingetragen werden.
+                          <b
+                            >Dies ist jedoch relativ aufwändig und kann entfallen, wenn in
+                            letzter Zeit keine Begegnungen mit hohem Risiko
+                            stattfanden.</b
+                          >
+                        </p>
+                        <p>
+                          Ähnlich wie auf dieser Seite werden durch microCOVID diverse
+                          Rahmenbedingungen abgefragt und auf Basis wissenschaftlicher
+                          Erkenntnisse und gewissenhaft abgeschätzter Berechnungsformeln
+                          ein ungefährer Wert ermittelt.
+                        </p>
+                        <p>
+                          Dabei bezeichnet 1 Microcovid bzw. 1 µCoV als Einheit das Risiko
+                          von eins zu einer Million, sich mit SARS-CoV-2 infiziert zu
+                          haben.
+                        </p>
+                        <p>
+                          Mit den vorherigen Auswahlfeldern wurde versucht, das
+                          Alltagsrisiko durch privates Zusammenleben und berufliche
+                          Kontakte abzuschätzen. Hier geht es darum, zusätzliche,
+                          einmalige Risiken hinzu zu rechnen. Es können natürlich auch
+                          mehrere Risiko-Begegnungen ermittelt und zusammen addiert
+                          werden.
+                        </p> </Info
+                      >:
                       <v-text-field
                         v-model="additionalRiskString"
                         background-color="white"
@@ -696,7 +718,6 @@
                         solo
                         class="mt-2"
                       >
-                        
                       </v-text-field>
 
                       <p v-if="intermediate">
@@ -713,7 +734,27 @@
                     >
                       Symptome
                     </v-expansion-panel-header>
-                    <v-expansion-panel-content color="blue lighten-5">
+                    <v-expansion-panel-content color="blue lighten-5" class="pt-4">
+                      Wer aktuell Anzeichen einer Krankheit (Symptome) hat, ist mit
+                      deutlich höherer Wahrscheinlichkeit infiziert.
+                      <Info type="Dialog">
+                        <p>
+                          Nicht jede Infektion mit SARS-CoV-2 führt zu Symptomen, und
+                          selbst wenn, ist man schon vor Beginn der ersten Symptome
+                          ansteckend. Daher ist das Risiko nicht gleich Null, nur weil man
+                          sich gesund fühlt.
+                        </p>
+                        <p>
+                          Andererseits gibt es viele andere, meist harmlose Krankheiten,
+                          deren Symptome denen von Covid-19 ähneln.
+                        </p>
+                        <p>
+                          Inzwischen gibt es Erkenntnisse über Kombinationen von
+                          Symptomen, die besonders für eine Infektion mit SARS-CoV-2
+                          sprechen, oder eher für eine Infektion mit einem anderen
+                          Erreger.
+                        </p>
+                      </Info>
                       <v-container fluid>
                         <v-row no-gutters>
                           <v-col cols="12" sm="4" md="4" no-gutters>
@@ -767,6 +808,61 @@
                           >hier</a
                         >
                         erläutert wird.
+                      </v-alert>
+                      <v-alert
+                        icon="mdi-alert"
+                        dense
+                        outlined
+                        type="warning"
+                        text
+                        class="mt-4"
+                      >
+                        Diese Website kann generell nur eine Abschätzung der
+                        Vortestwahrscheinlichkeit bieten und keine
+                        <i>exakte</i> Bestimmung. Während die vorherigen Schritte der
+                        Abschätzung ziemlich sicher sind, ist die Einbeziehung der
+                        Symptome eine relativ ungenaue Angelegenheit.
+                        <Info type="Dialog">
+                          <p>
+                            In der Studie
+                            <a
+                              href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7584484/"
+                              target="_"
+                              >A Symptom-Based Rule for Diagnosis of COVID-19</a
+                            >
+                            von Smith, Richey und Brunetto wurde relativ genau
+                            beschrieben, wie viel aussagekräftiger manche Symptome sind
+                            als andere.
+                          </p>
+                          <p>
+                            So kann z.B. gesagt werden, dass der Verluste von Geruch
+                            <b>oder</b> Geschmack die Wahrscheinlichkeit einer
+                            SARS-CoV-Infektion viel stärker erhöht als Fieber
+                            <b>und</b> Husten zusammen.
+                          </p>
+                          <p>
+                            Allerdings fehlen im Moment noch zuverlässige Informationen
+                            dazu, wie stark Symptome im Allgeinen das Riksiko erhöhen. Wir
+                            gehen aktuell von einem Faktor von 18,8 aus, der eben je nach
+                            konkreter Symptom-Kombination auch höher oder niedriger
+                            ausfallen kann.
+                          </p>
+                          <p>
+                            Die Schätzung dieses Faktors basiert auf einigen
+                            <a
+                              href="https://github.com/lenaschimmel/schnelltestrechner/issues/9#issuecomment-805657593"
+                              target="_"
+                              >sehr gewagten Annahmen</a
+                            >. Wir sind davon überzeugt, dass es besser ist, die Symptome
+                            mit diesem ungefähren Wert einzuberechnen, als sie komplett zu
+                            ignorieren.
+                          </p>
+                          <p>
+                            Trotzdem steht es natürlich jedem, der diesen Wert für falsch
+                            hält, frei, keine Symptome anzugeben und sie somit nicht in
+                            die Rechnung eingehen zu lassen.
+                          </p>
+                        </Info>
                       </v-alert>
 
                       <template v-if="anySymptoms && intermediate">
