@@ -1622,11 +1622,11 @@
     >
       <v-container fluid>
         <v-row v-if="$vuetify.breakpoint.xsOnly">
-          <v-col class="font-weight-bold text-center" cols="12"
+          <v-col class="font-weight-bold text-center mb-0 pb-0" cols="12"
             >Vortestwahrscheinlichkeit {{ formatPercent(priorProbSymptoms) }}
           </v-col>
         </v-row>
-        <v-row>
+        <v-row >
           <v-col
             cols="12"
             sm="4"
@@ -1641,7 +1641,7 @@
           </v-col>
           <v-col cols="12" sm="8" md="9">
             <v-container fluid>
-              <v-row>
+              <v-row no-gutters>
                 <v-col cols="4" md="2"> </v-col>
                 <v-col cols="4" md="5"> Infiziert </v-col>
                 <v-col cols="4" md="5"> Nicht infiziert </v-col>
@@ -1650,12 +1650,13 @@
 
             <v-card color="#FFDDDD">
               <v-container>
-                <v-row>
+                <v-row no-gutters>
                   <v-col cols="4" md="2" class="text-left font-weight-bold">
-                    Test positiv:
+                    {{ $vuetify.breakpoint.mdAndUp ? 'Test positiv:' : 'positiv' }}
                   </v-col>
                   <v-col cols="4" md="5">
                     <Info
+                      :icon="$vuetify.breakpoint.mdAndUp ? 'info' : 'none'"
                       :text="
                         formatPercent(updatedProbPos) +
                         ($vuetify.breakpoint.mdAndUp ? ' echt-positiv' : '')
@@ -1669,6 +1670,7 @@
                   </v-col>
                   <v-col cols="4" md="5">
                     <Info
+                      :icon="$vuetify.breakpoint.mdAndUp ? 'info' : 'none'"
                       :text="
                         formatPercent(1 - updatedProbPos) +
                         ($vuetify.breakpoint.mdAndUp ? ' falsch-positiv' : '')
@@ -1686,12 +1688,13 @@
 
             <v-card class="mt-2">
               <v-container>
-                <v-row>
+                <v-row no-gutters>
                   <v-col cols="4" md="2" class="text-left font-weight-bold">
-                    Test negativ:
+                    {{ $vuetify.breakpoint.mdAndUp ? 'Test negativ:' : 'negativ' }}
                   </v-col>
                   <v-col cols="4" md="5">
                     <Info
+                      :icon="$vuetify.breakpoint.mdAndUp ? 'info' : 'none'"
                       :text="
                         formatPercent(updatedProbNeg) +
                         ($vuetify.breakpoint.mdAndUp ? ' falsch-negativ' : '')
@@ -1705,6 +1708,7 @@
                   </v-col>
                   <v-col cols="4" md="5">
                     <Info
+                      :icon="$vuetify.breakpoint.mdAndUp ? 'info' : 'none'"
                       :text="
                         formatPercent(1 - updatedProbNeg) +
                         ($vuetify.breakpoint.mdAndUp ? ' echt-negativ' : '')
@@ -1853,7 +1857,7 @@ export default {
     this.percentFormatter = new Intl.NumberFormat("de-DE", {
       style: "percent",
       minimumSignificantDigits: 2,
-      maximumSignificantDigits: 4,
+      maximumSignificantDigits: 3,
     });
     this.numberFormatter = new Intl.NumberFormat("de-DE", {
       style: "decimal",
