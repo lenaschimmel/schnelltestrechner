@@ -261,7 +261,7 @@
                                   <div v-bind="attrs" v-on="on">
                                     <v-icon
                                       v-for="circle in getDataCircles(item.studies)"
-                                      :key="circle.color"
+                                      :key="item.id + '_s_' + circle.color"
                                       small
                                       :color="circle.color"
                                     >
@@ -278,7 +278,7 @@
                                   <div v-bind="attrs" v-on="on">
                                     <v-icon
                                       v-for="circle in getAttribCircles(item)"
-                                      :key="circle.color"
+                                      :key="item.id + '_a_' + circle.color"
                                       small
                                       :color="circle.color"
                                     >
@@ -295,7 +295,7 @@
                                   <div v-bind="attrs" v-on="on">
                                     <v-icon
                                       v-for="circle in getDataCircles(item.studies)"
-                                      :key="circle.color"
+                                      :key="item.id + '_as_s_' + circle.color"
                                       small
                                       :color="circle.color"
                                     >
@@ -303,7 +303,7 @@
                                     </v-icon>
                                     <v-icon
                                       v-for="circle in getAttribCircles(item)"
-                                      :key="circle.color"
+                                      :key="item.id + '_as_a_' + circle.color"
                                       small
                                       :color="circle.color"
                                     >
@@ -1070,6 +1070,7 @@
                                     </title>
                                   </rect>
                                   <line
+                                    v-if="study.sensitivity.min && study.sensitivity.max && !Number.isNaN(study.sensitivity.min) && !Number.isNaN(study.sensitivity.max)"
                                     :key="study.id + '_sp2'"
                                     :x1="study.sensitivity.min * 200"
                                     :x2="study.sensitivity.max * 200"
@@ -1080,6 +1081,7 @@
                                     "
                                   />
                                   <line
+                                    v-if="study.sensitivity.avg && !Number.isNaN(study.sensitivity.avg)"
                                     :key="study.id + '_sp3'"
                                     :x1="study.sensitivity.avg * 200"
                                     :x2="study.sensitivity.avg * 200"
@@ -1144,6 +1146,7 @@
                                     </title>
                                   </rect>
                                   <line
+                                    v-if="study.specificity.min && study.specificity.max && !Number.isNaN(study.specificity.min) && !Number.isNaN(study.specificity.max)"
                                     :key="study.id + '_sp2'"
                                     :x1="getSpecificityX(study.specificity.min)"
                                     :x2="getSpecificityX(study.specificity.max)"
@@ -1154,6 +1157,7 @@
                                     "
                                   />
                                   <line
+                                    v-if="study.specificity.avg && !Number.isNaN(study.specificity.avg)"
                                     :key="study.id + '_sp3'"
                                     :x1="getSpecificityX(study.specificity.avg)"
                                     :x2="getSpecificityX(study.specificity.avg)"

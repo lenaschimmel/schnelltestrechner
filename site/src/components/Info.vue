@@ -68,7 +68,7 @@ export default {
     },
     content: {
       type: String,
-      required: true,
+      default: "",
     },
     type: {
       type: String, // tooltip, dialog
