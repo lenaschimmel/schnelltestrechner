@@ -19,7 +19,7 @@ npm i
 cd ../site
 npm i
 # copy Mathjax runtime as documented at http://docs.mathjax.org/en/latest/web/hosting.html
-cp -r node_modules/mathjax/es5 public/mathjax
+cp -r node_modules/mathjax/es5/* public/mathjax/
 npm run build
 if [ -z "$TARGET" ]; then 
     echo "Did not deploy. Set TARGET var to deploy."; 
