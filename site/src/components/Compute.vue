@@ -1139,7 +1139,7 @@ export default {
     },
     bayesFactorPos() {
       // If the false positive rate is 0, the bayes facotr would be infinity. This will break other computetions later.
-      // Using a hight, finite value kinda fixes it. We used to return 9999 here, which was so far from infinity that
+      // Using a high, finite value kinda fixes it. We used to return 9999 here, which was so far from infinity that
       // the result was useless. Using 99,999,999 instead reduces the error so much that it disappears from the
       // result display due to rounding - at least for true-positives which will be 100%.
       // It would still show 0.0001444 % false-positives, which will not be rounded down to 0 because of the

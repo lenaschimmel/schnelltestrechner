@@ -1,5 +1,5 @@
 <template>
-    <v-container class="fill-height">
+  <v-container class="fill-height">
     <v-row class="fill-height">
       <v-col cols="12" class="fill-height">
         <v-expansion-panels multiple class="mb-8" v-model="expandedPanelsInfo">
@@ -105,6 +105,135 @@
                   basierten Wert ersetzt werden.</strong
                 >
               </p>
+            </v-expansion-panel-content>
+          </v-expansion-panel>
+
+          <v-expansion-panel>
+            <v-expansion-panel-header
+              class="font-weight-bold text-uppercase"
+              color="blue lighten-3"
+            >
+              Berechnungsverfahren
+            </v-expansion-panel-header>
+            <v-expansion-panel-content color="blue lighten-5">
+              <h2 class="mt-4">Überblick</h2>
+              <p>
+                Die Berechnungen auf dieser Seite bestehen im Wesentlichen aus drei
+                Schritten:
+              </p>
+              <ol>
+                <li>Berechnung der Bayes-Faktoren aus Sensititvität und Spezifität</li>
+                <li>Berechnung der Vortestwahrscheinlichkeit</li>
+                <li>
+                  Berechnung der Nachtestwahrscheinlichkeiten für positive und negative
+                  Ergebnisse
+                </li>
+              </ol>
+              <p class="mt-4">
+                Die Schritte 1 und 3 sind rein mathematischer Natur und lassen sich
+                einfach darlegen und (objektiv) nachvollziehen. Für sie befindert sich unten eine Erläuterung.
+              </p>
+              <p>
+                Im Gegensatz dazu ist Schritt 2 eine ungefähre Abschätzung, quasi ein
+                vereinfachtes Modell der Realität. Hier sind eine Reihe von Annahmen und
+                (subjektiver) Entscheidungen nötig. Die Erläuterung wird in Kürze nachgetragen.
+              </p>
+              <h2>1. Berechnung der Bayes-Faktoren</h2>
+              <p>
+                Ein Test ist entweder positiv ($T$) oder negativ ($\overline{T}$). Eine
+                Person ist im leicht vereinfachten Modell binärer Tests entweder infiziert
+                ($I$) oder nicht infiziert ($\overline{I}$). Es wird keine Unterscheidung
+                zwischen <i>infiziert</i> und <i>infektiös</i> vorgenommen, und keine
+                Betrachtung von z.B. verschiedenen Viruslasten.
+              </p>
+
+              <p>
+                Die <b>Sensitivität</b> gibt die Wahrscheinlichkeit an, dass eine
+                infizierte Person ein posives Testergebnis erhält: $P(T|I)$. Und die
+                <b>Spezifität</b>, wie wahrscheinlich eine nicht infizierte ein negatives
+                Testergebnis erhält: $P(\overline{T}|\overline{I})$.
+              </p>
+
+              <p>
+                Für eine Person, deren tatsächlicher Infektionsstatus noch unbekannt ist,
+                kann ein solcher medizinischer Test nicht sicher sagen, ob sie infiziert
+                ist. Er kann nichtmal direkt bestimmen, mit welcher Wahrscheinlichkeit sie
+                infiziert ist. Er kann lediglig die zuvor bekannte Chance, infiziert bzw.
+                nicht infiziert zu sein, um gewisse Faktoren erhöhen. Dies sind die
+                sogenannten Bayes-Faktoren bzw. Likelihood-Quotienten:
+              </p>
+
+              $$ {B}_{pos} = {P(T|I) \over P(T|\overline{I})} ; {B}_{neg} =
+              {P(\overline{T}|I) \over P(\overline{T}|\overline{I})} $$
+
+              <p>
+                Der ${B}_{pos}$ gibt für ein positives Testergebnis an, wie viel
+                wahrscheinlicher eine Infektion ist. Üblicherweise gilt ${B}_{pos} > 1$.
+              </p>
+              <p>
+                Der ${B}_{neg}$ sagt entsprechend aus, wie viel wahrscheinlcher eine
+                Infektion bei negativem Testergebnis ist. Ein negativer Test lässt
+                effektiv die Chancen sinken, denn in aller Regel gilt: ${B}_{neg} &lt; 1$.
+              </p>
+
+              <p>
+                <i
+                  >Im "erweiterten Modus" werden die beiden Bayes-Faktoren unter dem
+                  ausgewählten Test angezeigt. Sie sind unabhängig von der
+                  Vortestwahrscheinlichkeit, also ein grundlegender Parameter eines
+                  Tests.</i
+                >
+              </p>
+
+              <h2>2. Berechnung der Vortestwahrscheinlichkeit</h2>
+              <p>
+                Dieses Seite führt eine relativ umfangreiche Abschätzung der
+                Vortestwahrscheinlichkeit durch, die in naher Zukunft erleutert werden wird. Im
+                simpelsten Fall kann sie z.B. auch sehr grob abgeschätzt werden, indem die
+                aktulle Prävalenz oder sogar Inzidenz eingesetzt wird.
+              </p>
+
+              <h2>3. Berechnung der Nachtestwahrscheinlichkeiten</h2>
+
+              <p>
+                Das direkte Multiplizieren der Bayes-Faktoren auf die
+                Vortestwahrscheinlichkeit führt im Allgemeinen zu falschen Ergebnissen -
+                insbesondere zu Wahrscheinlichkeiten über $1$. Für extrem kleine
+                Vortestwahrscheinlichkeit ist der Fehler allerdings vernachlässigbar.
+              </p>
+
+              <p>
+                Für eine korrekte Berechnung muss die Vortestwahrscheinlichkeit $0 &lt;=
+                P(I) &lt;= 1$ in eine Chance bzw. Likelihood $0 &lt; L(I) &lt; \infty$
+                umgerechnet werden. Diese können später wieder zurück in
+                Wahrscheinlichkeiten konvertiert werden. Allgemein:
+              </p>
+
+              $$L(x) = {P(x) \over {1 - P(x)}} ; P(x) = {L(x) \over {1 + L(x)}}$$
+
+              <p>Likelihoods können valide mit Bayses-Faktoren multipliziert werden:</p>
+
+              $$L(I|T) = L(I) \cdot {B}_{pos} ; L(I|\overline{T}) = L(I) \cdot {B}_{neg}$$
+              Final ergibt sich: $$P(I|T) = { {P(I) \over {1 - P(I)} } {B}_{pos} \over {1
+              + {P(I) \over {1 - P(I)} } {B}_{pos} } } = { {P(I) \over {1 - P(I)} } \cdot
+              {P(T|I) \over P(T|\overline{I})} \over {1 + {P(I) \over {1 - P(I)} } \cdot
+              {P(T|I) \over P(T|\overline{I})} } }$$
+              
+              $$P(I|\overline{T}) = { {P(I) \over
+              {1 - P(I)} } {B}_{neg} \over {1 + {P(I) \over {1 - P(I)} } {B}_{neg} } } = {
+              {P(I) \over {1 - P(I)} } \cdot {P(\overline{T}|I) \over
+              P(\overline{T}|\overline{I})} \over {1 + {P(I) \over {1 - P(I)} } \cdot
+              {P(\overline{T}|I) \over P(\overline{T}|\overline{I})} } }$$
+
+              $$P(\overline{I}|T) = 1 - P(I|T)$$
+              $$P(\overline{I}|\overline{T}) = 1 - P(I|\overline{T})$$
+
+              <!--
+                $$ P(I|T) = \text{Wahrscheinlichkeit, dass eine Person mit positivem Testergebnis infiziert ist} $$
+                $$ P(\overline{I}|T) = \text{Wahrscheinlichkeit, dass eine Person mit positivem Testergebnis gesund ist} $$
+                $$ P(I|\overline{T}) = \text{Wahrscheinlichkeit, dass eine Person mit negativem Testergebnis infiziert ist} $$
+                $$ P(\overline{I}|\overline{T}) = \text{Wahrscheinlichkeit, dass eine Person mit negativem Testergebnis gesund ist} $$
+-->
             </v-expansion-panel-content>
           </v-expansion-panel>
 
@@ -294,12 +423,16 @@
 <script>
 export default {
   name: "Information",
-  props: {
-  },
+  props: {},
   data: () => ({
     expandedPanelsInfo: [0, 1],
   }),
+  mounted() {
+    window.MathJax.typeset();
+  },
+  updated() {
+    window.MathJax.typeset();
+  },
 };
 </script>
-<style scoped>
-</style>
+<style scoped></style>
