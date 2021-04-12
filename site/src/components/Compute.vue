@@ -146,7 +146,7 @@
                             evaluiert
                             <Info
                               type="Dialog"
-                              content="Das Paul-Ehrlich-Institut prüft einige Schnelltests, ob diese Mindeskriterien erfüllen. Im Tab 'Weitere Infos' gibt es einen ganzen Textabschnitt zur Bedeutung dieser Evaluation."
+                              content="Das Paul-Ehrlich-Institut prüft einige Schnelltests, ob diese Mindeskriterien erfüllen. Zugelassene Selbst-Tests sind per Defition vom PEI zugelassen. Im Tab 'Weitere Infos' gibt es einen ganzen Textabschnitt zur Bedeutung dieser Evaluation."
                             />
                           </div>
                         </template>
@@ -343,9 +343,19 @@
                   class="mt-4"
                   v-if="this.selectedTest != null && Number.isNaN(this.sensitivity)"
                 >
-                  Zu diesem Test hat der Hersteller keine Sensitivität und Spezifität
-                  angegeben. Bitte einen anderen Test auswählen oder Daten selbst
-                  eingeben.
+                  Zu diesem Test liegen uns keine Daten zu Sensitivität und Spezifität vom Hersterller vor. Bitte einen anderen Test auswählen oder eigene Werte eingeben.
+                </v-alert>
+
+                <v-alert
+                  icon="mdi-alert"
+                  dense
+                  outlined
+                  type="warning"
+                  text
+                  class="mt-4"
+                  v-if="peiAssumption"
+                >
+                  Zu diesem Test liegen uns keine Daten zu Sensitivität und Spezifität vom Hersterller vor. <b>Für die Berechnung werden daher die Mindestkriterien des PEI angenommen.</b> Falls du die Daten kennst, z.B. aus dem Beipackzettel, kannst du diese selbst eingeben. In dem Fall freuen wir uns auch über eine Nachticht, damit wir die Daten bei uns einpflegen können.
                 </v-alert>
 
                 <v-alert
@@ -1015,7 +1025,6 @@ export default {
       }
     },
     updatedProbPos: function (newVal) {
-
         this.result.probPos = newVal;
         this.result.valid = this.resultValid;
     },
@@ -1044,16 +1053,26 @@ export default {
       }
       return [];
     },
+    peiAssumption() {
+      return this.selectedTest && !this.selectedTest.studies[this.studyId] && this.selectedTest.pei;
+    },
     sensitivity() {
       if (this.loadedData.testsKind == "input") {
         return (
           parseFloat(this.sensitivityString.replace(",", ".").replace("%", "")) / 100.0
         );
       } else {
-        if (this.selectedTest && this.selectedTest.studies[this.studyId]) {
+        if (!this.selectedTest) {
+          return Number.NaN;
+        }
+        if (this.selectedTest.studies[this.studyId]) {
           return this.selectedTest.studies[this.studyId].sensitivity[this.confidence];
         } else {
-          return Number.NaN;
+          if (this.selectedTest.pei) {
+            return 0.8; // we have no better data, so assume the test just matches the minimum criteria
+          } else {
+            return Number.NaN;
+          }
         }
       }
     },
@@ -1063,10 +1082,17 @@ export default {
           parseFloat(this.specificityString.replace(",", ".").replace("%", "")) / 100.0
         );
       } else {
-        if (this.selectedTest && this.selectedTest.studies[this.studyId]) {
+        if (!this.selectedTest) {
+          return Number.NaN;
+        }
+        if (this.selectedTest.studies[this.studyId]) {
           return this.selectedTest.studies[this.studyId].specificity[this.confidence];
         } else {
-          return Number.NaN;
+          if (this.selectedTest.pei) {
+            return 0.97; // we have no better data, so assume the test just matches the minimum criteria
+          } else {
+            return Number.NaN;
+          }
         }
       }
     },
