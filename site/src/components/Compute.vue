@@ -808,7 +808,6 @@
 
 <script>
 import Info from "./Info.vue";
-import Vue from 'vue';
 
 export default {
   components: {
@@ -1210,23 +1209,6 @@ export default {
       let priorOdds = this.priorProbSymptoms / (1.0 - this.priorProbSymptoms);
       let updatedOddsNeg = priorOdds * this.bayesFactorNeg;
       return updatedOddsNeg / (1.0 + updatedOddsNeg);
-    },
-    testSelectSuccess() {
-      if (!Number.isNaN(this.sensitivity) && !Number.isNaN(this.specificity))
-        return (
-          Vue.filter.formatPercent(this.sensitivity) +
-          " Sensitivität, " +
-          Vue.filter.formatPercent(this.specificity) +
-          " Spezifität"
-        );
-      else return null;
-    },
-    testSelectError() {
-      if (!Number.isNaN(this.sensitivity) && !Number.isNaN(this.specificity)) return null;
-
-      if (!this.selectedTest) return "Bitte einen Test auswählen";
-
-      return "Keine Daten für diesen Test verfügbar";
     },
     testHeaders() {
       if (this.$vuetify.breakpoint.xsOnly)
