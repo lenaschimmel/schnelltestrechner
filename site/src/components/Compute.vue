@@ -1114,11 +1114,11 @@ export default {
       if (this.incidenceSource == "input") {
         return parseFloat(this.incidenceString.replace(",", "."));
       } else if (this.incidenceSource == "germany" && this.loadedData.germany) {
-        return this.loadedData.germany[6].weekIncidence;
+        return this.loadedData.germany[7].weekIncidence;
       } else if (this.incidenceSource == "state" && this.selectedState) {
-        return this.selectedState.history[6].weekIncidence;
+        return this.selectedState.history[7].weekIncidence;
       } else if (this.incidenceSource == "district" && this.selectedDistrict) {
-        return this.selectedDistrict.history[6].weekIncidence;
+        return this.selectedDistrict.history[7].weekIncidence;
       } else {
         return 0.0;
       }
