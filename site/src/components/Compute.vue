@@ -355,7 +355,7 @@
                   class="mt-4"
                   v-if="peiAssumption"
                 >
-                  Zu diesem Test liegen uns keine Daten zu Sensitivität und Spezifität vom Hersterller vor. <b>Für die Berechnung werden daher die Mindestkriterien des PEI angenommen.</b> Falls du die Daten kennst, z.B. aus dem Beipackzettel, kannst du diese selbst eingeben. In dem Fall freuen wir uns auch über eine Nachticht, damit wir die Daten bei uns einpflegen können.
+                  Zu diesem Test liegen uns keine Daten zu Sensitivität und Spezifität vom Hersterller vor. <b>Für die Berechnung werden daher die Mindestkriterien des PEI angenommen.</b> Falls du die Daten kennst, z.B. aus dem Beipackzettel, kannst du diese selbst eingeben. In dem Fall freuen wir uns auch über eine Nachricht, damit wir die Daten bei uns einpflegen können.
                 </v-alert>
 
                 <v-alert
