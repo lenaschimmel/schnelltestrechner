@@ -458,7 +458,7 @@
                   Bundesland:
                   <v-select
                     v-model="stateId"
-                    :items="states"
+                    :items="loadedData.states"
                     item-text="name"
                     item-value="id"
                     solo
