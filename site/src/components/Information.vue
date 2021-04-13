@@ -225,7 +225,7 @@
                 Schritten:
               </p>
               <ol>
-                <li>Berechnung der Bayes-Faktoren aus Sensititvität und Spezifität</li>
+                <li>Berechnung der Bayes-Faktoren aus Sensitivität und Spezifität</li>
                 <li>Berechnung der Vortestwahrscheinlichkeit</li>
                 <li>
                   Berechnung der Nachtestwahrscheinlichkeiten für positive und negative
@@ -291,14 +291,14 @@
               <h2>2. Berechnung der Vortestwahrscheinlichkeit</h2>
               <h3>2.1. Inzidenz und Prävalenz</h3>
               <p>
-                In den meisten Fällen wir vom User eine Region $R$ (ganz Deutschland, ein
+                In den meisten Fällen wird vom User eine Region $R$ (ganz Deutschland, ein
                 Bundesland oder ein Landkreis) ausgewählt. Für diese wird die
                 7-Tage-Inzidenz je 100.000 laut RKI ermittelt, wie sie vor 2 und vor 9
                 Tagen gemeldet wurden. (Die Werte des aktuellen und des Vortages haben
                 sich als oft fehlerträchtig gezeigt.)
               </p>
 
-              <p>Daraus wird ein Wachstumsfaktor ermittelt, der auf 2 gedecket wird:</p>
+              <p>Daraus wird ein Wachstumsfaktor ermittelt, der auf 2 gedeckelt wird:</p>
 
               $$f_{g} = \min(2, I_{R,-2} / I_{R,-9})$$ Die Entwicklung wird um eine Woche
               in die Zukunft extrapoliert, um den Meldeverzug auszugleichen. Die Prävalenz
@@ -339,7 +339,7 @@
                   target="_blank"
                   >www.addendum.org</a
                 >
-                wie folgt eingestuft, wobei "Büro" als durchschnittliches Risoko
+                wie folgt eingestuft, wobei "Büro" als durchschnittliches Risiko
                 angenommen wurde:
               </p>
 
@@ -423,7 +423,11 @@
 
               <p>
                 Die Punkte für alle zutreffenden Symptomkombinationen werden
-                zusammengezählt und daraus der Faktor $f_s$ abgelesen:
+                zusammengezählt und daraus der Faktor $f_s$ abgelesen. Zusätzlich zu den Werten von $f_s$ wie sie von Smith et al. angegeben werden wird ein Faktor von $18,8$ aufgerechnet. Die Begründung sowie die unsichere Herleitung dieses Faktors wurde an mehreren Stellen (z.B.  <a
+                      href="https://github.com/lenaschimmel/schnelltestrechner/issues/9#issuecomment-805657593"
+                      target="_blank"
+                      >GitHub</a
+                    >) thematisiert. Er sorgt u.A. dafür, dass das Vorliegen von Symptomen niemals die Vortestwahrscheinlichkeit unter den symptomfreien Fall $p_-$ senkt.
               </p>
 
               <v-simple-table dense style="width: max-content" class="mb-4">
@@ -432,28 +436,34 @@
                     <tr>
                       <th class="text-left">Punkte-Summe</th>
                       <th class="text-left">Faktor $f_s$</th>
+                      <th class="text-left">$f_s \cdot 18.8$</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
                       <td>3</td>
                       <td>15,0</td>
+                      <td>{{15.0 * 18.8 | formatNumber}}</td>
                     </tr>
                     <tr>
                       <td>2</td>
                       <td>4,2</td>
+                      <td>{{4.2 * 18.8 | formatNumber}}</td>
                     </tr>
                     <tr>
                       <td>1</td>
                       <td>1,2</td>
+                     <td>{{1.2 * 18.8 | formatNumber}}</td>
                     </tr>
                     <tr>
                       <td>0</td>
                       <td>0,7</td>
+                      <td>{{0.7 * 18.8 | formatNumber}}</td>
                     </tr>
                     <tr>
                       <td>-1</td>
                       <td>0,1</td>
+                      <td>{{0.1 * 18.8 | formatNumber}}</td>
                     </tr>
                   </tbody>
                 </template>
@@ -462,9 +472,15 @@
               <p>
                 Da der Symptomstatus selbst wie ein binärer medizinischer Test gewertet
                 wird, der die Vortestwahrscheinlichkeit modifiziert, wird $f_s$ nicht
-                direkt auf die Wahrscheinlichkeit $p_?$ , sondern auf die Chance bzw.
-                Likelihood $L_?$ aufgerechnet:
+                direkt auf die Wahrscheinlichkeit $p_?$ , sondern als Bayes-Faktor angesehen und auf die Chance bzw.
+                Likelihood $L_?$ aufgerechnet.
               </p>
+              <p>Allgemein ist die Umrechnung zwischen Wahrscheinlichkeiten und Likelihoods:</p>
+
+
+              $$L(x) = {P(x) \over {1 - P(x)}} ; P(x) = {L(x) \over {1 + L(x)}}$$
+
+              <p>Spezifisch für die Vortestwahrscheinlichkeit nach Symptomen:</p>
 
               $$L_? = { {p_?} \over {1 - p_?} }$$
               
@@ -498,9 +514,7 @@
                 Wahrscheinlichkeiten konvertiert werden. Allgemein:
               </p>
 
-              $$L(x) = {P(x) \over {1 - P(x)}} ; P(x) = {L(x) \over {1 + L(x)}}$$
-
-              <p>Likelihoods können valide mit Bayses-Faktoren multipliziert werden:</p>
+              <p>Likelihoods können valide mit Bayes-Faktoren multipliziert werden:</p>
 
               $$L(I|T) = L(I) \cdot {B}_{pos} ; L(I|\overline{T}) = L(I) \cdot {B}_{neg}$$
               Final ergibt sich: $$P(I|T) = { {P(I) \over {1 - P(I)} } {B}_{pos} \over {1
@@ -514,12 +528,14 @@
               $$P(\overline{I}|T) = 1 - P(I|T)$$ $$P(\overline{I}|\overline{T}) = 1 -
               P(I|\overline{T})$$
 
-              <!--
+              <p>Dabei bedeutet:</p>
+
+              
                 $$ P(I|T) = \text{Wahrscheinlichkeit, dass eine Person mit positivem Testergebnis infiziert ist} $$
-                $$ P(\overline{I}|T) = \text{Wahrscheinlichkeit, dass eine Person mit positivem Testergebnis gesund ist} $$
+                $$ P(\overline{I}|T) = \text{Wahrscheinlichkeit, dass eine Person mit positivem Testergebnis nicht infiziert ist} $$
                 $$ P(I|\overline{T}) = \text{Wahrscheinlichkeit, dass eine Person mit negativem Testergebnis infiziert ist} $$
-                $$ P(\overline{I}|\overline{T}) = \text{Wahrscheinlichkeit, dass eine Person mit negativem Testergebnis gesund ist} $$
--->
+                $$ P(\overline{I}|\overline{T}) = \text{Wahrscheinlichkeit, dass eine Person mit negativem Testergebnis nicht infiziert ist} $$
+
             </v-expansion-panel-content>
           </v-expansion-panel>
 
@@ -539,14 +555,14 @@
               <p>
                 <b
                   >Die Relevanz der PEI-Evaluation kann leicht überschätzt werden, da der
-                  Anschein entsteht, die Tests würden unabhängig bzgl. Sensititvität
+                  Anschein entsteht, die Tests würden unabhängig bzgl. Sensitivität
                   <i>und</i> Spezifität getestet werden. Das ist nicht der Fall.</b
                 >
               </p>
               <p>
                 Das PEI fragt u. A. die Sensitivität und Spezifität vom Hersteller ab, und
                 legt daran Mindestkriterien an. Nur wenn ein Test laut Hersteller
-                mindestens 80% Sensititvität und mindestens 97% Spezifität hat, kommt er
+                mindestens 80% Sensitivität und mindestens 97% Spezifität hat, kommt er
                 für die Evaluierung überhaupt in Frage.
               </p>
               <p>
@@ -571,7 +587,7 @@
               </p>
               <p>
                 Der durchgeführte Test ist zwar geeignet, eine vage Aussage zur
-                Sensititvität zu machen, jedoch wird dabei kein Wert Ermittelt, der direkt
+                Sensitivität zu machen, jedoch wird dabei kein Wert Ermittelt, der direkt
                 mit den Ergebnissen der Hersteller oder anderer unabhängiger Studien
                 verglichen werden kann. Insbesondere wird vom PEI kein solcher Wert als
                 Prozentangabe veröffentlicht, sondern nur die Liste der Tests, die als
