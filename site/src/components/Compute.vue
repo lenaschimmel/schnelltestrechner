@@ -1057,7 +1057,7 @@ export default {
       return this.selectedTest && !this.selectedTest.studies[this.studyId] && this.selectedTest.pei;
     },
     sensitivity() {
-      if (this.loadedData.testsKind == "input") {
+      if (this.testsKind == "input") {
         return (
           parseFloat(this.sensitivityString.replace(",", ".").replace("%", "")) / 100.0
         );
@@ -1077,7 +1077,7 @@ export default {
       }
     },
     specificity() {
-      if (this.loadedData.testsKind == "input") {
+      if (this.testsKind == "input") {
         return (
           parseFloat(this.specificityString.replace(",", ".").replace("%", "")) / 100.0
         );
