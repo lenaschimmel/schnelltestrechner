@@ -7,7 +7,6 @@ Pollock, N.R., et al.;USA;low concern;yes;fresh;AN;2308;78.1% (95% CI 77.4-72.2)
 Pilarowski, G., et al.;USA;low concern;no;fresh;AN;878;57.7% (95% CI 36.9*-76.7*);100%* (95% CI 99.6*-100*)
 James, A. E., et al.;USA;low concern;yes;fresh;AN;2339;56.5% (95% CI 48.7-64.5);99.9% (95% CI 99.7-100)
 Okoye, N.C., et al.;USA;intermediate concern;unclear;fresh;MT;2645;53.3% (95% CI 39.1-67.1);100% (95% CI 99.9-100)
-Prince-Guerra, J.L., et al.;USA;low concern;yes;stored;AN;3419;52.5% (95% CI 46.7-58.3);99.9% (95% CI 99.7-100)
 ;;;;;;;;
 Abbott, Panbio™ (NP sampling);;;;;;;;
 Domínguez Fernández, M., et al.;Spain;intermediate concern;unclear;fresh;unclear;30;95.0% (not provided);100% (not provided)
@@ -16,7 +15,9 @@ FINDdx;Germany;low concern;yes;fresh;NP;281;90.9% (95% CI 78.8-96.4);99.2% (95% 
 Merino-Amador, P., et al.;Spain;low concern;no;fresh;NP;958;90.5% (95% CI 87.5-93.6);98.8% (95% CI 98.0-99.7)
 Krüger, L.J., et al.;Germany;low concern;yes;fresh;NP;1034;87.5% (95% CI 79.8-92.5);99.9% (95% CI 99.4-100)
 Schwob, J.M., et al.;Switzerland;low concern;yes;fresh;NP;271;86.1% (95% CI 78.6-91.7);100% (95% CI 97.6*-100*)
+Stokes, W., et al.;Canada;low concern;yes;fresh;NP;1641;86.1% (95% CI 81.3-90.0);99.9% (95% CI 99.5-100)
 Berger, A., et al.;Switzerland;low concern;yes;fresh;NP;535;85.5% (95% CI 78.0-91.2);100% (95% CI 99.1-100)
+Faíco-Filho, K.S., et al.;Brazil;low concern;no;fresh;NP;127;84.0% (95% CI 75.0-93.8);98.0% (95% CI 96.0-98.8)
 Jääskeläinen, A.E., et al.;Finland;high concern;yes;banked;NP;190;83.0% (95% CI 76.1-88.1);100% (not provided)
 Abdulrahman, A., et al.;Bahrain;intermediate concern;yes;fresh;AN;4183;82.1% (95% CI 79.2-84.8);99.1% (95% CI 98.8-99.4)
 Gremmels, H., et al.;Netherlands;intermediate concern;yes;fresh;NP;208;81.0% (95% CI 69.0-89.9);100% (95% CI 97.5-100)
@@ -29,6 +30,7 @@ Gremmels, H., et al.;Netherlands;intermediate concern;yes;fresh;NP;1367;72.6% (9
 Halfon, P. et al.;France;intermediate concern;yes;unclear;NP;200;72.0% (95% CI 62.0-81.0);99.0% (95% CI 95.0-100)
 Bulilete, O., et al.;Spain;low concern;yes;fresh;NP;1362*;71.4% (95% CI 63.2*-78.7);99.8% (95% CI 99.4-99.9)
 Akingba, O.L., et al.;Southafrica;unclear;yes;fresh;NP;677;69.2% (95% CI 61.4-75.8);99.0% (95% CI 98.8-99.2)
+Del Vecchio, C., et al.;Italy;low concern;yes;fresh;unclear;1441;68.9% (95% CI 55.7-80.1);99.9% (95% CI 99.6-100)
 Favresse, J., et al.;Belgium;intermediate concern;yes;fresh;NP;188;67.7% (95% CI 57.4-76.9);100% (95% CI 96.1-100)
 Drevinek, P., et al.;Czech Republic;low concern;yes;fresh;NP;591;66.4% (95% CI 59.9-72.2);100% (95% CI 99.0-100)
 Pérez-García, F., et al.;Spain;high concern;no;banked;NP;320;60.0% (95% CI 52.2-67.4);100% (95% CI 97.6-100)
@@ -50,10 +52,13 @@ Access Bio, CareStart™ COVID-19 Antigen Test;;;;;;;;
 Pollock, N.R., et al.;USA;low concern;yes;fresh;AN;1498;57.7% (95% CI 51.1-64.1);98.3% (95% CI 97.5-99.0)
 ;;;;;;;;
 Becton, Dickinson and Company, BD Veritor™;;;;;;;;
-Pekosz, A., et al.;USA;high concern;no;fresh;NP;251;96.4% (95% CI 82.3-99.4);98.7% (95% CI 96.1-99.7)
+Pekosz, A., et al.;USA;high concern;no;fresh;NP;251;"96.4% (95% CI 82.3-99.4)
+compared to virus culture";"98.7% (95% CI 96.1-99.7)
+compared to virus culture"
 Van der Moeren, N., et al.;Netherlands;intermediate concern;yes;banked;NP/OP;351*;94.1% (95% CI 71.1-100);100% (95% CI 98.9-100)
 Marti, J.L.G., et al.;USA;unclear;yes;fresh;AN;unknown;93.8% (not provided);100% (not provided)
 Young, S., et al.;USA;intermediate concern;no;banked;NP;251;76.3%* (95% CI 60.8*-87.0*);99.5%* (95% CI 97.4*-99.9*)
+Schuit, E., et al.;Netherlands;intermediate concern;yes;fresh;NP;2678;63.9% (95% CI 57.4-70.1);99.6% (95% CI 99.3-99.8)
 Caruana, G., et al.;Switzerland;intermediate concern;yes;fresh;NP;532;41.2% (not provided);99.7% (not provided)
 ;;;;;;;;
 Becton, Dickinson and Company, Hometest;;;;;;;;
@@ -154,9 +159,13 @@ Herrera, V., et al.;USA;unclear;yes;unclear;unclear;1172;76.8% (95% CI 72.6-80.5
 Marti, J.L.G., et al.;USA;unclear;yes;fresh;MT;427;72.0% (not provided);99.0% (not provided)
 ;;;;;;;;
 RapiGEN, Biocredit Covid-19 Antigen Detection Kit;;;;;;;;
+Shidlovskaya, E., et al.;Russia;low concern;yes;fresh;NP;106;"100% (95% CI 76.8-100)
+compared to virus culture";"67.4% (95% CI 56.8-76.8)
+compared to virus culture"
 Shrestha, B., et al.;Nepal;intermediate concern;yes;fresh;NP;113;85.0% (95% CI 71.7*-93.8*);100% (95% CI 94.6*-100*)
 FINDdx;Brazil;low concern;yes;fresh;NP;476;74.4% (95% CI 65.8-81.4);99.0% (95% CI 97.2-99.6)
 Weitzel, T., et al.;Chile;high concern;no;banked;NOP;109;62.0% (95% CI 51.0-71.9);100% (95% CI 88.7-100)
+Shidlovskaya, E., et al.;Russia;low concern;yes;fresh;NP;106;56.4% (95% CI 44.7-67.6);100% (95% CI 87.7-100)
 Schildgen, V., et al.;Germany;high concern;yes;unclear;BAL/TW;73;33.3% (95% CI 19.6*-49.6*);87.1% (95% CI 70.2*-94.6*)
 ;;;;;;;;
 R-Biopharm, RIDA®QUICK SARS-CoV-2 Antigen;;;;;;;;
@@ -199,6 +208,7 @@ Nalumansi, A., et al.;Uganda;low concern;yes;fresh;NP;262;70.0% (95% CI 60.0-79.
 Pena, M., et al.;Chile;low concern;yes;fresh;NP;842;69.8% (95% CI 58.5-79.2);99.6% (95% CI 98.86-99.87)
 Favresse, J., et al.;Belgium;intermediate concern;yes;fresh;NP;188;69.8% (95% CI 59.6-78.8);100% (95% CI 96.1-100)
 Osterman, A., et al.;Germany;high concern;yes;unclear;NP/OP;386;64.5% (95% CI 58.4-70.1);97.7% (95% CI 95.6-98.8)
+Schuit, E., et al.;Netherlands;low concern;yes;fresh;NP;1596;62.9% (95% CI 54.0-71.1);99.5% (95% CI 98.9-99.8)
 Ristic, M., et al.;Serbia;low concern;yes;fresh;NP;120;58.1% (95% CI 42.1-73.0);100% (not provided)
 Kannian, P., et al.;India;high concern;yes;unclear;saliva;37;56.0% (not provided);100% (not provided)
 Olearo, F., et al.;Germany;intermediate concern;yes;unclear;OP;184;49.4% (95% CI 38.9-59.9);100% (95% CI 96.3-100)
@@ -225,6 +235,15 @@ Torres, I. et al.;Spain;low concern;yes;fresh;NP;178;80.2% (95% CI 70.9-87.1);10
 Torres, I. et al.;Spain;low concern;yes;fresh;NP;92;60.0% (95% CI 40.7-76.6);100% (95% CI 94.6-100)
 Olearo, F., et al.;Germany;intermediate concern;yes;unclear;OP;170;54.9% (95% CI 43.4-65.9);100% (95% CI 96.3-100)
 Baro, B., et al.;Spain;intermediate concern;yes;banked;NP;286;51.5% (95% CI 41.3-61.6);98.4% (95% CI 95.3-99.6)
+;;;;;;;;
+SIENNA, COVID-19 Antigen Rapid Test;;;;;;;;
+Bouassa, M.R.S., et al.;France;high concern;no;banked;NP;100;90% (95% CI 84.1-95.9);100% (95% CI 99.9-100)
+;;;;;;;;
+Sugentech, SGTi-flex COVID-19 Ag;;;;;;;;
+Shidlovskaya, E., et al.;Russia;low concern;yes;fresh;NP;106;"78.6% (95% CI 49.2-95.3)
+compared to viral culture";"66.3% (95% CI 55.7-75.8)
+compared to viral culture"
+Shidlovskaya, E., et al.;Russia;low concern;yes;fresh;NP;106;52.6% (95% CI 40.9-64.0);96.4% (95% CI 81.7-99.9)
 ;;;;;;;;
 SureScreen, COVID-19 Rapid Antigen Test Cassette;;;;;;;;
 Baro, B., et al.;Spain;intermediate concern;yes;banked;NP;286;28.8% (95% CI 20.2-38.6);97.8% (95% CI 94.5-99.4)
