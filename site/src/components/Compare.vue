@@ -227,11 +227,11 @@
                           >
                             <title>
                               {{
-                                (study.specificity.avg | $options.filters.formatPercent) +
+                                $options.filters.formatPercent(study.specificity.avg) +
                                 " (95% CI: " +
-                                (study.specificity.min | $options.filters.formatPercent) +
+                                $options.filters.formatPercent(study.specificity.min) +
                                 " bis " +
-                                (study.specificity.max | $options.filters.formatPercent) +
+                                $options.filters.formatPercent(study.specificity.max) +
                                 ") - " +
                                 study.author +
                                 ", n = " +
