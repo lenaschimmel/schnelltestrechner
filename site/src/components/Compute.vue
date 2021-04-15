@@ -415,6 +415,21 @@
               Inzidenz und Prävalenz
             </v-expansion-panel-header>
             <v-expansion-panel-content color="blue lighten-5" class="pt-4">
+                    <v-alert color="orange" type="warning" icon="mdi-alert">
+          <p>
+            Aktuell gibt es Probleme mit der offiziellen API des RKI, die auch unsere Datenquelle, <a
+              href="https://api.corona-zahlen.org/docs/"
+              target="_blank"
+              class="white--text"
+              >corona-zahlen.org</a
+            >, betreffen. Bis das Problem behoben ist, werden hier die Inzidenzdaten vom Abend des 13. April verwendet. Das Problem ist <a
+              href="https://github.com/marlon360/rki-covid-api/issues/179"
+              target="_blank"
+              class="white--text"
+              >hier</a
+            > dokumentiert.
+          </p>
+        </v-alert>
               <p>
                 Wähle aus, ob die Inzidenz einer Region oder ein eigener Wert genutzt
                 werden soll.
