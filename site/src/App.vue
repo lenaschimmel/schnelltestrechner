@@ -127,6 +127,7 @@ export default {
         states: [],
         districts: [],
         districtsFull: {},
+        date: null
       },
       result: {
         prior: NaN,
@@ -186,6 +187,7 @@ export default {
         .then((response) => response.json())
         .then((root) => {
           this.loadedData.germany = root.data;
+          this.loadedData.date = new Date(Date.parse(root.meta.lastUpdate));
         })
         .catch((error) => console.log(error));
       fetch(apiStates)

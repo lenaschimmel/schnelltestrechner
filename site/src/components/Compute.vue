@@ -328,7 +328,7 @@
                       >
                       <v-col cols="12" sm="6" md="3" no-gutters
                         >Bayes-Faktor bei negativem Test:
-                        {{ (1 / bayesFactorNeg) | formatNumber}}</v-col
+                        {{ (1 / bayesFactorNeg) | formatNumber }}</v-col
                       >
                     </template>
                   </v-row>
@@ -343,7 +343,9 @@
                   class="mt-4"
                   v-if="this.selectedTest != null && Number.isNaN(this.sensitivity)"
                 >
-                  Zu diesem Test liegen uns keine Daten zu Sensitivität und Spezifität vom Hersterller vor. Bitte einen anderen Test auswählen oder eigene Werte eingeben.
+                  Zu diesem Test liegen uns keine Daten zu Sensitivität und Spezifität vom
+                  Hersterller vor. Bitte einen anderen Test auswählen oder eigene Werte
+                  eingeben.
                 </v-alert>
 
                 <v-alert
@@ -355,7 +357,15 @@
                   class="mt-4"
                   v-if="peiAssumption"
                 >
-                  Zu diesem Test liegen uns keine Daten zu Sensitivität und Spezifität vom Hersterller vor. <b>Für die Berechnung werden daher die Mindestkriterien des PEI angenommen.</b> Falls du die Daten kennst, z.B. aus dem Beipackzettel, kannst du diese selbst eingeben. In dem Fall freuen wir uns auch über eine Nachricht, damit wir die Daten bei uns einpflegen können.
+                  Zu diesem Test liegen uns keine Daten zu Sensitivität und Spezifität vom
+                  Hersterller vor.
+                  <b
+                    >Für die Berechnung werden daher die Mindestkriterien des PEI
+                    angenommen.</b
+                  >
+                  Falls du die Daten kennst, z.B. aus dem Beipackzettel, kannst du diese
+                  selbst eingeben. In dem Fall freuen wir uns auch über eine Nachricht,
+                  damit wir die Daten bei uns einpflegen können.
                 </v-alert>
 
                 <v-alert
@@ -415,21 +425,6 @@
               Inzidenz und Prävalenz
             </v-expansion-panel-header>
             <v-expansion-panel-content color="blue lighten-5" class="pt-4">
-                    <v-alert color="orange" type="warning" icon="mdi-alert">
-          <p>
-            Aktuell gibt es Probleme mit der offiziellen API des RKI, die auch unsere Datenquelle, <a
-              href="https://api.corona-zahlen.org/docs/"
-              target="_blank"
-              class="white--text"
-              >corona-zahlen.org</a
-            >, betreffen. Bis das Problem behoben ist, werden hier die Inzidenzdaten vom Abend des 13. April verwendet. Das Problem ist <a
-              href="https://github.com/marlon360/rki-covid-api/issues/179"
-              target="_blank"
-              class="white--text"
-              >hier</a
-            > dokumentiert.
-          </p>
-        </v-alert>
               <p>
                 Wähle aus, ob die Inzidenz einer Region oder ein eigener Wert genutzt
                 werden soll.
@@ -496,6 +491,33 @@
                 </p>
               </template>
 
+              <template v-if="incidenceSource != 'input' && incidenceSource != 'inputPrevalence'">
+                <p>
+                  Quelle der Inzidenzdaten:
+                  <a href="https://api.corona-zahlen.org" target="_blank"
+                    >api.corona-zahlen.org</a
+                  >
+                  - Stand der Daten: {{ dataUpdateDate }}
+                </p>
+                <v-alert color="orange" type="warning" icon="mdi-alert" v-if="isDataTooOld">
+                    Zeitweise gibt es Probleme mit der offiziellen API des RKI, die auch
+                    unsere Datenquelle,
+                    <a
+                      href="https://api.corona-zahlen.org/docs/"
+                      target="_blank"
+                      class="white--text"
+                      >corona-zahlen.org</a
+                    >, betreffen. Deshalb werden unter umständen veraltete Daten genutzt. Das Problem ist
+                    <a
+                      href="https://github.com/lenaschimmel/schnelltestrechner/issues/48"
+                      target="_blank"
+                      class="white--text"
+                      >hier</a
+                    >
+                    dokumentiert. 
+                </v-alert>
+              </template>
+
               <template v-if="incidenceSource == 'input'">
                 <p>
                   7-Tage Inzidenz je 100.000:
@@ -515,14 +537,6 @@
                     incidenceSource != 'input' && incidenceSource != 'inputPrevalence'
                   "
                 >
-                  <p>
-                    <i
-                      >Quelle der Inzidenzdaten:
-                      <a href="https://api.corona-zahlen.org" target="_blank"
-                        >api.corona-zahlen.org</a
-                      ></i
-                    >
-                  </p>
                   <p>
                     Gemeldete 7-Tage Inzidenz je 100.000 diese Woche:
                     <input disabled :value="incidence | formatNumber" />
@@ -840,9 +854,9 @@ export default {
   },
   name: "Compute",
   props: {
-      loadedData: Object,
-      result: Object,
-      detailedMode: Boolean,
+    loadedData: Object,
+    result: Object,
+    detailedMode: Boolean,
   },
   data: () => ({
     // showing any symtomps that might lead to PCR testing in Germany
@@ -1040,19 +1054,46 @@ export default {
       }
     },
     updatedProbPos: function (newVal) {
-        this.result.probPos = newVal;
-        this.result.valid = this.resultValid;
+      this.result.probPos = newVal;
+      this.result.valid = this.resultValid;
     },
     updatedProbNeg: function (newVal) {
-        this.result.probNeg = newVal;
-        this.result.valid = this.resultValid;
+      this.result.probNeg = newVal;
+      this.result.valid = this.resultValid;
     },
     priorProbSymptoms: function (newVal) {
-        this.result.prior = newVal;
-        this.result.valid = this.resultValid;
-    }
+      this.result.prior = newVal;
+      this.result.valid = this.resultValid;
+    },
   },
   computed: {
+    dataUpdateDate() {
+      if (this.loadedData.date) {
+        const options = {
+          weekday: "long",
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+          hour: "numeric",
+          minute: "numeric",
+        };
+        return this.loadedData.date.toLocaleDateString("de-DE", options);
+      }
+      return "unbekannt";
+    },
+    isDataTooOld() {
+      const _MS_PER_DAY = 1000 * 60 * 60 * 24;
+      if (this.loadedData.date) {
+        let a = this.loadedData.date;
+        let b = new Date();
+        const utc1 = Date.UTC(a.getFullYear(), a.getMonth(), a.getDate());
+        const utc2 = Date.UTC(b.getFullYear(), b.getMonth(), b.getDate());
+
+        let daysOld = Math.floor((utc2 - utc1) / _MS_PER_DAY);
+        return daysOld > 1;
+      }
+      return true;
+    },
     selectedTest() {
       if (this.selectedTests.length > 0) return this.selectedTests[0];
       else return null;
@@ -1069,7 +1110,11 @@ export default {
       return [];
     },
     peiAssumption() {
-      return this.selectedTest && !this.selectedTest.studies[this.studyId] && this.selectedTest.pei;
+      return (
+        this.selectedTest &&
+        !this.selectedTest.studies[this.studyId] &&
+        this.selectedTest.pei
+      );
     },
     sensitivity() {
       if (this.testsKind == "input") {
