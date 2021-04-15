@@ -106,7 +106,7 @@
         "manufacturer": "Hangzhou Clongene Biotech Co., Ltd.",
         "antragsteller": "Hangzhou Clongene Biotech Co., Ltd.",
         "name": "COVID-19 Antigen Rapid Test",
-        "id": null,
+        "id": "AT373/21",
         "studies": {
             "manufacturer-pos": {
                 "author": "manufacturer",
@@ -231,6 +231,13 @@
         "name": "ANBIO Corona Antigen Nasentupfer"
     },
     {
+        "reference": "5640-S-080/21",
+        "manufacturer": "Beijing Hotgen Biotech Co.,Ltd",
+        "antragsteller": "Beijing Hotgen Biotech Co.,Ltd",
+        "name": "Coronavirus (2019-nCoV)-Antigentest - Speichel",
+        "id": "AT095/21"
+    },
+    {
         "reference": "5460-S-178/21",
         "manufacturer": "Haemato Pharm GmbH",
         "antragsteller": "Haemato Pharm GmbH",
@@ -347,7 +354,8 @@
         "manufacturer": "Shenzhen Watmind Medical Co., Ltd.",
         "antragsteller": "Shenzhen Watmind Medical Co., Ltd.",
         "name": "SARS-CoV-2 Ag Diagnostic Test Kit (Colloidal Gold)",
-        "internal_comment": "Hat AT-108/21 aber die Nummer kommt in der großen Tabelle nicht vor."
+        "id": "AT108/20",
+        "internal_comment": "Hat in kleiner Tabelle AT-108/21 aber Minus-Zeichen ist fehl am Platz."
     },
     {
         "reference": "5640-S-049/21",
@@ -415,13 +423,76 @@
         "manufacturer": "Guangzhou Wondfo Biotech Co., Ltd.",
         "antragsteller": "Guangzhou Wondfo Biotech Co., Ltd.",
         "name": "2019-nCoV Antigen Test (Lateral Flow Method)",
-        "id": "AT614/21"
+        "id": null
     },
     {
         "reference": "5640-S-031/21",
         "manufacturer": "PerGrande BioTech Development Co., Ltd.",
         "antragsteller": "JingCheng Asia Group Limited",
         "name": "SARS-CoV-2 Antigen Detection Kit (Colloidal Gold Immunochromatographic assay)",
+        "id": null
+    },
+    {
+        "reference": "5640-S-118/21",
+        "manufacturer": "Bio-Gram Diagnostics GmbH",
+        "antragsteller": "Bio-Gram Diagnostics GmbH",
+        "name": "COVID-19 Ag Test Kit",
+        "id": null
+    },
+    {
+        "reference": "5640-S-094/21",
+        "manufacturer": "Beijing Wantai Biological Pharmacy Enterprise Co., Ltd.",
+        "antragsteller": "Beijing Wantai Biological Pharmacy Enterprise Co., Ltd.",
+        "name": "WANTAI SARS-CoV-2 Ag Schnelltest (Kolloidales Gold)",
+        "id": null
+    },
+    {
+        "reference": "5640-S-063/21",
+        "manufacturer": "PCL Inc.",
+        "antragsteller": "Haemo Pharma GmbH",
+        "name": "PCL COVID19 Ag Gold",
+        "id": null
+    },
+    {
+        "reference": "5640-S-151/21",
+        "manufacturer": "JOINSTAR BIOMEDICAL TECHNOLOGY CO., LTD.",
+        "antragsteller": "JOINSTAR BIOMEDICAL TECHNOLOGY CO., LTD.",
+        "name": "COVID-19 Antigen Schnelltest (kolloidales Gold) Probenmaterial: vorderer Nasenabstrich",
+        "id": null
+    },
+    {
+        "reference": "5640-S-028/21",
+        "manufacturer": "Icon Medlab GmbH",
+        "antragsteller": "Icon Medlab GmbH",
+        "name": "SARS-CoV-2 Antigen Rapid Test Kit",
+        "id": null
+    },
+    {
+        "reference": "5640-S-214/21",
+        "manufacturer": "Brawa GmbH",
+        "antragsteller": "Brawa GmbH",
+        "name": "COVID-19 (SARS-CoV-2) Antigen Schnelltest",
+        "id": null
+    },
+    {
+        "reference": "5640-S-086/21",
+        "manufacturer": "Anhui Deepblue Medical Technology Co. Ltd.",
+        "antragsteller": "Anhui Deepblue Medical Technology Co. Ltd.",
+        "name": "COVID-19 (SARS-CoV-2) Antigentest (kolloidales Gold)",
+        "id": null
+    },
+    {
+        "reference": "5640-S-087/21",
+        "manufacturer": "Anhui Deepblue Medical Technology Co. Ltd.",
+        "antragsteller": "Anhui Deepblue Medical Technology Co. Ltd.",
+        "name": "COVID-19 (SARS-CoV-2) Antigentestkit (kolloidales Gold) - Speichel",
+        "id": null
+    },
+    {
+        "reference": "5640-S-240/21",
+        "manufacturer": "Joinstar Biomedical Technology Co., Ltd",
+        "antragsteller": "Joinstar Biomedical Technology Co., Ltd",
+        "name": "Covid-19 Antigen Rapid Test (Colloidal Gold)",
         "id": null
     }
 ]
