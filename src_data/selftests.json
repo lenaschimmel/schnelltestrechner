@@ -494,5 +494,19 @@
         "antragsteller": "Joinstar Biomedical Technology Co., Ltd",
         "name": "Covid-19 Antigen Rapid Test (Colloidal Gold)",
         "id": null
+    },
+    {
+        "reference": "5640-S-164/21",
+        "manufacturer": "EJOY-GmbH",
+        "antragsteller": "EJOY-GmbH",
+        "name": "SARS-CoV-2 Antigen Rapid Test (Colloidal Gold)",
+        "id": null
+    },
+    {
+        "reference": "5640-S-210/21",
+        "manufacturer": "Xiamen WIZ BIOTECH Co., Ltd.",
+        "antragsteller": "Xiamen WIZ BIOTECH Co., Ltd.",
+        "name": "WizDx COVID-19 Antigen Schnelltest",
+        "id": null
     }
 ]
