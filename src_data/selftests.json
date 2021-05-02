@@ -508,5 +508,68 @@
         "antragsteller": "Xiamen WIZ BIOTECH Co., Ltd.",
         "name": "WizDx COVID-19 Antigen Schnelltest",
         "id": null
+    },
+    { 
+        "reference": "5640-S-245/21",
+        "manufacturer": "Günter Keul GmbH",
+        "antragsteller": "Günter Keul GmbH",
+        "name": "SARS-CoV-2 Antigentest Kit (Kolloidales Gold) - Laientest / Selbsttest",
+        "id": null
+    },
+    { 
+        "reference": "5640-S-064/21",
+        "manufacturer": "Zhejiang Anji Saianfu Biotech Co., Ltd.",
+        "antragsteller": "Zhejiang Anji Saianfu Biotech Co., Ltd.",
+        "name": "„AndLucky“ SARS CoV-2 Antigen Rapid Test, Anterior Nasal Check (minimal-invasiv)",
+        "id": null
+    },
+    { 
+        "reference": "5640-S-225/21",
+        "manufacturer": "Lama Licensing GmbH",
+        "antragsteller": "Lama Licensing GmbH",
+        "name": "LAMA SARS-Cov-2-Antigen- Saliva/Sputum-Test Spucktest zur Eigenanwendung",
+        "id": null
+    },
+    { 
+        "reference": "5640-S-206/21",
+        "manufacturer": "XIAMEN WIZ BIOTECH Co., Ltd.",
+        "antragsteller": "XIAMEN WIZ BIOTECH Co., Ltd.",
+        "name": "WizDx COVID-19 Antigen Schnelltest",
+        "id": null
+    },
+    { 
+        "reference": "5640-S-185/21",
+        "manufacturer": "Getein Biotech Inc.",
+        "antragsteller": "Getein Biotech Inc.",
+        "name": "Einstufiger Test für SARS-COV-2-Antigen",
+        "id": null
+    },
+    { 
+        "reference": "5640-S-230/21",
+        "manufacturer": "Guangdong Longsee Biomedical Co., Ltd.",
+        "antragsteller": "Guangdong Longsee Biomedical Co., Ltd.",
+        "name": "2019-nCoV Ag Rapid Detection Kit (Immuno-Chromatography)",
+        "id": null
+    },
+    { 
+        "reference": "5640-S-103/21",
+        "manufacturer": "Guangzhou Wondfo Biotech Co., Ltd",
+        "antragsteller": "Guangzhou Wondfo Biotech Co., Ltd",
+        "name": "SARS-CoV-2 Antigen-Saliva / Sputum-Test Spucktest",
+        "id": null
+    },
+    { 
+        "reference": "5640-S-056/21",
+        "manufacturer": "Sugentech, Inc.",
+        "antragsteller": "Sugentech, Inc.",
+        "name": "SGTi-flex COVID-19 Ag",
+        "id": null
+    },
+    { 
+        "reference": "5640-S-020/21",
+        "manufacturer": "Pierenkemper GmbH",
+        "antragsteller": "Pierenkemper GmbH",
+        "name": "(SARS-CoV-2) Antigen Rapid test COVIDENT COVID-19",
+        "id": null
     }
 ]

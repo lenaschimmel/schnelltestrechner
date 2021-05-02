@@ -68,7 +68,7 @@ Beijing Savant Biotechnology, SARS-CoV-2 detection kit;;;;;;;;
 Weitzel, T., et al.;Chile;high concern;no;banked;NP/OP;109;16.7% (95% CI 10.0-26.5*);100% (95% CI 89.0-100)
 ;;;;;;;;
 Biotime, COVID-19 Antigen Test Cassette;;;;;;;;
-Seitz, T., et al.;Austria;low concern;unclear;fresh;saliva;40;44.4% (not provided);100% (not provided)
+Seitz, T., et al.;Austria;intermediate concern;unclear;fresh;saliva;40;44.4% (not provided);100% (not provided)
 ;;;;;;;;
 Bionote, NowCheck®;;;;;;;;
 FINDdx;Brazil;low concern;yes;fresh;NP;400;89.2% (95% CI 81.7-93.9);97.3% (95% CI 94.8-98.6)
@@ -91,6 +91,9 @@ Veyrenche, N., et al.;France;high concern;yes;fresh;NP;65;29.0% (95% CI 15.7-42.
 Denka, Quick Navi;;;;;;;;
 Takeuchi, Y., et al.;Japan;low concern;no;fresh;NP;1186;86.7% (95% CI 78.6-92.5);100% (95% CI 99.7-100)
 Takeuchi, Y., et al.;Japan;unclear;no;fresh;AN;862;71.5% (95% CI 58.3-84.1);100% (95% CI 99.3-100)
+;;;;;;;;
+DiaSorin, LIAISON® SARS-CoV-2 Ag;;;;;;;;
+Lefever, S., et al.;Belgium;low concern;no;banked;NP;414;65.7% (95% CI 58.9-71.9);100% (95% CI 97.8-100)
 ;;;;;;;;
 EcoDiagnostica, COVID-19 Ag;;;;;;;;
 Filgueiras, P.S., et al.;Brazil;unclear;no;fresh;NP;150;69.0% (95% CI 55.0-81.0);98.0% (95% CI 94.0-100)
@@ -188,6 +191,7 @@ Liotti, F.M., et al.;Italy;intermediate concern;yes;banked;NP;359;47.1% (95% CI 
 ;;;;;;;;
 SD Biosensor / Roche, Standard Q (NP sampling);;;;;;;;
 Chaimayo, C., et al.;Thailand;intermediate concern;yes;banked;NP/OP;454;98.3% (95% CI 91.1-100);98.7% (95% CI 97.1-99.6)
+Kerneis, S., et al.;France;low concern;no;fresh;NP;1109;94% (95% CI 86.0-98.0);99% (95% CI 98.0-99.0)
 Schwob, J.M., et al.;Switzerland;low concern;yes;fresh;NP;333;92.9% (95% CI 86.4-96.9);100% (95% CI 98.3*-100*)
 Nikolai, O., et al.;Germany;low concern;yes;fresh;NP;96;91.2% (95% CI 77.0-97.0);100% (95% CI 94.2-100)
 Berger, A., et al.;Switzerland;low concern;yes;fresh;NP;529;89.0% (95% CI 83.7-93.1);99.7% (95% CI 98.4-100)
