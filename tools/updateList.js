@@ -1,7 +1,7 @@
 const util = require('util');
 const fs = require('fs');
 const parse = require('csv-parse/lib/sync');
-var latestEvaluationName = "";
+var latestEvaluationTest = "";
 var latestMapping = null;
 var currentStudyId = 1;
 var currentTestId = 1;
@@ -26,12 +26,31 @@ function convertAntigenTestColumnName(origName) {
     return origName;
 }
 
+function getSelfTestColumnNames(firstLine) {
+    return firstLine.map(convertSelfTestColumnName);
+}
+
+function convertSelfTestColumnName(origName) {
+    switch (origName) {
+        case "Aktenzeichen des BfArM": return "reference";
+        case "Name des Tests": return "name";
+        case "Hersteller": return "manufacturer";
+        case "Sensitivität %": return "sensitivityAvg";
+        case "Spezifität %": return "specificityAvg";
+        case "Spezifität %": return "specificityAvg";
+        case "Probennahme": return "sample";
+        case "Gebrauchsanweisung": return "instructionsUrl";
+        case "Europäischer Bevollmächtigter": return "euRep";
+    }
+    return origName;
+}
+
 bools = { "Ja": true, "Nein": false, "": undefined };
 
 function onAntigenTestRecord(record, context) {
     record.pei = bools[record.pei];
     let manufacturerStudyId = currentStudyId++;
-    record.studies = { [manufacturerStudyId]: { "author": "manufacturer", "id": manufacturerStudyId } };
+    record.studies = { [manufacturerStudyId]: { "author": "manufacturer (via BfArM)", "id": manufacturerStudyId } };
     record.studies[manufacturerStudyId].sensitivity = {
         avg: parseFloat((record.sensitivityAvg + "").replace(",", ".")) / 100.0,
         min: parseFloat(record.sensitivityRange.split("-")[0]) / 100.0,
@@ -49,21 +68,25 @@ function onAntigenTestRecord(record, context) {
     record.distributors = record.distributors.split(",");
     record.tradename = record.tradename.split(",");
 
-    let matchingSelftests = jsonSelftests.filter(selftest => selftest.id == record.id);
+    return record;
+}
 
-    record.selftest = (matchingSelftests.length == 1);
-    if (record.selftest) {
-        record.reference = matchingSelftests[0].reference;
-        record.shops = matchingSelftests[0].available;
-        record.pei = true;
-    } else {
-        record.shops = [];
-    }
+function onSelfTestRecord(record, context) {
+    record.pei = true;
+    record.sample = [record.sample];
+    let manufacturerStudyId = currentStudyId++;
+    record.studies = { [manufacturerStudyId]: { "author": "manufacturer (via PEI)", "id": manufacturerStudyId, "sample": record.sample } };
+    record.studies[manufacturerStudyId].sensitivity = {
+        avg: parseFloat((record.sensitivityAvg + "").replace(",", ".")) / 100.0,
+    };
+    record.studies[manufacturerStudyId].specificity = {
+        avg: parseFloat((record.specificityAvg + "").replace(",", ".")) / 100.0,
+    };
+    delete record.sensitivityAvg;
+    delete record.specificityAvg;
 
-    // add independent studies
-    jsonEvaluation.filter(study => study.testId == record.id).forEach(study => {
-        record.studies[study.id] = study;
-    });
+    record.selftest = true;
+    record.shops = [];
 
     return record;
 }
@@ -95,22 +118,39 @@ function onEvaluationRecord(record, context) {
 
     if (nonEmpty == 1) {
         latestEvaluationName = record.author; // this is the name of the antigen test, but it's saved in the 'author' column
-        let mapping = jsonEvaluationNameMapping[latestEvaluationName];
-        if (mapping && mapping.startsWith("AT")) {
-            latestMapping = mapping;
+        
+        var re = /(.*), ([^\(]*)(\((.*) sampling\))?/i;
+        var found = latestEvaluationName.match(re);
+        if (found) {
+            latestEvaluationTest = {
+                manufacturer: found[1],
+                name: found[2],
+                sample: found[4]
+            }
         } else {
-            latestMapping = null;
+            latestEvaluationTest = null;
+            console.log("NAME unmatched: " + latestEvaluationName);
         }
-        // console.log("Got name: " + latestEvaluationName + " a.k.a. " + latestMapping);
         return null;
     }
 
-    record.testId = latestMapping;
-    record.sensitivity = parseEvaluationRange(record.sensitivity);
-    record.specificity = parseEvaluationRange(record.specificity);
-    record.id = currentStudyId++;
+    test = {};
+    test.manufacturer = latestEvaluationTest.manufacturer;
+    test.name = latestEvaluationTest.name;
+    test.sample = latestEvaluationTest.sample;
+    id = currentStudyId++;
+    test.studies = {
+        [id]: {
+            "id": id,
+            "sensitivity": parseEvaluationRange(record.sensitivity),
+            "specificity": parseEvaluationRange(record.specificity),
+            "sample": latestEvaluationTest.sample,
+            "author": record.autor,
+        }
+    }
 
-    return record;
+
+    return test;
 }
 
 function parseEvaluationRange(input) {
@@ -131,6 +171,8 @@ function parseEvaluationRange(input) {
             return {
                 avg: parseFloat(found[1]) / 100.0
             };
+        } else if (input == "not provided") {
+            // nothing
         } else {
             console.log("Could not match '" + input + "'.");
         }
@@ -138,7 +180,7 @@ function parseEvaluationRange(input) {
 }
 
 function getSelftestsWithoutId() {
-    return jsonSelftests.filter(test => test.id == null).map(test => {
+    return jsonSelfTests.filter(test => test.id == null).map(test => {
         test.selftest = true;
         test.pei = false;
         let newStudies = {};
@@ -167,17 +209,79 @@ function compareStrings(a, b) {
     return 0;
 }
 
+function onlyUnique(value, index, self) {
+    return self.indexOf(value) === index;
+}
+
+function cleanupNames(tests) {
+    for (const test of tests) {
+        test.tradename = test.tradename || [];
+        test.distributors = test.distributors || [];
+
+        for (const sampleKey in jsonSampleMapping) {
+            const sampleValue = jsonSampleMapping[sampleKey];
+            if (test.name.endsWith(sampleKey)) {
+                test.sample = sampleValue;
+                test.tradename.push(test.name);
+                test.name = test.name.substring(0, test.name.length - sampleKey.length);
+
+                for (const studyKey in test.studies) {
+                    if (Object.hasOwnProperty.call(test.studies, studyKey)) {
+                        const study = test.studies[studyKey];
+                        study.sample = test.sample;
+                    }
+                }
+            }
+        }
+        test.name = test.name.trim();
+        test.tradename.push(test.name);
+
+        test.tradename = test.tradename.map(name => name.trim()).filter(a => a.length > 0);
+        test.distributors = test.distributors.map(name => name.trim()).filter(a => a.length > 0);
+    }
+}
+
+function testNamesMatch(name1, name2) {
+    if(name1 == name2 || name1.startsWith(name2) || name2.startsWith(name1)) {
+        return true;
+    }
+
+    return false;
+}
+
+function mergeTests(tests) {
+    ret = tests[0];
+    for (const test of tests) {
+        if (test != ret) {
+            ret.id = ret.id || test.id;
+            ret.pei = ret.pei || test.pei;
+            ret.selftest = ret.selftest || test.selftest;
+            ret.instructionsUrl = ret.instructionsUrl || test.instructionsUrl;
+            ret.studies = { ...ret.studies, ... test.studies };
+            ret.tradename = [ ... (ret.tradename || []), ... (test.tradename || []) ].filter(onlyUnique);
+            ret.distributors = [ ... (ret.distributors || []), ... (test.distributors || []) ].filter(onlyUnique);
+        }
+    }
+    delete ret.merged;
+    return ret;
+}
+
 const csvAntigenTests = fs.readFileSync("../src_data/antigentests.csv", { encoding: "latin1" }).replace(/\u0099/g, "\u2122").replace(/\u0096/g, "\u002D");
-const jsonSelftests = JSON.parse(fs.readFileSync("../src_data/selftests.json", { encoding: "utf8" }));
-jsonSelftests.sort((a,b) => compareStrings(a.reference, b.reference));
-jsonSelftests.sort((a,b) => compareStrings(a.id, b.id));
-// selfttest sorted by id, a.k.a. AT-Number, and if there is none, sorted by reference, a.k.a. Aktenzeichen der Sonderzulassung des BfArM
+const csvSelfTests = fs.readFileSync("../src_data/selftests.csv", { encoding: "latin1" }).replace(/\u0099/g, "\u2122").replace(/\u0096/g, "\u002D");
 const csvEvaluation = fs.readFileSync("../src_data/evaluation.csv", { encoding: "utf8" });
 const jsonEvaluationNameMapping = JSON.parse(fs.readFileSync("../src_data/evaluation_name_mapping.json", { encoding: "utf8" }));
+const jsonSampleMapping = JSON.parse(fs.readFileSync("../src_data/sample.json", { encoding: "utf8" }));
 
-const jsonEvaluation = parse(csvEvaluation, {
+const jsonEvaluations = parse(csvEvaluation, {
     on_record: onEvaluationRecord,
     columns: getEvaluationColumnNames,
+    delimiter: ";",
+});
+
+const jsonSelfTests = parse(csvSelfTests, {
+    columns: getSelfTestColumnNames,
+    on_record: onSelfTestRecord,
+    skip_empty_lines: true,
     delimiter: ";",
 });
 
@@ -187,9 +291,44 @@ const jsonAntigenTests = parse(csvAntigenTests, {
     skip_empty_lines: true,
     delimiter: ";",
 });
-jsonAntigenTests.sort((a,b) => compareStrings(a.id, b.id));
+
+allTests = [];
+allTests.push(...jsonSelfTests);
+allTests.push(...jsonAntigenTests);
+allTests.push(...jsonEvaluations);
+console.log("Added " + jsonSelfTests.length + " self tests, " + jsonEvaluations.length + " studies and " + jsonAntigenTests.length + " antigen tests, resulting in " + allTests.length + " tests.")
+
+cleanupNames(allTests);
 
 
-jsonAntigenTests.push(...getSelftestsWithoutId());
+resultTests = [];
 
-fs.writeFileSync("../site/public/data/antigentests.json", JSON.stringify(jsonAntigenTests, null, 2));
+for (const test1 of allTests) {
+    if(test1.merged) {
+        continue
+    }
+    merge = [test1];
+    test1.merged = true;
+    for (const test2 of allTests) {
+        if(test2.merged) {
+            continue
+        }
+        if (test1.manufacturer == test2.manufacturer && test1 != test2) {
+            if (testNamesMatch(test1.name, test2.name)) {
+                merge.push(test2);
+                test2.merged = true;
+            }
+        }        
+    }
+    if (merge.length > 1) {
+        console.log("Merge " + merge.length + " tests from " + test1.manufacturer);
+    }
+    resultTests.push(mergeTests(merge));
+}
+
+resultTests.sort((a,b) => compareStrings(a.name, b.name));
+resultTests.sort((a,b) => compareStrings(a.manufacturer, b.manufacturer));
+
+// jsonAntigenTests.push(...getSelftestsWithoutId());
+
+fs.writeFileSync("../site/public/data/antigentests.json", JSON.stringify(resultTests, null, 2));
