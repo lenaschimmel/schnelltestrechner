@@ -175,6 +175,7 @@ function splitDistributorNames(inputNames) {
         name = name.replaceAll("GmbH, & Co.KG", "GmbH & Co. KG");
         name = name.replaceAll("GmbH, & Co. KG", "GmbH & Co. KG");
         name = name.replaceAll("GmbH, & Co KG", "GmbH & Co. KG");
+        name = name.replaceAll("GmbH, + Co. KG", "GmbH & Co. KG");        
         name = name.replaceAll("UG, (haftungsbeschraenkt)", "UG (haftungsbeschränkt)");
         name = name.replaceAll("UG, (haftungsbeschränkt)", "UG (haftungsbeschränkt)");
         console.log(name);
@@ -305,6 +306,13 @@ function mergeTests(tests) {
     return ret;
 }
 
+function fixId(test) {
+    if (!test.id) {
+        test.id = "NO-AT-" + (currentTestId++);
+    }
+    return test;
+}
+
 const csvAntigenTests = fs.readFileSync("../src_data/antigentests.csv", { encoding: "latin1" }).replace(/\u0099/g, "\u2122").replace(/\u0096/g, "\u002D");
 const csvSelfTests = fs.readFileSync("../src_data/selftests.csv", { encoding: "latin1" }).replace(/\u0099/g, "\u2122").replace(/\u0096/g, "\u002D");
 const csvEvaluation = fs.readFileSync("../src_data/evaluation.csv", { encoding: "utf8" });
@@ -362,6 +370,7 @@ for (const test1 of allTests) {
     resultTests.push(mergeTests(merge));
 }
 
+resultTests = resultTests.map(test => fixId(test));
 resultTests.sort((a,b) => compareStrings(a.name, b.name));
 resultTests.sort((a,b) => compareStrings(a.manufacturer, b.manufacturer));
 
