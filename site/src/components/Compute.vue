@@ -264,6 +264,27 @@
                     Object.keys(this.selectedTest.studies).length > 0
                   "
                 >
+
+                  <p class="mt-4" v-if="selectedTest && selectedTest.distributors.length > 0">
+                    Distributoren:
+                    <ul>
+                      <li 
+                        v-for="dist in selectedTest.distributors"
+                        :key="dist"
+                      >{{ dist }}</li>
+                    </ul>
+                  </p>
+
+                  <p class="mt-4" v-if="selectedTest && selectedTest.tradename.length > 0">
+                    Alternative Handelsnamen:
+                    <ul>
+                      <li 
+                        v-for="name in selectedTest.tradename"
+                        :key="name"
+                      >{{ name }}</li>
+                    </ul>
+                  </p>
+
                   <p
                     v-if="Object.keys(this.selectedTest.studies).length > 1"
                     class="mt-4"
