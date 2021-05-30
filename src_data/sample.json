@@ -28,6 +28,7 @@
     "/ Nasopharyngeal-Abstrich": ["np"],
     "Abstrich": ["swab"],
     "Antigen Speichel Schnelltest": ["saliva"],
+    "Frontnasal": ["nasal"],
     "Nasal": ["nasal"],
     "Nasal Swab": ["nasal"],
     "Nasalabstrich": ["nasal"],

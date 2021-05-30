@@ -1,6 +1,7 @@
 const util = require('util');
 const fs = require('fs');
 const parse = require('csv-parse/lib/sync');
+var levenshtein = require('fast-levenshtein');
 var latestEvaluationTest = "";
 var latestMapping = null;
 var currentStudyId = 1;
@@ -144,8 +145,9 @@ function onEvaluationRecord(record, context) {
             "id": id,
             "sensitivity": parseEvaluationRange(record.sensitivity),
             "specificity": parseEvaluationRange(record.specificity),
-            "sample": latestEvaluationTest.sample,
-            "author": record.autor,
+            "sample": latestEvaluationTest.sampleType,
+            "author": record.author,
+            "quadas": record.quadas,
         }
     }
 
@@ -246,12 +248,21 @@ function testNamesMatch(name1, name2) {
         return true;
     }
 
+    l = levenshtein.get(name1, name2) / Math.min(name1.length, name2.length);
+    return l < 0.7;
+
     return false;
 }
 
 function mergeTests(tests) {
     ret = tests[0];
+    if (tests.length > 1) {
+        console.log("Merging " + tests.length + " tests:");
+    }
     for (const test of tests) {
+        if (tests.length > 1) {
+            console.log(" * " + test.name);
+        }
         if (test != ret) {
             ret.id = ret.id || test.id;
             ret.pei = ret.pei || test.pei;
@@ -313,21 +324,20 @@ for (const test1 of allTests) {
         if(test2.merged) {
             continue
         }
-        if (test1.manufacturer == test2.manufacturer && test1 != test2) {
+        if (testNamesMatch(test1.manufacturer, test2.manufacturer) && test1 != test2) {
             if (testNamesMatch(test1.name, test2.name)) {
                 merge.push(test2);
                 test2.merged = true;
             }
         }        
     }
-    if (merge.length > 1) {
-        console.log("Merge " + merge.length + " tests from " + test1.manufacturer);
-    }
     resultTests.push(mergeTests(merge));
 }
 
 resultTests.sort((a,b) => compareStrings(a.name, b.name));
 resultTests.sort((a,b) => compareStrings(a.manufacturer, b.manufacturer));
+
+console.log("Merged tests, remaining couunt is " + resultTests.length);
 
 // jsonAntigenTests.push(...getSelftestsWithoutId());
 
