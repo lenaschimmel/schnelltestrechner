@@ -66,7 +66,7 @@ function onAntigenTestRecord(record, context) {
     delete record.sensitivityRange;
     delete record.specificityAvg;
     delete record.specificityRange;
-    record.distributors = record.distributors.split(",");
+    record.distributors = splitDistributorNames(record.distributors.split(","));
     record.tradename = record.tradename.split(",");
 
     return record;
@@ -153,6 +153,34 @@ function onEvaluationRecord(record, context) {
 
 
     return test;
+}
+
+String.prototype.replaceAll = function(search, replacement) {
+    var target = this;
+    return target.split(search).join(replacement);
+};
+
+function splitDistributorNames(inputNames) {
+    const endings = [
+        "KG", "Gmbh", "mbH", "AG", "SLR", "BV", "OHG", "UG", "(haftungsbeschraenkt)", "(haftungsbeschränkt)", "Ltd.", "SRL", "e.K."
+    ];
+
+    let ret = [];
+    for (let name of inputNames) {
+        for (const ending of endings) {
+            name = name.replaceAll(ending, ending + ",");
+        }
+        // put back together those endings which may occur alone but also in conjunction
+        // fixing obvious misspellings of "GmbH & Co. KG" and "haftungsbeschränkt" while at it
+        name = name.replaceAll("GmbH, & Co.KG", "GmbH & Co. KG");
+        name = name.replaceAll("GmbH, & Co. KG", "GmbH & Co. KG");
+        name = name.replaceAll("GmbH, & Co KG", "GmbH & Co. KG");
+        name = name.replaceAll("UG, (haftungsbeschraenkt)", "UG (haftungsbeschränkt)");
+        name = name.replaceAll("UG, (haftungsbeschränkt)", "UG (haftungsbeschränkt)");
+        console.log(name);
+        ret.push(...name.split(",").filter(n => n.length > 0))
+    }
+    return ret;
 }
 
 function parseEvaluationRange(input) {
@@ -257,11 +285,11 @@ function testNamesMatch(name1, name2) {
 function mergeTests(tests) {
     ret = tests[0];
     if (tests.length > 1) {
-        console.log("Merging " + tests.length + " tests:");
+    //    console.log("Merging " + tests.length + " tests:");
     }
     for (const test of tests) {
         if (tests.length > 1) {
-            console.log(" * " + test.name);
+        //    console.log(" * " + test.name);
         }
         if (test != ret) {
             ret.id = ret.id || test.id;
@@ -337,7 +365,7 @@ for (const test1 of allTests) {
 resultTests.sort((a,b) => compareStrings(a.name, b.name));
 resultTests.sort((a,b) => compareStrings(a.manufacturer, b.manufacturer));
 
-console.log("Merged tests, remaining couunt is " + resultTests.length);
+//console.log("Merged tests, remaining count is " + resultTests.length);
 
 // jsonAntigenTests.push(...getSelftestsWithoutId());
 
