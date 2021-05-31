@@ -51,7 +51,7 @@ bools = { "Ja": true, "Nein": false, "": undefined };
 function onAntigenTestRecord(record, context) {
     record.pei = bools[record.pei];
     let manufacturerStudyId = currentStudyId++;
-    record.studies = { [manufacturerStudyId]: { "author": "manufacturer (via BfArM)", "id": manufacturerStudyId } };
+    record.studies = { [manufacturerStudyId]: { "author": "manufacturer", "comment": "via BfArM (" + record.name + ")", "id": manufacturerStudyId } };
     record.studies[manufacturerStudyId].sensitivity = {
         avg: parseFloat((record.sensitivityAvg + "").replace(",", ".")) / 100.0,
         min: parseFloat(record.sensitivityRange.split("-")[0]) / 100.0,
@@ -76,7 +76,7 @@ function onSelfTestRecord(record, context) {
     record.pei = true;
     record.sample = [record.sample];
     let manufacturerStudyId = currentStudyId++;
-    record.studies = { [manufacturerStudyId]: { "author": "manufacturer (via PEI)", "id": manufacturerStudyId, "sample": record.sample } };
+    record.studies = { [manufacturerStudyId]: { "author": "manufacturer", "comment": "via PEI", "id": manufacturerStudyId, "sample": record.sample } };
     record.studies[manufacturerStudyId].sensitivity = {
         avg: parseFloat((record.sensitivityAvg + "").replace(",", ".")) / 100.0,
     };
@@ -146,8 +146,10 @@ function onEvaluationRecord(record, context) {
             "sensitivity": parseEvaluationRange(record.sensitivity),
             "specificity": parseEvaluationRange(record.specificity),
             "sample": latestEvaluationTest.sampleType,
+            "sampleSize": record.sampleSize,
             "author": record.author,
             "quadas": record.quadas,
+            "independent": record.independent,
         }
     }
 
@@ -278,7 +280,7 @@ function testNamesMatch(name1, name2) {
     }
 
     l = levenshtein.get(name1, name2) / Math.min(name1.length, name2.length);
-    return l < 0.7;
+    return l < 0.2;
 
     return false;
 }
@@ -298,8 +300,10 @@ function mergeTests(tests) {
             ret.selftest = ret.selftest || test.selftest;
             ret.instructionsUrl = ret.instructionsUrl || test.instructionsUrl;
             ret.studies = { ...ret.studies, ... test.studies };
-            ret.tradename = [ ... (ret.tradename || []), ... (test.tradename || []) ].filter(onlyUnique);
-            ret.distributors = [ ... (ret.distributors || []), ... (test.distributors || []) ].filter(onlyUnique);
+            ret.tradename = [ ... (ret.tradename || []), ... (test.tradename || []) ].filter(onlyUnique).sort(((a,b) => compareStrings(a.toLowerCase(), b.toLowerCase())));
+            ret.distributors = [ ... (ret.distributors || []), ... (test.distributors || []) ].filter(onlyUnique).sort(((a,b) => compareStrings(a.toLowerCase(), b.toLowerCase())));
+
+            
         }
     }
     delete ret.merged;
