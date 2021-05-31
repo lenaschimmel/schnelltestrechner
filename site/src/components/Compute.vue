@@ -207,6 +207,16 @@
                         <span>{{ getDataText(item.studies) }}</span>
                       </v-tooltip>
                     </template>
+                    <template v-slot:item.sampledings="{ item }">
+                      <v-tooltip left>
+                        <template v-slot:activator="{ on, attrs }">
+                          <div v-bind="attrs" v-on="on">
+                            {{ getSampleIcons(item) }}
+                          </div>
+                        </template>
+                        <span>{{ getSampleText(item) }}</span>
+                      </v-tooltip>
+                    </template>
                     <template v-slot:item.attrib="{ item }">
                       <v-tooltip left>
                         <template v-slot:activator="{ on, attrs }">
@@ -1010,6 +1020,49 @@ export default {
 
       return text;
     },
+    getSampleValues(test) {
+      let samples = [];
+      if (test.sample) {
+        samples.push(...test.sample);
+      }
+      let studies = Object.values(test.studies);
+      for (const study of studies) {
+        if (study.sample) {
+          samples.push(... study.sample);
+        }
+      }
+
+      samples = samples.filter(function(item, pos) {
+          return samples.indexOf(item) == pos;
+      });
+      return samples;
+    },
+    getSampleIcons(test) {
+      let samples = this.getSampleValues(test);
+      let ret = "";
+      if (samples.includes("nasal")) {
+        ret = ret + "👃";
+      }     
+      if (samples.includes("np")) {
+        ret = ret + "🥺";
+      }     
+      if (samples.includes("op")) {
+        ret = ret + "😲";
+      }     
+      if (samples.includes("sputum")) {
+        ret = ret + "🤑";
+      }
+      if (samples.includes("saliva")) {
+        ret = ret + "💦";
+      }
+      if (samples.includes("stool")) {
+        ret = ret + "💩";
+      }
+      return ret;
+    },
+    getSampleText(test) {
+      return this.getSampleValues(test).join(",");
+    },
     getAttribCircles(test) {
       let array = [];
       if (!test.selftest) array.push({ icon: "mdi-doctor", color: "red darken-2" });
@@ -1329,6 +1382,7 @@ export default {
           { text: "Name", value: "name" },
           { text: "Merkmal", value: "attrib", sortable: false },
           { text: "Daten", value: "studies", sortable: false },
+          { text: "Probe", value: "sampledings", sortable: false}
         ];
     },
     districtsChoices() {

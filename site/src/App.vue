@@ -153,7 +153,7 @@ export default {
     fetchData() {
       // local sorting function
       let byName = function (a, b) {
-        // straigt from developer.mozilla.org
+        // straight from developer.mozilla.org
         var nameA = a.name.toUpperCase(); // Groß-/Kleinschreibung ignorieren
         var nameB = b.name.toUpperCase(); // Groß-/Kleinschreibung ignorieren
         if (nameA < nameB) {

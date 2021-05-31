@@ -32,10 +32,16 @@ Vue.filter('formatNumber', function (value) {
 })
 
 Vue.filter('studyTitle', function (study) {
+  let sampleString = "";
+  if (study.sample && study.sample.length > 0) {
+    sampleString = " (Probenart: " + study.sample.join(", ") + ")";
+  }
+
+
   if (study.author == "manufacturer") {
     if (study.comment && study.comment.length > 0)
-      return "Angaben des Herstellers (" + study.comment + ")";
-    else return "Angaben des Herstellers";
+      return "Angaben des Herstellers (" + study.comment + ")" + sampleString;
+    else return "Angaben des Herstellers" + sampleString;
   } else {
     if (study.comment && study.comment.length > 0)
       return (
@@ -47,7 +53,8 @@ Vue.filter('studyTitle', function (study) {
         study.sampleSize +
         ", " +
         study.quadas +
-        ")"
+        ")" +
+        sampleString
       );
     else
       return (
@@ -57,7 +64,8 @@ Vue.filter('studyTitle', function (study) {
         study.sampleSize +
         ", " +
         study.quadas +
-        ")"
+        ")" + 
+        sampleString
       );
   }
 })
