@@ -175,7 +175,7 @@ String.prototype.replaceAll = function(search, replacement) {
 
 function splitDistributorNames(inputNames) {
     const endings = [
-        "KG", "Gmbh", "mbH", "AG", "SLR", "BV", "OHG", "UG", "(haftungsbeschraenkt)", "(haftungsbeschränkt)", "Ltd.", "SRL", "e.K."
+        "KG", "Gmbh", "mbH", "AG", "SLR", "BV", "OHG", "UG", "(haftungsbeschraenkt)", "(haftungsbeschränkt)", "Ltd.", "SRL", "e.K.", "B.V.", "GbR"
     ];
 
     let ret = [];
