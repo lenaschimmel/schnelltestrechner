@@ -74,7 +74,7 @@ function onAntigenTestRecord(record, context) {
 
 function onSelfTestRecord(record, context) {
     record.pei = true;
-    record.sample = [record.sample];
+    record.sample = record.sample.split(" / ").map(s => s.toLowerCase().replace("speichel","saliva"));
     let manufacturerStudyId = currentStudyId++;
     record.studies = { [manufacturerStudyId]: { "author": "manufacturer", "comment": "via PEI", "id": manufacturerStudyId, "sample": record.sample } };
     record.studies[manufacturerStudyId].sensitivity = {
@@ -112,6 +112,17 @@ function convertEvaluationColumnName(origName) {
 }
 
 function onEvaluationRecord(record, context) {
+    // the values "unclear" and "BAL/TW" were removed from this list
+    const mapping = {
+        "NP": ["np"],
+        "NP/OP": ["np","op"],
+        "AN": ["nasal"],
+        "MT": ["mid-turbinate"],
+        "saliva": ["saliva"],
+        "OP": ["op"],
+        "AN/MT": ["nasal", "mid-turbinate"]
+    };
+
     const nonEmpty = Object.values(record).filter(v => v != "").length;
     if (nonEmpty == 0) {
         return null;
@@ -126,7 +137,7 @@ function onEvaluationRecord(record, context) {
             latestEvaluationTest = {
                 manufacturer: found[1],
                 name: found[2],
-                sample: found[4]
+                sample: found[4]?.toLowerCase()
             }
         } else {
             latestEvaluationTest = null;
@@ -138,14 +149,14 @@ function onEvaluationRecord(record, context) {
     test = {};
     test.manufacturer = latestEvaluationTest.manufacturer;
     test.name = latestEvaluationTest.name;
-    test.sample = latestEvaluationTest.sample;
+    test.sample = mapping[record.sampleType] || [latestEvaluationTest.sample];
     id = currentStudyId++;
     test.studies = {
         [id]: {
             "id": id,
             "sensitivity": parseEvaluationRange(record.sensitivity),
             "specificity": parseEvaluationRange(record.specificity),
-            "sample": latestEvaluationTest.sampleType,
+            "sample": test.sample,
             "sampleSize": record.sampleSize,
             "author": record.author,
             "quadas": record.quadas,
@@ -212,25 +223,6 @@ function parseEvaluationRange(input) {
     }
 }
 
-function getSelftestsWithoutId() {
-    return jsonSelfTests.filter(test => test.id == null).map(test => {
-        test.selftest = true;
-        test.pei = false;
-        let newStudies = {};
-        for (const key in test.studies) {
-            if (Object.hasOwnProperty.call(test.studies, key)) {
-                const study = test.studies[key];
-                study.id = currentStudyId++;
-                newStudies[study.id] = study;
-            }
-        }
-        test.studies = newStudies;
-        test.pei = true;
-        test.id = "NO-AT-" + (currentTestId++);
-        return test;
-    });
-}
-
 function compareStrings(a, b) {
     if (a < b) {
         return -1;
@@ -250,24 +242,29 @@ function cleanupNames(tests) {
     for (const test of tests) {
         test.tradename = test.tradename || [];
         test.distributors = test.distributors || [];
+        test.sample = test.sample || [];
 
+        // remove sample endings from primary name
         for (const sampleKey in jsonSampleMapping) {
             const sampleValue = jsonSampleMapping[sampleKey];
-            if (test.name.endsWith(sampleKey)) {
-                test.sample = sampleValue;
+            if (test.name.toLowerCase().endsWith(sampleKey)) {
+                test.sample = [...test.sample, ...sampleValue];
                 test.tradename.push(test.name);
                 test.name = test.name.substring(0, test.name.length - sampleKey.length);
-
-                for (const studyKey in test.studies) {
-                    if (Object.hasOwnProperty.call(test.studies, studyKey)) {
-                        const study = test.studies[studyKey];
-                        study.sample = test.sample;
-                    }
-                }
             }
         }
         test.name = test.name.trim();
         test.tradename.push(test.name);
+
+        // add sample types from all names, withouth changing names
+        for (const name of test.tradename) {
+            for (const sampleKey in jsonSampleMapping) {
+                const sampleValue = jsonSampleMapping[sampleKey];
+                if (name.toLowerCase().includes(sampleKey)) {
+                    test.sample = [...test.sample, ...sampleValue];
+                }
+            }
+        }
 
         test.tradename = test.tradename.map(name => name.trim()).filter(a => a.length > 0);
         test.distributors = test.distributors.map(name => name.trim()).filter(a => a.length > 0);
@@ -299,6 +296,7 @@ function mergeTests(tests) {
             ret.pei = ret.pei || test.pei;
             ret.selftest = ret.selftest || test.selftest;
             ret.instructionsUrl = ret.instructionsUrl || test.instructionsUrl;
+            ret.sample = [ ...(ret.sample || []), ... (test.sample || []) ].filter(onlyUnique);
             ret.studies = { ...ret.studies, ... test.studies };
             ret.tradename = [ ... (ret.tradename || []), ... (test.tradename || []) ].filter(onlyUnique).sort(((a,b) => compareStrings(a.toLowerCase(), b.toLowerCase())));
             ret.distributors = [ ... (ret.distributors || []), ... (test.distributors || []) ].filter(onlyUnique).sort(((a,b) => compareStrings(a.toLowerCase(), b.toLowerCase())));
