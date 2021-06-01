@@ -137,7 +137,7 @@ function onEvaluationRecord(record, context) {
             latestEvaluationTest = {
                 manufacturer: found[1],
                 name: found[2],
-                sample: found[4]?.toLowerCase()
+                sample: (found[4] || "").toLowerCase()
             }
         } else {
             latestEvaluationTest = null;
