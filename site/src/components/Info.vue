@@ -42,7 +42,7 @@
     </template>
 
     <v-card>
-      <v-card-title class="headline grey lighten-2"> Info </v-card-title>
+      <v-card-title class="headline grey lighten-2">{{ title }}</v-card-title>
 
       <v-card-text class="pt-4">
         {{ content }} <slot></slot>
@@ -69,6 +69,10 @@ export default {
     content: {
       type: String,
       default: "",
+    },
+    title: {
+      type: String,
+      default: "Info",
     },
     type: {
       type: String, // tooltip, dialog

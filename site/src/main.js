@@ -32,6 +32,18 @@ Vue.filter('formatNumber', function (value) {
 })
 
 Vue.filter('studyTitle', function (study) {
+  if(study == "nothing") {
+    return "[nichts ausgewählt]";
+  }
+
+  if(study == "ownValues") {
+    return "[eigene Werte eingeben]";
+  }
+
+  if(study == "minPei") {
+    return "[Mindestwerte gemäß PEI]";
+  }
+
   let sampleString = "";
   if (study.sample && study.sample.length > 0) {
     sampleString = " (Probenart: " + study.sample.join(", ") + ")";
