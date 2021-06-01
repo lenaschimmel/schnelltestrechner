@@ -1038,30 +1038,32 @@ export default {
       return samples;
     },
     getSampleIcons(test) {
+      const mapping = {
+        "nasal":"👃",
+        "np": "🥺",
+        "op": "😲",
+        "sputum": "🤑",
+        "saliva": "💦",
+        "stool": "💩",
+        "mid-turbinate": "🐚",
+      };
+
       let samples = this.getSampleValues(test);
-      let ret = "";
-      if (samples.includes("nasal")) {
-        ret = ret + "👃";
-      }     
-      if (samples.includes("np")) {
-        ret = ret + "🥺";
-      }     
-      if (samples.includes("op")) {
-        ret = ret + "😲";
-      }     
-      if (samples.includes("sputum")) {
-        ret = ret + "🤑";
-      }
-      if (samples.includes("saliva")) {
-        ret = ret + "💦";
-      }
-      if (samples.includes("stool")) {
-        ret = ret + "💩";
-      }
-      return ret;
+      return samples.map(k => mapping[k]).join("");
     },
     getSampleText(test) {
-      return this.getSampleValues(test).join(",");
+      const mapping = {
+        "nasal":"👃 vordere Nase",
+        "np": "🥺 Nasen-Rachen-Abstrich",
+        "op": "😲 Mund-Rachen-Abstrich",
+        "sputum": "🤑 Sputum",
+        "saliva": "💦 Speichel",
+        "stool": "💩 Stuhl",
+        "mid-turbinate": "🐚 Mittlere Nasenmuschel",
+      };
+
+      let samples = this.getSampleValues(test);
+      return samples.map(k => mapping[k]).join(", ");
     },
     getAttribCircles(test) {
       let array = [];
