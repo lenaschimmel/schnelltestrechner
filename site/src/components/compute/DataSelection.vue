@@ -33,20 +33,33 @@
 
       <p class="mt-4">
         Quelle der Angaben zu Sensitivität und Spezifität:
-        <v-select
-          v-model="studyId"
+        <v-card>
+        <v-data-table
+        class="mt-4"
+          dense
+          v-model="selectedStudies"
           :items="studies"
-          item-text="author"
-          item-value="id"
-          solo
+          :headers="studyHeaders"
+          show-select
+          single-select
+          locale="de-DE"
+          mobile-breakpoint="360"
+          :options="{ itemsPerPage: 10 }"
         >
-          <template v-slot:item="{ parent, item }">
-            {{ item | studyTitle }}
+          <template v-slot:item.sensitivity="{ item }">
+            {{ item.sensitivity ? $options.filters.formatPercent(item.sensitivity.avg) : "" }}
           </template>
-          <template v-slot:selection="{ parent, item }">
-            {{ item | studyTitle }}
+          <template v-slot:item.specificity="{ item }">
+            {{ item.specificity ? $options.filters.formatPercent(item.specificity.avg) : "" }}
           </template>
-        </v-select>
+          <template v-slot:item.author="{ item }">
+            {{ item.author == "manufacturer" ? "Herstellerangaben " + item.comment : item.author }}
+          </template>
+          <template v-slot:item.quality="{ item }">
+            {{ studyQuality(item) }}
+          </template>
+        </v-data-table>
+        </v-card>
       </p>
 
       <!--
@@ -176,21 +189,40 @@ export default {
   },
   data: () => ({
     testsKind: "list",
-    studyId: "nothing",
+    selectedStudies: [{id:"nothing", author:"[nichts ausgewählt]"}],
     sensitivityString: "80,0 %",
     specificityString: "80,0 %",
     confidence: "avg",
+    studyHeaders: [
+          { text: "Autor_innen", value: "author", sortable: true },
+          { text: "Studienqualität", value: "quality", sortable: true },
+          { text: "Probenart", value: "sample", sortable: true },
+          { text: "Sensitivität", value: "sensitivity", sortable: true },
+          { text: "Spezifität", value: "specificity", sortable: true },
+        ],
   }),
   computed: {
+    selectedStudy() {
+      return this.selectedStudies[0];
+    },
+    studyId() {
+      if (this.selectedStudies.length == 0) {
+        return null;
+      }
+      return this.selectedStudies[0].id;
+    },
     studies() {
+      const nothing = {id:"nothing", author:"[nichts ausgewählt]"};
+      const ownValues = {id:"ownValues", author:"[eigene Werte eingeben]"};
+      const minPei = {id:"minPei", author:"[Paul-Ehrlich-Institut - allg. Mindestwerte]", sensitivity:{avg:0.8}, specificity:{avg:0.97}};
       if (this.selectedTest) {
         let pei = [];
         if (this.selectedTest.pei) {
-          pei = ["minPei"];
+          pei = [minPei];
         }
-        return ["nothing", "ownValues", ...pei, ...Object.values(this.selectedTest.studies)];
+        return [nothing,ownValues, ...pei, ...Object.values(this.selectedTest.studies)];
       }
-      return ["nothing", "ownValues", "minPei"];
+      return [nothing,ownValues, minPei];
     },
     peiAssumption() {
       return (
@@ -236,6 +268,18 @@ export default {
         }
       }
     },
+  },
+  methods: {
+    studyQuality: function(study) {
+      let ret = [];
+      if (study.sampleSize) {
+        ret.push("n = " + study.sampleSize);
+      }
+      if (study.quadas) {
+        ret.push(study.quadas);
+      }
+      return ret.join(", ");
+    }
   },
   watch: {
     sensitivity: function (newVal) {
