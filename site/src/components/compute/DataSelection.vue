@@ -61,11 +61,18 @@
               }}
             </template>
             <template v-slot:item.author="{ item }">
-              {{
+              <a v-if="item.url" :href="item.url" target="_blank">{{
+                item.author == "manufacturer"
+                  ? "Herstellerangaben " + item.comment
+                  : item.author
+              }}</a>
+              <span v-else>
+               {{
                 item.author == "manufacturer"
                   ? "Herstellerangaben " + item.comment
                   : item.author
               }}
+              </span>
             </template>
             <template v-slot:item.quality="{ item }">
               <v-tooltip left v-if="!item.author.startsWith('[')">
@@ -258,6 +265,7 @@ export default {
         author: "[Paul-Ehrlich-Institut - allg. Mindestwerte]",
         sensitivity: { avg: 0.8 },
         specificity: { avg: 0.97 },
+        url: "https://www.pei.de/SharedDocs/Downloads/DE/newsroom/dossiers/mindestkriterien-sars-cov-2-antigentests-01-12-2020.pdf?__blob=publicationFile&v=6",
       };
       if (this.selectedTest) {
         let pei = [];

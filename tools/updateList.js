@@ -51,7 +51,7 @@ bools = { "Ja": true, "Nein": false, "": undefined };
 function onAntigenTestRecord(record, context) {
     record.pei = bools[record.pei];
     let manufacturerStudyId = currentStudyId++;
-    record.studies = { [manufacturerStudyId]: { "author": "manufacturer", "comment": "via BfArM (" + record.name + ")", "id": manufacturerStudyId } };
+    record.studies = { [manufacturerStudyId]: { "author": "manufacturer", "comment": "via BfArM (" + record.name + ")", "id": manufacturerStudyId, "url": "https://antigentest.bfarm.de/ords/f?p=ANTIGENTESTS-AUF-SARS-COV-2" } };
     record.studies[manufacturerStudyId].sensitivity = {
         avg: parseFloat((record.sensitivityAvg + "").replace(",", ".")) / 100.0,
         min: parseFloat(record.sensitivityRange.split("-")[0]) / 100.0,
@@ -76,7 +76,7 @@ function onSelfTestRecord(record, context) {
     record.pei = true;
     record.sample = record.sample.split(" / ").map(s => s.toLowerCase().replace("speichel","saliva"));
     let manufacturerStudyId = currentStudyId++;
-    record.studies = { [manufacturerStudyId]: { "author": "manufacturer", "comment": "via PEI", "id": manufacturerStudyId, "sample": record.sample } };
+    record.studies = { [manufacturerStudyId]: { "author": "manufacturer", "comment": "via PEI", "id": manufacturerStudyId, "sample": record.sample, "url": "https://antigentest.bfarm.de/ords/f?p=ANTIGENTESTS-AUF-SARS-COV-2:TESTS-ZUR-EIGENANWENDUNG-DURCH-LAIEN" } };
     record.studies[manufacturerStudyId].sensitivity = {
         avg: parseFloat((record.sensitivityAvg + "").replace(",", ".")) / 100.0,
     };
@@ -161,6 +161,7 @@ function onEvaluationRecord(record, context) {
             "author": record.author,
             "quadas": record.quadas,
             "independent": record.independent,
+            "url": "https://www.klinikum.uni-heidelberg.de/diagnostics-global-health",
         }
     }
 
