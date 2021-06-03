@@ -484,7 +484,7 @@ export default {
     riskProfilePrivate: "1.0",
     riskProfileProfessional: "0.8",
     additionalRiskString: "0",
-    expandedPanelsCalc: [0, 1],
+    expandedPanelsCalc: [0, 1, 2],
 
     // symptoms
     sympSmell: false,
