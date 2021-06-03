@@ -34,31 +34,61 @@
       <p class="mt-4">
         Quelle der Angaben zu Sensitivität und Spezifität:
         <v-card>
-        <v-data-table
-        class="mt-4"
-          dense
-          v-model="selectedStudies"
-          :items="studies"
-          :headers="studyHeaders"
-          show-select
-          single-select
-          locale="de-DE"
-          mobile-breakpoint="360"
-          :options="{ itemsPerPage: 10 }"
-        >
-          <template v-slot:item.sensitivity="{ item }">
-            {{ item.sensitivity ? $options.filters.formatPercent(item.sensitivity.avg) : "" }}
-          </template>
-          <template v-slot:item.specificity="{ item }">
-            {{ item.specificity ? $options.filters.formatPercent(item.specificity.avg) : "" }}
-          </template>
-          <template v-slot:item.author="{ item }">
-            {{ item.author == "manufacturer" ? "Herstellerangaben " + item.comment : item.author }}
-          </template>
-          <template v-slot:item.quality="{ item }">
-            {{ studyQuality(item) }}
-          </template>
-        </v-data-table>
+          <v-data-table
+            class="mt-4"
+            dense
+            v-model="selectedStudies"
+            :items="studies"
+            :headers="studyHeaders"
+            show-select
+            single-select
+            locale="de-DE"
+            mobile-breakpoint="360"
+            :options="{ itemsPerPage: 10 }"
+          >
+            <template v-slot:item.sensitivity="{ item }">
+              {{
+                item.sensitivity
+                  ? $options.filters.formatPercent(item.sensitivity.avg)
+                  : ""
+              }}
+            </template>
+            <template v-slot:item.specificity="{ item }">
+              {{
+                item.specificity
+                  ? $options.filters.formatPercent(item.specificity.avg)
+                  : ""
+              }}
+            </template>
+            <template v-slot:item.author="{ item }">
+              {{
+                item.author == "manufacturer"
+                  ? "Herstellerangaben " + item.comment
+                  : item.author
+              }}
+            </template>
+            <template v-slot:item.quality="{ item }">
+              <v-tooltip left v-if="!item.author.startsWith('[')">
+                <template v-slot:activator="{ on, attrs }">
+                  <v-icon v-bind="attrs" v-on="on" small :color="getStudyColor(item)">
+                    mdi-circle
+                  </v-icon>
+                </template>
+                <span>{{ getStudyQualityText(item) }}</span>
+              </v-tooltip>
+              {{ getStudySampleSizeString(item) }}
+            </template>
+            <template v-slot:item.sample="{ item }">
+              <v-tooltip left>
+                <template v-slot:activator="{ on, attrs }">
+                  <div v-bind="attrs" v-on="on">
+                    {{ getSampleIcons(item) }}
+                  </div>
+                </template>
+                <span>{{ getStudySampleSizeString(item) }}</span>
+              </v-tooltip>
+            </template>
+          </v-data-table>
         </v-card>
       </p>
 
@@ -83,7 +113,7 @@
         </p>
       -->
 
-      <template v-if="studyId=='ownValues'">
+      <template v-if="studyId == 'ownValues'">
         <v-container fluid class="pt-8">
           <v-row>
             <v-col cols="12" sm="6" md="3" no-gutters>
@@ -178,6 +208,15 @@
 </template>
 <script>
 //import Info from "../Info.vue";
+import {
+  studyQualityString,
+  getSampleIcons,
+  getSampleText,
+  getStudyColor,
+  getStudySampleSizeString,
+  getStudyQualityText,
+} from "../../helpers.js";
+
 export default {
   components: {
     //  Info,
@@ -189,17 +228,17 @@ export default {
   },
   data: () => ({
     testsKind: "list",
-    selectedStudies: [{id:"nothing", author:"[nichts ausgewählt]"}],
+    selectedStudies: [{ id: "nothing", author: "[nichts ausgewählt]" }],
     sensitivityString: "80,0 %",
     specificityString: "80,0 %",
     confidence: "avg",
     studyHeaders: [
-          { text: "Autor_innen", value: "author", sortable: true },
-          { text: "Studienqualität", value: "quality", sortable: true },
-          { text: "Probenart", value: "sample", sortable: true },
-          { text: "Sensitivität", value: "sensitivity", sortable: true },
-          { text: "Spezifität", value: "specificity", sortable: true },
-        ],
+      { text: "Autor_innen", value: "author", sortable: true },
+      { text: "Studienqualität", value: "quality", sortable: true },
+      { text: "Probenart", value: "sample", sortable: true },
+      { text: "Sensitivität", value: "sensitivity", sortable: true },
+      { text: "Spezifität", value: "specificity", sortable: true },
+    ],
   }),
   computed: {
     selectedStudy() {
@@ -212,19 +251,27 @@ export default {
       return this.selectedStudies[0].id;
     },
     studies() {
-      const nothing = {id:"nothing", author:"[nichts ausgewählt]"};
-      const ownValues = {id:"ownValues", author:"[eigene Werte eingeben]"};
-      const minPei = {id:"minPei", author:"[Paul-Ehrlich-Institut - allg. Mindestwerte]", sensitivity:{avg:0.8}, specificity:{avg:0.97}};
+      const nothing = { id: "nothing", author: "[nichts ausgewählt]" };
+      const ownValues = { id: "ownValues", author: "[eigene Werte eingeben]" };
+      const minPei = {
+        id: "minPei",
+        author: "[Paul-Ehrlich-Institut - allg. Mindestwerte]",
+        sensitivity: { avg: 0.8 },
+        specificity: { avg: 0.97 },
+      };
       if (this.selectedTest) {
         let pei = [];
         if (this.selectedTest.pei) {
           pei = [minPei];
         }
         let studies = Object.values(this.selectedTest.studies);
-        studies.sort((a,b) => ((b.author == "manufacturer") ? 1 : 0) - (a.author == "manufacturer" ? 1 : 0));
-        return [nothing,ownValues, ...pei, ...studies];
+        studies.sort(
+          (a, b) =>
+            (b.author == "manufacturer" ? 1 : 0) - (a.author == "manufacturer" ? 1 : 0)
+        );
+        return [nothing, ownValues, ...pei, ...studies];
       }
-      return [nothing,ownValues, minPei];
+      return [nothing, ownValues, minPei];
     },
     peiAssumption() {
       return (
@@ -248,7 +295,7 @@ export default {
         if (this.selectedTest.studies[this.studyId]) {
           return this.selectedTest.studies[this.studyId].sensitivity[this.confidence];
         } else {
-            return Number.NaN;
+          return Number.NaN;
         }
       }
     },
@@ -272,16 +319,12 @@ export default {
     },
   },
   methods: {
-    studyQuality: function(study) {
-      let ret = [];
-      if (study.sampleSize) {
-        ret.push("n = " + study.sampleSize);
-      }
-      if (study.quadas) {
-        ret.push(study.quadas);
-      }
-      return ret.join(", ");
-    }
+    studyQualityString,
+    getSampleIcons,
+    getSampleText,
+    getStudyColor,
+    getStudySampleSizeString,
+    getStudyQualityText,
   },
   watch: {
     sensitivity: function (newVal) {

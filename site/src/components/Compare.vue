@@ -171,7 +171,7 @@
                             :x2="study.sensitivity.max * 200"
                             :y1="10 + i * 20"
                             :y2="10 + i * 20"
-                            :style="'stroke:' + getStudyColor(study) + ';stroke-width:2'"
+                            :style="'stroke:' + getStudyColor(study, true) + ';stroke-width:2'"
                           />
                           <line
                             v-if="
@@ -183,7 +183,7 @@
                             :x2="study.sensitivity.avg * 200"
                             :y1="5 + i * 20"
                             :y2="15 + i * 20"
-                            :style="'stroke:' + getStudyColor(study) + ';stroke-width:2'"
+                            :style="'stroke:' + getStudyColor(study, true) + ';stroke-width:2'"
                           />
                         </template>
                       </template>
@@ -251,7 +251,7 @@
                             :x2="getSpecificityX(study.specificity.max)"
                             :y1="10 + i * 20"
                             :y2="10 + i * 20"
-                            :style="'stroke:' + getStudyColor(study) + ';stroke-width:2'"
+                            :style="'stroke:' + getStudyColor(study, true) + ';stroke-width:2'"
                           />
                           <line
                             v-if="
@@ -263,7 +263,7 @@
                             :x2="getSpecificityX(study.specificity.avg)"
                             :y1="5 + i * 20"
                             :y2="15 + i * 20"
-                            :style="'stroke:' + getStudyColor(study) + ';stroke-width:2'"
+                            :style="'stroke:' + getStudyColor(study, true) + ';stroke-width:2'"
                           />
                         </template>
                       </template>
@@ -283,6 +283,8 @@
 </template>
 
 <script>
+import { getStudyColor } from "../helpers.js";
+
 export default {
   name: "Compare",
   props: {
@@ -298,13 +300,7 @@ export default {
     zoomSpecificity: false,
   }),
   methods: {
-    getStudyColor(study) {
-      if (study.author == "manufacturer") return "#1976D2";
-      if (study.quadas == "low concern") return "#388E3C";
-      if (study.quadas == "intermediate concern") return "#FBC02D";
-      if (study.quadas == "high concern") return "#D32F2F";
-      return "black";
-    },
+    getStudyColor,
     testMatchesCompareFilter(test) {
       if (this.compareFilterSelf && !test.selftest) return false;
 

@@ -209,6 +209,8 @@
 </template>
 <script>
 import Info from "../Info.vue";
+import { getSampleIcons, getSampleText } from "../../helpers.js";
+
 export default {
   components: {
     Info,
@@ -226,6 +228,8 @@ export default {
     testFilter: "",
   }),
   methods: {
+    getSampleIcons,
+    getSampleText,
     getDataCircles(studiesObject) {
       let numMax = function (num) {
         if (num > 9) return "9-plus";
@@ -297,51 +301,6 @@ export default {
       if (text == "") text = "Keine Daten vorhanden.";
 
       return text;
-    },
-    getSampleValues(test) {
-      let samples = [];
-      if (test.sample) {
-        samples.push(...test.sample);
-      }
-      let studies = Object.values(test.studies);
-      for (const study of studies) {
-        if (study.sample) {
-          samples.push(...study.sample);
-        }
-      }
-
-      samples = samples.filter(function (item, pos) {
-        return samples.indexOf(item) == pos;
-      });
-      return samples;
-    },
-    getSampleIcons(test) {
-      const mapping = {
-        nasal: "👃",
-        np: "🥺",
-        op: "😲",
-        sputum: "🤑",
-        saliva: "💦",
-        stool: "💩",
-        "mid-turbinate": "🐚",
-      };
-
-      let samples = this.getSampleValues(test);
-      return samples.map((k) => mapping[k]).join("");
-    },
-    getSampleText(test) {
-      const mapping = {
-        nasal: "👃 vordere Nase",
-        np: "🥺 Nasen-Rachen-Abstrich",
-        op: "😲 Mund-Rachen-Abstrich",
-        sputum: "🤑 Sputum",
-        saliva: "💦 Speichel",
-        stool: "💩 Stuhl",
-        "mid-turbinate": "🐚 Mittlere Nasenmuschel",
-      };
-
-      let samples = this.getSampleValues(test);
-      return samples.map((k) => mapping[k]).join(", ");
     },
     getAttribCircles(test) {
       let array = [];
