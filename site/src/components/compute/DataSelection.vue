@@ -220,7 +220,9 @@ export default {
         if (this.selectedTest.pei) {
           pei = [minPei];
         }
-        return [nothing,ownValues, ...pei, ...Object.values(this.selectedTest.studies)];
+        let studies = Object.values(this.selectedTest.studies);
+        studies.sort((a,b) => ((b.author == "manufacturer") ? 1 : 0) - (a.author == "manufacturer" ? 1 : 0));
+        return [nothing,ownValues, ...pei, ...studies];
       }
       return [nothing,ownValues, minPei];
     },
