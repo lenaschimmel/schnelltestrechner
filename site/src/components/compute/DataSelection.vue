@@ -92,7 +92,7 @@
                     {{ getSampleIcons(item) }}
                   </div>
                 </template>
-                <span>{{ getStudySampleSizeString(item) }}</span>
+                <span>{{ getSampleText(item) }}</span>
               </v-tooltip>
             </template>
           </v-data-table>
