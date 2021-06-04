@@ -169,6 +169,19 @@ function onEvaluationRecord(record, context) {
     return test;
 }
 
+function onLogisticRecord(record, context) {
+    test = {};
+    test.manufacturer = record.manufacturer;
+    test.name = record.name;
+    test.logisticRegression = {
+        intercept: record.intercept,
+        coef: record.coef,
+        test: record.test
+    };
+
+    return test;
+}
+
 String.prototype.replaceAll = function(search, replacement) {
     var target = this;
     return target.split(search).join(replacement);
@@ -186,13 +199,26 @@ function splitDistributorNames(inputNames) {
         }
         // put back together those endings which may occur alone but also in conjunction
         // fixing obvious misspellings of "GmbH & Co. KG" and "haftungsbeschränkt" while at it
-        name = name.replaceAll("GmbH, & Co.KG", "GmbH & Co. KG");
-        name = name.replaceAll("GmbH, & Co. KG", "GmbH & Co. KG");
-        name = name.replaceAll("GmbH, & Co KG", "GmbH & Co. KG");
-        name = name.replaceAll("GmbH, + Co. KG", "GmbH & Co. KG");        
+        name = name.replaceAll(", & Co.KG", " & Co. KG");
+        name = name.replaceAll(", & Co. KG", " & Co. KG");
+        name = name.replaceAll(", & Co KG", " & Co. KG");
+        name = name.replaceAll(", + Co. KG", " & Co. KG");        
+        name = name.replaceAll(", & CO KG", " & Co. KG");        
+        name = name.replaceAll(", & Co. KG", " & Co. KG");        
+        name = name.replaceAll(", & CoKG", " & Co. KG");        
+        name = name.replaceAll(", &Co. KG", " & Co. KG");
+        name = name.replaceAll("Co., Ltd", "Co., Ltd.");
+        name = name.replaceAll("Co.,Ltd", "Co., Ltd.");
+        name = name.replaceAll("Co., Ltd.", "Co., Ltd.");
+        name = name.replaceAll("Co.,Ltd.", "Co., Ltd.");
+        name = name.replaceAll("Co.Ltd.", "Co., Ltd.");
+        name = name.replaceAll("A. Menarini Diagnostics", "A. Menarini Diagnostics,");
+        name = name.replaceAll("Diagenics Group SE", "Diagenics Group SE,");
+        name = name.replaceAll("Dr. Grob HealthcareIgefa", "Dr. Grob Healthcare,Igefa");
+        name = name.replaceAll("Dropshippers GermanyGeSino GmbH", "Dropshippers Germany,GeSino GmbH");
         name = name.replaceAll("UG, (haftungsbeschraenkt)", "UG (haftungsbeschränkt)");
         name = name.replaceAll("UG, (haftungsbeschränkt)", "UG (haftungsbeschränkt)");
-        console.log(name);
+        // console.log(name);
         ret.push(...name.split(",").filter(n => n.length > 0))
     }
     return ret;
@@ -245,6 +271,8 @@ function cleanupNames(tests) {
         test.distributors = test.distributors || [];
         test.sample = test.sample || [];
 
+        test.name = test.name.replaceAll("‐","-");
+
         // remove sample endings from primary name
         for (const sampleKey in jsonSampleMapping) {
             const sampleValue = jsonSampleMapping[sampleKey];
@@ -267,18 +295,38 @@ function cleanupNames(tests) {
             }
         }
 
-        test.tradename = test.tradename.map(name => name.trim()).filter(a => a.length > 0);
+        test.tradename = test.tradename.map(name => name.trim().replaceAll("‐","-")).filter(a => a.length > 0);
         test.distributors = test.distributors.map(name => name.trim()).filter(a => a.length > 0);
     }
 }
 
 function testNamesMatch(name1, name2) {
-    if(name1 == name2 || name1.startsWith(name2) || name2.startsWith(name1)) {
-        return true;
+    if (name1.toLowerCase() == name2.toLowerCase()) return true;
+
+    for (const array of jsonTestMapping) {
+        if (array.includes(name1.toLowerCase()) && array.includes(name2.toLowerCase())) 
+            return true;
+    }
+    
+    l = levenshtein.get(name1.toLowerCase(), name2.toLowerCase()) / Math.min(name1.length, name2.length);
+    if (l < 0.3) {
+        console.log('   [\n        "' + name1 + '",\n        "' + name2 + '"\n    ],');
+    }
+    
+    return false;
+}
+
+function companyNamesMatch(name1, name2) {
+    if (name1.toLowerCase() == name2.toLowerCase()) return true;
+    for (const array of jsonCompanyMapping) {
+        if (array.includes(name1.toLowerCase()) && array.includes(name2.toLowerCase())) 
+            return true;
     }
 
-    l = levenshtein.get(name1, name2) / Math.min(name1.length, name2.length);
-    return l < 0.2;
+    l = levenshtein.get(name1.toLowerCase(), name2.toLowerCase()) / Math.min(name1.length, name2.length);
+    if (l < 0.1) {
+        //console.log('   [\n        "' + name1 + '",\n        "' + name2 + '"\n    ],');
+    }
 
     return false;
 }
@@ -286,14 +334,15 @@ function testNamesMatch(name1, name2) {
 function mergeTests(tests) {
     ret = tests[0];
     if (tests.length > 1) {
-    //    console.log("Merging " + tests.length + " tests:");
+        // console.log("Merging " + tests.length + " tests:");
     }
     for (const test of tests) {
         if (tests.length > 1) {
-        //    console.log(" * " + test.name);
+            // console.log(" * " + test.name);
         }
         if (test != ret) {
             ret.id = ret.id || test.id;
+            ret.logisticRegression = ret.logisticRegression || test.logisticRegression;
             ret.pei = ret.pei || test.pei;
             ret.selftest = ret.selftest || test.selftest;
             ret.instructionsUrl = ret.instructionsUrl || test.instructionsUrl;
@@ -301,8 +350,6 @@ function mergeTests(tests) {
             ret.studies = { ...ret.studies, ... test.studies };
             ret.tradename = [ ... (ret.tradename || []), ... (test.tradename || []) ].filter(onlyUnique).sort(((a,b) => compareStrings(a.toLowerCase(), b.toLowerCase())));
             ret.distributors = [ ... (ret.distributors || []), ... (test.distributors || []) ].filter(onlyUnique).sort(((a,b) => compareStrings(a.toLowerCase(), b.toLowerCase())));
-
-            
         }
     }
     delete ret.merged;
@@ -319,8 +366,11 @@ function fixId(test) {
 const csvAntigenTests = fs.readFileSync("../src_data/antigentests.csv", { encoding: "latin1" }).replace(/\u0099/g, "\u2122").replace(/\u0096/g, "\u002D");
 const csvSelfTests = fs.readFileSync("../src_data/selftests.csv", { encoding: "latin1" }).replace(/\u0099/g, "\u2122").replace(/\u0096/g, "\u002D");
 const csvEvaluation = fs.readFileSync("../src_data/evaluation.csv", { encoding: "utf8" });
+const csvLogistic = fs.readFileSync("../src_data/logistic.csv", { encoding: "utf8" });
 const jsonEvaluationNameMapping = JSON.parse(fs.readFileSync("../src_data/evaluation_name_mapping.json", { encoding: "utf8" }));
 const jsonSampleMapping = JSON.parse(fs.readFileSync("../src_data/sample.json", { encoding: "utf8" }));
+const jsonCompanyMapping = JSON.parse(fs.readFileSync("../src_data/company_mapping.json", { encoding: "utf8" }));
+const jsonTestMapping = JSON.parse(fs.readFileSync("../src_data/test_mapping.json", { encoding: "utf8" }));
 
 const jsonEvaluations = parse(csvEvaluation, {
     on_record: onEvaluationRecord,
@@ -342,11 +392,19 @@ const jsonAntigenTests = parse(csvAntigenTests, {
     delimiter: ";",
 });
 
+const jsonLogistic = parse(csvLogistic, {
+    columns: true,
+    skip_empty_lines: true,
+    delimiter: ";",
+    on_record: onLogisticRecord,
+});
+
 allTests = [];
 allTests.push(...jsonSelfTests);
 allTests.push(...jsonAntigenTests);
 allTests.push(...jsonEvaluations);
-console.log("Added " + jsonSelfTests.length + " self tests, " + jsonEvaluations.length + " studies and " + jsonAntigenTests.length + " antigen tests, resulting in " + allTests.length + " tests.")
+allTests.push(...jsonLogistic);
+console.log("Added " + jsonSelfTests.length + " self tests, " + jsonEvaluations.length + " studies, " + jsonLogistic.length + " logistic regressions and " + jsonAntigenTests.length + " antigen tests, resulting in " + allTests.length + " tests.")
 
 cleanupNames(allTests);
 
@@ -363,7 +421,7 @@ for (const test1 of allTests) {
         if(test2.merged) {
             continue
         }
-        if (testNamesMatch(test1.manufacturer, test2.manufacturer) && test1 != test2) {
+        if (companyNamesMatch(test1.manufacturer, test2.manufacturer) && test1 != test2) {
             if (testNamesMatch(test1.name, test2.name)) {
                 merge.push(test2);
                 test2.merged = true;
@@ -377,7 +435,20 @@ resultTests = resultTests.map(test => fixId(test));
 resultTests.sort((a,b) => compareStrings(a.name, b.name));
 resultTests.sort((a,b) => compareStrings(a.manufacturer, b.manufacturer));
 
-//console.log("Merged tests, remaining count is " + resultTests.length);
+console.log("Merged tests, remaining count is " + resultTests.length);
+
+/*
+let manufacturers = [];
+for (const test of allTests) {
+    manufacturers.push(test.manufacturer, ...test.distributors)
+}
+
+manufacturers = manufacturers.filter(onlyUnique);
+manufacturers.sort();
+for (const manufacturer of manufacturers) {
+    console.log("'" + manufacturer + "'");
+}
+*/
 
 // jsonAntigenTests.push(...getSelftestsWithoutId());
 

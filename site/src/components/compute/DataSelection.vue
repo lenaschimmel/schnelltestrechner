@@ -216,7 +216,6 @@
 <script>
 //import Info from "../Info.vue";
 import {
-  studyQualityString,
   getSampleIcons,
   getSampleText,
   getStudyColor,
@@ -327,7 +326,6 @@ export default {
     },
   },
   methods: {
-    studyQualityString,
     getSampleIcons,
     getSampleText,
     getStudyColor,

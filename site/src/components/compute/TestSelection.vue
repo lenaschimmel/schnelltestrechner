@@ -277,7 +277,7 @@ export default {
       return array;
     },
     getDataText(studiesObject) {
-      let studies = Object.values(studiesObject);
+      let studies = studiesObject ? Object.values(studiesObject) : [];
       let count = studies.length;
       let manCount = studies.filter((study) => study.author.startsWith("manufacturer"))
         .length;
@@ -311,6 +311,8 @@ export default {
         array.push({ icon: "mdi-map-check-outline", color: "pink darken-2" });
       if (test.shops && test.shops.length > 0)
         array.push({ icon: "mdi-cart", color: "purple darken-2" });
+      if (test.logisticRegression)
+        array.push({ icon: "mdi-chart-bell-curve-cumulative", color: "orange darken-2" });
 
       return array;
     },
