@@ -181,6 +181,20 @@
         </v-row>
       </v-container>
 
+       <v-alert
+        icon="mdi-alert"
+        dense
+        outlined
+        type="info"
+        text
+        class="mt-4"
+        v-if="this.selectedTest != null && this.selectedTest.logisticRegression"
+      >
+        Dieser Test wurde in der Studie "Comparative sensitivity evaluation for 122 CE-marked SARS-CoV-2 antigen rapid tests" von Scheiblauer et. al.  (<a target="_blank" href="https://doi.org/10.1101/2021.05.11.21257016"
+          >Link zum Preprint</a>) betrachtet. Dadurch liegen besonders detaillierte Daten zur Sensitivität vor, die in naher Zukunft im Schnelltest-Rechner verwendet werden können.
+      </v-alert>
+
+<!--
       <v-alert
         icon="mdi-alert"
         dense
@@ -210,6 +224,7 @@
         eingeben. In dem Fall freuen wir uns auch über eine Nachricht, damit wir die Daten
         bei uns einpflegen können.
       </v-alert>
+      -->
     </v-expansion-panel-content>
   </v-expansion-panel>
 </template>

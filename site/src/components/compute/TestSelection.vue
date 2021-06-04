@@ -86,7 +86,7 @@
               <template v-slot:activator="{ on, attrs }">
                 <div v-bind="attrs" v-on="on">
                   <v-icon
-                    v-for="circle in getDataCircles(item.studies)"
+                    v-for="circle in getDataCircles(item)"
                     :key="item.id + '_s_' + circle.color"
                     small
                     :color="circle.color"
@@ -95,7 +95,7 @@
                   </v-icon>
                 </div>
               </template>
-              <span>{{ getDataText(item.studies) }}</span>
+              <span>{{ getDataText(item) }}</span>
             </v-tooltip>
           </template>
           <template v-slot:item.sampledings="{ item }">
@@ -130,7 +130,7 @@
               <template v-slot:activator="{ on, attrs }">
                 <div v-bind="attrs" v-on="on">
                   <v-icon
-                    v-for="circle in getDataCircles(item.studies)"
+                    v-for="circle in getDataCircles(item)"
                     :key="item.id + '_as_s_' + circle.color"
                     small
                     :color="circle.color"
@@ -147,7 +147,7 @@
                   </v-icon>
                 </div>
               </template>
-              <span>{{ getDataText(item.studies) + " - " + getAttribText(item) }}</span>
+              <span>{{ getDataText(item) + " - " + getAttribText(item) }}</span>
             </v-tooltip>
           </template>
           <template v-slot:item.manufacturer_name="{ item }">
@@ -230,7 +230,8 @@ export default {
   methods: {
     getSampleIcons,
     getSampleText,
-    getDataCircles(studiesObject) {
+    getDataCircles(test) {
+      let studiesObject = test.studies
       let numMax = function (num) {
         if (num > 9) return "9-plus";
         else return "" + num;
@@ -249,7 +250,10 @@ export default {
       let array = [];
 
       if (manCount > 0)
-        array.push({ icon: "mdi-alpha-h-circle", color: "blue darken-2" });
+        array.push({ 
+          icon: "mdi-numeric-" + numMax(manCount) + "-circle",
+          color: "blue darken-2"
+           });
       if (lcCount > 0)
         array.push({
           icon: "mdi-numeric-" + numMax(lcCount) + "-circle",
@@ -270,13 +274,17 @@ export default {
           icon: "mdi-numeric-" + numMax(ucCount) + "-circle",
           color: "black",
         });
+      if (test.logisticRegression)
+        array.push({ icon: "mdi-chart-bell-curve-cumulative", color: "orange darken-2" });
+
 
       if (array.length == 0)
         array.push({ icon: "mdi-numeric-0-circle-outline", color: "grey darken-2" });
 
       return array;
     },
-    getDataText(studiesObject) {
+    getDataText(test) {
+      let studiesObject = test.studies;
       let studies = studiesObject ? Object.values(studiesObject) : [];
       let count = studies.length;
       let manCount = studies.filter((study) => study.author.startsWith("manufacturer"))
@@ -297,6 +305,7 @@ export default {
       if (hcCount > 0) text += hcCount + " mit geringer Qualität, ";
       if (ucCount > 0) text += ucCount + " mit unklarer Qualität, ";
       if (nonManCount > 0) text += " vorhanden.";
+      if (test.logisticRegression) text += "Teil des Sensitivitäts-Vergleichs von Scheiblauer et.al.";
 
       if (text == "") text = "Keine Daten vorhanden.";
 
@@ -311,9 +320,7 @@ export default {
         array.push({ icon: "mdi-map-check-outline", color: "pink darken-2" });
       if (test.shops && test.shops.length > 0)
         array.push({ icon: "mdi-cart", color: "purple darken-2" });
-      if (test.logisticRegression)
-        array.push({ icon: "mdi-chart-bell-curve-cumulative", color: "orange darken-2" });
-
+      
       return array;
     },
     getAttribText(test) {
