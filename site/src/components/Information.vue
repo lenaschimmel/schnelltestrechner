@@ -54,15 +54,20 @@
                   einer Extrapolation der Inzidenz durch das Wachstum seit der Vor-Woche
                 </li>
                 <li>
-                  einer Abschätzung des Underreporting-Faktors von 1,8 durch das <a
+                  einer Abschätzung des Underreporting-Faktors von 1,8 durch das
+                  <a
                     href="https://www.rki.de/DE/Content/Gesundheitsmonitoring/Studien/lid/Ergebnisse.pdf?__blob=publicationFile"
                     target="_blank"
                     >RKI</a
-                  > (bis zum 13.06.2021 wurde von einem deutlich höhreren Faktor (nämlich 5,5) ausgegangen, da die  <a
+                  >
+                  (bis zum 13.06.2021 wurde von einem deutlich höhreren Faktor (nämlich
+                  5,5) ausgegangen, da die
+                  <a
                     href="https://www.rki.de/DE/Content/Infekt/EpidBull/Archiv/2020/Ausgaben/50_20.pdf?__blob=publicationFile"
                     target="_blank"
                     >damaligen Werte des RKI</a
-                  > diesen Schluss zuließen.)
+                  >
+                  diesen Schluss zuließen.)
                 </li>
                 <li>
                   Faktoren für das private Infektionsrisiko, die an
@@ -110,7 +115,6 @@
               </p>
             </v-expansion-panel-content>
           </v-expansion-panel>
-
 
           <v-expansion-panel>
             <v-expansion-panel-header
@@ -383,7 +387,8 @@
               <h3>2.2. Symptome</h3>
               <p>
                 Es wird keine Unterscheidung zwischen "keine Symptome" und "Symptome
-                unbekannt" gemacht, d.h. $p_- = p_?$. Dies soll in einer künftigen Version verbessert werden.
+                unbekannt" gemacht, d.h. $p_- = p_?$. Dies soll in einer künftigen Version
+                verbessert werden.
               </p>
 
               <p>
@@ -392,11 +397,13 @@
               </p>
 
               <p>
-                Nach <a
+                Nach
+                <a
                   href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7584484/"
                   target="_blank"
                   >Smith et al.</a
-                > wird bestimmten Symptomkombinationen ein Punktewert zugeordnet:
+                >
+                wird bestimmten Symptomkombinationen ein Punktewert zugeordnet:
               </p>
 
               <v-simple-table dense style="width: max-content" class="mb-4">
@@ -426,11 +433,17 @@
 
               <p>
                 Die Punkte für alle zutreffenden Symptomkombinationen werden
-                zusammengezählt und daraus der Faktor $f_s$ abgelesen. Zusätzlich zu den Werten von $f_s$ wie sie von Smith et al. angegeben werden wird ein Faktor von $18,8$ aufgerechnet. Die Begründung sowie die unsichere Herleitung dieses Faktors wurde an mehreren Stellen (z.B.  <a
-                      href="https://github.com/lenaschimmel/schnelltestrechner/issues/9#issuecomment-805657593"
-                      target="_blank"
-                      >GitHub</a
-                    >) thematisiert. Er sorgt u.A. dafür, dass das Vorliegen von Symptomen niemals die Vortestwahrscheinlichkeit unter den symptomfreien Fall $p_-$ senkt.
+                zusammengezählt und daraus der Faktor $f_s$ abgelesen. Zusätzlich zu den
+                Werten von $f_s$ wie sie von Smith et al. angegeben werden wird ein Faktor
+                von $18,8$ aufgerechnet. Die Begründung sowie die unsichere Herleitung
+                dieses Faktors wurde an mehreren Stellen (z.B.
+                <a
+                  href="https://github.com/lenaschimmel/schnelltestrechner/issues/9#issuecomment-805657593"
+                  target="_blank"
+                  >GitHub</a
+                >) thematisiert. Er sorgt u.A. dafür, dass das Vorliegen von Symptomen
+                niemals die Vortestwahrscheinlichkeit unter den symptomfreien Fall $p_-$
+                senkt.
               </p>
 
               <v-simple-table dense style="width: max-content" class="mb-4">
@@ -446,27 +459,27 @@
                     <tr>
                       <td>3</td>
                       <td>15,0</td>
-                      <td>{{15.0 * 18.8 | formatNumber}}</td>
+                      <td>{{ (15.0 * 18.8) | formatNumber }}</td>
                     </tr>
                     <tr>
                       <td>2</td>
                       <td>4,2</td>
-                      <td>{{4.2 * 18.8 | formatNumber}}</td>
+                      <td>{{ (4.2 * 18.8) | formatNumber }}</td>
                     </tr>
                     <tr>
                       <td>1</td>
                       <td>1,2</td>
-                     <td>{{1.2 * 18.8 | formatNumber}}</td>
+                      <td>{{ (1.2 * 18.8) | formatNumber }}</td>
                     </tr>
                     <tr>
                       <td>0</td>
                       <td>0,7</td>
-                      <td>{{0.7 * 18.8 | formatNumber}}</td>
+                      <td>{{ (0.7 * 18.8) | formatNumber }}</td>
                     </tr>
                     <tr>
                       <td>-1</td>
                       <td>0,1</td>
-                      <td>{{0.1 * 18.8 | formatNumber}}</td>
+                      <td>{{ (0.1 * 18.8) | formatNumber }}</td>
                     </tr>
                   </tbody>
                 </template>
@@ -475,31 +488,26 @@
               <p>
                 Da der Symptomstatus selbst wie ein binärer medizinischer Test gewertet
                 wird, der die Vortestwahrscheinlichkeit modifiziert, wird $f_s$ nicht
-                direkt auf die Wahrscheinlichkeit $p_?$ , sondern als Bayes-Faktor angesehen und auf die Chance bzw.
-                Likelihood $L_?$ aufgerechnet.
+                direkt auf die Wahrscheinlichkeit $p_?$ , sondern als Bayes-Faktor
+                angesehen und auf die Chance bzw. Likelihood $L_?$ aufgerechnet.
               </p>
-              <p>Allgemein ist die Umrechnung zwischen Wahrscheinlichkeiten und Likelihoods:</p>
-
+              <p>
+                Allgemein ist die Umrechnung zwischen Wahrscheinlichkeiten und
+                Likelihoods:
+              </p>
 
               $$L(x) = {P(x) \over {1 - P(x)}} ; P(x) = {L(x) \over {1 + L(x)}}$$
 
               <p>Spezifisch für die Vortestwahrscheinlichkeit nach Symptomen:</p>
 
-              $$L_? = { {p_?} \over {1 - p_?} }$$
-              
-              $$L_+ = L_? \cdot 18,8 \cdot f_s$$
-              
-              $$p_+ = { L_+ \over {1 + L_+ } } = { { { {p_?} \over {1 - p_?} } \cdot 18,8 \cdot f_s } \over {1 + { { {p_?} \over {1 - p_?} } \cdot 18,8 \cdot f_s } } }$$ 
-              
-              <p>Die Wahrscheinlichkeit, infiziert zu sein, ist
-              damit gegeben als:</p>
-              
-              $$P(I) = \left\{ 
-                \begin{array}{ll} 
-                p_- = p_? & \text{ohne Symptome} \\
-                p_+ & \text{mit Symptomen} \\
-              \end{array}
-              \right. $$
+              $$L_? = { {p_?} \over {1 - p_?} }$$ $$L_+ = L_? \cdot 18,8 \cdot f_s$$ $$p_+
+              = { L_+ \over {1 + L_+ } } = { { { {p_?} \over {1 - p_?} } \cdot 18,8 \cdot
+              f_s } \over {1 + { { {p_?} \over {1 - p_?} } \cdot 18,8 \cdot f_s } } }$$
+
+              <p>Die Wahrscheinlichkeit, infiziert zu sein, ist damit gegeben als:</p>
+
+              $$P(I) = \left\{ \begin{array}{ll} p_- = p_? & \text{ohne Symptome} \\ p_+ &
+              \text{mit Symptomen} \\ \end{array} \right. $$
 
               <h2>3. Berechnung der Nachtestwahrscheinlichkeiten</h2>
 
@@ -533,12 +541,13 @@
 
               <p>Dabei bedeutet:</p>
 
-              
-                $$ P(I|T) = \text{Wahrscheinlichkeit, dass eine Person mit positivem Testergebnis infiziert ist} $$
-                $$ P(\overline{I}|T) = \text{Wahrscheinlichkeit, dass eine Person mit positivem Testergebnis nicht infiziert ist} $$
-                $$ P(I|\overline{T}) = \text{Wahrscheinlichkeit, dass eine Person mit negativem Testergebnis infiziert ist} $$
-                $$ P(\overline{I}|\overline{T}) = \text{Wahrscheinlichkeit, dass eine Person mit negativem Testergebnis nicht infiziert ist} $$
-
+              $$ P(I|T) = \text{Wahrscheinlichkeit, dass eine Person mit positivem
+              Testergebnis infiziert ist} $$ $$ P(\overline{I}|T) =
+              \text{Wahrscheinlichkeit, dass eine Person mit positivem Testergebnis nicht
+              infiziert ist} $$ $$ P(I|\overline{T}) = \text{Wahrscheinlichkeit, dass eine
+              Person mit negativem Testergebnis infiziert ist} $$ $$
+              P(\overline{I}|\overline{T}) = \text{Wahrscheinlichkeit, dass eine Person
+              mit negativem Testergebnis nicht infiziert ist} $$
             </v-expansion-panel-content>
           </v-expansion-panel>
 
