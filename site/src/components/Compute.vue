@@ -615,7 +615,9 @@ export default {
       // estimated to be between 4 and 6 by rki, see
       // https://www.rki.de/DE/Content/Infekt/EpidBull/Archiv/2020/Ausgaben/50_20.pdf?__blob=publicationFile
       // on page 3
-      return 5.0;
+
+      // new data suggests it to be about 1.8 see https://www.rki.de/DE/Content/Gesundheitsmonitoring/Studien/lid/Ergebnisse.pdf?__blob=publicationFile
+      return 1.8;
     },
     delayFactor() {
       // see https://www.microcovid.org/paper/7-basic-method step 3

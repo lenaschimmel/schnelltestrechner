@@ -54,12 +54,15 @@
                   einer Extrapolation der Inzidenz durch das Wachstum seit der Vor-Woche
                 </li>
                 <li>
-                  einer Abschätzung des Underreporting-Faktors von 4-6 durch das
-                  <a
-                    href="https://www.rki.de/DE/Content/Infekt/EpidBull/Archiv/2020/Ausgaben/50_20.pdf?__blob=publicationFile"
+                  einer Abschätzung des Underreporting-Faktors von 1,8 durch das <a
+                    href="https://www.rki.de/DE/Content/Gesundheitsmonitoring/Studien/lid/Ergebnisse.pdf?__blob=publicationFile"
                     target="_blank"
                     >RKI</a
-                  >
+                  > (bis zum 13.06.2021 wurde von einem deutlich höhreren Faktor (nämlich 5,5) ausgegangen, da die  <a
+                    href="https://www.rki.de/DE/Content/Infekt/EpidBull/Archiv/2020/Ausgaben/50_20.pdf?__blob=publicationFile"
+                    target="_blank"
+                    >damaligen Werte des RKI</a
+                  > diesen Schluss zuließen.)
                 </li>
                 <li>
                   Faktoren für das private Infektionsrisiko, die an
@@ -302,9 +305,9 @@
 
               $$f_{g} = \min(2, I_{R,-2} / I_{R,-9})$$ Die Entwicklung wird um eine Woche
               in die Zukunft extrapoliert, um den Meldeverzug auszugleichen. Die Prävalenz
-              der Region wird als das 5-fache der Inzidenz angenommen, um die nicht
+              der Region wird als das 1,8-fache der Inzidenz angenommen, um die nicht
               gemeldeten Infektionen einzubeziehen (Dunkelziffer). $$I_{R,+5} = I_{R,-2}
-              \cdot f_{g}$$ $$P_R = 5 \cdot I_{R,+5}$$
+              \cdot f_{g}$$ $$P_R = 1,8 \cdot I_{R,+5}$$
 
               <h3>2.2. Persönliches Risiko</h3>
               <p>
