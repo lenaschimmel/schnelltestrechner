@@ -196,8 +196,8 @@
           href="https://doi.org/10.1101/2021.05.11.21257016"
           >Link zum Preprint</a
         >) betrachtet. Dadurch liegen besonders detaillierte Daten zur Sensitivität vor,
-        die in Abhängigkeit von der Sensititvität betrachtet werden können. Allerdings
-        können diese Daten derzeit nicht direkt in die Berechnung übernommen werden.
+        die in Abhängigkeit von der Sensititvität <i>betrachtet</i> werden können. Allerdings
+        können diese Daten derzeit nicht direkt in die Berechnung übernommen werden.<br/>Die Berechnung der folgenden Werte ist noch in Entwicklung und als Vorläufig zu betrachten:
       </v-alert>
 
       <v-card v-if="this.selectedTest != null && this.selectedTest.logisticRegression">

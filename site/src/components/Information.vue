@@ -598,15 +598,16 @@
                 >
               </p>
               <p>
-                Der durchgeführte Test ist zwar geeignet, eine vage Aussage zur
-                Sensitivität zu machen, jedoch wird dabei kein Wert Ermittelt, der direkt
-                mit den Ergebnissen der Hersteller oder anderer unabhängiger Studien
-                verglichen werden kann. Insbesondere wird vom PEI kein solcher Wert als
-                Prozentangabe veröffentlicht, sondern nur die Liste der Tests, die als
+                Der durchgeführte Test ist zwar geeignet, eine Aussagen zur Sensitivität
+                zu machen, jedoch wurden vom PEI lange Zeit keine Werte veröffentlich, die
+                direkt mit den Ergebnissen der Hersteller oder anderer unabhängiger
+                Studien verglichen werden konnten, insbesondere keine gemessenen
+                Sensitivitäten als Prozentangabe. Es wurde nur die Liste der Tests
+                angeboten, die als
                 <i>"dem derzeitigen Stand der Technik entsprechend bewertet wurden"</i>.
               </p>
               <p>Die konkreten Verfahrensweise können bei PEI nachgelesen werden:</p>
-              <ul>
+              <ul class="mb-4">
                 <li>
                   <a
                     href="https://www.pei.de/SharedDocs/Downloads/DE/newsroom/dossiers/mindestkriterien-sars-cov-2-antigentests-01-12-2020.pdf?__blob=publicationFile&v=6"
@@ -624,6 +625,28 @@
                   </a>
                 </li>
               </ul>
+              <p>
+                Inzwischen sind die Messungen, die vom PEI zur Evaluation genutzt wurden,
+                durch zwei Preprints veröffentlicht:
+              </p>
+              <p>
+                Im <a
+                    href="https://www.medrxiv.org/content/10.1101/2021.05.11.21257021v1"
+                    target="_blank"
+                    >ersten</a> sind für 31 Schnelltest detaillierte Ergebnisse verfügbar
+                (Sensitivität insgesamt, sowie einzeln für niedrige, mittlere und hohe
+                Viruslasten, sowie der Grenzwert der Viruslast, ab dem 50% Sensititvität
+                erreicht wird)
+              </p>
+              <p>
+                Im <a
+                    href="https://www.medrxiv.org/content/10.1101/2021.05.11.21257016v1"
+                    target="_blank"
+                    >zweiten</a> sind derartige Ergebnisse für 122 Schnelltests enthalten,
+                jedoch ohne die Angabe des Grenzwerts. Teile der Daten sind bereits auf
+                dieser Seite eingebunden, jedoch fehlen hier noch einige Erläuterungen,
+                die in Kürze nachgetragen werden.
+              </p>
             </v-expansion-panel-content>
           </v-expansion-panel>
         </v-expansion-panels>
