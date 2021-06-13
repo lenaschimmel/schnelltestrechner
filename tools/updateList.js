@@ -311,7 +311,7 @@ function testNamesMatch(name1, name2) {
     
     l = levenshtein.get(name1.toLowerCase(), name2.toLowerCase()) / Math.min(name1.length, name2.length);
     if (l < 0.3) {
-        console.log('   [\n        "' + name1 + '",\n        "' + name2 + '"\n    ],');
+        console.log('   [\n        "' + name1.toLowerCase() + '",\n        "' + name2.toLowerCase() + '"\n    ],');
     }
     
     return false;
@@ -326,7 +326,7 @@ function companyNamesMatch(name1, name2) {
 
     l = levenshtein.get(name1.toLowerCase(), name2.toLowerCase()) / Math.min(name1.length, name2.length);
     if (l < 0.1) {
-        //console.log('   [\n        "' + name1 + '",\n        "' + name2 + '"\n    ],');
+        //console.log('   [\n        "' + name1.toLowerCase() + '",\n        "' + name2.toLowerCase() + '"\n    ],');
     }
 
     return false;
