@@ -305,7 +305,7 @@ export default {
       if (hcCount > 0) text += hcCount + " mit geringer Qualität, ";
       if (ucCount > 0) text += ucCount + " mit unklarer Qualität, ";
       if (nonManCount > 0) text += " vorhanden.";
-      if (test.logisticRegression) text += "Teil des Sensitivitäts-Vergleichs von Scheiblauer et.al.";
+      if (test.logisticRegression) text += "Teil des Sensitivitäts-Vergleichs von Scheiblauer et.al. (50%-Grenze CT " + Math.round(test.logisticRegression.test*10)/10 + ")";
 
       if (text == "") text = "Keine Daten vorhanden.";
 

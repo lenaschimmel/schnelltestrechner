@@ -174,10 +174,11 @@ function onLogisticRecord(record, context) {
     test.manufacturer = record.manufacturer;
     test.name = record.name;
     test.logisticRegression = {
-        intercept: record.intercept,
-        coef: record.coef,
-        test: record.test
+        intercept: parseFloat(record.intercept),
+        coef: parseFloat(record.coef),
+        test: parseFloat(record.test)
     };
+    test.studies = {};
 
     return test;
 }

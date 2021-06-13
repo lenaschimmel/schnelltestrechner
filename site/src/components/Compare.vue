@@ -113,6 +113,12 @@
                   mobile-breakpoint="360"
                   :options="{ itemsPerPage: 15 }"
                 >
+                    <template v-slot:header.logisticRegression.test="{  }">
+                      ½
+                      <Info
+                        content="Viruslast, ab der die Sensitivität 50% beträgt"
+                      />
+                    </template>
                   <template v-slot:item.sensitivity="{ item }">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -272,6 +278,9 @@
                   <template v-slot:item.manufacturer_name="{ item }">
                     {{ item.manufacturer + " - " + item.name }}
                   </template>
+                  <template v-slot:item.logisticRegression.test="{ item }">
+                    {{ item.logisticRegression ? "CT " + Math.round(item.logisticRegression.test*10)/10 : "" }}
+                  </template>
                 </v-data-table>
               </v-card>
             </v-expansion-panel-content>
@@ -284,8 +293,12 @@
 
 <script>
 import { getStudyColor } from "../helpers.js";
+import Info from "./Info.vue";
 
 export default {
+  components: {
+    Info,
+  },
   name: "Compare",
   props: {
     loadedData: Object,
@@ -345,6 +358,11 @@ export default {
           value: "specificity",
           sortable: false,
           width: "210px",
+        },
+        { 
+          text: "½",
+           value: "logisticRegression.test",
+           width: "90px"
         },
       ];
     },
