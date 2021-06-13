@@ -88,6 +88,12 @@
                   </v-col>
                   <v-col cols="12" sm="4" md="3" no-gutters>
                     <v-checkbox
+                      label="Logistische Regression"
+                      v-model="compareFilterLogistic"
+                    ></v-checkbox>
+                  </v-col>
+                  <v-col cols="12" sm="4" md="3" no-gutters>
+                    <v-checkbox
                       label="Ausgewählte"
                       v-model="compareFilterSelected"
                     ></v-checkbox>
@@ -310,6 +316,7 @@ export default {
     compareFilterPei: false,
     compareFilterStudies: false,
     compareFilterSelected: false,
+    compareFilterLogistic: false,
     zoomSpecificity: false,
   }),
   methods: {
@@ -318,6 +325,8 @@ export default {
       if (this.compareFilterSelf && !test.selftest) return false;
 
       if (this.compareFilterPei && !test.pei) return false;
+      
+      if (this.compareFilterLogistic && !test.logisticRegression) return false;
 
       if (
         this.compareFilterStudies &&

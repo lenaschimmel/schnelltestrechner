@@ -19,6 +19,13 @@ var numberFormatter = new Intl.NumberFormat("de-DE", {
   maximumFractionDigits: 1,
 });
 
+
+var largeNumberFormatter = new Intl.NumberFormat("de-DE", {
+  style: "decimal",
+  minimumSignificantDigits: 2,
+  maximumSignificantDigits: 3,
+});
+
 Vue.filter('formatPercent', function (value) {
   if (!value) return ''
   if (value < 0.0000015) return percentFormatter.format(0);
@@ -29,6 +36,12 @@ Vue.filter('formatPercent', function (value) {
 Vue.filter('formatNumber', function (value) {
   if (!value) return ''
   return numberFormatter.format(value);
+})
+
+
+Vue.filter('formatLargeNumber', function (value) {
+  if (!value) return ''
+  return largeNumberFormatter.format(value);
 })
 
 Vue.filter('studyTitle', function (study) {

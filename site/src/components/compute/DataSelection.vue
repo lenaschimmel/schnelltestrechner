@@ -67,11 +67,11 @@
                   : item.author
               }}</a>
               <span v-else>
-               {{
-                item.author == "manufacturer"
-                  ? "Herstellerangaben " + item.comment
-                  : item.author
-              }}
+                {{
+                  item.author == "manufacturer"
+                    ? "Herstellerangaben " + item.comment
+                    : item.author
+                }}
               </span>
             </template>
             <template v-slot:item.quality="{ item }">
@@ -181,7 +181,7 @@
         </v-row>
       </v-container>
 
-       <v-alert
+      <v-alert
         icon="mdi-alert"
         dense
         outlined
@@ -190,11 +190,71 @@
         class="mt-4"
         v-if="this.selectedTest != null && this.selectedTest.logisticRegression"
       >
-        Dieser Test wurde in der Studie "Comparative sensitivity evaluation for 122 CE-marked SARS-CoV-2 antigen rapid tests" von Scheiblauer et. al.  (<a target="_blank" href="https://doi.org/10.1101/2021.05.11.21257016"
-          >Link zum Preprint</a>) betrachtet. Dadurch liegen besonders detaillierte Daten zur Sensitivität vor, die in naher Zukunft im Schnelltest-Rechner verwendet werden können.
+        Dieser Test wurde in der Studie "Comparative sensitivity evaluation for 122
+        CE-marked SARS-CoV-2 antigen rapid tests" von Scheiblauer et. al. (<a
+          target="_blank"
+          href="https://doi.org/10.1101/2021.05.11.21257016"
+          >Link zum Preprint</a
+        >) betrachtet. Dadurch liegen besonders detaillierte Daten zur Sensitivität vor,
+        die in Abhängigkeit von der Sensititvität betrachtet werden können. Allerdings
+        können diese Daten derzeit nicht direkt in die Berechnung übernommen werden.
       </v-alert>
 
-<!--
+      <v-card v-if="this.selectedTest != null && this.selectedTest.logisticRegression">
+        <v-card-title>Sensititvität nach Viruslast</v-card-title>
+        <v-container fluid class="pt-8">
+          <v-row>
+            <v-col cols="12" sm="8" md="9" no-gutters>
+              <v-slider
+                v-model="ct"
+                min="17"
+                max="37"
+                label="CT-Wert"
+                :thumb-size="24"
+                thumb-label="always"
+                class="ml-4 mr-4 mt-4"
+                tick-size="6"
+                ticks="always"
+                :tick-labels="[
+                  '17',
+                  '',
+                  '',
+                  '',
+                  '',
+                  '',
+                  'hoch ansteckend',
+                  '',
+                  '',
+                  '',
+                  '',
+                  'gering ansteckend',
+                  '',
+                  '',
+                  '',
+                  '',
+                  'kaum ansteckend',
+                  '',
+                  '',
+                  '',
+                  '37',
+                ]"
+              ></v-slider>
+            </v-col>
+            <v-col cols="12" sm="4" md="3" no-gutters class="text-h3">
+              {{ $options.filters.formatPercent(logarithmicSensitivity) }}
+            </v-col>
+          </v-row>
+          <v-row>
+            <v-col cols="12" sm="8" md="9" no-gutters>
+              Entspricht {{ $options.filters.formatLargeNumber(viralLoad) }} Genomkopien /
+              ml
+            </v-col>
+            <v-col cols="12" sm="4" md="3" no-gutters> </v-col>
+          </v-row>
+        </v-container>
+      </v-card>
+
+      <!--
       <v-alert
         icon="mdi-alert"
         dense
@@ -253,6 +313,7 @@ export default {
     sensitivityString: "80,0 %",
     specificityString: "80,0 %",
     confidence: "avg",
+    ct: 30,
     studyHeaders: [
       { text: "Autor_innen", value: "author", sortable: true },
       { text: "Studienqualität", value: "quality", sortable: true },
@@ -279,7 +340,8 @@ export default {
         author: "[Paul-Ehrlich-Institut - allg. Mindestwerte]",
         sensitivity: { avg: 0.8 },
         specificity: { avg: 0.97 },
-        url: "https://www.pei.de/SharedDocs/Downloads/DE/newsroom/dossiers/mindestkriterien-sars-cov-2-antigentests-01-12-2020.pdf?__blob=publicationFile&v=6",
+        url:
+          "https://www.pei.de/SharedDocs/Downloads/DE/newsroom/dossiers/mindestkriterien-sars-cov-2-antigentests-01-12-2020.pdf?__blob=publicationFile&v=6",
       };
       if (this.selectedTest) {
         let pei = [];
@@ -302,6 +364,21 @@ export default {
         !this.selectedTest.studies[this.studyId] &&
         this.selectedTest.pei
       );
+    },
+    logarithmicSensitivity() {
+      return (
+        1 /
+        (1 +
+          Math.exp(
+            -(
+              this.selectedTest.logisticRegression.intercept +
+              this.selectedTest.logisticRegression.coef * this.ct
+            )
+          ))
+      );
+    },
+    viralLoad() {
+      return 220000000000000 / Math.pow(2, this.ct);
     },
     sensitivity() {
       if (this.studyId == "minPei") {
